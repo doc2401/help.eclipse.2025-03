@@ -1,0 +1,752 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Trace Compass Developer Guide - Data Providers</title>
+		<link type="text/css" rel="stylesheet" href="book.css"/>
+	</head>
+	<body>
+		<table class="navigation" style="width: 100%;" border="0" summary="navigation">
+			<tr>
+				<th style="width: 100%" align="center" colspan="3">Data Providers</th>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left">
+					<a href="OS-Execution-Graph-Extension.html" title="OS Execution Graph Extension">
+						<img alt="Previous" border="0" src="images/prev.gif"/>
+					</a>
+				</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right"></td>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left" valign="top">OS Execution Graph Extension</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right" valign="top"></td>
+			</tr>
+		</table><hr class="navigation-separator"/>
+		<h1 id="Data_Providers">Data Providers</h1>
+		<p>Starting in Trace Compass 3.3, the core and UI are being decoupled with the data provider interface. This interface aims to provide a standard data model for different types of views.</p>
+		<p>Data providers are queried with a filter object, which usually contains a time range as well as other parameters required to correctly filter and sample the returned data. They also take an optional progress monitor to cancel the task. The returned models are encapsulated in a 
+			<b>TmfModelResponse</b> object, which is generic (to the response's type) and also encapsulates the Status of the reponse:
+		</p>
+		<ul>
+			<li>CANCELLED if the query was cancelled by the progress monitor</li>
+			<li>FAILED if an error occurred inside the data provider</li>
+			<li>RUNNING if the response was returned before the underlying analysis was completed, and querying the provider again with the same parameters can return a different model.</li>
+			<li>COMPLETED if the underlying analysis is finished and we do not expect a different response for the query parameters.</li>
+		</ul>
+		<p>
+			<i>Note that a complete example of analysis, data provider and views can be found in the 
+				<a href="https://github.com/eclipse-tracecompass/org.eclipse.tracecompass/blob/master/doc/org.eclipse.tracecompass.examples">org.eclipse.tracecompass.examples plugin sources</a>.
+			</i>
+		</p>
+		<h2 id="Data_provider_types">Data provider types</h2>
+		<p>The base data provider returns a tree, as a list of 
+			<b>TmfTreeDataModel</b>, with a name, ID and parent ID. The ID is unique to a provider type and the parent ID indicates which element from the list is the entry's parent to rebuild the tree hierarchy from the list of models.
+		</p>
+		<p>The base 
+			<b>TimeGraphEntryModel</b> class extends this with a start time and end time. Concrete classes are free to add other fields, as long as the model is serializable.
+		</p>
+		<h3 id="XY">XY</h3>
+		<p>The XY data provider type is used to associate an XY series to an entry from the tree. The data provider is queried with a filter that also contains a Collection of the IDs of the entries for which we want XY series. The response contains a map of the series for the desired IDs.</p>
+		<p>Each XY series can have its own x axis (
+			<b>ISeriesModel</b> / 
+			<b>SeriesModel</b> - encapsulated in an 
+			<b>ITmfXyModel</b> / 
+			<b>TmfXyModel</b>) or they can be shared by all models (
+			<b>IYModel</b> / 
+			<b>YModel</b> encapsulated in an 
+			<b>ITmfCommonXAxisModel</b> / 
+			<b>TmfCommonXAxisModel</b>). The X axis is an array of longs, which makes it useful for a time axis or time buckets, but it can be used for any XY content.
+		</p>
+		<p>The interface to implement is 
+			<b>ITmfTreeXYDataProvider</b>.
+		</p>
+		<p>Here is a simple example of XY data provider, retrieving data from a simple state system displaying the child attributes of the root attributes.</p>
+		<pre>
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.atomic.AtomicLong;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.tracecompass.examples.core.analysis.ExampleStateSystemAnalysisModule;
+import org.eclipse.tracecompass.internal.tmf.core.model.tree.AbstractTreeDataProvider;
+import org.eclipse.tracecompass.statesystem.core.ITmfStateSystem;
+import org.eclipse.tracecompass.statesystem.core.exceptions.StateSystemDisposedException;
+import org.eclipse.tracecompass.statesystem.core.exceptions.TimeRangeException;
+import org.eclipse.tracecompass.statesystem.core.interval.ITmfStateInterval;
+import org.eclipse.tracecompass.tmf.core.dataprovider.DataProviderParameterUtils;
+import org.eclipse.tracecompass.tmf.core.model.CommonStatusMessage;
+import org.eclipse.tracecompass.tmf.core.model.TmfCommonXAxisModel;
+import org.eclipse.tracecompass.tmf.core.model.YModel;
+import org.eclipse.tracecompass.tmf.core.model.tree.ITmfTreeDataModel;
+import org.eclipse.tracecompass.tmf.core.model.tree.ITmfTreeDataProvider;
+import org.eclipse.tracecompass.tmf.core.model.tree.TmfTreeDataModel;
+import org.eclipse.tracecompass.tmf.core.model.tree.TmfTreeModel;
+import org.eclipse.tracecompass.tmf.core.model.xy.ITmfTreeXYDataProvider;
+import org.eclipse.tracecompass.tmf.core.model.xy.ITmfXyModel;
+import org.eclipse.tracecompass.tmf.core.model.xy.IYModel;
+import org.eclipse.tracecompass.tmf.core.response.ITmfResponse;
+import org.eclipse.tracecompass.tmf.core.response.ITmfResponse.Status;
+import org.eclipse.tracecompass.tmf.core.response.TmfModelResponse;
+import org.eclipse.tracecompass.tmf.core.trace.ITmfTrace;
+import org.eclipse.tracecompass.tmf.core.trace.TmfTraceUtils;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+
+/**
+ * An example of an XY data provider.
+ *
+ * @author Geneviève Bastien
+ */
+@SuppressWarnings("restriction")
+@NonNullByDefault
+public class ExampleXYDataProvider extends AbstractTreeDataProvider&lt;ExampleStateSystemAnalysisModule, TmfTreeDataModel&gt; implements ITmfTreeXYDataProvider&lt;TmfTreeDataModel&gt; {
+
+    /**
+     * Provider unique ID.
+     */
+    public static final String ID = "org.eclipse.tracecompass.examples.xy.dataprovider"; //$NON-NLS-1$
+    private static final AtomicLong sfAtomicId = new AtomicLong();
+
+    private final BiMap&lt;Long, Integer&gt; fIDToDisplayQuark = HashBiMap.create();
+
+    /**
+     * Constructor
+     *
+     * @param trace
+     *            The trace this data provider is for
+     * @param analysisModule
+     *            The analysis module
+     */
+    public ExampleXYDataProvider(ITmfTrace trace, ExampleStateSystemAnalysisModule analysisModule) {
+        super(trace, analysisModule);
+    }
+
+    /**
+     * Create the time graph data provider
+     *
+     * @param trace
+     *            The trace for which is the data provider
+     * @return The data provider
+     */
+    public static @Nullable ITmfTreeDataProvider&lt;? extends ITmfTreeDataModel&gt; create(ITmfTrace trace) {
+        ExampleStateSystemAnalysisModule module = TmfTraceUtils.getAnalysisModuleOfClass(trace, ExampleStateSystemAnalysisModule.class, ExampleStateSystemAnalysisModule.ID);
+        return module != null ? new ExampleXYDataProvider(trace, module) : null;
+    }
+
+
+    @Override
+    public String getId() {
+        return ID;
+    }
+
+    @Override
+    protected boolean isCacheable() {
+        return true;
+    }
+
+    @Override
+    protected TmfTreeModel&lt;TmfTreeDataModel&gt; getTree(ITmfStateSystem ss, Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) throws StateSystemDisposedException {
+        // Make an entry for each base quark
+        List&lt;TmfTreeDataModel&gt; entryList = new ArrayList&lt;&gt;();
+        for (Integer quark : ss.getQuarks("CPUs", "*")) { //$NON-NLS-1$ //$NON-NLS-2$
+            int statusQuark = ss.optQuarkRelative(quark, "Status"); //$NON-NLS-1$
+            if (statusQuark != ITmfStateSystem.INVALID_ATTRIBUTE) {
+                Long id = fIDToDisplayQuark.inverse().computeIfAbsent(statusQuark, q -&gt; sfAtomicId.getAndIncrement());
+                entryList.add(new TmfTreeDataModel(id, -1, ss.getAttributeName(quark)));
+            }
+        }
+        return new TmfTreeModel&lt;&gt;(Collections.emptyList(), entryList);
+    }
+
+    @Override
+    public TmfModelResponse&lt;ITmfXyModel&gt; fetchXY(Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) {
+        ITmfStateSystem ss = getAnalysisModule().getStateSystem();
+        if (ss == null) {
+            return new TmfModelResponse&lt;&gt;(null, ITmfResponse.Status.FAILED, CommonStatusMessage.ANALYSIS_INITIALIZATION_FAILED);
+        }
+
+        Map&lt;Integer, double[]&gt; quarkToValues = new HashMap&lt;&gt;();
+        // Prepare the quarks to display
+        Collection&lt;Long&gt; selectedItems = DataProviderParameterUtils.extractSelectedItems(fetchParameters);
+        if (selectedItems == null) {
+            // No selected items, take them all
+            selectedItems = fIDToDisplayQuark.keySet();
+        }
+        List&lt;Long&gt; times = getTimes(ss, DataProviderParameterUtils.extractTimeRequested(fetchParameters));
+        for (Long id : selectedItems) {
+            Integer quark = fIDToDisplayQuark.get(id);
+            if (quark != null) {
+                quarkToValues.put(quark, new double[times.size()]);
+            }
+        }
+        long[] nativeTimes = new long[times.size()];
+        for (int i = 0; i &lt; times.size(); i++) {
+            nativeTimes[i] = times.get(i);
+        }
+
+        // Query the state system to fill the array of values
+        try {
+            for (ITmfStateInterval interval : ss.query2D(quarkToValues.keySet(), times)) {
+                if (monitor != null &amp;&amp; monitor.isCanceled()) {
+                    return new TmfModelResponse&lt;&gt;(null, Status.CANCELLED, CommonStatusMessage.TASK_CANCELLED);
+                }
+                double[] row = quarkToValues.get(interval.getAttribute());
+                Object value = interval.getValue();
+                if (row != null &amp;&amp; (value instanceof Number)) {
+                    Double dblValue = ((Number) value).doubleValue();
+                    for (int i = 0; i &lt; times.size(); i++) {
+                        Long time = times.get(i);
+                        if (interval.getStartTime() &lt;= time &amp;&amp; interval.getEndTime() &gt;= time) {
+                            row[i] = dblValue;
+                        }
+                    }
+                }
+            }
+        } catch (IndexOutOfBoundsException | TimeRangeException | StateSystemDisposedException e) {
+            return new TmfModelResponse&lt;&gt;(null, Status.FAILED, CommonStatusMessage.STATE_SYSTEM_FAILED);
+        }
+        List&lt;IYModel&gt; models = new ArrayList&lt;&gt;();
+        for (Entry&lt;Integer, double[]&gt; values : quarkToValues.entrySet()) {
+            models.add(new YModel(fIDToDisplayQuark.inverse().getOrDefault(values.getKey(), -1L), values.getValue()));
+        }
+
+        return new TmfModelResponse&lt;&gt;(new TmfCommonXAxisModel("Example XY data provider", nativeTimes, models), Status.COMPLETED, CommonStatusMessage.COMPLETED); //$NON-NLS-1$
+    }
+
+    private static List&lt;Long&gt; getTimes(ITmfStateSystem key, @Nullable List&lt;Long&gt; list) {
+        if (list == null) {
+            return Collections.emptyList();
+        }
+        List&lt;@NonNull Long&gt; times = new ArrayList&lt;&gt;();
+        for (long t : list) {
+            if (key.getStartTime() &lt;= t &amp;&amp; t &lt;= key.getCurrentEndTime()) {
+                times.add(t);
+            }
+        }
+        Collections.sort(times);
+        return times;
+    }
+
+}
+</pre>
+		<h3 id="Time_Graph">Time Graph</h3>
+		<p>The Time Graph data provider is used to associate states to tree entries, i.e. a sampled list of states, with a start time, duration, integer value and optional label. The time graph states (
+			<b>ITimeGraphState</b> / 
+			<b>TimeGraphState</b>) are encapsulated in an 
+			<b>ITimeGraphRowModel</b> which also provides the ID of the entry they map to.
+		</p>
+		<p>The time graph data provider can also supply arrows to link entries one to another with a start time and start ID as well as a duration and target ID. The interface to implement is 
+			<b>ITimeGraphArrow</b>, else 
+			<b>TimeGraphArrow</b> can be extended.
+		</p>
+		<p>Additional information can be added to the states with tooltips, which are maps of tooltip entry names to tooltip entry values. The data provider may also suggest styles for the states by implementing the 
+			<b>IOutputStyleProvider</b> interface.
+		</p>
+		<p>The interface to implement is 
+			<b>ITimeGraphDataProvider</b>.
+		</p>
+		<p>Also, if the data provider wants to provide some styling information, for example, colors, height and opacity, etc, it can implement the 
+			<b>IOutputStyleProvider</b> interface who will add a method to fetch styles. The 
+			<b>TimeGraphState</b> objects can then be constructed with a style and the view will automatically use this style information.
+		</p>
+		<p>Here is a simple example of a time graph data provider, retrieving data from a simple state system where each root attribute is to be displayed. It also provides simple styling.</p>
+		<pre>
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.function.Predicate;
+
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.NonNullByDefault;
+import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.tracecompass.examples.core.analysis.ExampleStateSystemAnalysisModule;
+import org.eclipse.tracecompass.internal.tmf.core.model.AbstractTmfTraceDataProvider;
+import org.eclipse.tracecompass.statesystem.core.ITmfStateSystem;
+import org.eclipse.tracecompass.statesystem.core.exceptions.StateSystemDisposedException;
+import org.eclipse.tracecompass.statesystem.core.exceptions.TimeRangeException;
+import org.eclipse.tracecompass.statesystem.core.interval.ITmfStateInterval;
+import org.eclipse.tracecompass.tmf.core.dataprovider.DataProviderParameterUtils;
+import org.eclipse.tracecompass.tmf.core.dataprovider.X11ColorUtils;
+import org.eclipse.tracecompass.tmf.core.model.CommonStatusMessage;
+import org.eclipse.tracecompass.tmf.core.model.IOutputStyleProvider;
+import org.eclipse.tracecompass.tmf.core.model.OutputElementStyle;
+import org.eclipse.tracecompass.tmf.core.model.OutputStyleModel;
+import org.eclipse.tracecompass.tmf.core.model.StyleProperties;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.ITimeGraphArrow;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.ITimeGraphDataProvider;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.ITimeGraphEntryModel;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.ITimeGraphRowModel;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.ITimeGraphState;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.TimeGraphEntryModel;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.TimeGraphModel;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.TimeGraphRowModel;
+import org.eclipse.tracecompass.tmf.core.model.timegraph.TimeGraphState;
+import org.eclipse.tracecompass.tmf.core.model.tree.ITmfTreeDataModel;
+import org.eclipse.tracecompass.tmf.core.model.tree.ITmfTreeDataProvider;
+import org.eclipse.tracecompass.tmf.core.model.tree.TmfTreeModel;
+import org.eclipse.tracecompass.tmf.core.response.ITmfResponse;
+import org.eclipse.tracecompass.tmf.core.response.ITmfResponse.Status;
+import org.eclipse.tracecompass.tmf.core.response.TmfModelResponse;
+import org.eclipse.tracecompass.tmf.core.trace.ITmfTrace;
+import org.eclipse.tracecompass.tmf.core.trace.TmfTraceUtils;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Multimap;
+
+/**
+ * An example of a time graph data provider.
+ *
+ * @author Geneviève Bastien
+ */
+@SuppressWarnings("restriction")
+@NonNullByDefault
+public class ExampleTimeGraphDataProvider extends AbstractTmfTraceDataProvider implements ITimeGraphDataProvider&lt;@NonNull ITimeGraphEntryModel&gt;, IOutputStyleProvider {
+
+    /**
+     * Provider unique ID.
+     */
+    public static final String ID = "org.eclipse.tracecompass.examples.timegraph.dataprovider"; //$NON-NLS-1$
+    private static final AtomicLong sfAtomicId = new AtomicLong();
+    private static final String STYLE0_NAME = "style0"; //$NON-NLS-1$
+    private static final String STYLE1_NAME = "style1"; //$NON-NLS-1$
+    private static final String STYLE2_NAME = "style2"; //$NON-NLS-1$
+
+    /* The map of basic styles */
+    private static final Map&lt;String, OutputElementStyle&gt; STATE_MAP;
+    /*
+     * A map of styles names to a style that has the basic style as parent, to
+     * avoid returning complete styles for each state
+     */
+    private static final Map&lt;String, OutputElementStyle&gt; STYLE_MAP;
+
+    static {
+        /* Build three different styles to use as examples */
+        ImmutableMap.Builder&lt;String, OutputElementStyle&gt; builder = new ImmutableMap.Builder&lt;&gt;();
+
+        builder.put(STYLE0_NAME, new OutputElementStyle(null, ImmutableMap.of(StyleProperties.STYLE_NAME, STYLE0_NAME,
+                StyleProperties.BACKGROUND_COLOR, String.valueOf(X11ColorUtils.toHexColor("blue")), //$NON-NLS-1$
+                StyleProperties.HEIGHT, 0.5f,
+                StyleProperties.OPACITY, 0.75f)));
+        builder.put(STYLE1_NAME, new OutputElementStyle(null, ImmutableMap.of(StyleProperties.STYLE_NAME, STYLE1_NAME,
+                StyleProperties.BACKGROUND_COLOR, String.valueOf(X11ColorUtils.toHexColor("yellow")), //$NON-NLS-1$
+                StyleProperties.HEIGHT, 1.0f,
+                StyleProperties.OPACITY, 1.0f)));
+        builder.put(STYLE2_NAME, new OutputElementStyle(null, ImmutableMap.of(StyleProperties.STYLE_NAME, STYLE2_NAME,
+                StyleProperties.BACKGROUND_COLOR, String.valueOf(X11ColorUtils.toHexColor("green")), //$NON-NLS-1$
+                StyleProperties.HEIGHT, 0.75f,
+                StyleProperties.OPACITY, 0.5f)));
+        STATE_MAP = builder.build();
+
+        /* build the style map too */
+        builder = new ImmutableMap.Builder&lt;&gt;();
+        builder.put(STYLE0_NAME, new OutputElementStyle(STYLE0_NAME));
+        builder.put(STYLE1_NAME, new OutputElementStyle(STYLE1_NAME));
+        builder.put(STYLE2_NAME, new OutputElementStyle(STYLE2_NAME));
+        STYLE_MAP = builder.build();
+    }
+
+    private final BiMap&lt;Long, Integer&gt; fIDToDisplayQuark = HashBiMap.create();
+    private ExampleStateSystemAnalysisModule fModule;
+
+    /**
+     * Constructor
+     *
+     * @param trace
+     *            The trace this analysis is for
+     * @param module
+     *            The scripted analysis for this data provider
+     */
+    public ExampleTimeGraphDataProvider(ITmfTrace trace, ExampleStateSystemAnalysisModule module) {
+        super(trace);
+        fModule = module;
+    }
+
+    /**
+     * Create the time graph data provider
+     *
+     * @param trace
+     *            The trace for which is the data provider
+     * @return The data provider
+     */
+    public static @Nullable ITmfTreeDataProvider&lt;? extends ITmfTreeDataModel&gt; create(ITmfTrace trace) {
+        ExampleStateSystemAnalysisModule module = TmfTraceUtils.getAnalysisModuleOfClass(trace, ExampleStateSystemAnalysisModule.class, ExampleStateSystemAnalysisModule.ID);
+        return module != null ? new ExampleTimeGraphDataProvider(trace, module) : null;
+    }
+
+    @Override
+    public TmfModelResponse&lt;TmfTreeModel&lt;@NonNull ITimeGraphEntryModel&gt;&gt; fetchTree(Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) {
+        fModule.waitForInitialization();
+        ITmfStateSystem ss = fModule.getStateSystem();
+        if (ss == null) {
+            return new TmfModelResponse&lt;&gt;(null, ITmfResponse.Status.FAILED, CommonStatusMessage.ANALYSIS_INITIALIZATION_FAILED);
+        }
+
+        boolean isComplete = ss.waitUntilBuilt(0);
+        long endTime = ss.getCurrentEndTime();
+
+        // Make an entry for each base quark
+        List&lt;ITimeGraphEntryModel&gt; entryList = new ArrayList&lt;&gt;();
+        for (Integer quark : ss.getQuarks("CPUs", "*")) { //$NON-NLS-1$ //$NON-NLS-2$
+            Long id = fIDToDisplayQuark.inverse().computeIfAbsent(quark, q -&gt; sfAtomicId.getAndIncrement());
+            entryList.add(new TimeGraphEntryModel(id, -1, ss.getAttributeName(quark), ss.getStartTime(), endTime));
+        }
+
+        Status status = isComplete ? Status.COMPLETED : Status.RUNNING;
+        String msg = isComplete ? CommonStatusMessage.COMPLETED : CommonStatusMessage.RUNNING;
+        return new TmfModelResponse&lt;&gt;(new TmfTreeModel&lt;&gt;(Collections.emptyList(), entryList), status, msg);
+    }
+
+    @Override
+    public @NonNull String getId() {
+        return ID;
+    }
+
+    @Override
+    public @NonNull TmfModelResponse&lt;TimeGraphModel&gt; fetchRowModel(Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) {
+        ITmfStateSystem ss = fModule.getStateSystem();
+        if (ss == null) {
+            return new TmfModelResponse&lt;&gt;(null, ITmfResponse.Status.FAILED, CommonStatusMessage.ANALYSIS_INITIALIZATION_FAILED);
+        }
+
+        try {
+            List&lt;@NonNull ITimeGraphRowModel&gt; rowModels = getDefaultRowModels(fetchParameters, ss, monitor);
+            if (rowModels == null) {
+                rowModels = Collections.emptyList();
+            }
+            return new TmfModelResponse&lt;&gt;(new TimeGraphModel(rowModels), Status.COMPLETED, CommonStatusMessage.COMPLETED);
+        } catch (IndexOutOfBoundsException | TimeRangeException | StateSystemDisposedException e) {
+            return new TmfModelResponse&lt;&gt;(null, Status.FAILED, CommonStatusMessage.STATE_SYSTEM_FAILED);
+        }
+    }
+
+    private @Nullable List&lt;ITimeGraphRowModel&gt; getDefaultRowModels(Map&lt;String, Object&gt; fetchParameters, ITmfStateSystem ss, @Nullable IProgressMonitor monitor) throws IndexOutOfBoundsException, TimeRangeException, StateSystemDisposedException {
+        Map&lt;Integer, ITimeGraphRowModel&gt; quarkToRow = new HashMap&lt;&gt;();
+        // Prepare the quarks to display
+        Collection&lt;Long&gt; selectedItems = DataProviderParameterUtils.extractSelectedItems(fetchParameters);
+        if (selectedItems == null) {
+            // No selected items, take them all
+            selectedItems = fIDToDisplayQuark.keySet();
+        }
+        for (Long id : selectedItems) {
+            Integer quark = fIDToDisplayQuark.get(id);
+            if (quark != null) {
+                quarkToRow.put(quark, new TimeGraphRowModel(id, new ArrayList&lt;&gt;()));
+            }
+        }
+
+        // This regex map automatically filters or highlights the entry
+        // according to the global filter entered by the user
+        Map&lt;@NonNull Integer, @NonNull Predicate&lt;@NonNull Multimap&lt;@NonNull String, @NonNull Object&gt;&gt;&gt; predicates = new HashMap&lt;&gt;();
+        Multimap&lt;@NonNull Integer, @NonNull String&gt; regexesMap = DataProviderParameterUtils.extractRegexFilter(fetchParameters);
+        if (regexesMap != null) {
+            predicates.putAll(computeRegexPredicate(regexesMap));
+        }
+
+        // Query the state system to fill the states
+        long currentEndTime = ss.getCurrentEndTime();
+        for (ITmfStateInterval interval : ss.query2D(quarkToRow.keySet(), getTimes(ss, DataProviderParameterUtils.extractTimeRequested(fetchParameters)))) {
+            if (monitor != null &amp;&amp; monitor.isCanceled()) {
+                return Collections.emptyList();
+            }
+            ITimeGraphRowModel row = quarkToRow.get(interval.getAttribute());
+            if (row != null) {
+                List&lt;@NonNull ITimeGraphState&gt; states = row.getStates();
+                ITimeGraphState timeGraphState = getStateFromInterval(interval, currentEndTime);
+                // This call will compare the state with the filter predicate
+                applyFilterAndAddState(states, timeGraphState, row.getEntryID(), predicates, monitor);
+            }
+        }
+        for (ITimeGraphRowModel model : quarkToRow.values()) {
+            model.getStates().sort(Comparator.comparingLong(ITimeGraphState::getStartTime));
+        }
+
+        return new ArrayList&lt;&gt;(quarkToRow.values());
+    }
+
+    private static TimeGraphState getStateFromInterval(ITmfStateInterval statusInterval, long currentEndTime) {
+        long time = statusInterval.getStartTime();
+        long duration = Math.min(currentEndTime, statusInterval.getEndTime() + 1) - time;
+        Object o = statusInterval.getValue();
+        if (!(o instanceof Long)) {
+            // Add a null state
+            return new TimeGraphState(time, duration, Integer.MIN_VALUE);
+        }
+        String styleName = "style" + ((Long) o) % 3; //$NON-NLS-1$
+        return new TimeGraphState(time, duration, String.valueOf(o), STYLE_MAP.get(styleName));
+    }
+
+    private static Set&lt;Long&gt; getTimes(ITmfStateSystem key, @Nullable List&lt;Long&gt; list) {
+        if (list == null) {
+            return Collections.emptySet();
+        }
+        Set&lt;@NonNull Long&gt; times = new HashSet&lt;&gt;();
+        for (long t : list) {
+            if (key.getStartTime() &lt;= t &amp;&amp; t &lt;= key.getCurrentEndTime()) {
+                times.add(t);
+            }
+        }
+        return times;
+    }
+
+    @Override
+    public @NonNull TmfModelResponse&lt;List&lt;ITimeGraphArrow&gt;&gt; fetchArrows(Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) {
+        /**
+         * If there were arrows to be drawn, this is where they would be defined
+         */
+        return new TmfModelResponse&lt;&gt;(null, Status.COMPLETED, CommonStatusMessage.COMPLETED);
+    }
+
+    @Override
+    public @NonNull TmfModelResponse&lt;Map&lt;String, String&gt;&gt; fetchTooltip(Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) {
+        /**
+         * If there were tooltips to be drawn, this is where they would be
+         * defined
+         */
+        return new TmfModelResponse&lt;&gt;(null, Status.COMPLETED, CommonStatusMessage.COMPLETED);
+    }
+
+    @Override
+    public TmfModelResponse&lt;OutputStyleModel&gt; fetchStyle(Map&lt;String, Object&gt; fetchParameters, @Nullable IProgressMonitor monitor) {
+        return new TmfModelResponse&lt;&gt;(new OutputStyleModel(STATE_MAP), Status.COMPLETED, CommonStatusMessage.COMPLETED);
+    }
+
+}
+</pre>
+		<h2 id="Data_provider_management">Data provider management</h2>
+		<p>Data providers can be handled by the 
+			<b>DataProviderManager</b> class, which uses an extension point and factories for data providers.
+		</p>
+		<p>This manager associates a unique data provider per trace and extension point ID, ensuring that data providers can be reused and that each entry for a trace reuses the same unique entry ID.</p>
+		<h3 id="Data_Provider_Factories">Data Provider Factories</h3>
+		<p>The data provider manager requires a factory for the various data providers, to create the data provider instances for a trace. Here is an example of factory class to create the time graph data provider of the previous section.</p>
+		<pre>
+import java.util.Collection;
+import java.util.Collections;
+
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.tracecompass.examples.core.analysis.ExampleStateSystemAnalysisModule;
+import org.eclipse.tracecompass.internal.tmf.core.model.DataProviderDescriptor;
+import org.eclipse.tracecompass.tmf.core.dataprovider.IDataProviderDescriptor;
+import org.eclipse.tracecompass.tmf.core.dataprovider.IDataProviderDescriptor.ProviderType;
+import org.eclipse.tracecompass.tmf.core.dataprovider.IDataProviderFactory;
+import org.eclipse.tracecompass.tmf.core.model.tree.ITmfTreeDataModel;
+import org.eclipse.tracecompass.tmf.core.model.tree.ITmfTreeDataProvider;
+import org.eclipse.tracecompass.tmf.core.model.xy.TmfTreeXYCompositeDataProvider;
+import org.eclipse.tracecompass.tmf.core.trace.ITmfTrace;
+import org.eclipse.tracecompass.tmf.core.trace.TmfTraceManager;
+import org.eclipse.tracecompass.tmf.core.trace.TmfTraceUtils;
+
+/**
+ * An example of a time graph data provider factory.
+ *
+ * This factory is also in the developer documentation of Trace Compass. If it is
+ * modified here, the doc should also be updated.
+ *
+ * @author Geneviève Bastien
+ */
+@SuppressWarnings("restriction")
+public class ExampleTimeGraphProviderFactory implements IDataProviderFactory {
+
+    private static final IDataProviderDescriptor DESCRIPTOR = new DataProviderDescriptor.Builder()
+            .setId(ExampleTimeGraphDataProvider.ID)
+            .setName("Example time graph data provider") //$NON-NLS-1$
+            .setDescription("This is an example of a time graph data provider using a state system analysis as a source of data") //$NON-NLS-1$
+            .setProviderType(ProviderType.TIME_GRAPH)
+            .build();
+
+    @Override
+    public @Nullable ITmfTreeDataProvider&lt;? extends ITmfTreeDataModel&gt; createProvider(ITmfTrace trace) {
+        Collection&lt;@NonNull ITmfTrace&gt; traces = TmfTraceManager.getTraceSet(trace);
+        if (traces.size() == 1) {
+            return ExampleTimeGraphDataProvider.create(trace);
+        }
+        return TmfTreeXYCompositeDataProvider.create(traces, "Example time graph data provider", ExampleTimeGraphDataProvider.ID); //$NON-NLS-1$
+    }
+
+    @Override
+    public Collection&lt;IDataProviderDescriptor&gt; getDescriptors(@NonNull ITmfTrace trace) {
+        ExampleStateSystemAnalysisModule module = TmfTraceUtils.getAnalysisModuleOfClass(trace, ExampleStateSystemAnalysisModule.class, ExampleStateSystemAnalysisModule.ID);
+        return module != null ? Collections.singletonList(DESCRIPTOR) : Collections.emptyList();
+    }
+
+}
+</pre>
+		<h3 id="Extension_point">Extension point</h3>
+		<p>This extension needs to be added to the plugin's plugin.xml file:</p>
+		<pre>
+&lt;extension point="org.eclipse.tracecompass.tmf.core.dataprovider"&gt;
+    &lt;dataProviderFactory
+         class="org.eclipse.tracecompass.examples.core.data.provider.ExampleTimeGraphProviderFactory"
+         id="org.eclipse.tracecompass.examples.timegraph.dataprovider"&gt;
+    &lt;/dataProviderFactory&gt;
+    &lt;dataProviderFactory
+         class="org.eclipse.tracecompass.examples.core.data.provider.ExampleXYDataProviderFactory"
+         id="org.eclipse.tracecompass.examples.xy.dataprovider"&gt;
+    &lt;/dataProviderFactory&gt;
+&lt;/extension&gt;
+</pre>
+		<h3 id="Experiments">Experiments</h3>
+		<p>In the data provider manager, experiments also get a unique instance of a data provider, which can be specific or encapsulate the data providers from the child traces. For example, an experiment can have its own concrete data provider when required (an analysis that runs only on experiments), or the factory would create a 
+			<b>CompositeDataProvider</b> (using 
+			<b>TmfTreeXYCompositeDataProvider</b> or 
+			<b>TmfTimeGraphCompositeDataProvider</b>) encapsulating the providers from its traces. The benefit of encapsulating the providers from child traces is that their entries/IDs can be reused, limiting the number of created objects and ensuring consistency in views. These composite data providers dispatch the request to all the encapsulated providers and aggregates the results into the expected data structure.
+		</p>
+		<h2 id="Utilities">Utilities</h2>
+		<p>Abstract base classes are provided for TreeXY and time graph data providers based on 
+			<b>TmfStateSystemAnalysisModule</b>s (
+			<b>AbstractTreeCommonXDataProvider</b> and 
+			<b>AbstractTimeGraphDataProvider</b>, respectively). They handle concurrency, mapping of state system attributes to unique IDs, exceptions, caching and encapsulating the model in a response with the correct status.
+		</p>
+		<h2 id="Views">Views</h2>
+		<p>Data providers are used to populate views. When the data provider is well implemented and if the view does not require any additional behavior, it should be straightforward to implement.</p>
+		<h3 id="XY_views">XY views</h3>
+		<p>XY data providers can be visualized with a view extending 
+			<b>TmfChartView</b>. Here's an example of the minimal implementation required to display its data.
+		</p>
+		<p>The tree viewer (left part) can be an extension of the 
+			<b>AbstractSelectTreeViewer</b> class, while the chart part, showing the XY chart itself can extend 
+			<b>AbstractSelectTreeViewer</b>.
+		</p>
+		<p>Out of the box, it supports experiments, updating during the trace analysis, Pin &amp; Clone and a number of chart viewer features.</p>
+		<pre>
+import java.util.Comparator;
+import java.util.Objects;
+
+import org.eclipse.jdt.annotation.NonNull;
+import org.eclipse.jdt.annotation.Nullable;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.tracecompass.examples.core.data.provider.ExampleXYDataProvider;
+import org.eclipse.tracecompass.tmf.ui.viewers.TmfViewer;
+import org.eclipse.tracecompass.tmf.ui.viewers.tree.AbstractSelectTreeViewer;
+import org.eclipse.tracecompass.tmf.ui.viewers.tree.ITmfTreeColumnDataProvider;
+import org.eclipse.tracecompass.tmf.ui.viewers.tree.TmfTreeColumnData;
+import org.eclipse.tracecompass.tmf.ui.viewers.tree.TmfTreeViewerEntry;
+import org.eclipse.tracecompass.tmf.ui.viewers.xycharts.TmfXYChartViewer;
+import org.eclipse.tracecompass.tmf.ui.viewers.xycharts.linecharts.TmfFilteredXYChartViewer;
+import org.eclipse.tracecompass.tmf.ui.viewers.xycharts.linecharts.TmfXYChartSettings;
+import org.eclipse.tracecompass.tmf.ui.views.TmfChartView;
+
+import com.google.common.collect.ImmutableList;
+
+/**
+ * An example of a data provider XY view
+ *
+ * @author Geneviève Bastien
+ */
+public class ExampleXYDataProviderView extends TmfChartView {
+
+    /** View ID. */
+    public static final String ID = "org.eclipse.tracecompass.examples.dataprovider.xyview"; //$NON-NLS-1$
+
+    /**
+     * Constructor
+     */
+    public ExampleXYDataProviderView() {
+        super("Example Tree XY View"); //$NON-NLS-1$
+    }
+
+    @Override
+    protected TmfXYChartViewer createChartViewer(@Nullable Composite parent) {
+        TmfXYChartSettings settings = new TmfXYChartSettings(null, null, null, 1);
+        return new TmfFilteredXYChartViewer(parent, settings, ExampleXYDataProvider.ID);
+    }
+
+    private static final class TreeXyViewer extends AbstractSelectTreeViewer {
+
+        public TreeXyViewer(Composite parent) {
+            super(parent, 1, ExampleXYDataProvider.ID);
+        }
+
+        @Override
+        protected ITmfTreeColumnDataProvider getColumnDataProvider() {
+            return () -&gt; ImmutableList.of(createColumn("Name", Comparator.comparing(TmfTreeViewerEntry::getName)), //$NON-NLS-1$
+                    new TmfTreeColumnData("Legend")); //$NON-NLS-1$
+        }
+    }
+
+    @Override
+    protected @NonNull TmfViewer createLeftChildViewer(@Nullable Composite parent) {
+        return new TreeXyViewer(Objects.requireNonNull(parent));
+    }
+}
+</pre>
+		<h3 id="Time_Graph_Views">Time Graph Views</h3>
+		<p>For time graph view populated by a data provider, the base class to extend would be the 
+			<b>BaseDataProviderTimeGraphView</b>. The default implementation is fairly straightforward and if the the data provider also provides styling through the 
+			<b>IOutputStyleProvider</b>, an instance of the 
+			<b>BaseDataProviderTimeGraphPresentationProvider</b> can be used directly. 
+		</p>
+		<p>If there is no styling though, all states would be drawn as black states. In that case, a presentation provider will need to be added to the view. It can extend 
+			<b>TimeGraphPresentationProvider</b>.
+		</p>
+		<p>Here is the simplest implementation of the time graph view using a data provider:</p>
+		<pre>
+import org.eclipse.tracecompass.examples.core.data.provider.ExampleTimeGraphDataProvider;
+import org.eclipse.tracecompass.internal.provisional.tmf.ui.widgets.timegraph.BaseDataProviderTimeGraphPresentationProvider;
+import org.eclipse.tracecompass.tmf.ui.views.timegraph.BaseDataProviderTimeGraphView;
+
+/**
+ * An example of a data provider time graph view
+ *
+ * @author Geneviève Bastien
+ */
+@SuppressWarnings("restriction")
+public class ExampleTimeGraphDataProviderView extends BaseDataProviderTimeGraphView {
+
+    /** View ID. */
+    public static final String ID = "org.eclipse.tracecompass.examples.dataprovider.tgview"; //$NON-NLS-1$
+
+    /**
+     * Default constructor
+     */
+    public ExampleTimeGraphDataProviderView() {
+       super(ID, new BaseDataProviderTimeGraphPresentationProvider(), ExampleTimeGraphDataProvider.ID);
+    }
+
+}
+</pre><hr class="navigation-separator"/>
+		<table class="navigation" style="width: 100%;" border="0" summary="navigation">
+			<tr>
+				<td style="width: 20%" align="left">
+					<a href="OS-Execution-Graph-Extension.html" title="OS Execution Graph Extension">
+						<img alt="Previous" border="0" src="images/prev.gif"/>
+					</a>
+				</td>
+				<td style="width: 60%" align="center">
+					<a href="Developer-Guide.html" title="Trace Compass Developer Guide">
+						<img alt="Trace Compass Developer Guide" border="0" src="images/home.gif"/>
+					</a>
+				</td>
+				<td style="width: 20%" align="right"></td>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left" valign="top">OS Execution Graph Extension</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right" valign="top"></td>
+			</tr>
+		</table>
+	</body>
+</html>

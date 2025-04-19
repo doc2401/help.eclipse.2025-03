@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UnitTest View Support</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">UnitTest View Support</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.unittest.ui.unittestViewSupport<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>Internal extension point to register Unit Test View support.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.viewSupport">viewSupport</a>+)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>point</b> - a fully qualified extention point identifier</li>
+<li><b>id</b> - a fully qualified identifier of the target extension point</li>
+<li><b>name</b> - a name of this extention point</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.viewSupport">viewSupport</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST viewSupport</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">class&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+A Test View Support definition that implements org.eclipse.unittest.launcher.ITestViewSupport.
+This is used by the <i>Unit Test</i> view to provide support for test engines.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - a fully qualified extention point identifier. 
+This identifier is used to load support for the <i>Unit Test</i> view when some ILaunch is running, and the underlying launch configuration sets attributes <code>UnitTestLaunchConfigurationConstants.ATTR_UNIT_TEST_VIEW_SUPPORT</code> to the given id.</li>
+<li><b>class</b> - a fully qualified class name that implements org.eclipse.unittest.launcher.ITestViewSupport.
+This is used by the <i>Unit Test</i> view to provide support for test engines.
+The class defines the method that creates a Unit Test Runner Client  dedicated to communicate with a  test engine and to gather the results of testing as well as  a number of methods that help to  the <i>Unit Test</i> view in creation of unit test related actions, like openning a test source or a file reported on a stack trace in  editor or returning a ILaunchConfiguration for Rerun action.</li>
+</ul>
+<br><br>
+<p class="note SchemaCopyright">
+Copyright (c) 2006, 2020 IBM Corporation and others.
+
+This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which accompanies this distribution, and is available at <a href="https://www.eclipse.org/legal/epl-2.0">https://www.eclipse.org/legal/epl-v20.html</a>/
+
+SPDX-License-Identifier: EPL-2.0
+
+</p>
+</BODY>
+</HTML>

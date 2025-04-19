@@ -1,0 +1,103 @@
+Signature-Version: 1.0
+Created-By: 11.0.24 (Eclipse Adoptium)
+SHA-256-Digest-Manifest: 1PY4/DOp886bPGea9xFmrzLTH2S3kRbaj5cWCWxAwuU=
+SHA-256-Digest-Manifest-Main-Attributes: lho0qxcgqaAqYBhsGo1p6CPm5fCMmtb
+ zPjVM+/kyBDM=
+
+Name: about.properties
+SHA-256-Digest: 6PyXOIO3V2WGWRcj3XyHXlqTWCJ4lQpcy3sJ9UQTAG0=
+
+Name: plugin.xml
+SHA-256-Digest: MpsZVtfvvI/uYIVAWIerUW9Pa1qmPImHW0ftPITPSjw=
+
+Name: index/indexed_docs
+SHA-256-Digest: Nt0wO3ttVECfP8j2Jz3OAflJtzDdMxF45HaFXQm2THc=
+
+Name: help/workflow_reference_workflow_components.html
+SHA-256-Digest: jpPqHTrrUrh7jmGghDL4V13+S1xlvoyk7K1ai8buwK0=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.mwe.doc/pom.propert
+ ies
+SHA-256-Digest: ib4PVdz5z4EinyX6OmXYnCQ7IgfzTBCY9yRNinbpfec=
+
+Name: index/deletable
+SHA-256-Digest: lJvrIrO4AFAFORn0g/j9TcU6EfB09qDZPgwYkJcvXTk=
+
+Name: about.mappings
+SHA-256-Digest: qBcDQFGBH+weM5Dm9HM0XHF+SvzyM3CoBC+WBvUnASU=
+
+Name: eclipse48.png
+SHA-256-Digest: pE6UnwVz94FWBxKsRzPC+4izufvJnhtCnd43LKkAgR8=
+
+Name: about.ini
+SHA-256-Digest: iKQzL98AJf1c8iyc1ac+clIi4OtMFAeKwvSIxPhDOWI=
+
+Name: eclipse_lg.gif
+SHA-256-Digest: HO8571ZiS/S14OlSOG5WC0k8MDL3mGu4or7aaVTjbI8=
+
+Name: help/workflow_reference_workflow_configuration.html
+SHA-256-Digest: grFIa6w9/sXmVE4TVhXQcs21EX7GTUrG8Sknfq53Jno=
+
+Name: plugin.properties
+SHA-256-Digest: 9kJ+1D+gMVZ4yEaL6dvee0X0FUcLX+TPlO44obN2U9A=
+
+Name: index/_1.cfs
+SHA-256-Digest: K6W+zB1/Vx+v4nuiOJABJOIlnDfUyJu7fteRj6/64bA=
+
+Name: help/images/java_object_graph.GIF
+SHA-256-Digest: rlFUirBnAO1swaDwVp7BcljB5ehSXSADUqFMjUSYk2g=
+
+Name: modeling32.png
+SHA-256-Digest: CgS/5RX+HpcveJj25BP7XwIrPI3o7AtCMO2apmBLMZ0=
+
+Name: about.html
+SHA-256-Digest: ncO+WCNUIJ0JLCOl/ot53yopwTqvvtVu0qSgblesdYo=
+
+Name: images/java_object_graph.GIF
+SHA-256-Digest: 07TYGUzF6zDLP6JvkFCRxxBKUFXOCV8wAfzrFRXC31A=
+
+Name: eclipse.gif
+SHA-256-Digest: qrFBkyJ7nxDHCQQTrEy+79IRIadSziHhhm3zWN7nf7g=
+
+Name: help/book.css
+SHA-256-Digest: 49Y0FBbj2QTHyxdT9GYvgB3qqX3VcBkyZsXREHWxmI8=
+
+Name: help/index.html
+SHA-256-Digest: TSBBWCqNaHc5UEu4t7OlrfwLP7dw9SpfFBkRECEKRO0=
+
+Name: eclipse32.png
+SHA-256-Digest: M6assZwc2xFPohvsXozDkB76w2srQDv7Y8TKJLGcVvs=
+
+Name: META-INF/maven/org.eclipse.emf/org.eclipse.emf.mwe.doc/pom.xml
+SHA-256-Digest: GyppUFXWdWKtxwXuJk6oufqtPcWtjcNvdsp5ILr8lQE=
+
+Name: help/workflow_reference_included_workflow_components.html
+SHA-256-Digest: CB8I9yocnDcv4n4zWqDLAMhWK8aZRJSC99yu5F1LXJA=
+
+Name: index/segments
+SHA-256-Digest: UJiBMbg1mRuGnQk1k/yv1M0y6zmPftWXDZPwnfMiDjY=
+
+Name: eclipse24.gif
+SHA-256-Digest: 2uNgqTP4qEutS7EiB/2J8HbYgHesF0REBR+/xJEl51k=
+
+Name: index/indexed_dependencies
+SHA-256-Digest: xEzKXkMFj4nrxvDm/ILl3+jQlPu0r7nHMimQ9XTN0Ns=
+
+Name: eclipse48.gif
+SHA-256-Digest: 307hoYpNwWe4aoX7wJWV8CWCIga1dky0Xr5F6kfuUUI=
+
+Name: eclipse32.gif
+SHA-256-Digest: 8LCeSwh/Al3IpiZrPqm7JdYm3pWdWL6IDTpBFcnknkQ=
+
+Name: index/indexed_contributions
+SHA-256-Digest: vpg/NsLHTu3Y9psIvAd4OY1MN793a0vYTicCTpbo0gs=
+
+Name: toc.xml
+SHA-256-Digest: DImcS8XAYVZDBCmztyhOPoO8Z0mlZ7og9bd2TSUJoRY=
+
+Name: help/index.xml
+SHA-256-Digest: ckG9RZTVUnwrBDxY7lu0pzMGJiZGzmdKDaYkVRBqKeo=
+
+Name: eclipse.png
+SHA-256-Digest: MV/tgww/swebVnsx1in/xH6AdYwuyZw7XX8+BZcTSo4=
+

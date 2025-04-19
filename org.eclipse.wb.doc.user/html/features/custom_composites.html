@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Custom Composites &amp; Panels</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge .cm {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .c1 {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+pre.rouge .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+pre.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+pre.rouge .gr {
+  color: #aa0000;
+}
+pre.rouge .gh {
+  color: #999999;
+}
+pre.rouge .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+pre.rouge .go {
+  color: #888888;
+}
+pre.rouge .gp {
+  color: #555555;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #aaaaaa;
+}
+pre.rouge .gt {
+  color: #aa0000;
+}
+pre.rouge .kc {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kd {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .k, pre.rouge .kv {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .mf {
+  color: #009999;
+}
+pre.rouge .mh {
+  color: #009999;
+}
+pre.rouge .il {
+  color: #009999;
+}
+pre.rouge .mi {
+  color: #009999;
+}
+pre.rouge .mo {
+  color: #009999;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
+  color: #009999;
+}
+pre.rouge .sa {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .sb {
+  color: #d14;
+}
+pre.rouge .sc {
+  color: #d14;
+}
+pre.rouge .sd {
+  color: #d14;
+}
+pre.rouge .s2 {
+  color: #d14;
+}
+pre.rouge .se {
+  color: #d14;
+}
+pre.rouge .sh {
+  color: #d14;
+}
+pre.rouge .si {
+  color: #d14;
+}
+pre.rouge .sx {
+  color: #d14;
+}
+pre.rouge .sr {
+  color: #009926;
+}
+pre.rouge .s1 {
+  color: #d14;
+}
+pre.rouge .ss {
+  color: #990073;
+}
+pre.rouge .s, pre.rouge .dl {
+  color: #d14;
+}
+pre.rouge .na {
+  color: #008080;
+}
+pre.rouge .bp {
+  color: #999999;
+}
+pre.rouge .nb {
+  color: #0086B3;
+}
+pre.rouge .nc {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #008080;
+}
+pre.rouge .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #800080;
+}
+pre.rouge .ne {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #555555;
+}
+pre.rouge .nt {
+  color: #000080;
+}
+pre.rouge .vc {
+  color: #008080;
+}
+pre.rouge .vg {
+  color: #008080;
+}
+pre.rouge .vi {
+  color: #008080;
+}
+pre.rouge .nv, pre.rouge .vm {
+  color: #008080;
+}
+pre.rouge .ow {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .o {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #bbbbbb;
+}
+pre.rouge {
+  background-color: #f8f8f8;
+}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Custom Composites &amp; Panels</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tool supports the creation of custom <strong>Composites</strong> (SWT) and
+<strong>JPanels</strong> (Swing). This is an ideal way to create custom, reusable
+components. The following features are supported:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Embed any <strong>Composite</strong> of <strong>JPanel</strong> subclass in another window</p>
+</li>
+<li>
+<p>All widgets defined in the <strong>Composite</strong> / <strong>JPanel</strong> are visible in the
+window they are used</p>
+</li>
+<li>
+<p>Access any widget exposed via public accessors</p>
+</li>
+<li>
+<p>Access exposed custom properties</p>
+</li>
+<li>
+<p>Exposed widgets appear in tree with the "exposed"
+<span class="image"><img src="../userinterface/images/exposed_decorator.gif" alt="image" width="6" height="6"></span>
+decorator</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following is an example of a custom <strong>Composites</strong> that is then used
+in a window. The <strong>Composite</strong> uses a <strong>GridLayout</strong> and has two <strong>Labels</strong>,
+two <strong>Text</strong> widgets, a <strong>Button</strong> and an inner <strong>Composite</strong> widget.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/custom_composite.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>The inner <strong>Composite</strong> widget has been exposed as a public component
+using the <strong><a href="../userinterface/context_menu.html">Expose Component</a></strong>
+command. <strong><a href="../userinterface/context_menu.html">Expose Component</a></strong>
+converts a component to a field and adds a public accessor for it.
+Finally, the <strong>background</strong> color property of the first <strong>Text</strong> widget and
+the <strong>text</strong> property of the <strong>Button</strong> have been exposed as a public
+properties of the <strong>Composite</strong> using the
+<strong><a href="../userinterface/property_pane_context_menu.html">Expose Property</a></strong>
+command. <strong><a href="../userinterface/property_pane_context_menu.html">Expose
+Property</a></strong> adds a pair of accessors for getting and setting the desired
+property of the target widget.</p>
+</div>
+<p>
+  <img src="images/visual_inheritance_expose_component_menu.png">
+  <img src="images/visual_inheritance_expose_property_menu.png" align="top">
+</p>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">org.eclipse.swt.SWT</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.eclipse.swt.graphics.Color</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.eclipse.swt.layout.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.eclipse.swt.widgets.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CustomComposite</span> <span class="kd">extends</span> <span class="nc">Composite</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="nc">Button</span> <span class="n">browseButton</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Composite</span> <span class="n">composite</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Text</span> <span class="n">secondField</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Text</span> <span class="n">firstField</span><span class="o">;</span> <span class="o">+</span>
+<span class="err"> </span>
+  <span class="kd">public</span> <span class="nf">CustomComposite</span><span class="o">(</span><span class="nc">Composite</span> <span class="n">parent</span><span class="o">,</span> <span class="kt">int</span> <span class="n">style</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="n">parent</span><span class="o">,</span> <span class="n">style</span><span class="o">);</span>
+    <span class="n">createContents</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="err"> </span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">createContents</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">GridLayout</span> <span class="n">gridLayout</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GridLayout</span><span class="o">();</span>
+    <span class="n">gridLayout</span><span class="o">.</span><span class="na">numColumns</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+    <span class="n">setLayout</span><span class="o">(</span><span class="n">gridLayout</span><span class="o">);</span>
+
+    <span class="kd">final</span> <span class="nc">Label</span> <span class="n">firstFieldLabel</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Label</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">NONE</span><span class="o">);</span>
+    <span class="n">firstFieldLabel</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"First Field"</span><span class="o">);</span>
+
+    <span class="n">firstField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Text</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">BORDER</span><span class="o">);</span>
+    <span class="kd">final</span> <span class="nc">GridData</span> <span class="n">gd_firstField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">CENTER</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+    <span class="n">firstField</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="n">gd_firstField</span><span class="o">);</span>
+
+    <span class="n">browseButton</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Button</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">NONE</span><span class="o">);</span>
+    <span class="n">browseButton</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">CENTER</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">false</span><span class="o">));</span>
+    <span class="n">browseButton</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"Browse..."</span><span class="o">);</span>
+
+    <span class="kd">final</span> <span class="nc">Label</span> <span class="n">secondFieldLabel</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Label</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">NONE</span><span class="o">);</span>
+    <span class="n">secondFieldLabel</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"Second Field"</span><span class="o">);</span>
+
+    <span class="n">secondField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Text</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">BORDER</span><span class="o">);</span>
+    <span class="kd">final</span> <span class="nc">GridData</span> <span class="n">gd_secondField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">CENTER</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+    <span class="n">secondField</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="n">gd_secondField</span><span class="o">);</span>
+
+    <span class="n">composite</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Composite</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">_NONE</span><span class="o">);</span>
+    <span class="n">composite</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">1</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">Composite</span> <span class="nf">getComposite</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">composite</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="err"> </span>
+  <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getBrowseButtonText</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">browseButton</span><span class="o">.</span><span class="na">getText</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBrowseButtonText</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">browseButton</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nc">Color</span> <span class="nf">getFirstFieldBackground</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">firstField</span><span class="o">.</span><span class="na">getBackground</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setFirstFieldBackground</span><span class="o">(</span><span class="nc">Color</span> <span class="n">background</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">firstField</span><span class="o">.</span><span class="na">setBackground</span><span class="o">(</span><span class="n">background</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The window uses a <strong>FillLayout</strong> and embeds the custom <strong>Composite</strong>. The
+window sets the inner <strong>Composite&#8217;s</strong> layout manager via its accessor
+exposed in the custom <strong>Composite</strong> and then adds several new widgets to
+the inner <strong>Composite</strong>. Finally, it overrides the <strong>background</strong> color for
+the first <strong>Text</strong> widget and the text setting of the <strong>Button</strong> using the
+accessors defined in the embedded Composite.<br>
+<br>
+Note that the exposed inner <strong>Composite</strong> from the custom <strong>Composite</strong>
+shows up in the component tree with a small
+<span class="image"><img src="../userinterface/images/exposed_decorator.gif" alt="image" width="6" height="6"></span>
+overlay icon. The other widgets defined in the embedded <strong>Composite</strong> do
+not show up in the tree because they are private to that <strong>Composite</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/custom_composite_used.png" alt="image"></span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">org.eclipse.swt.SWT</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.eclipse.swt.widgets.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.eclipse.swt.layout.*</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.eclipse.swt.layout.GridLayout</span><span class="o">;</span> <span class="o">+</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">WindowUsingComposite</span> <span class="o">{</span>
+  <span class="kd">protected</span> <span class="nc">Shell</span> <span class="n">shell</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">List</span> <span class="n">list</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Text</span> <span class="n">thirdField</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="nc">Text</span> <span class="n">fourthField</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="nc">WindowUsingComposite</span> <span class="n">window</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">WindowUsingComposite</span><span class="o">();</span>
+      <span class="n">window</span><span class="o">.</span><span class="na">open</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">open</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="nc">Display</span> <span class="n">display</span> <span class="o">=</span> <span class="nc">Display</span><span class="o">.</span><span class="na">getDefault</span><span class="o">();</span>
+    <span class="n">createContents</span><span class="o">();</span>
+    <span class="n">shell</span><span class="o">.</span><span class="na">open</span><span class="o">();</span>
+    <span class="n">shell</span><span class="o">.</span><span class="na">layout</span><span class="o">();</span>
+    <span class="k">while</span> <span class="o">(!</span><span class="n">shell</span><span class="o">.</span><span class="na">isDisposed</span><span class="o">())</span> <span class="o">{</span>
+     <span class="k">if</span> <span class="o">(!</span><span class="n">display</span><span class="o">.</span><span class="na">readAndDispatch</span><span class="o">())</span> <span class="o">{</span>
+         <span class="n">display</span><span class="o">.</span><span class="na">sleep</span><span class="o">();</span>
+       <span class="o">}</span>
+     <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">createContents</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">shell</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Shell</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">SHELL_TRIM</span><span class="o">);</span>
+    <span class="n">shell</span><span class="o">.</span><span class="na">setLayout</span><span class="o">(*</span><span class="k">new</span><span class="o">*</span> <span class="nc">FillLayout</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">HORIZONTAL</span><span class="o">));</span>
+    <span class="n">shell</span><span class="o">.</span><span class="na">setSize</span><span class="o">(</span><span class="mi">450</span><span class="o">,</span> <span class="mi">384</span><span class="o">);</span>
+    <span class="n">shell</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"Window Using Composite"</span><span class="o">);</span>
+
+    <span class="nc">CustomComposite</span> <span class="n">customComposite</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">CustomComposite</span><span class="o">(</span><span class="n">shell</span><span class="o">,</span><span class="no">SWT</span><span class="o">.</span><span class="na">NONE</span><span class="o">);</span>
+
+    <span class="n">customComposite</span><span class="o">.</span><span class="na">setBrowseButtonText</span><span class="o">(</span><span class="s">"Find..."</span><span class="o">);</span>
+    <span class="n">customComposite</span><span class="o">.</span><span class="na">setFirstFieldBackground</span><span class="o">(</span><span class="n">shell</span><span class="o">.</span><span class="na">getDisplay</span><span class="o">().</span><span class="na">getSystemColor</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">COLOR_YELLOW</span><span class="o">));</span>
+
+    <span class="kd">final</span> <span class="nc">GridLayout</span> <span class="n">gridLayout</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GridLayout</span><span class="o">();</span>
+    <span class="n">gridLayout</span><span class="o">.</span><span class="na">numColumns</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="n">customComposite</span><span class="o">.</span><span class="na">getComposite</span><span class="o">().</span><span class="na">setLayout</span><span class="o">(</span><span class="n">gridLayout</span><span class="o">);</span>
+
+    <span class="kd">final</span> <span class="nc">Label</span> <span class="n">thirdFieldLabel</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Label</span><span class="o">(</span><span class="n">customComposite</span><span class="o">.</span><span class="na">getComposite</span><span class="o">(),</span> <span class="no">SWT</span><span class="o">.</span><span class="na">NONE</span><span class="o">);</span>
+    <span class="n">thirdFieldLabel</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"Third Field"</span><span class="o">);</span>
+
+    <span class="n">thirdField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Text</span><span class="o">(</span><span class="n">customComposite</span><span class="o">.</span><span class="na">getComposite</span><span class="o">(),</span> <span class="no">SWT</span><span class="o">.</span><span class="na">BORDER</span><span class="o">);</span>
+    <span class="kd">final</span><span class="o">*</span> <span class="nc">GridData</span> <span class="n">gd_thirdField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">CENTER</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+    <span class="n">thirdField</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="n">gd_thirdField</span><span class="o">);</span>
+
+    <span class="kd">final</span> <span class="nc">Label</span> <span class="n">fourthFieldLabel</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Label</span><span class="o">(</span><span class="n">customComposite</span><span class="o">.</span><span class="na">getComposite</span><span class="o">(),</span> <span class="no">SWT</span><span class="o">.</span><span class="na">NONE</span><span class="o">);</span>
+    <span class="n">fourthFieldLabel</span><span class="o">.</span><span class="na">setText</span><span class="o">(</span><span class="s">"Fourth Field"</span><span class="o">);</span>
+
+    <span class="n">fourthField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Text</span><span class="o">(</span><span class="n">customComposite</span><span class="o">.</span><span class="na">getComposite</span><span class="o">(),</span> <span class="no">SWT</span><span class="o">.</span><span class="na">BORDER</span><span class="o">);</span>
+    <span class="kd">final</span> <span class="nc">GridData</span> <span class="n">gd_fourthField</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span><span class="no">SWT</span><span class="o">.</span><span class="na">CENTER</span><span class="o">,</span> <span class="kc">true</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+    <span class="n">fourthField</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="n">gd_fourthField</span><span class="o">);</span>
+
+    <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">List</span><span class="o">(</span><span class="n">customComposite</span><span class="o">.</span><span class="na">getComposite</span><span class="o">(),</span> <span class="no">SWT</span><span class="o">.</span><span class="na">BORDER</span><span class="o">);</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">setItems</span><span class="o">(</span><span class="k">new</span> <span class="nc">String</span><span class="o">[]</span> <span class="o">{</span><span class="s">"First Item"</span><span class="o">,</span> <span class="s">"Second Item"</span><span class="o">});</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">setLayoutData</span><span class="o">(</span><span class="k">new</span> <span class="nc">GridData</span><span class="o">(</span><span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="no">SWT</span><span class="o">.</span><span class="na">FILL</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span><span class="kc">true</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">1</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

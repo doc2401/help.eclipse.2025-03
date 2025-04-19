@@ -1,0 +1,4 @@
+org.eclipse.gef.dot.internal
+org.eclipse.gef.dot.internal.ui
+org.eclipse.gef.dot.internal.ui.conversion
+org.eclipse.gef.dot.internal.ui.handlers

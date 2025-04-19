@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="doc/User-Guide.html" label="Trace Compass (new-) Callstack User Guide">
+	<topic href="doc/User-Guide.html" label="Table of Contents"></topic>
+	<topic href="doc/Overview.html" label="Overview"></topic>
+	<topic href="doc/Terminology.html" label="Terminology"></topic>
+	<topic href="doc/Analyses-and-views.html" label="Analyses and views"></topic>
+	<topic href="doc/Additional-documentation-for-developers.html" label="Additional documentation for developers"></topic>
+	<anchor id="additions"/>
+</toc>

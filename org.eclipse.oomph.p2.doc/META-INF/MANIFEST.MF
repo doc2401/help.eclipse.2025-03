@@ -1,0 +1,493 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.3
+Build-Jdk-Spec: 17
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.oomph.p2.doc; singleton:=true
+Bundle-Version: 1.14.0.v20230625-0755
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-ClassPath: .
+Require-Bundle: org.eclipse.help;bundle-version="[3.3.0,4.0.0)";resoluti
+ on:=optional,org.eclipse.oomph.util.doc;bundle-version="[1.14.0,2.0.0)"
+ ;resolution:=optional;visibility:=reexport,org.eclipse.oomph.p2;bundle-
+ version="[1.17.0,2.0.0)";resolution:=optional;visibility:=reexport,org.
+ eclipse.oomph.p2.core;bundle-version="[1.26.0,2.0.0)";resolution:=optio
+ nal;visibility:=reexport,org.eclipse.oomph.p2.edit;bundle-version="[1.1
+ 7.0,2.0.0)";resolution:=optional;visibility:=reexport,org.eclipse.oomph
+ .p2.ui;bundle-version="[1.21.0,2.0.0)";resolution:=optional;visibility:
+ =reexport
+Export-Package: org.eclipse.oomph.p2.doc;version="1.14.0";x-internal:=tr
+ ue,org.eclipse.oomph.p2.doc.online;version="1.14.0";x-internal:=true,or
+ g.eclipse.oomph.p2.doc.reference;version="1.14.0";x-internal:=true,org.
+ eclipse.oomph.p2.doc.reference.api;version="1.14.0";x-internal:=true,or
+ g.eclipse.oomph.p2.doc.reference.schema;version="1.14.0";x-internal:=tr
+ ue
+Automatic-Module-Name: org.eclipse.oomph.p2.doc
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-oomph/oomph
+ .incubator.git;path="plugins/org.eclipse.oomph.p2.doc";commitId=7dd34da
+ e7911d7640017e5a8d324d7359e5c5a8e
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+
+Name: plugin.xml
+SHA-256-Digest: AoeZtJvihIEUK7B3tIVhcQRFBSD0qeRu7h6WeshcR8k=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/Agent.html
+SHA-256-Digest: z1GreHkPobPRLAiU+nAgR4zcv+masBtDL7sPG+7TXn4=
+
+Name: images/editor-5.png
+SHA-256-Digest: 6qUQIAkwwgsVgS5TVBobK9AuDOf95NDJxdkOhYLQjKU=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/RepositoryImpl.html
+SHA-256-Digest: eVqkSE6okBnEc3iidy17f38Nx/cUyxx5qVzWm37K69o=
+
+Name: javadoc/org/eclipse/oomph/p2/core/ProfileContainer.html
+SHA-256-Digest: pK0KCtptT/a0TehtFEMwzWCPw9PfkKVx9CThAJvZWJ4=
+
+Name: javadoc/org/eclipse/oomph/p2/P2Factory.html
+SHA-256-Digest: BHHmIo5Cxo0vK1fsa/lRQfLRPe089Is3vgNoDVIq/Rw=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/ProfileTransaction.htm
+ l
+SHA-256-Digest: NZ10UVF7TjJ5VLhf6xubYts6jywSdOoElZqFG4CS1xc=
+
+Name: javadoc/org/eclipse/oomph/p2/Repository.html
+SHA-256-Digest: rlajdlFM1Nh0YHar0aPY69MWhDovxQdpzedZl4d8EjQ=
+
+Name: images/formatter-tree-properties.gif
+SHA-256-Digest: bMYkavZR3mQJofvnpNdpMmDCzP3gruV/KmzXVNDcZ/M=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/ProfileTransaction.Com
+ mitContext.html
+SHA-256-Digest: MLmEl6U6uCz5/IbuQAdsW8qtIGmAzZmVzno29sYg/o0=
+
+Name: javadoc/org/eclipse/oomph/p2/core/package-summary.html
+SHA-256-Digest: a0U7angc2hUQ3OL2p9z3SV6Z7sPge+Qa1Q7r25F64V4=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/P2Exception.html
+SHA-256-Digest: l6AisRLcDQtDAp1HcrUTpDa0Qqwp6nwvO35+BiYkOi8=
+
+Name: javadoc/org/eclipse/oomph/p2/Requirement.html
+SHA-256-Digest: RMJU4A/ddkThRRebgo0C/JzeyjN3ggk4mY1C1f7mDZQ=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/RepositoryList.html
+SHA-256-Digest: WUQonVk40+vv3V4D6TIipnz2S2aVdIIbqDHjK96xw/8=
+
+Name: book.css
+SHA-256-Digest: bihy0LiVsMTD6/Ish5mJYe+T5qJpR1+Udyu/OF4dSik=
+
+Name: about.ini
+SHA-256-Digest: tUUYRn5gCnB9pcCy/ZNWIfZXxRSWh1k5nIFJhIG6gIk=
+
+Name: javadoc/org/eclipse/oomph/p2/core/AgentElement.html
+SHA-256-Digest: d5M7imPvjZeLvNz9nVeWJZKgZsQiQ4wlAzToys4bfQU=
+
+Name: html/Overview.html
+SHA-256-Digest: xqAwK5VjU3n6HOerrRjRbHjrCMqqtayo8llYYWPZOhI=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/ProfileTransaction.Res
+ olution.html
+SHA-256-Digest: toGnDmqzBBBBXGBL4A5znq0MT53vqoMSevIf5ulXzfI=
+
+Name: javadoc/org/eclipse/oomph/p2/core/AgentManagerElement.html
+SHA-256-Digest: cHMvz1lDGksdjufDXxqDxQomjjiSlfais06xD57JZVA=
+
+Name: images/callout-7.png
+SHA-256-Digest: g3P3kZLj4st84hXZZ8/uQyYiSOuaQSyLcgoa2S5qDJI=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/P2Util.html
+SHA-256-Digest: e/T5Ml2Jm3m1YUnXMCYGNzXx1E4gf2tT8J+smwU9ZKI=
+
+Name: javadoc/org/eclipse/oomph/p2/util/package-summary.html
+SHA-256-Digest: /muvD+e0EcR9jK8XYyiD/OtY1Qvf9rfDDK472ER4/jM=
+
+Name: javadoc/package-list
+SHA-256-Digest: Ba69D3fZdUdITStJwPdl3rCIh2wSfIESyXvA7NoXqkU=
+
+Name: toc.xmi
+SHA-256-Digest: iJF0DaGRbEWIswRQQlmx3HfDsTcZKykBZUpE+tnSoWs=
+
+Name: javadoc/org/eclipse/oomph/p2/core/Agent.html
+SHA-256-Digest: TfDQ/Dy+XUnNW5Y6pmt94emMvBoOhfdSkLtWoFY0Jns=
+
+Name: images/editor-rst.png
+SHA-256-Digest: KQoq2T8nwvtxk8DQxypPajOfoK+IoeWR4xKtwAu0hs0=
+
+Name: images/plus.gif
+SHA-256-Digest: aMqc9gCyGSQduf3Fcqdvo/cpMuSW5m3CG9enX5YEAnQ=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/AgentManagerElement.ht
+ ml
+SHA-256-Digest: 9Vac4FKxgFjjqkMmykLn8AoxwYevqLRle/oOmB48Vgs=
+
+Name: META-INF/maven/org.eclipse.oomph/org.eclipse.oomph.p2.doc/pom.prop
+ erties
+SHA-256-Digest: A8y68R8hHV3stzfTLr1nhq4fhBmj9cU1zKiHzmsDHH8=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/package-frame.html
+SHA-256-Digest: Pu9MTrnYbaaX5aXgm4K1CVau1sMVgVLeWYhopIAJesg=
+
+Name: javadoc/org/eclipse/oomph/p2/core/P2Util.html
+SHA-256-Digest: vavJV0j0ZPE2AD7vcuX3zh0NDZORxpxLRnCkSbESbjo=
+
+Name: images/editor-max-hover.png
+SHA-256-Digest: 3NhxGkmBil8CggIK8btPEZrTgiNF3BiJxm93ALa8R2s=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/P2Util.VersionedIdFilt
+ er.html
+SHA-256-Digest: LRymTkaCYlKghQd4AvGDWkx/SI5uKERmOXp7V5EiShM=
+
+Name: javadoc/org/eclipse/oomph/p2/core/P2Util.VersionedIdFilter.html
+SHA-256-Digest: EFVf77gZp4uEB6MgcHHFidxnADkhf/GczXRSfT/N30w=
+
+Name: javadoc/resources/titlebar.gif
+SHA-256-Digest: vimlqIcA/URWjZnkWNJ/buyOaEiHFlaqW04wTj9A7bk=
+
+Name: javadoc/index.html
+SHA-256-Digest: KXh1usjZU8G00c1ZU3GAzQZyZgSzP5CEDdsVI196xHM=
+
+Name: toc.xml
+SHA-256-Digest: gXtkO/b2HbohQPQnzvO38ERztr3xxtEJOn39AWOD9wg=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/RepositoryType.html
+SHA-256-Digest: VTH3ugIB8vx7Lnl6K877IDtblpOg/unBsgtmBr/IKE4=
+
+Name: images/callout-5.png
+SHA-256-Digest: gVhcGnJwgDyuqMA3a+nILx7Op2SgZWPMJG7KBSs2YKE=
+
+Name: schemadoc/schema.css
+SHA-256-Digest: H+uIF9vViHPaTbGkEe/bejH09LcmiyC3rQDnW1pRqh4=
+
+Name: images/formatter-java.gif
+SHA-256-Digest: KioimDI1U/sEwXmyAdefUYJcXu/RHvTj1QEQCLTjjYw=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/Profile.html
+SHA-256-Digest: VAgpL7QY2oLG7TzwxvEdAsV5iFf+Y0aD1FN4JZ1s0Ww=
+
+Name: javadoc/org/eclipse/oomph/p2/package-summary.html
+SHA-256-Digest: w274/rWe3JTq5XfLV97cVrPQenowT7Xd34YC3UwSsDA=
+
+Name: javadoc/help-doc.html
+SHA-256-Digest: OqU2cAfzB9UWZjqjvg8HbqQB2GUPwh/Yto5VkD8upq0=
+
+Name: images/forward.png
+SHA-256-Digest: AnofoDiwybpiqWiqOezG7UiNm10k4zZOTQ14zbBMlVM=
+
+Name: javadoc/resources/titlebar_end.gif
+SHA-256-Digest: kdw6TIrhgbg5r/3pMzMcGr4OabRIs3J9hQfdkWbLpnU=
+
+Name: images/callout-4.png
+SHA-256-Digest: e2AlCCggV4vZ7X56NyaS29keLjXbDPqwMQd//F7/ltw=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/class-use/RequirementImpl.html
+SHA-256-Digest: 7uv4pxxcihw+xs6xijTSfEIvPtKnLtai1eB9wtLOfr4=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/ProfileContainer.html
+SHA-256-Digest: zPPZ7zqqqcLI8TUybxUsldxta2lmbdSlPozNZaVVVq8=
+
+Name: javadoc/org/eclipse/oomph/p2/core/ProfileTransaction.html
+SHA-256-Digest: WVg7J8J2HKBNYRIuZdiSZNqRC0XdmOxlL2VF26/WqkA=
+
+Name: javadoc/org/eclipse/oomph/p2/core/ProfileTransaction.CommitContext
+ .DeltaType.html
+SHA-256-Digest: FumBhpg5FGFuf8TsxyjUh+daNgI73DeIhwFQUHQjGcM=
+
+Name: about.mappings
+SHA-256-Digest: xuAbMbrL2nziOKRswiYVXxE+ZGZsZbC062lzTf14FGc=
+
+Name: images/editor-1.png
+SHA-256-Digest: HKwkBvMJShE117GDda9XV2fglUEBggkGSVUkHVaQdvM=
+
+Name: images/empty.gif
+SHA-256-Digest: FcT/0p3f6VA4/9MuAZrSnCXRaClTF2lRJY6kGzQSC68=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/class-use/P2FactoryImpl.html
+SHA-256-Digest: 0meys0hMQn+9q2h0oKbLWOTgZz5CJg334e80H5xZiCg=
+
+Name: javadoc/org/eclipse/oomph/p2/package-use.html
+SHA-256-Digest: CY0164zOuVFBrvg+Wc66IVsyI7pGm8O75ien0ALexr8=
+
+Name: javadoc/org/eclipse/oomph/p2/core/Profile.html
+SHA-256-Digest: fFVDqQaaCDjX354oIx5Ezj3YTKY2AOhpHq+RaTyrs1c=
+
+Name: html/online/index.html
+SHA-256-Digest: oQnYFO+BqAxS32KbhvI8byhgCT7vBYZmkN0yGrQ/od0=
+
+Name: javadoc/org/eclipse/oomph/p2/RepositoryList.html
+SHA-256-Digest: R31Bo9jjm/ZeCODXB9ZD1+XUizSKjEEiyk+YSrLmCRA=
+
+Name: images/background-1.gif
+SHA-256-Digest: 0JNVqqFa4wQsCV3dTczjHOUdpn4ePEHfS97qc37joW0=
+
+Name: html/editor.css
+SHA-256-Digest: ufH2Z3UXkQN0wRP52V69ohzPkONPSkkN8KLjCOTIZ54=
+
+Name: images/formatter-xml.gif
+SHA-256-Digest: 9M/U7mn24+olvbiAdaiS3aJo6iHZ/l8E9GIiTy+hm5o=
+
+Name: images/callout-2.png
+SHA-256-Digest: vlbfqDNSPQ6mFN5JMGk1Kyrwi8cjy1mFMM5jJ4KmH/w=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/ProfileCreator.html
+SHA-256-Digest: Kq+5uOrRr71TNxuQpLoQmvOHAifq6WA9d0UcalLVgNY=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/class-use/P2PackageImpl.html
+SHA-256-Digest: NWzVRfm7TwSLMvr4cj+g+qRz2zrp+ZRx7t9Ae0wXpOM=
+
+Name: javadoc/index-all.html
+SHA-256-Digest: G+o1hTXMBOqAzuf2fL1KacxnGc/iifihZCR8x1gwoHM=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/P2Package.html
+SHA-256-Digest: Iwtpwg2L8LNqo/dZ3X3XZmr84GQg+Osj/kagDJRr+Ao=
+
+Name: html/book.css
+SHA-256-Digest: Wto5XbjNOyLAuihjKgKkN+30V5j3V6Gvo+36mkdlszY=
+
+Name: javadoc/org/eclipse/oomph/p2/core/BundlePool.html
+SHA-256-Digest: 8OGz6Ee5qAhVRzcnGK4LB3zwD+1E4b5Cmgb8W5VmvM0=
+
+Name: javadoc/org/eclipse/oomph/p2/VersionSegment.html
+SHA-256-Digest: WqCrTODJqmGGqoSNTO8vfxv3Imf94mvg5HRTmsQ5k2M=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/class-use/RepositoryListImpl.htm
+ l
+SHA-256-Digest: UYBfQl3lxEajAOJUMZ0AHKpEWeCWakmZkMFboxpaAgQ=
+
+Name: images/editor-3.png
+SHA-256-Digest: iOgMM2r8lCk2UBDaz+KNFNqvzUK+1c1OrRTfO+UgFx4=
+
+Name: javadoc/overview-frame.html
+SHA-256-Digest: Gs1PYjTjlNQPnYY9e/eJJAV5aPvMNYirfMv/9BTOS5Y=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/Requirement.html
+SHA-256-Digest: 1hXQoeCLWxbmd6ikFsiey/c+YXyKavfw303Wu95rUv0=
+
+Name: javadoc/org/eclipse/oomph/p2/P2Exception.html
+SHA-256-Digest: rApBtu1bb8V/MRMIVR9ZUJuXrZfCSZpL0FtIKCsxSQI=
+
+Name: javadoc/resources/tab.gif
+SHA-256-Digest: E84YKX++xPtHAghK7XPxKAwyhsOPAs29anj141jLzcU=
+
+Name: images/callout-9.png
+SHA-256-Digest: Yv4fCUt72kfuevFdAo/r42NX73LgByi1XbEj0tvur7A=
+
+Name: javadoc/org/eclipse/oomph/p2/P2Package.html
+SHA-256-Digest: L8i+F9J6UOqnjvSOkPH1NeRTsaeUed03GMIf78FqjIo=
+
+Name: html/reference/schema/index.html
+SHA-256-Digest: 5iPq6TLJ1xh82cOO9K9zs+cOxxrOPDCuHoY/utB+I7w=
+
+Name: about.properties
+SHA-256-Digest: yNF75LuRydU5Oux/CODWylR+WLcAqTMJRzPq1YifbTA=
+
+Name: META-INF/maven/org.eclipse.oomph/org.eclipse.oomph.p2.doc/pom.xml
+SHA-256-Digest: 6GfujsNh0iPDYPlwO3fOSchddqhbE4nLo52Bcwg3P5Q=
+
+Name: images/editor-4.png
+SHA-256-Digest: avRb7VaJJWwGEuvSi/gNdh/ZLNS8T+loarbat5egHa0=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/ProfileDefinition.html
+SHA-256-Digest: YPwCiH2h2KW+wHSMF0z6ybVUM29OkPYK7rbkYQEBRNE=
+
+Name: javadoc/org/eclipse/oomph/p2/core/package-frame.html
+SHA-256-Digest: /FP9z0s8DhDgvtEPUNHamYIkfV0IfiAdqyggykNWODg=
+
+Name: images/callout-8.png
+SHA-256-Digest: Qyb96bcekEb8bMpa2VJq4gqS76jsLy9PRvbeQVDiWuY=
+
+Name: oomph32.png
+SHA-256-Digest: HWDpe1I18ffznIZTYTRTBIBNeXvrwF7UL/L11OmvGtY=
+
+Name: images/extpoint.gif
+SHA-256-Digest: iat6lRiGVTvoNzT6BewepyrD6l3BKHp6kT4RQolfC70=
+
+Name: javadoc/org/eclipse/oomph/p2/core/AgentManager.html
+SHA-256-Digest: OMHvfrjZ9ufsmupARn10/q/jufhu4S/Fd096Mh0pbiY=
+
+Name: plugin.properties
+SHA-256-Digest: o/FrEMTEhwPdvqiILouJBfZd06z00JW7T4D/p5o+8UQ=
+
+Name: javadoc/org/eclipse/oomph/p2/core/ProfileCreator.html
+SHA-256-Digest: Phpiyo6xIvCzB9tun8Ri5WKcueY+NX1nS0b+2MPqPmM=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/package-use.html
+SHA-256-Digest: RaeOGwUeyUBfm4rcpuzBE7qxv+UXSc/DNJDmgkM+i+o=
+
+Name: javadoc/stylesheet.css
+SHA-256-Digest: GQVKTx0XpLeIZRI+UZUvvKmrtz0F7Fj272VQIB4djLU=
+
+Name: images/minus.gif
+SHA-256-Digest: 3U7eC1Ec14pGX1LUpNcohKyL3/UReobaQaaUQKllSn4=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/AgentElement.html
+SHA-256-Digest: KFnPrG6Q0+w8bEUR9ZJaJdcm0EBvLgl3/KmNIYYhloU=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/RequirementImpl.html
+SHA-256-Digest: fNJdPd+k/vIMR6T+DjUXdFwNNWlYLWBXWxf0+GFy61o=
+
+Name: schemadoc/org_eclipse_oomph_p2_ui_profileTypes.html
+SHA-256-Digest: 508DdQv9BzNP5thrEUU0PzQ6ZqvG55ZlrOAfRxfKzw4=
+
+Name: html/tree.css
+SHA-256-Digest: 11wh+F/Rq/+KMgGN6JXP2HJW7LmtmS55/dTWFjM1UcY=
+
+Name: images/callout-6.png
+SHA-256-Digest: 5z6qTFpX35StKftfr8eZGkSqhRDCr/Q1xzqW5nWwjxk=
+
+Name: images/category.gif
+SHA-256-Digest: cBt5h1QpT3QywZmZrBzxdRRPzCGBQsD8pGWQYE7DItg=
+
+Name: javadoc/org/eclipse/oomph/p2/util/P2AdapterFactory.html
+SHA-256-Digest: 3kUWwtfIDqQkHRxC5fk575yqS4xTgLTzYJgWyZt4X6c=
+
+Name: javadoc/org/eclipse/oomph/p2/ProfileDefinition.html
+SHA-256-Digest: YdXFjBDUMvIy89pR6CPMtxBgU12TyIu2CXzBACaiNPs=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/P2Package.Literals.html
+SHA-256-Digest: DEacSCENYSMmXtGNgU4EcRpZC2YC4bPm6KfKKlGHY5k=
+
+Name: html/reference/index.html
+SHA-256-Digest: YjKyHdUVo11+YW2dUpm6i5PV37Gc1KtFQIjhupO9Mj0=
+
+Name: javadoc/allclasses-frame.html
+SHA-256-Digest: 6yR1opSynKFeLJr2Paw6U4228d+cuIy3sa/aO5GX7uY=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/P2FactoryImpl.html
+SHA-256-Digest: 7BdK0psp6AFYEVSgAAZ3AUvQXy2jboNWU5NNvA8dqVg=
+
+Name: javadoc/overview-summary.html
+SHA-256-Digest: Tpxx3yHeKV1YvcKn4Qa3c/sCWYEaSYDk3jm/vGb20Ik=
+
+Name: javadoc/org/eclipse/oomph/p2/package-frame.html
+SHA-256-Digest: g8JwiDdx2rik5rhFcDL12uS7nLmRpaQpg2oHhaZsW0s=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/BundlePool.html
+SHA-256-Digest: djqpDf53W4xT/l46hhZhzuz0kcP/2yw8sEsXsz9e78k=
+
+Name: javadoc/org/eclipse/oomph/p2/util/class-use/P2Switch.html
+SHA-256-Digest: aJGCyjciuID2HRCJMIqmSr6pAQACCjGjUbLsWHKQ3DM=
+
+Name: images/editor-max.png
+SHA-256-Digest: eLXvGObAjd8H13dIj7DWMdpxBh6OMvUXmxf+6hDYzhQ=
+
+Name: javadoc/org/eclipse/oomph/p2/P2Package.Literals.html
+SHA-256-Digest: AyRbYnSS/Fr71iScSFQndiWiUZM88uczdJfxhroX4D4=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/P2PackageImpl.html
+SHA-256-Digest: wdsYAZFOvujXarqWUNqATUHdMJ2jd9jWx4sU3j/UYeU=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/ProfileTransaction.Com
+ mitContext.DeltaType.html
+SHA-256-Digest: 0m6QjkS5FaIRloKvh1yMmkn+aCnjopEt/DZ22NA+SdQ=
+
+Name: javadoc/org/eclipse/oomph/p2/core/package-use.html
+SHA-256-Digest: QzJ7Pr6DezzBNxR/B9TzobBh9TFchb3oV2bP6eKLnls=
+
+Name: javadoc/resources/background.gif
+SHA-256-Digest: tB7Yzvm2yPD5JDE1TIFOk9FIVBx/K3XBfKms42P9ZwA=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/Repository.html
+SHA-256-Digest: Mfz6vLUgSKXuKNXx3Fd6k6d/g1IIUyD8/j8KDoc/R1Q=
+
+Name: images/empty-icon.gif
+SHA-256-Digest: nZm2rEx8czvQ/LHIXLYIMRS6ZpTkiuoXwqmPQhVSE7k=
+
+Name: images/package.gif
+SHA-256-Digest: EZPZadqTzMYVqSnpvt1ksENpA6RZ+UefMr7MiGwUO2c=
+
+Name: javadoc/org/eclipse/oomph/p2/RepositoryType.html
+SHA-256-Digest: 3UaUEGaBfYpDuxuuVIlEObLvA7KIiy+ah1OiYBZI300=
+
+Name: javadoc/org/eclipse/oomph/p2/util/package-use.html
+SHA-256-Digest: xq5R84QJZYYL5I9aHqoAihmIwKy3QD+Xx+I6YjuL9Rk=
+
+Name: images/callout-3.png
+SHA-256-Digest: 1cucuwQt4uneilhS7wqZz3fap+kp4YwEbi1iY0htxhk=
+
+Name: images/backward.png
+SHA-256-Digest: rZGGYCmb0kjy1mX4xvs2zXHFHErxkADBMMQFdaKb8Fc=
+
+Name: javadoc/serialized-form.html
+SHA-256-Digest: hlpH8FOegMCnrKEzdKobfUc9igYe2fkx3anmw2lME7I=
+
+Name: images/article.gif
+SHA-256-Digest: W1SXQdPwwTrdZA2VuRK90U8mIMhms8qKfBoDSXocMpI=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/ProfileDefinitionImpl.html
+SHA-256-Digest: NjBLLnuDKgzZTK41egkMF3Djq5bT3oGfDKEQUGIaC2c=
+
+Name: javadoc/org/eclipse/oomph/p2/core/ProfileTransaction.CommitContext
+ .html
+SHA-256-Digest: R+KAsF1eLrxDT9+FqyxQpBX71TMZWVk69VX4D+mAqjo=
+
+Name: javadoc/org/eclipse/oomph/p2/util/P2Switch.html
+SHA-256-Digest: YrLPHcoWUYTypzsd4jAIU64GMGiUFrluhKUWpxq0B4Q=
+
+Name: javadoc/allclasses-noframe.html
+SHA-256-Digest: sO+C1ZKPtAIoo3NTlnKwl8BUK77a+Z6wk5UpciCDMkQ=
+
+Name: images/editor-rst-hover.png
+SHA-256-Digest: GLmuxrwlSDL0KE0QQDk1ollHbixHgUX6grAHyQFbyas=
+
+Name: images/editor-2.png
+SHA-256-Digest: LsAS0nk0PPKVVhkt55nHEtEe7nGN6pQsWsYkZf3vuhA=
+
+Name: about.html
+SHA-256-Digest: OpLVxihWLkRdw2ih1dG1awUZzMFVCE0AFOZOKvaoyNo=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/RepositoryListImpl.html
+SHA-256-Digest: eOVTKfn7M23nZvinGZ+3tS/Bh7it4RfrW5EWj9aK1uk=
+
+Name: javadoc/constant-values.html
+SHA-256-Digest: LG/6jGFDjdnLBW4okZ05x3ox0PoJvBVUqLjmqEDtApc=
+
+Name: javadoc/org/eclipse/oomph/p2/util/class-use/P2AdapterFactory.html
+SHA-256-Digest: w9xgVhUhN4OTUwGhjChrnB/riUpZFndZGrMRiTkgTsY=
+
+Name: META-INF/eclipse.inf
+SHA-256-Digest: Rr5LcOp+oA1o+OBG8dKE1JkMSO9EcD9X+5TLiaC/4Sg=
+
+Name: images/background-2.gif
+SHA-256-Digest: yGmeX/sPBzkwV9gqpAByEKT+tUZhKRa8XXPzGu4uR0c=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/class-use/ProfileDefinitionImpl.
+ html
+SHA-256-Digest: s06MMrn+nNSwpTY86UkYnL2swHpPKiHb6T3caCZGTFs=
+
+Name: javadoc/org/eclipse/oomph/p2/util/package-frame.html
+SHA-256-Digest: c78pC9FdRS/WKRQ3rUKWgz/BJ1cyk3EnT03t4nga7Hc=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/VersionSegment.html
+SHA-256-Digest: kP1v4VA1ixUSvm0FtpYhYNvWIm5awZ9kU2MHSTsl80k=
+
+Name: javadoc/org/eclipse/oomph/p2/class-use/P2Factory.html
+SHA-256-Digest: /oiWmr4w8/yco0n1VE9wDLSb0dsOaPAyYGW2q+GJdns=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/package-summary.html
+SHA-256-Digest: Z1bewy4A8EPJMKyd68aYD1pgWbRtNEBehG68sAkryXQ=
+
+Name: images/formatter-tree.gif
+SHA-256-Digest: YbEKYq1OM2+ZJ6fY86vbVGYRWUJmh7lD0vdRbbe+G+A=
+
+Name: javadoc/org/eclipse/oomph/p2/impl/class-use/RepositoryImpl.html
+SHA-256-Digest: 9UeHhfQty8bBd2xTN6IcMatUuBxrOj4X9ny0JFL8ueY=
+
+Name: images/callout-1.png
+SHA-256-Digest: 7UgmRpBAvzhBbChmYOKjavDlblghnWU9wVVKdw6h7IY=
+
+Name: javadoc/org/eclipse/oomph/p2/core/ProfileTransaction.Resolution.ht
+ ml
+SHA-256-Digest: eediBUb5btRP1vp9l8FFCSbYPQkQmCwHrRFTIN3xwzU=
+
+Name: images/external.gif
+SHA-256-Digest: dOBdLrZafBGpu/MMX/LLlLLCpIpqIlhp3p2yyY8gACg=
+
+Name: javadoc/org/eclipse/oomph/p2/core/class-use/AgentManager.html
+SHA-256-Digest: DjW7+mH0tIy6owv6vVZhtWBapQXZTFqf/7q49Z8eyFA=
+
+Name: images/plugin.gif
+SHA-256-Digest: ZsOwYc4ZMigs5KViOkp50rrZ53fxeEmt0UDx86Pc/rk=
+
+Name: javadoc/deprecated-list.html
+SHA-256-Digest: 5n9Dhy+KGgcdX9GJwbegPrmZbOUVdxu8u0k7AAz148s=
+

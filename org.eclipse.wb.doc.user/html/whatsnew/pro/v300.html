@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>What&#8217;s New - v3.0.0</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>What&#8217;s New - v3.0.0</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#EclipseForms">Support for Eclipse Forms</a></p>
+</li>
+<li>
+<p><a href="#SwingVisualInheritance">Support for Swing Visual Inheritance</a></p>
+</li>
+<li>
+<p><a href="#CustomSwingPanels">Enhanced support for custom Swing panels</a></p>
+</li>
+<li>
+<p><a href="#EventHandlers">New event handler code generation options</a></p>
+</li>
+<li>
+<p><a href="#SWT">Enhanced SWT support</a></p>
+</li>
+<li>
+<p><a href="#Swing">Enhanced Swing support</a></p>
+</li>
+<li>
+<p><a href="#Editor_PropertyPane">Editor &amp; Property Pane Enhancements</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="EclipseForms">Support for Eclipse Forms</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Create "flat look" user interfaces</p>
+</li>
+<li>
+<p>New wizards for FormPages, DetailPages and MasterDetailsBlocks</p>
+</li>
+<li>
+<p>New Eclipse Forms palette supporting all Eclipse Forms widgets</p>
+</li>
+<li>
+<p>Support for ColumnLayout and TableWrapLayout</p>
+</li>
+<li>
+<p>New Forms API preferences to optionally generate paintBordersFor()</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SwingVisualInheritance">Support for Swing Visual Inheritance</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Inherit from any JFrame, JDialog, JApplet or JPanel subclass</p>
+</li>
+<li>
+<p>All inherited widgets are visible</p>
+</li>
+<li>
+<p>Access inherited widgets exposed via public or protected accessor</p>
+</li>
+<li>
+<p>Inherited widgets appear in tree with "i" decorators</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CustomSwingPanels">Enhanced support for custom Swing panels</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>New "Expose component" command to generate accessor</p>
+</li>
+<li>
+<p>Subcomponents appear in tree with special decorator</p>
+</li>
+<li>
+<p>Access subcomponents exposed via public accessors</p>
+</li>
+<li>
+<p>Add new children to subcomponent containers</p>
+</li>
+<li>
+<p>Automatically recognize custom bean properties</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="EventHandlers">New event handler code generation options</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Create anonymous class</p>
+</li>
+<li>
+<p>Create inner class</p>
+</li>
+<li>
+<p>Implement listener interface in parent class</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SWT">Enhanced SWT support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>New SWT Shell wizard</p>
+</li>
+<li>
+<p>New Eclipse EditorPart wizard</p>
+</li>
+<li>
+<p>New SWT &gt; PreferencePage preferences</p>
+</li>
+<li>
+<p>Added support for Eclipse 3.0 Browser widget</p>
+</li>
+<li>
+<p>Added option to highlight borderless Composites</p>
+</li>
+<li>
+<p>Support for SWT Shell.defaultButton property</p>
+</li>
+<li>
+<p>Support for top right control in CTabFolder</p>
+</li>
+<li>
+<p>Enhanced FieldEditor support</p>
+</li>
+<li>
+<p>Keyboard support for FormLayout</p>
+</li>
+<li>
+<p>SWT custom widget support for String[], Font and Color properties</p>
+</li>
+<li>
+<p>SWT custom Item support</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Swing">Enhanced Swing support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>New Swing Application wizard</p>
+</li>
+<li>
+<p>Support for JSpinner models (number, list and date)</p>
+</li>
+<li>
+<p>Support for JLabel.setLabelFor()</p>
+</li>
+<li>
+<p>Keyboard support for SpringLayout</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Editor_PropertyPane">Editor &amp; Property Pane Enhancements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added Replicate Width and Replicate Height commands to toolbar</p>
+</li>
+<li>
+<p>Preference to control when to use layout grid</p>
+</li>
+<li>
+<p>Enhanced visual feedback for null layout move and size operations</p>
+</li>
+<li>
+<p>Placed wizards into categories</p>
+</li>
+<li>
+<p>Support for source code hint for events</p>
+</li>
+<li>
+<p>Support for arrow key movement in various layouts</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

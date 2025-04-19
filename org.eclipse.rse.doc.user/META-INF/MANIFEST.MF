@@ -1,0 +1,201 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.2
+Build-Jdk-Spec: 17
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.rse.doc.user; singleton:=true
+Bundle-Version: 4.5.700.202407151325
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/tm/org.e
+ clipse.tm.git;path="rse/doc/org.eclipse.rse.doc.user";commitId=564d5be3
+ 1a15db448bc27a34080afec86ab7c886
+
+Name: plugin.xml
+SHA-256-Digest: L7Mo0niyh3UleJSZXwBw9pScJJ5LEOxOm6gbaOi5myo=
+
+Name: tasks/tbegindiscon.html
+SHA-256-Digest: 3lhj35UxlXr8dcdYhmo71zRqYrHmgoM3sd405xhJOE4=
+
+Name: gettingstarted/gxtending.html
+SHA-256-Digest: EW8W+xT1Xj1EUXfJUcynuS92V/evPaBsRngH9y9lyOE=
+
+Name: images/navigator.jpg
+SHA-256-Digest: l8MANQoSlN/rF4KYOYr4wgSafclpuSksUnwaliLftu0=
+
+Name: gettingstarted/gusing.html
+SHA-256-Digest: gF+/ko6Hm4TPr74lp8CjL+Jcuoez23fDSwXAh6hAGS4=
+
+Name: tasks/tteamsup.html
+SHA-256-Digest: v5oByRPnzU5VN3FfkDHqV5aAzc0GCpRM0kOJZnE954U=
+
+Name: tasks/tmanagepoolsref.html
+SHA-256-Digest: AbjIonAy/LXW/EoIs0ZOl+tjCWTgkGBoFuTPEUdP0Ig=
+
+Name: tasks/tbeginwindows.html
+SHA-256-Digest: PfySYIE2Cy1uupCatiGBGRd/DKG4HLdt8vHwp4fIk6s=
+
+Name: tasks/tmanagepools.html
+SHA-256-Digest: 2XdYVBsRAlEPEdIHvEBNeFbGUKz4+mW3w6NMf0eCaUM=
+
+Name: tasks/tusingefs.html
+SHA-256-Digest: cUvWLE3cX3SRIZxOlPBz6eDnKfSz6ovUmR3CNTKoEU0=
+
+Name: tasks/tmanagedel.html
+SHA-256-Digest: SBeC4csAvYJLtLwB5OJ4sKOmZoSX8fQOdmmC4UKMNjI=
+
+Name: tasks/tbegindelete.html
+SHA-256-Digest: 1Vwj5fB63bFraqaQqPBbvMXHnnEKn8WfzLL7FXH99LQ=
+
+Name: book.css
+SHA-256-Digest: 2rD6Bd691fsNuO4P2SHg4m/Kh1IMxqSzftt84i7pzmM=
+
+Name: plugin.properties
+SHA-256-Digest: vaFTYfNGuakfCZyNuiPKtCdB0a4w1OnU3juB2BkG3HQ=
+
+Name: ref/rrsepref.html
+SHA-256-Digest: spVgrgg4O45I1gJb6GiF9tsS+EA8TP5brtfGn1pvXuw=
+
+Name: tasks/tbeginlinux.html
+SHA-256-Digest: 67yTzOEOYNB/BJ44jdg7Uq+R4KiTh6nUx8LEge47AkQ=
+
+Name: tasks/tworkssl.html
+SHA-256-Digest: wYypqT79gyY6qL4YHK5InV+11EjdMFlAqVdRMB2Ab5c=
+
+Name: concepts/cremcompile.html
+SHA-256-Digest: 2mjXpgwMefccTQRnIVTykkaDmP7GO0UyrCJrD1RyGZw=
+
+Name: concepts/cteam.html
+SHA-256-Digest: gBcPMsmaW35qb+tf60gQvyHQdYiZMc7REAZfw+BXjug=
+
+Name: gettingstarted/g2firststeps.html
+SHA-256-Digest: NY6nz100RQWlfrMDXUOioY1ki/3dGMTIdprp+B6ZCvU=
+
+Name: tasks/ttablecopy.html
+SHA-256-Digest: L2MSVsxMq2zkjH3QoiMLEGPSuaV7zE3M0DOqlDFKQZs=
+
+Name: images/gsarrow.gif
+SHA-256-Digest: 1bkxtkjMRHYJSN5Ll7v3q+lGJWS2lEoQqeymeBsxuaM=
+
+Name: images/newconnection_wiz.gif
+SHA-256-Digest: zM8EDKG9sQlO74qz1Sp12mXESEqrLKQPAgZwgBkAM9Y=
+
+Name: notices.html
+SHA-256-Digest: ffycySbH9jxqYUg9J6O6Y7t4LHPUOaOb5mHtrib5nsA=
+
+Name: tasks/tmanagesearch.html
+SHA-256-Digest: VdBtVXrKZyEWET3+mGuRvbSGgUEobsUF/5sOWqwldec=
+
+Name: concepts/cprofile.html
+SHA-256-Digest: PvzPKXuJr9pU1mhpRdJfrYl/Fx6+dTBhpoelDUeXqiU=
+
+Name: concepts/cbegin.html
+SHA-256-Digest: z/TtPl0y2ItIsv5QlLiTJn/ryM+KJkz3MyVLTi2fvMo=
+
+Name: gettingstarted/g1installing.html
+SHA-256-Digest: Cqoe8D3OekA3xrGYqbCKHFbm7CxRsIHNnUJexZ4WVpM=
+
+Name: images/pw.jpg
+SHA-256-Digest: RR0KunnbRnVBciyKc4RSDuGt5lPL/bI567+d11XVe90=
+
+Name: images/RSESample.gif
+SHA-256-Digest: sLFLJvWoTVZ0yJnQWD+YVOHLD9HN10DB4UKODfTJ2Hw=
+
+Name: images/ModelRSE.png
+SHA-256-Digest: s7AgeK80dsNb3O9w/mIqxW3+piLvGGsMA4x5BOR9btQ=
+
+Name: tasks/tbegindeleteprofile.html
+SHA-256-Digest: LCSaguVExBOLbQH3gh/4V9pQs7+RnSpa52NS46QpPq0=
+
+Name: concepts/cuseractions.html
+SHA-256-Digest: 7jLZHWy23pXqAfloFBW8/+xU9DzGdtlhY95Uvbq8qIc=
+
+Name: toc.xml
+SHA-256-Digest: ctAI4L6FYxgUNjBSG+MsbDu/iLWNuZNct38puiMi3yE=
+
+Name: tasks/tbeginenv.html
+SHA-256-Digest: Us42Fsmkb5qCEWH4YJWFa+HRNST/AyxtSZ+Vg2FIgnk=
+
+Name: tasks/tworkuseract.html
+SHA-256-Digest: slAOMBtjuEeqbu2JU7xC2J6iifkHt+1aIvnTZaRNOLE=
+
+Name: tasks/tremoimp.html
+SHA-256-Digest: 8zPlMi3wjIZRoCaiYl2vdXYKdbXmQnb+KE1UImpduPw=
+
+Name: tasks/twrkcmdshl.html
+SHA-256-Digest: hjYHA2Gw5DUSJ0FwEB+O5EMDgQxnnb+4dL9VGKI/8Fo=
+
+Name: tasks/tbuild.html
+SHA-256-Digest: R0J3XLOzLhAhellpSInw/5mkiGtSlOk/97lcXlWeO+Q=
+
+Name: ref/rsearch.html
+SHA-256-Digest: UaBv+NhdxDS3Ht2DG3KCInck44ZQiB69Fh9plLGoyPU=
+
+Name: tasks/tbeginsecprofile.html
+SHA-256-Digest: gGyaHATenD358PNYiL+S4MuJSC/goMMX+mPSoRg/eOc=
+
+Name: images/search.gif
+SHA-256-Digest: jNk99Eje91mlaNeNbY/wqSIKtFjPLcbgmDQdovzjrdc=
+
+Name: tasks/tmanagemem.html
+SHA-256-Digest: HCSO+uj/7xtAtWZLZa1m1Tktt3u3g4ZD94Wo32Hq6Z8=
+
+Name: tasks/tmanageedit.html
+SHA-256-Digest: 8XiYkKIbolA+Ou4Pe1EDCvFu5/XndjKPbnKSH1xJnlQ=
+
+Name: META-INF/maven/org.eclipse.tm/org.eclipse.rse.doc.user/pom.xml
+SHA-256-Digest: 7SnxHUYPYgOlzVK7mXjrpkN/fTk+ou5P5DTPmy+lp2M=
+
+Name: tasks/tbeginsecond.html
+SHA-256-Digest: hYYy2iSRW5Ji1tt186vF9ZFs8DLZHyL9+SEckYd8F+Q=
+
+Name: tasks/tteamsup1.html
+SHA-256-Digest: h4bvS3XyWNpKXg8MWyn9t99kqasd0DoizPne/n764PM=
+
+Name: concepts/cfilters.html
+SHA-256-Digest: yMY+ky9EKbBIzwLwdB1PYIXC5QEtqx225rIQIv2lKmc=
+
+Name: images/RSESample_small.gif
+SHA-256-Digest: iJlsfVAgWH9K7d0/CNV7qOXmUrTidtnmSI1asikhllM=
+
+Name: tasks/tarchive.html
+SHA-256-Digest: 0L6WWombgsWb6m8ugBXstspA+kYbQVZssezhv0qXkz8=
+
+Name: tasks/tedittype.html
+SHA-256-Digest: h0pore3Z7nDTM5MHDhbc3rXesq+Q0ednijgWkiWOW+M=
+
+Name: about.html
+SHA-256-Digest: 07qR6YdkygtTayRrQueF6ibNZMg7icYLY8bh2jc/0TU=
+
+Name: concepts/crunremcmds.html
+SHA-256-Digest: DGtNdefE5RytXtfd/BDQuWLR5J8AtjySwzpbq8gEsh8=
+
+Name: tasks/tbeginpass.html
+SHA-256-Digest: yY00IC6Qb+EeBeBASYrgDbdQgXzzj4cqSQnan50aTbU=
+
+Name: tasks/tremoexp.html
+SHA-256-Digest: RUM5s98qRFjEKya51TWxidC0FEtcYDCZg08u9cftCHo=
+
+Name: gettingstarted/g_start.html
+SHA-256-Digest: cBclg3LODmy7dX/5EzHJSqWdOaBclAZqiAYPXd4aM8c=
+
+Name: tasks/tbegindstore.html
+SHA-256-Digest: 65yx5kW6cB6dECP0SLPO82JEqJGeqeHq4Pvl6KbsbHM=
+
+Name: tasks/ttabledrag.html
+SHA-256-Digest: NccBm+2lRv6cCCuJQa4zGoKIl8TPfpWiMDpTcuIXyos=
+
+Name: concepts/cuniversal.html
+SHA-256-Digest: GVfp7qNdc7VBq94W4NhUE18XPWfpztlax5IF/gzevpM=
+
+Name: tasks/tremtype.html
+SHA-256-Digest: 5ihjigi9395Tmn26sL5MS/HGmkyBhN8OF38oU1y3AEY=
+
+Name: META-INF/maven/org.eclipse.tm/org.eclipse.rse.doc.user/pom.propert
+ ies
+SHA-256-Digest: KzoRwDSrTrYj0TjG9xxHK83AVBgN2oZ+eMyi29l4iGk=
+
+Name: tasks/truncmdsview.html
+SHA-256-Digest: Dfpa4QgzEG8/58RYbEcbD+MgzmkTqkTXPGsyBz4Q4hg=
+

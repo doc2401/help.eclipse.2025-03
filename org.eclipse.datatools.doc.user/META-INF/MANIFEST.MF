@@ -1,0 +1,67 @@
+Manifest-Version: 1.0
+Created-By: 1.5.0_15-b04 (Sun Microsystems Inc.)
+Build-Jdk-Spec: 21
+Ant-Version: Apache Ant 1.6.5
+Built-By: TPS_build ditamap.pipeline.1-1_20090521092446
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-Vendor: %providerName
+Bundle-SymbolicName: org.eclipse.datatools.doc.user; singleton:=true
+Bundle-Version: 1.15.0.202311071249
+Bundle-Localization: plugin
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.help.base
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-datatools/d
+ atatools.git;path="plugins/docs/org.eclipse.datatools.doc.user";commitI
+ d=daaa60f9523d48cc6a65d3b14c97cbba2a06ad91
+
+Name: about.properties
+SHA-256-Digest: oa6E3GKhLdSF3hsvUHX5TKbSUrE88MzpMquLffVfr4M=
+
+Name: about.html
+SHA-256-Digest: Dv5NbrV590iFepPFp4HDAA9w8zkHSynRW5FCE+FLHVM=
+
+Name: plugin.xml
+SHA-256-Digest: 1Nha3rNsqwNDkrr3CL0JSj8DA/jL8ZTTdiil3mmoMpY=
+
+Name: styles/doc.css
+SHA-256-Digest: rckFoYXKd9HdQakUwGGJEIyPdbayD9tkuv6ZxvsAU1s=
+
+Name: META-INF/maven/org.eclipse.datatools.plugins/org.eclipse.datatools
+ .doc.user/pom.xml
+SHA-256-Digest: Gl/3Q7oUqjUjxSorOhla4b6ZMGnh5Of9GBH78dV8dAs=
+
+Name: styles/commonrtl.css
+SHA-256-Digest: HebeUHgFbvcZkJUCbLeWRCx3K4i4mbKlu2rUaIC1NTY=
+
+Name: styles/book.css
+SHA-256-Digest: RYWOqAuws9iAo7re/Qxdo6ijfX2hS1iXtaB8zOV5oIA=
+
+Name: styles/commonltr.css
+SHA-256-Digest: 0/ZxttAYzjIWDXkcBZMsKsxeUCKvY3+FXo/KKfkOPqg=
+
+Name: eclipse32.png
+SHA-256-Digest: UATzR3wtZoCeaY5WmWPW+e5lnmthCEsJHmEu8/ZImq4=
+
+Name: about.mappings
+SHA-256-Digest: fL0yxTec9AWrH3zSTZTCywNBsT4QD9h4OEymigLsGDQ=
+
+Name: about_files/eclipse32.png
+SHA-256-Digest: UATzR3wtZoCeaY5WmWPW+e5lnmthCEsJHmEu8/ZImq4=
+
+Name: about.ini
+SHA-256-Digest: kq7kQ0VyCHM5wBVt1le4vN5s31MR1MC8+KAgHAFOLUo=
+
+Name: index.xml
+SHA-256-Digest: vyou/txZZc92QTVzyrf3kbl3EXbIC8bXRoz3JqHKBtM=
+
+Name: toc.xml
+SHA-256-Digest: iUdo7EZbNuYCDcHvGtgEGeROaVkOJK6yzTYKc3ATg5A=
+
+Name: plugin.properties
+SHA-256-Digest: 6TrQ++f3/8+G8uHW9EGgXvmtZekTxehgJm74xbHEVhc=
+
+Name: META-INF/maven/org.eclipse.datatools.plugins/org.eclipse.datatools
+ .doc.user/pom.properties
+SHA-256-Digest: iaYD499fwbxiaix4vegYPQCErO7LPzvHoHYFShqnoTs=
+

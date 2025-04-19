@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Expression Definitions</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">Expression Definitions</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.core.expressions.definitions<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>3.3
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6><p>
+This extension point allows you to create reusable extensions.  They can then be used in other core expression constructs.
+</p>
+<p>
+The reference element in a core expression will evaluated the expression definition with the evaluation context that is active for the reference element.
+</p><p>
+</p>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.definition">definition</a>*)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>point</b> - a fully qualified identifier of the target extension point</li>
+<li><b>id</b> - an optional identifier of the extension instance</li>
+<li><b>name</b> - an optional name of the extension instance</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.definition">definition</a> (<a href="#e.not">not</a> | <a href="#e.and">and</a> | <a href="#e.or">or</a> | <a href="#e.instanceof">instanceof</a> | <a href="#e.test">test</a> | <a href="#e.systemTest">systemTest</a> | <a href="#e.equals">equals</a> | <a href="#e.count">count</a> | <a href="#e.with">with</a> | <a href="#e.resolve">resolve</a> | <a href="#e.adapt">adapt</a> | <a href="#e.iterate">iterate</a>)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST definition</p>
+<p class="code SchemaDtdAttlist">id&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+Provides a global definition of an expression to be used with the &lt;reference/&gt; expression element.  This helps to reuse common expressions.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - A globally unique identifier for the expression definition.</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>You can define and the use core expressions:
+
+<p>
+<pre class="Example"><span class="code SchemaTag">
+&lt;extension point=</span><span class="code SchemaCstring">&quot;org.eclipse.core.expressions.definitions&quot;</span><span class="code SchemaTag">&gt;
+   &lt;definition id=</span><span class="code SchemaCstring">&quot;com.example.parts.activeProblemsView&quot;</span><span class="code SchemaTag">&gt;
+       &lt;with variable=</span><span class="code SchemaCstring">&quot;activePartId&quot;</span><span class="code SchemaTag">&gt;
+          &lt;equals value=</span><span class="code SchemaCstring">&quot;org.eclipse.ui.views.ProblemsView&quot;</span><span class="code SchemaTag">/&gt;
+       &lt;/with&gt;
+   &lt;/definition&gt;
+   &lt;definition id=</span><span class="code SchemaCstring">&quot;com.example.markers.markerSelection&quot;</span><span class="code SchemaTag">&gt;
+       &lt;iterate&gt;
+          &lt;instanceof value=</span><span class="code SchemaCstring">&quot;org.eclipse.core.resources.IMarker&quot;</span><span class="code SchemaTag">/&gt;
+       &lt;/with&gt;
+   &lt;/definition&gt;
+&lt;/extension&gt;
+</span></pre>
+</p>
+<p>
+Then this expression definition can be used when composing other expressions.
+</p>
+<p>
+<pre class="Example"><span class="code SchemaTag">
+&lt;enabledWhen&gt;
+   &lt;reference definitionId=</span><span class="code SchemaCstring">&quot;com.example.parts.activeProblemsView&quot;</span><span class="code SchemaTag">&gt;
+&lt;/enabledWhen&gt;
+</span></pre>
+<pre class="Example"><span class="code SchemaTag">
+&lt;visibleWhen&gt;
+   &lt;and&gt;
+      &lt;reference definitionId=</span><span class="code SchemaCstring">&quot;com.example.parts.activeProblemsView&quot;</span><span class="code SchemaTag">/&gt;
+      &lt;reference definitionId=</span><span class="code SchemaCstring">&quot;com.example.markers.markerSelection&quot;</span><span class="code SchemaTag">/&gt;
+   &lt;/and&gt;
+&lt;/visibleWhen&gt;
+</span></pre>
+</p>
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2007, 2008 IBM Corporation and others.<br>
+
+This program and the accompanying materials are made available under the terms of the Eclipse Public License 2.0 which accompanies this distribution, and is available at <a href="https://www.eclipse.org/legal/epl-2.0">https://www.eclipse.org/legal/epl-v20.html</a>/
+
+SPDX-License-Identifier: EPL-2.0
+
+</p>
+</BODY>
+</HTML>

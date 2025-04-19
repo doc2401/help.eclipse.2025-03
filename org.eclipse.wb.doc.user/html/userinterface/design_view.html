@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Design View</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Design View</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>Design View</strong> is your virtual sketchpad. You can add or remove
+components, edit layout properties, direct edit labels, and see what
+your overall design looks like as it evolves.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/design_view.png" alt="image" width="558" height="446"></span></p>
+</div>
+<div class="paragraph">
+<p>Select a component in the <strong>Design View</strong> to make it appear in the
+<strong><a href="property_pane.html">Property Pane</a></strong>, where you can edit its
+properties. This will also activate selection handles for the component.
+Selection handles allow you change layout properties of the selected
+control and, for some layout managers, also layout properties of sibling
+controls. All properties that can be changed in the <strong>Design View</strong> can be
+also changed in the <strong><a href="property_pane.html">Property Pane</a></strong>. Depending
+on the <a href="../layoutmanagers/index.html">layout manager</a> in effect, row
+and column headers may be visible in the header area.</p>
+</div>
+<div class="paragraph">
+<p>Right-click on component to access the same
+<a href="context_menu.html">context menu</a> available in the
+<strong><a href="component_tree.html">Component Tree</a></strong>. Components may added by
+choosing them from the <strong><a href="palette.html">Palette</a></strong> and deleted using
+the <strong>Delete</strong> key.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_component_selection">Component Selection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use the <span class="image"><img src="images/SelectionTool.gif" alt="image" width="16" height="16"></span>
+<strong>Selection</strong> tool in the <strong><a href="palette.html">Palette</a></strong> to select one or
+more widgets. Hold the <strong>Shift</strong> or <strong>Ctrl</strong> key down to select multiple
+widgets.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/single_selection.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Use the <span class="image"><img src="images/MarqueeSelectionTool.gif" alt="image" width="16" height="16"></span>
+<strong>Marquee</strong> tool in the <strong><a href="palette.html">Palette</a></strong> to rubber band select
+multiple widgets. Hold the <strong>Alt</strong> key and start dragging to automatically
+activate the  <strong>Marquee</strong> tool.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/marquee_select.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="DirectEdit">Direct Edit</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is a quick way to edit the text property of buttons (including
+check and radio buttons), labels, text fields, groups, and table
+columns. First select a component in the <strong>Design View</strong>, and then hit
+the <strong>Space</strong> key to reveal an edit box in which you can set the
+component&#8217;s text property.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/direct_edit.png" alt="image" width="230" height="147"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_moving_components">Moving Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whenever a component is moved in the <strong>Design View</strong>, drag feedback is
+provided that is layout manager specific. In an x,y oriented layout like
+absolute layout, the live component is shown moving with a tooltip
+showing its current location. Dynamic snap / alignment points are
+provided to make it convenient to align the component with other
+components or the window margin.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/feedback_drag_xy.png" alt="image" width="229" height="124"></span></p>
+</div>
+<div class="paragraph">
+<p>In grid oriented layouts different feedback is shown depending on which
+cell the cursor is over. If the cursor is positioned over an open cell,
+the cell is highlighted in green and the cursor shows a green check
+mark. If the cursor is positioned over a row or column border, the row
+or column border is highlighted in yellow indicating that a new row or
+column will be inserted. If the cursor is positioned over an already
+populated cell, that cell is highlighted in red and the cursor shows a
+red minus sign.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/feedback_drag_grid1.png" alt="image" width="229" height="124"></span> 
+<span class="image"><img src="images/feedback_drag_grid2.png" alt="image" width="229" height="124"></span> 
+<span class="image"><img src="images/feedback_drag_grid3.png" alt="image" width="229" height="124"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resizing_components">Resizing Components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whenever a component is resized in the <strong>Design View</strong>, size feedback is
+provided that is layout manager specific. In an x,y oriented layout like
+absolute layout, an outline of the new size is shown with a tooltip
+showing its current size. Dynamic snap / alignment points are provided
+to make it convenient to align the component with other components or
+the window margin. Resizing a component also snaps to the preferred size
+of the resized component or to the size (vertical or horizontal) of any
+other component on the same parent.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/feedback_size_xy.png" alt="image" width="229" height="124"></span></p>
+</div>
+<div class="paragraph">
+<p>In grid oriented layouts, resizing a component will cause it to span
+more than one rows or columns. During the resize operation, the cells
+that will be occupied by the component are outlined in green.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/feedback_size_grid.png" alt="image" width="229" height="124"></span></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

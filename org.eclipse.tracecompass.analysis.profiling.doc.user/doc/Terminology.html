@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>Trace Compass (new-) Callstack User Guide - Terminology</title>
+		<link type="text/css" rel="stylesheet" href="book.css"/>
+	</head>
+	<body>
+		<table class="navigation" style="width: 100%;" border="0" summary="navigation">
+			<tr>
+				<th style="width: 100%" align="center" colspan="3">Terminology</th>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left">
+					<a href="Overview.html" title="Overview">
+						<img alt="Previous" border="0" src="images/prev.gif"/>
+					</a>
+				</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right">
+					<a href="Analyses-and-views.html" title="Analyses and views">
+						<img alt="Next" border="0" src="images/next.gif"/>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left" valign="top">Overview</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right" valign="top">Analyses and views</td>
+			</tr>
+		</table><hr class="navigation-separator"/>
+		<h1 id="Terminology">Terminology</h1>
+		<p>Here are the definitions of the terms used in this plugin.</p>
+		<ul>
+			<li>Callstack: According to 
+				<a href="https://en.wikipedia.org/wiki/Call_stack">Wikipedia (as of July 2017)</a>, the call stack 
+				<i>is a stack data structure that stores information about the active subroutines of a computer program. It is also known as an execution stack, program stack, control stack, run-time stack or machine stack.</i> In our case, it refers to all the analyses that can be done on a trace that contains call stack data.
+			</li>
+		</ul>
+		<ul>
+			<li>Instrumented callstack: It is a callstack created by instrumenting entry and exits of methods, functions, logical operation, etc. The real time spent in each level of the stack is accurate and with some kernel data, it is possible to know the CPU time as well. Instrumenting a whole application can be costly and have large overhead for the application but one can accurately know the path the code went through and when.</li>
+		</ul>
+		<ul>
+			<li>Sampled callstack: The sampled callstack is obtained by profiling the application. The trace events usually contain an array of frame pointers that were being executed at the moment of the sampling. With this kind of data, only statistical analyses of the callstack can be done, like the number of sampling that were at a given frame, but no information on timing is available.</li>
+		</ul>
+		<ul>
+			<li>Call graph: According to 
+				<a href="https://en.wikipedia.org/wiki/Call_graph">Wikipedia (as of July 2017)</a> a call graph 
+				<i>represents calling relationships between subroutines</i>, i.e., the relationship between the callers and callees and how often one is called.
+			</li>
+		</ul>
+		<ul>
+			<li>Calling context tree: It is the most precise form of callgraph, that shows the hierarchy of calls from the very first level of the graph, i.e., it keeps the context of the calls when building a callgraph, unlike the less precise callgraphs, where an edge is just added from the caller to the callee, no matter who called the caller (there can be cycles).</li>
+		</ul>
+		<ul>
+			<li>Symbol: A symbol is a way to identify a given call site. In the callstack analysis, it represents either the address of the function or routine in the code. In this case, it usually is gibberish, but it can be resolved as a function name using some symbol providers. In other cases, it may already be a readable string.</li>
+		</ul>
+		<ul>
+			<li>Call site: A call site is a location in the executable, that could eventually be located in some source code. The call site is identified by a symbol.</li>
+		</ul>
+		<ul>
+			<li>Flame chart: The flame chart is a way to organize data in instrumented call stack analysis to show the exact state of the callstack at different moment of the trace.</li>
+		</ul>
+		<ul>
+			<li>Flame graph: The flame graph is an visualization of the calling context tree, which shows the length (with instrumented data) or frequency (with sampling data) of the different code paths.</li>
+		</ul><hr class="navigation-separator"/>
+		<table class="navigation" style="width: 100%;" border="0" summary="navigation">
+			<tr>
+				<td style="width: 20%" align="left">
+					<a href="Overview.html" title="Overview">
+						<img alt="Previous" border="0" src="images/prev.gif"/>
+					</a>
+				</td>
+				<td style="width: 60%" align="center">
+					<a href="User-Guide.html" title="Trace Compass (new-) Callstack User Guide">
+						<img alt="Trace Compass (new-) Callstack User Guide" border="0" src="images/home.gif"/>
+					</a>
+				</td>
+				<td style="width: 20%" align="right">
+					<a href="Analyses-and-views.html" title="Analyses and views">
+						<img alt="Next" border="0" src="images/next.gif"/>
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 20%" align="left" valign="top">Overview</td>
+				<td style="width: 60%" align="center"></td>
+				<td style="width: 20%" align="right" valign="top">Analyses and views</td>
+			</tr>
+		</table>
+	</body>
+</html>

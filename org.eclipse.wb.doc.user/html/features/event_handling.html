@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Event Handling</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge .cm {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .c1 {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+pre.rouge .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+pre.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+pre.rouge .gr {
+  color: #aa0000;
+}
+pre.rouge .gh {
+  color: #999999;
+}
+pre.rouge .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+pre.rouge .go {
+  color: #888888;
+}
+pre.rouge .gp {
+  color: #555555;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #aaaaaa;
+}
+pre.rouge .gt {
+  color: #aa0000;
+}
+pre.rouge .kc {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kd {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .k, pre.rouge .kv {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .mf {
+  color: #009999;
+}
+pre.rouge .mh {
+  color: #009999;
+}
+pre.rouge .il {
+  color: #009999;
+}
+pre.rouge .mi {
+  color: #009999;
+}
+pre.rouge .mo {
+  color: #009999;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
+  color: #009999;
+}
+pre.rouge .sa {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .sb {
+  color: #d14;
+}
+pre.rouge .sc {
+  color: #d14;
+}
+pre.rouge .sd {
+  color: #d14;
+}
+pre.rouge .s2 {
+  color: #d14;
+}
+pre.rouge .se {
+  color: #d14;
+}
+pre.rouge .sh {
+  color: #d14;
+}
+pre.rouge .si {
+  color: #d14;
+}
+pre.rouge .sx {
+  color: #d14;
+}
+pre.rouge .sr {
+  color: #009926;
+}
+pre.rouge .s1 {
+  color: #d14;
+}
+pre.rouge .ss {
+  color: #990073;
+}
+pre.rouge .s, pre.rouge .dl {
+  color: #d14;
+}
+pre.rouge .na {
+  color: #008080;
+}
+pre.rouge .bp {
+  color: #999999;
+}
+pre.rouge .nb {
+  color: #0086B3;
+}
+pre.rouge .nc {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #008080;
+}
+pre.rouge .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #800080;
+}
+pre.rouge .ne {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #555555;
+}
+pre.rouge .nt {
+  color: #000080;
+}
+pre.rouge .vc {
+  color: #008080;
+}
+pre.rouge .vg {
+  color: #008080;
+}
+pre.rouge .vi {
+  color: #008080;
+}
+pre.rouge .nv, pre.rouge .vm {
+  color: #008080;
+}
+pre.rouge .ow {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .o {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #bbbbbb;
+}
+pre.rouge {
+  background-color: #f8f8f8;
+}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Event Handling</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Events occur when the user interacts with the UI. The appropriate
+event-handling code is then executed. In order to know when events
+occur, event handlers must first be added to your components. The tool
+makes it very easy to add and remove event listeners to your components.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../userinterface/images/property_pane_events.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_an_event_handler">Adding an Event Handler</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There are two ways to add an event handler with the the editor. The
+first way is through the
+<strong><a href="../userinterface/property_pane.html">Property Pane</a></strong>. First select
+a component in either the
+<strong><a href="../userinterface/component_tree.html">Component Tree</a></strong> or the
+<strong><a href="../userinterface/design_view.html">Design View</a></strong>. Click the <strong>Show
+Events</strong>
+<span class="image"><img src="../userinterface/images/events.gif" alt="image" width="16" height="16"></span>
+button to reveal the events list in the
+<strong><a href="../userinterface/property_pane.html">Property Pane</a></strong>. Expand an
+event and double-click or press <strong>Enter</strong> on the event handler you wish to
+implement.</p>
+</div>
+<div class="paragraph">
+<p>The second way to add an event handler is to simply
+<a href="../userinterface/context_menu.html">right-click</a> on a component
+(either in the <strong><a href="../userinterface/design_view.html">Design View</a></strong> or
+in the <strong><a href="../userinterface/component_tree.html">Component Tree</a></strong>),
+select <strong>Add event handler &gt; [name of the event] &gt; [name of the event
+handler to implement]</strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/add_event_handler_menu.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>A quick way to add event listeners to buttons (including check and radio
+buttons) and menu items is to simply double-click on the button or menu
+item. When double-clicked, a selection event listener will be created.</p>
+</div>
+<div class="paragraph">
+<p>Any way you add an event, the tool will automatically create an event
+handler for the selected event method. The editor will then switch to
+the <strong><a href="../userinterface/source_view.html">Source View</a></strong> and go
+directly to the new event handler method. The code generated looks like
+the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ruby"><span class="n">browseButton</span> <span class="o">=</span> <span class="n">new</span> <span class="no">Button</span><span class="p">(</span><span class="n">shell</span><span class="p">,</span> <span class="no">SWT</span><span class="o">.</span><span class="no">NONE</span><span class="p">);</span>
+<span class="n">browseButton</span><span class="p">.</span><span class="nf">addSelectionListener</span><span class="p">(</span><span class="n">new</span> <span class="no">SelectionListener</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kp">public</span><span class="o">*</span> <span class="n">void</span> <span class="n">widgetDefaultSelected</span><span class="p">(</span><span class="no">SelectionEvent</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">}</span>
+
+  <span class="kp">public</span> <span class="n">void</span> <span class="n">widgetSelected</span><span class="p">(</span><span class="no">SelectionEvent</span> <span class="n">arg0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="n">browseButton</span><span class="p">.</span><span class="nf">setText</span><span class="p">(</span><span class="s2">"Browse..."</span><span class="p">);</span></code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 99%;">
+<col style="width: 1%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>There are two ways to quickly return to the event-handling code from the
+<strong><a href="../userinterface/design_view.html">Design View</a></strong>. In the
+<strong><a href="../userinterface/property_pane.html">Property Pane</a></strong>, click the
+<strong>Show Events</strong>
+<span class="image"><img src="../userinterface/images/events.gif" alt="image" width="16" height="16"></span>
+button and expand the event. Then double-click or press <strong>Enter</strong> on the
+event method to return to the code. The events' list in the
+<strong><a href="../userinterface/property_pane.html">Property Pane</a></strong> is a list of
+all the events implemented, and each individual event&#8217;s property value
+is the list of methods implemented. If a method has been implemented,
+its property value is the line number in the source code where its
+event-handling code begins.</p>
+</div>
+<div class="paragraph">
+<p>The other way to quickly return to the event-handling code is to
+right-click on a component (either in the
+<strong><a href="../userinterface/design_view.html">Design View</a></strong> or in the
+<strong><a href="../userinterface/component_tree.html">Component Tree</a></strong>), and then
+select the menu item for the correct method that was implemented. Shown
+to the right is "<strong>actionPerformed &#8594; line 111</strong>" being selected. In this
+example, "actionPerformed" is the event method, and "111" is the line
+number in the source code on which the method begins.</p>
+</div>
+<div class="paragraph">
+<p>Note: the tool is also able to generate an event handler stub method
+when a new event is created by setting the appropriate code generation
+preferences.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="images/event_line_number_menu.png" alt="image"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deleting_an_event_handler">Deleting an Event Handler</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>There is only one way to delete an existing event handler in the editor.
+Select a component in either the
+<strong><a href="../userinterface/design_view.html">Design View</a></strong> or in the
+<strong><a href="../userinterface/component_tree.html">Component Tree</a></strong>. In the
+<strong><a href="../userinterface/property_pane.html">Property Pane</a></strong> expand expand
+the event, click on the event method you wish to delete and then press
+<strong>Delete</strong>. If there are no other methods that have been implemented for
+that event, the tool will also delete the event listener for that event.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

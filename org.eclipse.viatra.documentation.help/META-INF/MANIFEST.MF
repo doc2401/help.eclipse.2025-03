@@ -1,0 +1,395 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.2
+Build-Jdk-Spec: 17
+SCM-Revision: 245c63fbb99d93a28c4595f3a6213a0b841e1566
+Bundle-ManifestVersion: 2
+Bundle-Name: VIATRA Documentation
+Bundle-SymbolicName: org.eclipse.viatra.documentation.help;singleton:=tr
+ ue
+Bundle-Version: 2.9.1.202409200831
+Require-Bundle: org.eclipse.help
+Bundle-Vendor: Eclipse VIATRA Project
+Automatic-Module-Name: org.eclipse.viatra.documentation.help
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-viatra/org.
+ eclipse.viatra.git;path="documentation/org.eclipse.viatra.documentation
+ .help";commitId=245c63fbb99d93a28c4595f3a6213a0b841e1566
+
+Name: plugin.xml
+SHA-256-Digest: wI//tMraRK4YigsWgFYZOqf24xbkobeoh5NczLMq32Y=
+
+Name: html/images/transformation/executor_adapter.png
+SHA-256-Digest: 0V8GsuTjRWj6rsjii/iDZoGpVUNf7XLTHfxmr4bIGCg=
+
+Name: html/images/releases/14_query-ui-matcher_filter.png
+SHA-256-Digest: HXFIfZjZwH3hPkRb6hO4HZ2fWBsv8QMGPgsVTbW54ZA=
+
+Name: html/images/cps/overview.png
+SHA-256-Digest: fTSqD/i/NeeAzjt6/f81qHZHPB+cdtemqSbbKevtIZU=
+
+Name: html/images/tools/vgql_first_pattern.png
+SHA-256-Digest: IaMLb+XTejJnsO4fXcab3rjKPLEeL6+Z38brHpunS0U=
+
+Name: html/images/transformation/screenshots/model_browser.png
+SHA-256-Digest: PITKXlkHo5lvqesVECzb+F1xkiZ0UaFcXasBvvgj7fQ=
+
+Name: html/documentation.html
+SHA-256-Digest: aFRg5OZqQv7/kHjz0OfzglilfKW87skJgpzl2TiZCcM=
+
+Name: html/images/cps/deployment_ecore.png
+SHA-256-Digest: qT2mifCSsqp6kz8wP/cFT+hlYflSnMTcPJZ3ZgL7aPs=
+
+Name: html/images/tutorial/transformation_wizard.png
+SHA-256-Digest: SWhKMb4IDFjJeKmH/oDpIMT3pjHQbPRYgU5a4sIjlCM=
+
+Name: html/images/releases/22_add_parameter.png
+SHA-256-Digest: by9xpdRxWqK+KC/qBeX6w/c00aF3rM90wbcQu44XmAU=
+
+Name: html/images/tutorial/viatraIncr_example5.png
+SHA-256-Digest: bLdX0qLT3pD7YSc9qNas3aW99IjCuVVDBng3UydsGM0=
+
+Name: html/images/tools/vgql_install.png
+SHA-256-Digest: zNZOVY2plkXhsWFb0cpg3vAp7Fcc89JHOXsJqqg8Mxk=
+
+Name: viatra.toc.xml
+SHA-256-Digest: v+LHo1LrRv9K7V8E899MD2atpU/bu/z5fBO/cnyygvM=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.documentation
+ .help/pom.xml
+SHA-256-Digest: +3v+mWsvItxlqGHSgv/JnL+lRFA5NSD5YMAs/Kt01iM=
+
+Name: html/images/cps/cps_transform_view.png
+SHA-256-Digest: C2o3KOxwSO9Xa2vjZ7TZS8jIcsRgPit3AmxNikYL1NQ=
+
+Name: html/images/releases/14_query-ui-registry-results-model-engine_det
+ ails.png
+SHA-256-Digest: yossKDkltL0os68E+oS0r0SjdiADOoyXMWhj4KzyPI8=
+
+Name: html/images/releases/22_codemining.png
+SHA-256-Digest: JFksvukcWOpd7abh4tkVoTXdH3OD8b7g3fNMoYdTh60=
+
+Name: build.properties
+SHA-256-Digest: xn64ghFooW40nz1f4kJLyxTOuUNWY1s2+UEp1W6uZ94=
+
+Name: html/images/cps/load_xform_w_debugger_icon.png
+SHA-256-Digest: aHnaH9qKpPFLsf5xb6c4tRwP2zyCO8H3CgoJGDRTf5k=
+
+Name: html/images/tutorial/generate_cps_example.png
+SHA-256-Digest: koBWKXKfFsEztcgFKmNa+37bUrlcbw0jhFr7+PONY4o=
+
+Name: html/images/language/aggregated_chain_result.png
+SHA-256-Digest: xkYPqjcM1wrkw6LgpRoYV/XkPHaMiaLubmmg+Y2zxnk=
+
+Name: org.eclipse.viatra.documentation.help.contexts.xml
+SHA-256-Digest: LAqXRtZ6XbaSOlyBi5v5EsvJpxxCbFpA1NZXu9RdrUw=
+
+Name: html/images/tutorial/batch_transformation_wizard_type.png
+SHA-256-Digest: LN/ylC0oAr2MPLVofgqA+dYHfnBWunwVlnWk3LORgGU=
+
+Name: html/images/cps/load_query_icon.png
+SHA-256-Digest: LU59bdUuZH3afbD2s9baQBreWU1eRzjQ+QYc0qLkhqA=
+
+Name: html/images/transformation/screenshots/debug_persp_empty.png
+SHA-256-Digest: TzijbZdMEuoXBG5G1tsxECF34lOUW5iIpHgInlEtI7o=
+
+Name: html/images/addons/viewers_ecore.png
+SHA-256-Digest: q3x+dgpXjhp4dRIZtD9olwj0JhjSKHAmWz/L9aaGzAY=
+
+Name: html/images/tools/dependency_quick_fix.png
+SHA-256-Digest: TvErm6ICv3fIAHq11OaLFts8GrL50Z4RtqDrU6us464=
+
+Name: html/evm.html
+SHA-256-Digest: eca3je65YbSr8WEVzlXmi0ogG2vVLiqm4iXegGh7TOs=
+
+Name: html/images/cps/plan.png
+SHA-256-Digest: el/S7Q+Hpo5klaOtBxAAey90bUGWjHBaI91R59v2W9c=
+
+Name: html/images/releases/14_managed_engine_selection.png
+SHA-256-Digest: ulj9Yr+KpBSg/IEYC4PM0+DwmSuR+o7M/JpS73QnKb4=
+
+Name: html/images/releases/14_query-ui-open_managed_engine.png
+SHA-256-Digest: 2tedk16fKTNrd4bQw8uyVMedV5xpIWokQBNuAndc9jw=
+
+Name: html/images/cps/raw/overview.pptx
+SHA-256-Digest: BxJjXUjQEZP9Ye6rE8CNkKtLGmN7Hxbcf0wmupNhP5M=
+
+Name: html/images/releases/17_viatra_compiler.png
+SHA-256-Digest: 75QkiQgArNUUZdGfV6vYgsGRPAs6daBrSxWMS7dc2kE=
+
+Name: html/images/transformation/screenshots/wizard_debugging.png
+SHA-256-Digest: 67NkOpJbxf3qqN+Poq/w0QCQO/8TJ0enw23POq2zO0E=
+
+Name: html/images/cps/planexecutor.png
+SHA-256-Digest: AOyzutx0/1ioFvpuUl1LqRc3YGOgAX/+Tr2HzFe0ArA=
+
+Name: html/images/transformation/screenshots/automatic_termination.png
+SHA-256-Digest: EukYA8XIDO7CWtmZYtT/f+gruQtUbsu8dtP4KHrL7yU=
+
+Name: html/images/tools/vgql_query_results.png
+SHA-256-Digest: IKFsBzSk4nKl8+ZSzha25oegW9inGsEmZTNCtIecUTc=
+
+Name: META-INF/maven/org.eclipse.viatra/org.eclipse.viatra.documentation
+ .help/pom.properties
+SHA-256-Digest: Dq6e7t9Evq6P3Astly6gj6SES+swJ36BXJRwccGfuBw=
+
+Name: html/images/transformation/screenshots/newtransf.png
+SHA-256-Digest: ATJbry7OGGG8ugkmYfwVxbdG8ZJKUrPbbMcqTWn+C3M=
+
+Name: html/images/tutorial/eventdrivent_transformation_wizard_type.png
+SHA-256-Digest: VGr5OtTQ6vu31jNbbqAwHtLpsidZLg8Ar1YJTegNtEw=
+
+Name: html/asciidoctor.css
+SHA-256-Digest: hCXNDrTvsXxxEVDY4wnG95gpHdRe4kcNPiQlJL6spHc=
+
+Name: html/images/transformation/screenshots/conflict_set.png
+SHA-256-Digest: Xdnwl22xZD8wHNbjN+UjJrFu+rg+ccewR+IiwAIVzLQ=
+
+Name: html/images/transformation/screenshots/breakpoints_view.png
+SHA-256-Digest: HHAPdZjcoi+QC7yLpps+2ZmZQW0q732DuGYamgwjawA=
+
+Name: html/images/transformation/screenshots/selectthread.png
+SHA-256-Digest: lfZ0J6VNFGQniFL0/gDatbOiNsarXkjkErTBZD0BMsM=
+
+Name: html/query-language.html
+SHA-256-Digest: LCZ6bAYlblCoULbH66d/WxtB554ZGqc9RhUkk+Ew/4k=
+
+Name: html/images/releases/16_rete_visualizer.png
+SHA-256-Digest: XRPDweJYY77KlUKsXJXUMNaISzbz5CqJWXtCFkhS1IA=
+
+Name: html/images/cps/cps_wizard_type_page.png
+SHA-256-Digest: Gm0R/1mBEb9zMLnCWVZqzeK+c42n31/peP7TSZBEUyc=
+
+Name: html/images/tutorial/install.png
+SHA-256-Digest: yrR4X9D5qsgCheFkmcGTdYz1HBVdiulESj2jwQO+xHg=
+
+Name: html/images/releases/22_ca_parameter.png
+SHA-256-Digest: vKMDjF4JCPeAmQRd6y2/hALSY58DdlefLaddVUV/ImQ=
+
+Name: html/images/tutorial/batch_transformation_wizard_name.png
+SHA-256-Digest: Hlb9XfBwF37J3cDxBPjhRcAadlwYkMH2AEShc/F3sis=
+
+Name: html/images/tutorial/queryresultview.png
+SHA-256-Digest: Es49+BotjcQ68fTh8aDZjXNdvHTzM44rJ7HcAK1+aw0=
+
+Name: html/images/transformation/screenshots/newtransf_classsel.png
+SHA-256-Digest: tEbhUZNAzICNVY00uAdR3saOhwzMpQAK66uXrX/bH3w=
+
+Name: html/tutorial.html
+SHA-256-Digest: sdrrAf4bBzaNgn6uHwoiKyBPW/kVFIhfaOmZgRfL6xY=
+
+Name: html/images/cps/cps_ecore.png
+SHA-256-Digest: arHcO0nazkVBYbWKmZ2oN9lZ901UyVIz6r6d3MxB2xU=
+
+Name: html/images/addons/uml-integration-surrogates.png
+SHA-256-Digest: TS7JazzeeNlqEXzf8fiTyUegjtem6LGZ35YX6YS2UFY=
+
+Name: html/images/transformation/transformation_debugger.png
+SHA-256-Digest: KNTpV5C8eLIPSDkuek8dNUMhNaE2LDHpBPLMDPYQqY8=
+
+Name: html/images/tutorial/viatraIncr_example2.png
+SHA-256-Digest: 0mFykLUIVk0T25+0+imRaPdIlgXob6WVLf3QFal8/nI=
+
+Name: html/images/cps/modelgenerator.png
+SHA-256-Digest: tc2pWQ2qtqDTw1YmhnqKZlqjoz3snwO1BDtsNxavu3Q=
+
+Name: html/images/tools/vgql_project.png
+SHA-256-Digest: ouim5AyBIcR5fIMersbU31N77Y9iEyhFUsaHv9wRw0c=
+
+Name: html/transformations.html
+SHA-256-Digest: Fp/1e2jM4RdV9uzHgkImiWD+l/l2jfVJeY3sCo+PLeM=
+
+Name: html/images/releases/16_query_codegen_options.png
+SHA-256-Digest: rphjiXcGUf4OernkookogxySZPKy43j1d4MZHW/vd4M=
+
+Name: html/images/addons/viewers_uml_tree.png
+SHA-256-Digest: JbhhLQiUy6KMM98l/DatT0dLH9WV49K1/GKayAO03n0=
+
+Name: html/images/tools/vgql_add_metamodel.png
+SHA-256-Digest: Q5KhNGI7c9GFfjc/4BsscF/ji05hRpiWJER7K3Y/MPM=
+
+Name: html/images/tutorial/viatrabatch.png
+SHA-256-Digest: P8bK8XFfvuHfM8Dussu0HE0vLS3IQNtEviaC5UYEQOQ=
+
+Name: html/images/tools/new_vgql_file.png
+SHA-256-Digest: 1vLcco77zAbtmo6wqL1SK4ZMdvUSmSGe9mlcCOsm1Cs=
+
+Name: html/images/transformation/screenshots/rule_breakpoint.png
+SHA-256-Digest: n9feBGXNyzJ+PWKXX9MbXZpYsDOg4xuJiaw4DYogIQ4=
+
+Name: html/viatra.html
+SHA-256-Digest: uncfz0dZoYdnjMRGl4b3A4/8vbaNxmiCmqY1zm037qo=
+
+Name: html/images/releases/14_benchmark_ls_time.png
+SHA-256-Digest: lyu8IiHi6FPjZkyEzxC+HP3uCxDrXKVLepfPrm/0IEI=
+
+Name: html/images/transformation/screenshots/debug_persp.png
+SHA-256-Digest: uE4g8qezOFqYCDtE1E4Xhqzw4hkHNved50phQifVBe0=
+
+Name: html/images/transformation/evm_adapter_classes.png
+SHA-256-Digest: eZmcCcvsOcSw8mDBbxAkT/B0oFnkYDjfqj5alCqx/zg=
+
+Name: html/images/releases/20_hover_ereference.png
+SHA-256-Digest: nkls4OZK/4h3DutSfskNjOXoTeXe/UyuTBDhIBA3ls4=
+
+Name: html/language/whitelist.html
+SHA-256-Digest: oZrsG/Iu8mu3LAphj939TXFyzp/oiejnLQrum2i0Qx4=
+
+Name: html/images/releases/16_query_explain_message.png
+SHA-256-Digest: sIuDuapCg9yUrNoz1hTeNIliZALrVjFbyfe/uzQZ698=
+
+Name: html/query-api.html
+SHA-256-Digest: PH/TN9fqlcXNg4OMLnm96NuNBXEtoPzzICOXm+v6B8o=
+
+Name: html/images/releases/16_query_coverage_report.png
+SHA-256-Digest: v/VYsalQOIsPSfgaoZYYvq1QrpJKemJ+cSpzAgtIiCg=
+
+Name: html/images/tutorial/viatraIncr_example4.png
+SHA-256-Digest: j2wBR6FZS9L5E25qUO3kwy1d3IFmTYwu6uzgCCMNLus=
+
+Name: html/images/transformation/screenshots/newtransf_connected.png
+SHA-256-Digest: kWRTME0DEWzzu5KtXlIEftRHgKqF9Bq7VXEi6pQEuVU=
+
+Name: html/tools/preferences.html
+SHA-256-Digest: raKWqeOF2GS0K0iyjKYy3gPsIUOshc8qWlsQDHy+DPs=
+
+Name: html/images/cps/cps_wizard_details_page.png
+SHA-256-Digest: XXw5+zvHT7j/x9wLAADu+kS90bj5zatgMkz0JZsYlVA=
+
+Name: html/images/transformation/screenshots/variables_view.png
+SHA-256-Digest: c18DFq/eCSGTrKhh3PAApoKPZYpzK+57HaV/GjWW5cA=
+
+Name: html/images/tutorial/query_runtime.png
+SHA-256-Digest: KTkzdD9lr/4T/KQomtst/o44tReuKGYAXGH8rWl7UVw=
+
+Name: html/language/asciidoctor.css
+SHA-256-Digest: hCXNDrTvsXxxEVDY4wnG95gpHdRe4kcNPiQlJL6spHc=
+
+Name: html/images/cps/cps_debug.png
+SHA-256-Digest: 2qkd89IBd6jRJDRCZRU4XwXL7caLwa9mb+rEMppSctk=
+
+Name: html/images/transformation/screenshots/conditional_breakpoint.png
+SHA-256-Digest: 40sbItDAmtuvu7Oe0b6q63TTNK2HvmZ0Kq1D0tIPq48=
+
+Name: html/graphical-queries.html
+SHA-256-Digest: mnv2vY9cDg7hWepG8tD8gkqnwvSZpU/IiqRCVx/awLs=
+
+Name: html/addons.html
+SHA-256-Digest: sH/QlwUJ7lOlx0C3nElpLmFgLgJcgfBFMN0gmZ/tNuU=
+
+Name: html/images/tools/new_vgql_project.png
+SHA-256-Digest: 2kMTo5H+tG52cJ1p2rRy4ivOn4Hjo4isDezHHzOVeAs=
+
+Name: html/images/releases/20_hover_eclass.png
+SHA-256-Digest: li+CyLOt8lRW5dLL7Sb1zPHwgsOCS+YiKCbkJx3tl6A=
+
+Name: html/images/tutorial/cps_resources.png
+SHA-256-Digest: 6xGL9IS0JK4ZLRrFC8JEHbvUhqGaJB/3Rm30D1uIL7k=
+
+Name: html/images/tutorial/eventdriven_transformation_wizard_type.png
+SHA-256-Digest: unsyJEx2WKTpOq+YzzX1gcmL8Bk7s64ktig4rkh7ufA=
+
+Name: html/images/addons/qbf-overview.png
+SHA-256-Digest: CnRxjEtnFqeJ+5bj45IDgDPYp0kRp0m/v8X1GeFJ7jg=
+
+Name: html/images/tutorial/viatraIncr_example6.png
+SHA-256-Digest: RA4lYdrIpFLcoUiDJ0xk2eqfqm5VHrpXt0aNLDHtNOQ=
+
+Name: html/cps-demonstrator.html
+SHA-256-Digest: JAbpOKQ0fJjLZLM72u+J6WBNEjwkOYiaB7xCieO0obk=
+
+Name: html/images/tutorial/viatraIncr_example1.png
+SHA-256-Digest: 54m/n14aPXYvsPKMt1UCGe4EfX70ASNrWWjuait5lI4=
+
+Name: html/images/cps/unload_icon.gif
+SHA-256-Digest: rvefCbcrUR7ReYbQDqo/8ahlei306gYBodoRMulQkd8=
+
+Name: html/images/transformation/screenshots/select_next.png
+SHA-256-Digest: fe2kwtxNxx3myYgEpPFs8XNuZ11hQpFdSDm2MIzRAB4=
+
+Name: html/images/tutorial/run_headless_application.png
+SHA-256-Digest: 80Og9awxdG8ri0Mfj3p/+ND3wShO3D48o4QKdfo/7RY=
+
+Name: html/images/addons/viewers_uml_list.png
+SHA-256-Digest: fN/yDQlgiRiDsVyVgxZWQMUAihMCzt3FodfRfWsOcDs=
+
+Name: html/images/transformation/screenshots/wizard_selection.png
+SHA-256-Digest: QbFszDvxOMGyBsVVTypO0Cp0+Gd3+heQQSCHN4Abr5w=
+
+Name: html/images/tutorial/eventdriven_transformation_name.png
+SHA-256-Digest: sYVp4L3KYsPvOXpfJaC4BPV0vfzQg/KTJXaTygnls4w=
+
+Name: html/tools.html
+SHA-256-Digest: Rrs0c/CG8spJ154DtTQ/vfBdxsvOwJjpg6fkxSAxj68=
+
+Name: html/images/transformation/screenshots/debug_newlaunch.png
+SHA-256-Digest: ChClHfwlhgC48RcxDbaf5hxEFA5HTGe2g0D4oPYQe5Q=
+
+Name: html/images/transformation/evm-overview.png
+SHA-256-Digest: 3klVvCevA0RRj8MfFHQBT/NO4x1CUUOwHWT8ec9Lp9c=
+
+Name: html/language/usagecounting.html
+SHA-256-Digest: WemrIlcsYEw4sOEHn2PTRqNEvALM9Nh7L0EaRoghiHI=
+
+Name: html/releases.html
+SHA-256-Digest: B6HaAjUSPV08b0Y89QSZr6vnsTTjyltRVVu2h3JhVKU=
+
+Name: html/images/tutorial/query_generated_code.png
+SHA-256-Digest: P+1EGC25Zpot65hI8a/xvR1qLd2BA6145ScJPaQDFvU=
+
+Name: html/images/cps/traceability_ecore.png
+SHA-256-Digest: DOKieO/Vnt1U6Ek9mJ41Bw+9lficFZqP1Slf4qpDfTs=
+
+Name: html/images/transformation/screenshots/conditional_breakpoint_pars
+ eerror.png
+SHA-256-Digest: /RtyAOvFMKJkfwAyrSF8q7YJoAq4uGPSlULQe5fyNmA=
+
+Name: html/images/releases/20_hover_varref.png
+SHA-256-Digest: ta2eUEb386um0xrNVQLzknTN41lGSs+eoIUgNXHG5Fg=
+
+Name: html/images/tutorial/eventdriven_transformation_wizard_name.png
+SHA-256-Digest: bnJgbTgmAGF7lsHRAGtSwvWCn97Ywvm2HY8RlIs1B98=
+
+Name: html/images/language/aggregated_chain_embedded_result.png
+SHA-256-Digest: X3JLenuUabi9D6VgYna40wKY1NYTvqvt9sjaAEUxKok=
+
+Name: html/images/tools/rete_visualizer.png
+SHA-256-Digest: shq6uhZshW2lC+KX3yRHd4G6TpCFAN+9UOsevIJ6mwY=
+
+Name: html/images/cps/codegenerator.png
+SHA-256-Digest: hjC+nwV9XXWi314nmt7+RxVSEwhZ4sd1tZJ9O9dBBoE=
+
+Name: html/tools/asciidoctor.css
+SHA-256-Digest: hCXNDrTvsXxxEVDY4wnG95gpHdRe4kcNPiQlJL6spHc=
+
+Name: about.html
+SHA-256-Digest: Qx53vUKBh4ByLG9I8uUS7GH8BTecG5s70WKYlnHc04k=
+
+Name: html/images/language/aggregated_chain_correct_result.png
+SHA-256-Digest: +R5XMUvhiLl/IULkrziimT8Je+UnptyfP6Bbgd8aPyY=
+
+Name: html/images/tutorial/viatraIncr_example3.png
+SHA-256-Digest: cZygHzM2Eu9qCRcnWIXwSTnzCAnYDWfWfVoGQnpJ6M4=
+
+Name: html/images/transformation/screenshots/connection_error.png
+SHA-256-Digest: JVa4jVtNTTI5NJFMnIW0AN1HJJhjNMekgX/KjahfqiY=
+
+Name: html/images/addons/uml-integration-deps.png
+SHA-256-Digest: lE/dAbJqOL7Tp881yID68UtakX2ydAfhKvoTctGoM04=
+
+Name: html/images/releases/22_codemining_prefs.png
+SHA-256-Digest: Kw+WMyzUYyxdHgF/1m9rVuweU/sfMNdqzZhAT9pNStc=
+
+Name: html/aggregatedchains.html
+SHA-256-Digest: l2bvjfn0RPG96cufAYZpA5dzOULjGOme7yARhrHKzZ8=
+
+Name: html/images/transformation/screenshots/transformation_rules.png
+SHA-256-Digest: 8Px9HrESKXOYQw6LJ9ZiSkQynII81VeQggPFj69gqaw=
+
+Name: html/images/transformation/adapter_framework.png
+SHA-256-Digest: JBq6xnpCbP6NZUwmmHJixTev7gstGDB6ecBXa+7g0dw=
+
+Name: html/images/transformation/coder_adapter.png
+SHA-256-Digest: aw0GY740DIxn4McF3NNi16tK1Vv8JW1pe6Y/UlXMfE4=
+
+Name: html/images/addons/viewers_uml_zest.png
+SHA-256-Digest: SixZl3uWqd6pyyDSQY21iPV0GRM5pNF2G/Xrz1PzjXU=
+

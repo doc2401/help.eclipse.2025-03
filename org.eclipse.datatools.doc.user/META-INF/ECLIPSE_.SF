@@ -1,0 +1,56 @@
+Signature-Version: 1.0
+Created-By: 11.0.24 (Eclipse Adoptium)
+SHA-256-Digest-Manifest: lFgPr9LlUgIsQDUZE7/oJ+0sRFAYfc/bzp3mSUzHqCo=
+SHA-256-Digest-Manifest-Main-Attributes: DI887/dta6Q1EExUq6sZbQjH5OfD1PQ
+ +egy6XhrHHps=
+
+Name: about.properties
+SHA-256-Digest: 4J95U8fFKjTeRWGQc3c73aeYG1FPZKJ8KBL0717geYw=
+
+Name: about.html
+SHA-256-Digest: Ee6ZmeH+oRjExUMNloPSZjic8Agy/zdhrcJJa6vd/wA=
+
+Name: plugin.xml
+SHA-256-Digest: rwfAnKREWie9Sv0ZECLkNJFoUt57Jmw0ae1yC3od8a8=
+
+Name: styles/doc.css
+SHA-256-Digest: waVto1lo/GjeeicjwP75z3BnhHw+Iixx0X9aMN7ZQgE=
+
+Name: META-INF/maven/org.eclipse.datatools.plugins/org.eclipse.datatools
+ .doc.user/pom.xml
+SHA-256-Digest: Aq0+OR4fGgItVNj4p7aqb3r8Va0Dhdtb3CV0nICe5nI=
+
+Name: styles/commonrtl.css
+SHA-256-Digest: 7ae6yMEmFQQmdS/d/GfntQT5YYyYr4DbG4U7UShAWMM=
+
+Name: styles/book.css
+SHA-256-Digest: F6X4JgBYhnJID1uDCsvsPTmDs5fhrFiuMLmQddfOLCU=
+
+Name: styles/commonltr.css
+SHA-256-Digest: 8/ewDe6nWtgFLW2d90VmO05Zy0eLKYkeuaKvKaQx8E4=
+
+Name: eclipse32.png
+SHA-256-Digest: 34OkOOTL08cNmARbGO7P2zpDVi1dlqtqmXqOujxDAvE=
+
+Name: about.mappings
+SHA-256-Digest: jo5WUhVoAtvX8dsWWVyeVWoUczf7jfs+cf9SMQLTXzU=
+
+Name: about_files/eclipse32.png
+SHA-256-Digest: 6bc+TIhVoU4J+x1Z8mA6M/IgI+WXXP0mYxRdWAFSumA=
+
+Name: about.ini
+SHA-256-Digest: uysu8V1uD1K5+r2ib4Qst6ttLS0IWdFTjpxVtHWenrU=
+
+Name: index.xml
+SHA-256-Digest: Ixth1tcbV3ZPDNI8fYMrN1LY/qDsUo0EQ1OPF5ua97k=
+
+Name: toc.xml
+SHA-256-Digest: FBuUempQqa7aLsj48L5aeP3B2KlHtYA3xJqC5XI2L8A=
+
+Name: plugin.properties
+SHA-256-Digest: ibQ+7VcM//EIypyYTBwfWjSsXyGlHX4ZrBefMCRASOc=
+
+Name: META-INF/maven/org.eclipse.datatools.plugins/org.eclipse.datatools
+ .doc.user/pom.properties
+SHA-256-Digest: Ar1LunuvrAxW8b7Kjq+4Qc5taEjLhqZoOplbjyK4iTw=
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:article="http://www.eclipse.org/ARTICLE/1.0">
+  <article:Plugin name="org.eclipse.net4j.util" label="Net4j Utilities">
+    <packages name="org.eclipse.net4j.util"/>
+    <packages name="org.eclipse.net4j.util.cache"/>
+    <packages name="org.eclipse.net4j.util.collection"/>
+    <packages name="org.eclipse.net4j.util.concurrent"/>
+    <packages name="org.eclipse.net4j.util.confirmation"/>
+    <packages name="org.eclipse.net4j.util.container"/>
+    <packages name="org.eclipse.net4j.util.container.delegate"/>
+    <packages name="org.eclipse.net4j.util.event"/>
+    <packages name="org.eclipse.net4j.util.factory"/>
+    <packages name="org.eclipse.net4j.util.fsm"/>
+    <packages name="org.eclipse.net4j.util.io"/>
+    <packages name="org.eclipse.net4j.util.lifecycle"/>
+    <packages name="org.eclipse.net4j.util.om"/>
+    <packages name="org.eclipse.net4j.util.om.job"/>
+    <packages name="org.eclipse.net4j.util.om.log"/>
+    <packages name="org.eclipse.net4j.util.om.monitor"/>
+    <packages name="org.eclipse.net4j.util.om.pref"/>
+    <packages name="org.eclipse.net4j.util.om.trace"/>
+    <packages name="org.eclipse.net4j.util.options"/>
+    <packages name="org.eclipse.net4j.util.properties"/>
+    <packages name="org.eclipse.net4j.util.ref"/>
+    <packages name="org.eclipse.net4j.util.registry"/>
+    <packages name="org.eclipse.net4j.util.security"/>
+    <packages name="org.eclipse.net4j.util.security.operations"/>
+    <packages name="org.eclipse.net4j.util.transaction"/>
+    <extensionPoints name="elementProcessors"/>
+    <extensionPoints name="factories"/>
+    <extensionPoints name="productGroups"/>
+    <productGroups id="org.eclipse.net4j.authenticators" name="Authenticators" description=""/>
+    <productGroups id="org.eclipse.net4j.util.security.authorizableOperations" name="Authorizable Operations" description=""/>
+    <productGroups id="org.eclipse.net4j.util.confirmationProviders" name="Confirmation Providers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.security.credentialsProviders" name="Credentials Providers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.security.crypters" name="Crypters" description=""/>
+    <productGroups id="org.eclipse.net4j.util.exceptionHandlers" name="Exception Handlers" description=""/>
+    <productGroups id="org.eclipse.net4j.executorServices" name="Executor Services" description=""/>
+    <productGroups id="org.eclipse.net4j.util.metaFactories" name="Meta Factories" description=""/>
+    <productGroups id="org.eclipse.net4j.Negotiators" name="Negotiators" description=""/>
+    <productGroups id="org.eclipse.net4j.randomizers" name="Randomizers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.concurrent.delegateDetectors" name="Reentrant Lock Delegate Detectors" description=""/>
+    <productGroups id="org.eclipse.net4j.streamWrappers" name="Stream Wrappers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.stringConverters" name="String Converters" description=""/>
+    <productGroups id="org.eclipse.net4j.util.stringParsers" name="String Parsers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.stringTesters" name="String Testers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.timers" name="Timers" description=""/>
+    <productGroups id="org.eclipse.net4j.userManagers" name="User Managers" description=""/>
+  </article:Plugin>
+  <article:Plugin name="org.eclipse.net4j.util.ui" label="Net4j Utilities UI">
+    <packages name="org.eclipse.net4j.util.ui"/>
+    <packages name="org.eclipse.net4j.util.ui.actions"/>
+    <packages name="org.eclipse.net4j.util.ui.chat"/>
+    <packages name="org.eclipse.net4j.util.ui.confirmation"/>
+    <packages name="org.eclipse.net4j.util.ui.container"/>
+    <packages name="org.eclipse.net4j.util.ui.dnd"/>
+    <packages name="org.eclipse.net4j.util.ui.handlers"/>
+    <packages name="org.eclipse.net4j.util.ui.prefs"/>
+    <packages name="org.eclipse.net4j.util.ui.proposals"/>
+    <packages name="org.eclipse.net4j.util.ui.security"/>
+    <packages name="org.eclipse.net4j.util.ui.views"/>
+    <packages name="org.eclipse.net4j.util.ui.widgets"/>
+    <productGroups id="org.eclipse.net4j.util.ui.avatarGenerators" name="Avatar Generators" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.chatRenderers" name="Chat Renderers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.elementWizards" name="Element Wizards" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.entryControlAdvisors" name="Entry Control Advisors" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.introspectionProviders" name="Introspection Providers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.menuFillers" name="Menu Fillers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.openHandlers" name="Open Handlers" description=""/>
+    <productGroups id="org.eclipse.net4j.util.ui.valueFormatters" name="Value Formatters" description=""/>
+  </article:Plugin>
+  <article:Plugin name="org.eclipse.net4j.util.ui.mylyn" label="Net4j Utilities UI Mylyn Support"/>
+</xmi:XMI>

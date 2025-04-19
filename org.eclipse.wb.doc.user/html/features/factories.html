@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Factories</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+<style>
+pre.rouge table td { padding: 5px; }
+pre.rouge table pre { margin: 0; }
+pre.rouge .cm {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cp {
+  color: #999999;
+  font-weight: bold;
+}
+pre.rouge .c1 {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
+}
+pre.rouge .c, pre.rouge .ch, pre.rouge .cd, pre.rouge .cpf {
+  color: #999988;
+  font-style: italic;
+}
+pre.rouge .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+pre.rouge .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+pre.rouge .ge {
+  color: #000000;
+  font-style: italic;
+}
+pre.rouge .gr {
+  color: #aa0000;
+}
+pre.rouge .gh {
+  color: #999999;
+}
+pre.rouge .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+pre.rouge .go {
+  color: #888888;
+}
+pre.rouge .gp {
+  color: #555555;
+}
+pre.rouge .gs {
+  font-weight: bold;
+}
+pre.rouge .gu {
+  color: #aaaaaa;
+}
+pre.rouge .gt {
+  color: #aa0000;
+}
+pre.rouge .kc {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kd {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kn {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kp {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kr {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .kt {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .k, pre.rouge .kv {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .mf {
+  color: #009999;
+}
+pre.rouge .mh {
+  color: #009999;
+}
+pre.rouge .il {
+  color: #009999;
+}
+pre.rouge .mi {
+  color: #009999;
+}
+pre.rouge .mo {
+  color: #009999;
+}
+pre.rouge .m, pre.rouge .mb, pre.rouge .mx {
+  color: #009999;
+}
+pre.rouge .sa {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .sb {
+  color: #d14;
+}
+pre.rouge .sc {
+  color: #d14;
+}
+pre.rouge .sd {
+  color: #d14;
+}
+pre.rouge .s2 {
+  color: #d14;
+}
+pre.rouge .se {
+  color: #d14;
+}
+pre.rouge .sh {
+  color: #d14;
+}
+pre.rouge .si {
+  color: #d14;
+}
+pre.rouge .sx {
+  color: #d14;
+}
+pre.rouge .sr {
+  color: #009926;
+}
+pre.rouge .s1 {
+  color: #d14;
+}
+pre.rouge .ss {
+  color: #990073;
+}
+pre.rouge .s, pre.rouge .dl {
+  color: #d14;
+}
+pre.rouge .na {
+  color: #008080;
+}
+pre.rouge .bp {
+  color: #999999;
+}
+pre.rouge .nb {
+  color: #0086B3;
+}
+pre.rouge .nc {
+  color: #445588;
+  font-weight: bold;
+}
+pre.rouge .no {
+  color: #008080;
+}
+pre.rouge .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+pre.rouge .ni {
+  color: #800080;
+}
+pre.rouge .ne {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nf, pre.rouge .fm {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nl {
+  color: #990000;
+  font-weight: bold;
+}
+pre.rouge .nn {
+  color: #555555;
+}
+pre.rouge .nt {
+  color: #000080;
+}
+pre.rouge .vc {
+  color: #008080;
+}
+pre.rouge .vg {
+  color: #008080;
+}
+pre.rouge .vi {
+  color: #008080;
+}
+pre.rouge .nv, pre.rouge .vm {
+  color: #008080;
+}
+pre.rouge .ow {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .o {
+  color: #000000;
+  font-weight: bold;
+}
+pre.rouge .w {
+  color: #bbbbbb;
+}
+pre.rouge {
+  background-color: #f8f8f8;
+}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Factories</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tool supports the creation of custom factory classes and methods.
+This is a convenient way to create customized, reusable versions of
+common components. The tool supports the following features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#Creating">Create a static factory method from any widget</a></p>
+</li>
+<li>
+<p><a href="#Parameterizing">Factory methods may be parameterized with one or
+more arguments</a></p>
+</li>
+<li>
+<p><a href="#Applying">Morph any widget into a factory instance</a></p>
+</li>
+<li>
+<p><a href="#AddingToPalette">Add any factory component to the palette</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following is an example of a simple button that is converted into
+multiple factories. The button has two properties set: its text is set
+to "OK" and its color is set to red.</p>
+</div>
+<p>
+  <img src="images/factory_example.png">
+  <img src="images/create_factory_menu.png" align="top">
+</p>
+<div class="paragraph">
+<p><code>JButton okButton = new JButton("OK");</code><br>
+<code>okButton.setForeground(Color.RED);</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Creating">Creating a factory method</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Right-click on the component and select the <strong>Factory &gt; Create
+factory&#8230;&#8203;</strong> command. In the <strong>Create Factory</strong> dialog, enter the name of
+the factory class (or select an existing factory using the <strong>Browse</strong>
+button) and the method name for the (static) factory method. If you wish
+the new factory to be added to the
+<strong><a href="../userinterface/palette.html">Palette</a></strong>, select a palette category
+or create a new category using the
+<strong><a href="../userinterface/palette_manager.html">Palette Manager</a></strong>.</p>
+</div>
+<div class="paragraph">
+<p>Below this, you will see a list if <strong>Creation arguments</strong> and
+<strong>Invocations</strong>. <strong>Creation arguments</strong> are passed directly to the
+constructor of the widget while <strong>Invocations</strong> are applied to the widget
+after creation. Note that for SWT factories, the <strong>parent</strong> container must
+be passed as an argument as shown below on the right (<strong>parent</strong> cannot be
+unchecked).</p>
+</div>
+<p>
+  <img src="images/create_factory_dialog1.png">
+  <img src="images/create_factory_dialog2.png" align="top">
+</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Parameterizing">Parameterizing a factory method</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As shown in the SWT example above and in the two examples below, a check
+in a leaf node within the tree indicates that a particular attribute
+should be a parameterized argument of the factory method. Checking the
+<strong>text</strong> creation argument will cause the <strong>text</strong> property to be passed
+into the method and applied to the widget. Likewise, checking the
+<strong>foreground</strong> invocation property will cause the <strong>foreground</strong> property to
+be passed into the method and applied to the widget.</p>
+</div>
+<p>
+  <img src="images/create_factory_dialog3.png">
+  <img src="images/create_factory_dialog4.png" align="top">
+</p>
+<div class="paragraph">
+<p>If an invocation property should be ignored entirely, uncheck it in the
+<strong>Invocations</strong> list as shown below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/create_factory_dialog5.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Clicking <strong>Create</strong> or <strong>OK</strong>, will create the factory class, if necessary,
+and add the factory method to it. Click <strong>Create</strong> to create multiple
+related methods at one time; click <strong>OK</strong> to create a single method and
+close the dialog.</p>
+</div>
+<div class="paragraph">
+<p>Each factory method will be tagged with a <strong>@wbp.factory</strong> Javadoc tag.
+The tool uses that tag to identify factory methods in a factory class.
+If you create any factory methods by hand, you should add this same tag
+in order to identify it to the editor. Any arguments passed into the
+method should be identified with an <strong>@wbp.factory.parameter.source</strong>
+Javadoc tag. That tag should also include the name of the parameter and
+a suitable default value (used for initial code generation).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kn">import</span> <span class="nn">javax.swing.JButton</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.Color</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="nc">MyFactory</span> <span class="o">{</span>
+<span class="err"> </span> <span class="cm">/**
+   * @wbp.factory
+   */</span>
+<span class="err"> </span> <span class="kd">public</span> <span class="kd">static</span> <span class="nc">JButton</span> <span class="nf">createRedOkButton</span><span class="o">()</span> <span class="o">{</span>
+<span class="err">   </span> <span class="nc">JButton</span> <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JButton</span><span class="o">(</span><span class="s">"OK"</span><span class="o">);</span>
+<span class="err">   </span> <span class="n">button</span><span class="o">.</span><span class="na">setForeground</span><span class="o">(</span><span class="nc">Color</span><span class="o">.</span><span class="na">RED</span><span class="o">);</span>
+<span class="err">   </span> <span class="k">return</span> <span class="n">button</span><span class="o">;</span>
+<span class="err"> </span> <span class="o">}</span>
+
+<span class="err"> </span> <span class="cm">/**
+   * @wbp.factory
+   * @wbp.factory.parameter.source text "OK"
+   */</span>
+<span class="err">   </span><span class="kd">public</span> <span class="kd">static</span> <span class="nc">JButton</span> <span class="nf">createRedButton</span><span class="o">(</span><span class="nc">String</span> <span class="n">text</span><span class="o">)</span> <span class="o">{</span>
+<span class="err">   </span> <span class="nc">JButton</span> <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JButton</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
+<span class="err">   </span> <span class="n">button</span><span class="o">.</span><span class="na">setForeground</span><span class="o">(</span><span class="nc">Color</span><span class="o">.</span><span class="na">RED</span><span class="o">);</span>
+<span class="err">   </span> <span class="k">return</span> <span class="n">button</span><span class="o">;</span>
+<span class="err"> </span> <span class="o">}</span>
+
+<span class="err"> </span> <span class="cm">/**
+   * @wbp.factory
+   * @wbp.factory.parameter.source foreground java.awt.Color.RED
+   */</span>
+<span class="err"> </span> <span class="kd">public</span> <span class="kd">static</span> <span class="nc">JButton</span> <span class="nf">createColoredOkButton</span><span class="o">(</span><span class="nc">Color</span> <span class="n">foreground</span><span class="o">)</span> <span class="o">{</span>
+<span class="err">   </span> <span class="nc">JButton</span> <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JButton</span><span class="o">(</span><span class="s">"OK"</span><span class="o">);</span>
+<span class="err">   </span> <span class="n">button</span><span class="o">.</span><span class="na">setForeground</span><span class="o">(</span><span class="n">foreground</span><span class="o">);</span>
+<span class="err">   </span> <span class="k">return</span> <span class="n">button</span><span class="o">;</span>
+<span class="err"> </span> <span class="o">}</span>
+
+<span class="err"> </span> <span class="cm">/**
+   * @wbp.factory
+   */</span>
+<span class="err"> </span> <span class="kd">public</span> <span class="kd">static</span> <span class="nc">JButton</span> <span class="nf">createOkButton</span><span class="o">()</span> <span class="o">{</span>
+<span class="err">   </span> <span class="nc">JButton</span> <span class="n">button</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">JButton</span><span class="o">(</span><span class="s">"OK"</span><span class="o">);</span>
+<span class="err">   </span> <span class="k">return</span> <span class="n">button</span><span class="o">;</span>
+<span class="err"> </span> <span class="o">}</span>
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The original widget source will be also replaced with a call to the
+newly created factory method.</p>
+</div>
+<div class="paragraph">
+<p><code>JButton okButton = MyFactory.createRedOkButton();</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Applying">Applying a factory to a widget</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once created, a factory may be applied to an existing widget using the
+<strong>Factory &gt; Select Factory&#8230;&#8203;</strong> command. This is very similar to a
+<a href="morphing.html">morphing</a> operation. Once a factory has been
+selected, its methods are shown directly in the <strong>Factory</strong> cascade menu
+as shown below.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/select_factory_menu.png" alt="image" width="382" height="149"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="AddingToPalette">Adding factories to the palette</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Factories may also be added to the palette for quick access using either
+the <strong><a href="../userinterface/palette_manager.html">Palette Manager</a></strong> or the
+<strong><a href="../userinterface/palette_context_menu.html">Palette context menu</a></strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/factory_custom_palette.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>To add a single factory item, give it a name, select the factory class
+and method signature, and give it a description. The component may be
+initially <strong>visible</strong> or not and may be added to any available category.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../userinterface/images/add_static_factory_dialog2.png" alt="image" width="463" height="278"></span></p>
+</div>
+<div class="paragraph">
+<p>To add a multiple factory items at the same time, select the factory
+class and method signatures. The component name and description will be
+given default values. The components will be initially <strong>visible</strong> and may
+be added to any available category.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../userinterface/images/add_static_factories_dialog2.png" alt="image" width="381" height="236"></span></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

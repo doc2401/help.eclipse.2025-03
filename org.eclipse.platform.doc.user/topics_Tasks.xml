@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- =========================== -->
+<!-- Define topics for the Tasks -->
+<!-- =========================== -->
+<toc label="Tasks">
+
+<topic label="Running Eclipse" href="tasks/running_eclipse.htm" />
+
+<anchor id="t_afterrunning" />
+
+<topic label="Upgrading Eclipse" href="tasks/tasks-2.htm" />
+
+<anchor id="t_afterupgrading" />
+
+<topic label="Working With Perspectives" href="tasks/tasks-1a.htm" >
+  <topic label="Switching Between Perspectives" href="tasks/tasks-28.htm" />
+  <topic label="Specifying the Default Perspective" href="tasks/tasks-31.htm" />
+  <topic label="Opening Perspectives" href="tasks/tasks-9f.htm" />
+  <topic label="Changing Where Perspectives Open" href="tasks/tasks-24.htm" />
+  <topic label="Showing and Hiding Menu Items and Toolbar Buttons" href="tasks/tasks-9n.htm"/>
+  <topic label="Configuring the Menu and Toolbar of the Perspective" href="tasks/tasks-9m.htm"/>
+  <topic label="Configuring Perspective Shortcuts" href="tasks/tasks-9k.htm"/>
+  <topic label="Saving a User Defined Perspective" href="tasks/tasks-9i.htm" />
+  <topic label="Deleting a User Defined Perspective" href="tasks/tasks-9d.htm" />
+  <topic label="Resetting Perspectives" href="tasks/tasks-9j.htm" />
+</topic>
+
+<anchor id="t_afterworking_perspectives" />
+
+<topic label="Working With Views and Editors"  href="tasks/tasks-1b.htm" >
+  <topic label="Opening Views" href="tasks/tasks-3.htm" />
+  <topic label="Moving and Docking Views" href="tasks/tasks-3e.htm" />
+  <topic label="Rearranging Tabbed Views" href="tasks/tasks-3h.htm" />
+  <topic label="Detaching Views and Editors" href="tasks/tasks-9l.htm" />
+  <topic label="Opening Files for Editing" href="tasks/tasks-46.htm" />
+  <topic label="Associating Editors With File Types" href="tasks/tasks-51.xhtml" />
+  <topic label="Editing Files Outside the Workbench" href="tasks/tasks-52.htm" />
+  <topic label="Tiling Editors" href="tasks/tasks-3g.htm" />
+  <topic label="Maximizing and Minimizing in the Eclipse Presentation" href="gettingStarted/qs-39g.htm" />
+</topic>
+
+<anchor id="t_afterworking_views" />
+
+<topic label="Customizing the Workbench" href="tasks/tasks-1.htm" >
+  <topic label="Customizing Welcome" href="tasks/welcome.htm">
+    <enablement>
+       <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.ui.intro"/>
+    </enablement>
+    <topic label="Customize Welcome Dialog" href="reference/welcome_preferences.htm"/>
+  </topic>
+  <topic label="Rearranging the Main Toolbar" href="tasks/ttoolbars.htm" />
+  <topic label="Changing the Key Bindings" href="tasks/tkeybindings.htm" />
+  <topic label="Changing Fonts and Colors" href="tasks/tasks-20.htm" />
+  <topic label="Controlling Single and Double Click Behavior" href="tasks/topenmode.htm" />
+  <topic label="Importing and Exporting Preferences" href="tasks/timpandexp.htm"/>
+  <topic label="Large File Associations" href="tasks/large-file-associations.htm"/>
+</topic>
+
+<anchor id="t_aftercustomizing" />
+
+<topic label="Working With Projects, Folders and Files" href="tasks/tasks-1e.htm" >
+  <topic label="Creating a Project" href="tasks/tasks-42.htm" />
+  <topic label="Closing Projects" href="tasks/tasks-47.htm" />
+  <topic label="Deleting Projects" href="tasks/tasks-42b.htm" />
+  <topic label="Creating a Folder" href="tasks/tasks-43.htm" />
+  <topic label="Creating a File" href="tasks/tasks-44.htm" />
+  <topic label="Creating Linked Resources" href="tasks/tasks-45.htm" />
+  <topic label="Creating Virtual Folders" href="tasks/tasks-45a.htm" />
+  <topic label="Moving Resources" href="tasks/tasks-63.htm" />
+  <topic label="Copying Resources" href="tasks/tasks-63cg.htm" />
+  <topic label="Renaming Resources" href="tasks/tasks-66.htm" />
+  <topic label="Deleting Resources" href="tasks/tasks-67.htm" />
+  <topic label="Viewing Resources Properties" href="tasks/tasks-49.htm" />
+  <topic label="Creating Resource Filters" href="tasks/tasks-97.htm" />
+</topic>
+
+<anchor id="t_afterworking_projects" />
+
+
+<topic label="Navigating and Finding Resources" href="tasks/tasks-1c.htm" >
+  <topic label="Finding a Resource Quickly" href="tasks/tasks-46ag.htm" />
+  <topic label="Searching for Files" href="tasks/tasks-84b.htm" />
+  <topic label="Searching for Text Within a File" href="tasks/tasks-84.htm" />
+  <topic label="Showing or Hiding Files in the Project Explorer View" href="tasks/tasks-48b.htm" />
+  <topic label="Linking the Project Explorer View to the Active Editor" href="tasks/tasks-18.htm" />
+</topic>
+
+<anchor id="t_afternavigating" />
+
+<topic label="Problems, Bookmarks, Tasks and Other Markers" href="tasks/tasks-1d.htm" >
+  <topic label="Creating a Bookmark Within a File" href="tasks/tasks-81.htm" />
+  <topic label="Creating a Bookmark for an Entire File" href="tasks/tasks-81b.htm" />
+  <topic label="Deleting a Bookmark" href="tasks/tasks-82.htm" />
+  <topic label="Adding Line Items in the Tasks View" href="tasks/tasks-77.htm" />
+  <topic label="Associating a Task with a Resource" href="tasks/tasks-77b.htm" />
+  <topic label="Deleting Tasks" href="tasks/tasks-78.htm" />
+  <topic label="Filtering the Tasks and Problems Views" href="tasks/tasks-79.htm" />
+  <topic label="Automatically Fixing Problems" href="tasks/tquickfix.htm" />
+</topic>
+
+<anchor id="t_afterbookmarks" />
+
+<topic label="Comparing Resources" href="tasks/tasks-68.htm" >
+  <topic label="Setting Preferences for Comparing Files" href="tasks/tasks-68b.htm" />
+  <topic label="Understanding the Comparison" href="tasks/tasks-68bg.htm" />
+  <topic label="Merging Changes in the Compare Editor" href="tasks/tasks-68dg.htm" />
+  <enablement>
+     <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.compare"/>
+  </enablement>
+</topic>
+
+<anchor id="t_aftercomparing" />
+
+<topic label="Working With Local History" href="tasks/tasks-1f.htm" >
+  <topic label="Comparing Resources With the Local History" href="tasks/tasks-70.htm" />
+  <topic label="Replacing a Resource With Local History" href="tasks/tasks-87.htm" />
+  <topic label="Restoring Deleted Resources From Local History" href="tasks/tasks-87b.htm" />
+  <topic label="Setting Local History Preferences" href="tasks/tasks-88.htm" />
+</topic>
+
+<anchor id="t_afterworking_local" />
+
+<topic label="Importing" href="tasks/tasks-53.xhtml" >
+  <topic label="Importing Existing Projects" href="tasks/tasks-importproject.htm" />
+  <topic label="Importing Resources From the File System" href="tasks/tasks-55.htm" />
+  <topic label="Importing Resources From an Archive File" href="tasks/tasks-55bg.htm" />
+</topic>
+
+<anchor id="t_afterimporting" />
+
+<topic label="Exporting" href="tasks/tasks-57.xhtml" >
+  <topic label="Exporting Resources to the File System" href="tasks/tasks-59.htm" />
+  <topic label="Exporting Resources to an Archive File" href="tasks/tasks-59ag.htm" />
+</topic>
+
+<anchor id="t_afterexporting" />
+
+<topic label="Building Resources" href="tasks/tasks-73.htm" >
+  <topic label="Performing Builds Automatically" href="tasks/tasks-16.htm" />
+  <topic label="Performing Builds Manually" href="tasks/tasks-75.htm" />
+  <topic label="Saving Resources Automatically Before a Manual Build" href="tasks/tasks-17.htm" />
+  <topic label="Changing Build Order" href="tasks/tasks-14.htm" />
+</topic>
+
+<anchor id="t_afterbuilding" />
+
+<topic label="Running Ant Buildfiles" href="tasks/tasks-ant-running.htm">
+	<topic label="Modifying the Ant Classpath" href="tasks/tasks-ant-classpath.htm"/>
+	<topic label="Using a Different Version of Ant" href="tasks/tasks-ant-version.htm"/>
+	<topic label="Adding New Ant Tasks and Types" href="tasks/tasks-ant-addtasksandtypes.htm"/>
+	<enablement>
+	  <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.ant.ui"/>
+	</enablement>
+</topic>
+
+<anchor id="t_afterant" />
+
+<topic label="Running External Tools" href="tasks/tasks-exttools-running.htm">
+    <enablement>
+      <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.ui.externaltools"/>
+    </enablement>
+</topic>
+
+<anchor id="t_afterexternaltools" />
+
+<!-- help topics -->
+<topic label="Accessing Help" href="tasks/help.xhtml" >
+  <topic label="Navigating Help Topics" href="tasks/help_navigate.htm" />
+  <topic label="Searching Help" href="tasks/help_search.htm" />
+  <topic label="Using Help Scopes" href="tasks/help_scope.htm" />
+  <topic label="Accessing Context-Sensitive Help" href="tasks/help_context.htm" />
+  <topic label="Help Display Settings" href="tasks/help_settings.htm" />
+  <topic label="Help Accessibility" href="tasks/help_accessibility.htm">
+    <enablement>
+      <systemTest property="osgi.os" value="win32"/>
+    </enablement>
+  </topic>
+  <enablement>
+    <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.help.ui"/>
+  </enablement>
+</topic>
+
+<anchor id="t_afterusing" />
+
+<!-- team topics -->
+<topic label="Working in the Team Environment" href="tasks/tasks-1h.htm" >
+  <topic label="Synchronizing With the Repository" href="tasks/tasks-115.htm" >
+    <topic label="Committing" href="tasks/tasks-114.htm" />
+    <topic label="Version Control Life Cycle: Adding and Ignoring Resources" href="tasks/tasks-100d.htm" >
+      <topic label="Creating a Global Ignore Pattern" href="tasks/tasks-100d1.htm" />
+      <topic label="Overriding or Removing Resource Ignore Patterns" href="tasks/tasks-100d1b.htm" />
+    </topic>
+    <topic label="Resolving Conflicts" href="tasks/tasks-113b.htm" />
+  </topic>
+  <topic label="Setting the Content Type of a File Extension" href="tasks/tasks-team-1.htm" />
+  <topic label="Comparing Resources With Repository Versions" href="tasks/tasks-101.htm" />
+  <topic label="Working With Patches" href="tasks/tasks-68c.htm" />
+</topic>
+
+<anchor id="t_afterworking_team" />
+
+
+<!-- install update topics -->
+  <topic label="Updating and Installing Software" href="tasks/tasks-129.htm" />
+  <topic label="Updating the Installation" href="tasks/tasks-120.htm" />
+  <topic label="Installing New Software" href="tasks/tasks-124.htm" />
+  <topic label="Updating Software Using the Available Updates Wizard" href="tasks/tasks-125.htm" />
+  <topic label="Uninstalling Software" href="tasks/tasks-126.htm" />
+  <topic label="Installation Details" href="tasks/tasks-130.htm">
+  <topic label="Installation Details for Plug-ins" href="tasks/tasks-131.htm" />
+  <topic label="Installation Details for Features" href="tasks/tasks-132.htm" />
+  <topic label="Installation Details for the Configuration" href="tasks/tasks-133.htm" />
+  <topic label="Adding a New Software Site" href="tasks/tasks-127.htm" />
+  <topic label="Working with the Available Software sites" href="tasks/tasks-128.htm" />
+  <topic label="Reverting to a Previous Install Configuration" href="tasks/tasks-123.htm" />
+  <topic label="Scheduling Automatic Updates" href="tasks/tasks-122.htm" />
+</topic>
+
+<anchor id="t_afterupdating" />
+
+</toc>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Bi-directional Code Generation</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Bi-directional Code Generation</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>WindowBuilder Pro</strong> is a powerful and easy to use bi-directional Java
+GUI designer, that directly generates Java code which can be changed in
+the <strong><a href="../userinterface/design_view.html">Design View</a></strong> or directly in
+the <strong><a href="../userinterface/source_view.html">Source View</a></strong>. All changes
+made to the source code will be reflected in the graphical designer. The
+tool can read and write almost any format and reverse-engineer most
+hand-written Java GUI code. It also supports free form code editing
+(make changes anywhere&#8230;&#8203;not just in <em>special</em> areas) and most user
+refactorings (you can move, rename and subdivide methods without a
+problem).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../userinterface/images/source_view_right.png" alt="image" width="902" height="305"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_hand_written_windows">Editing hand-written windows</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most GUI builders in the world will only read and write the code that
+they themselves create. <strong>WindowBuilder Pro</strong> is an exception to that
+rule. It can read and write not only the code it creates, but also a
+great deal of code written by hand(&gt;90%). If you come across a case that
+does not work, send it to us for analysis. The more broken examples that
+we can "fix", the better the tool will get in the long run (and the
+better chance you will have of salvaging your old code as-is).</p>
+</div>
+<div class="paragraph">
+<p>Note that dynamic GUI code can not be rendered or edited. The problem
+with dynamic code is that it generally relies on runtime calculations
+that have no meaning at runtime. Widgets created in a loop (where the
+loop parameters are passed in externally) are a good example. Widgets
+created in conditionals where the value of the conditional is not known
+until runtime are another example. Dynamic GUI code constructed from the
+results of complex database queries is yet another example.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_modifying_generated_code">Modifying generated code</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <strong>WindowBuilder Pro</strong> parser has a good understanding of basic Java
+code and various Swing and SWT patterns. As a result, it is very
+refactoring friendly and very resilient in the face of hand made
+changes. You can make changes or add code anywhere you like and the tool
+will reverse engineer it when possible. You can also refactor the code
+in almost any conceivable way and the tool will still be able to parse
+it and render it in the <strong><a href="../userinterface/design_view.html">Design
+View</a></strong>. For example, use the tool to create a new Swing JFrame, add some
+widgets, and then use the Eclipse refactoring tools to extract some of
+the widgets into their own methods.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_no_special_tags_required">No special tags required</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using special tags or marking code read-only would go against several of
+<strong>WindowBuilder Pro&#8217;s</strong> major design goals. The tool does not make any
+distinction between generated code and user-written code. The tool is
+designed to generated the same code that you would write by hand and to
+make minimal changes to the source when you make a change to the design
+view. The tool never regenerates the entire source for a file. If you
+change a single property, it will change only a single line of code.
+That line of code could theoretically be anywhere in the source file
+(including within lines originally created by the tool or within lines
+that you wrote by hand).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_specific_constructs_that_cant_be_parsed">Specific constructs that can&#8217;t be parsed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Here are some examples of constructs that the parser does not yet
+handle:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Re-use of GridBagConstraint objects across multiple widgets (we support reusing the same variable but not the same objects)</p>
+</li>
+<li>
+<p>UI construction through the use of local parameterized helper methods</p>
+</li>
+<li>
+<p>Multiple aliases (fields or local variables) referring to the same component</p>
+</li>
+<li>
+<p>Multiple references to the same widget definition through multiple invocations of the same helper method</p>
+</li>
+<li>
+<p>Dynamic GUI code based on runtime calculations</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.eclipse.gef.dot.internal"},{"l":"org.eclipse.gef.dot.internal.ui"},{"l":"org.eclipse.gef.dot.internal.ui.conversion"},{"l":"org.eclipse.gef.dot.internal.ui.handlers"}];updateSearchResults();

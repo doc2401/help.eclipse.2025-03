@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Swing Designer FAQ</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Swing Designer FAQ</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following are frequently asked questions about <strong>Swing Designer</strong>: </p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#OtherGUIBuilders">Can Swing Designer edit windows created with
+JBuilder, VA Java, NetBeans, VisualCafe, etc.?</a></p>
+</li>
+<li>
+<p><a href="#CreatedByHand">Can Swing Designer edit windows that have been
+created by hand?</a></p>
+</li>
+<li>
+<p><a href="#Refactor">Can I refactor or otherwise modify the Swing Designer
+generated code?</a></p>
+</li>
+<li>
+<p><a href="#SpecialTags">Why doesn&#8217;t Swing Designer surround generate code
+with special tags or mark it as read-only?</a></p>
+</li>
+<li>
+<p><a href="#CantParse">Are there any specific constructs that Swing Designer
+can&#8217;t parse?</a></p>
+</li>
+<li>
+<p><a href="#CustomWidgets">Can Swing Designer use custom widgets?</a></p>
+</li>
+<li>
+<p><a href="#DesignTab">What can I do if I don&#8217;t see the Design tab when I
+edit a window?</a></p>
+</li>
+<li>
+<p><a href="#Exception">What should I do if I encounter an exception using
+Swing Designer?</a></p>
+</li>
+<li>
+<p><a href="#ParsingError">What should I do if I encounter "Unknown Window
+Type (Parsing Error)"?</a></p>
+</li>
+<li>
+<p><a href="#OutOfMemoryError">What should I do if I encounter an
+OutOfMemoryError using Swing Designer?</a></p>
+</li>
+<li>
+<p><a href="#NoSuchMethodError">What should I do if I encounter an
+NoSuchMethodError or NoClassDefFoundError using Swing Designer?</a></p>
+</li>
+<li>
+<p><a href="#UnsupportedClassVersionError">What should I do if I encounter an
+UnsupportedClassVersionError using Swing Designer?</a></p>
+</li>
+<li>
+<p><a href="#InstantiationException">What should I do if I encounter an
+InstantiationException or other error when using a custom widget?</a></p>
+</li>
+<li>
+<p><a href="#Linux">How should Swing Designer be configured to work on Linux?</a></p>
+</li>
+<li>
+<p><a href="#SuSELinux">What should I do if I have problems running under SuSE
+Linux?</a></p>
+</li>
+<li>
+<p><a href="#LinuxFlashing">How can I prevent the preview window from flashing
+under Linux using Metacity</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="OtherGUIBuilders">Can Swing Designer edit windows created with JBuilder, VA Java, NetBeans, VisualCafe, etc.?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yes. Most GUI builders in the world will only read and write the code
+that they themselves create. Swing Designer is an exception to that
+rule. It can read and edit not only the code it creates, but also a
+great deal of code generated by other GUI builders (&gt;95%). We have had
+very good success with code generated by JBuilder, NetBeans, Visual
+Cafe, VA Java, the Eclipse VE, etc. If you come across a case that does
+not work, send it to us for analysis. The more broken examples that we
+can "fix", the better Swing Designer will get in the long run (and the
+better chance you will have of salvaging your old code as-is). Note that
+Swing Designer will edit any existing code in place without changing its
+formatting. Any new widgets will be created using Swing Designer&#8217;s own
+code generation preferences.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CreatedByHand">Can Swing Designer edit windows that have been created by hand?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yes. Most GUI builders in the world will only read and write the code
+that they themselves create. Swing Designer is an exception to that
+rule. It can read and write not only the code it creates, but also a
+great deal of code written by hand(&gt;90%). If you come across a case that
+does not work, send it to us for analysis. The more broken examples that
+we can "fix", the better Swing Designer will get in the long run (and
+the better chance you will have of salvaging your old code as-is).</p>
+</div>
+<div class="paragraph">
+<p>Note that dynamic GUI code can not be rendered or edited. The problem
+with dynamic code is that it generally relies on runtime calculations
+that have no meaning at runtime. Widgets created in a loop (where the
+loop parameters are passed in externally) are a good example. Widgets
+created in conditionals where the value of the conditional is not known
+until runtime are another example. Dynamic GUI code constructed from the
+results of complex database queries is yet another example.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Refactor">Can I refactor or otherwise modify the Swing Designer generated code?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yes. The Swing Designer parser has a good understanding of basic Java
+code and various Swing, SWT and other UI toolkit patterns. As a result,
+it is very refactoring friendly and very resilient in the face of hand
+made changes. You can make changes or add code anywhere you like and
+Swing Designer will reverse engineer it when possible. You can also
+refactor the code in almost any conceivable way and Swing Designer will
+still be able to parse it and render it in the design view. For example,
+use the tool to create a new Swing JFrame, add some widgets, and then
+use the Eclipse refactoring tools to extract some of the widgets into
+their own methods.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SpecialTags">Why doesn&#8217;t Swing Designer surround generate code with special tags or mark it as read-only?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using special tags or marking code read-only would go against several of
+Swing Designer&#8217;s major design goals. Swing Designer does not make any
+distinction between generated code and user-written code. Swing Designer
+is designed to generated the same code that you would write by hand and
+to make minimal changes to the source when you make a change to the
+design view. Swing Designer never regenerates the entire source for a
+file. If you change a single property, it will change only a single line
+of code. That line of code could theoretically be anywhere in the source
+file (including within lines originally created by Swing Designer or
+within lines that you wrote by hand).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CantParse">Are there any specific constructs that Swing Designer can&#8217;t parse?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yes. Here are some examples of constructs that Swing Designer does not
+yet handle:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Re-use of GridBagConstraint objects across multiple widgets (we
+support reusing the same variable but not the same objects)</p>
+</li>
+<li>
+<p>UI construction through the use of local parameterized helper methods</p>
+</li>
+<li>
+<p>Multiple aliases (fields or local variables) referring to the same
+component</p>
+</li>
+<li>
+<p>Multiple references to the same widget definition through multiple
+invocations of the same helper method</p>
+</li>
+<li>
+<p>Dynamic GUI code based on runtime calculations</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CustomWidgets">Can Swing Designer use custom widgets?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Yes., with a few restrictions.</p>
+</div>
+<div class="paragraph">
+<p>For Swing, any public JComponent subclass that has a public,
+zero-argument constructor can be used (as required by the Java Bean
+spec). Custom properties are derived through reflection by looking for
+getter/setter pairs of known types. If a matching JavaBean class is
+defined and available, it will be used for any custom properties. Custom
+JPanel subclasses will show their subcomponents when placed in Swing
+Designer. </p>
+</div>
+<div class="paragraph">
+<p>Note: the Java Bean conventions are important from a GUI builder point
+of view as they establish a common, expected, and, for the most part,
+self documenting API. If you create your own unique constructors, your
+are, in effect, creating your own personal API which makes it difficult
+for a GUI builder to reflectively interact with your components.
+Generating code to a custom constructor API requires knowledge of the
+API that generally is not provided by the component. That requires hard
+coding knowledge of the component into the GUI builder itself.</p>
+</div>
+<div class="paragraph">
+<p>Note: A component may rely on some runtime behavior that is not possible
+at design time (such as accessing an application database or some other
+file). Runtime specific behavior should be isolated (and stubbed out as
+necessary) by wrappering the runtime specific code with a call to
+Beans.isDesignTime() which will answer true when the component is loaded
+within Swing Designer and false at runtime.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="DesignTab">What can I do if I don&#8217;t see the Design tab when I edit a window?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="image"><img src="features/images/open_with.gif" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Eclipse remembers the last editor type used with a file. If you don&#8217;t see the
+<strong>Design</strong> tab, that means that you are using the standard Eclipse <strong>Java Editor</strong>
+rather than the <a href="features/editing_existing_window.html"><strong>WindowBuilder</strong></a>
+<strong><a href="features/editing_existing_window.html">Editor</a></strong>. Open the file with
+the <a href="features/editing_existing_window.html"><strong>WindowBuilder</strong></a>
+<strong><a href="features/editing_existing_window.html">Editor</a></strong> and you will see
+both the <strong>Source</strong> and <strong>Design</strong> tabs. Note that Eclipse will only let you
+have a file open with one editor at a time, so you may need to close any
+existing editor before opening it with the
+<a href="features/editing_existing_window.html"><strong>WindowBuilder</strong></a>
+<strong><a href="features/editing_existing_window.html">Editor</a></strong>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="features/images/source_design.png" alt="image" width="252" height="70"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Exception">What should I do if I encounter an exception using Swing Designer?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a newer Swing Designer build is available than the one you are using,
+please download the newer build and try and reproduce the problem. If
+the problem has been reported in the past, there is a good chance that
+it has already been fixed. If the problem still exists, you should send
+your Eclipse ".log" file (found in your &lt;workspace&gt;/.metadata directory)
+as well as any relevant test cases to support. Including a test case
+that will help us reproduce the problem is very important. The faster we
+can reproduce the problem, the faster we can get you a fix. If we can&#8217;t
+reproduce a problem, there is little we can do to help you.</p>
+</div>
+<div class="paragraph">
+<p>Ideally, the test case you send should be the same window you were
+editing when the problem occurred (along with any supporting files
+needed to compile it). If that is not possible (possibly because you
+aren&#8217;t allowed to send any code to a 3rd party), then you should try to
+create a new, standalone test case that illustrates the same problem.
+The best approach is to create a standalone test case by removing all of
+the code that isn&#8217;t relevant to the problem at hand (e.g., keep deleting
+code until the problem goes away and then restore that last code that
+was last deleted).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="ParsingError">What should I do if I encounter "Unknown Window Type (Parsing Error)"?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As suggested by the message, this is error is caused by a parsing
+problem. It has nothing to do with licensing. Your Eclipse ".log" file
+(found in your &lt;workspace&gt;/.metadata directory) should provide a hint as
+to the cause of the parsing error. Send the log file as well as a test
+case to support (ideally the window you are trying to edit). Including a
+test case that will help us reproduce the problem is very important. The
+faster we can reproduce the problem, the faster we can get you a fix. If
+we can&#8217;t reproduce a problem, there is little we can do to help you.</p>
+</div>
+<div class="paragraph">
+<p>Ideally, the test case you send should be the same window you were
+editing when the problem occurred (along with any supporting files
+needed to compile it). If that is not possible (possibly because you
+aren&#8217;t allowed to send any code to a 3rd party), then you should try to
+create a new, standalone test case that illustrates the same problem.
+The best approach is to create a standalone test case by removing all of
+the code that isn&#8217;t relevant to the problem at hand (e.g., keep deleting
+code until the problem goes away and then restore that last code that
+was last deleted).</p>
+</div>
+<div class="paragraph">
+<p>Refreshing and rebuilding your project using the Project &gt; Clean command
+can often help as can cleaning your Eclipse "configuration" directory.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="OutOfMemoryError">What should I do if I encounter an OutOfMemoryError using Swing Designer?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Make sure that you have Eclipse configured to use enough memory. Begin
+by specifying the starting amount of memory (-vmargs -Xms&#35;&#35;&#35;m)
+in your Eclipse startup command line (e.g., the target field within a Windows
+shortcut) or eclipse.ini file (in your Eclipse root directory). If this
+is not specified, Eclipse&#8217;s starting amount of memory is quite small
+(only 40 MB). You should also specify the maximum amount of memory that
+Eclipse can use (-vmargs -Xmx&#35;&#35;&#35;m) and the maximum amount of
+perm space available (-vmargs -XX:MaxPermSize=&#35;&#35;&#35;m).</p>
+</div>
+<div class="paragraph">
+<p>We typically recommend something like this (these setting are
+independent of any of the startup settings that you might have in
+place):</p>
+</div>
+<div class="paragraph">
+<p>-vmargs -XX:MaxPermSize=128m -Xms256m -Xmx512m</p>
+</div>
+<div class="paragraph">
+<p>An OutOfMemoryError is usually a side effect of something else, so you
+should send your Eclipse ".log" file (found in your
+&lt;workspace&gt;/.metadata directory) as well as any relevant test cases to
+support.</p>
+</div>
+<div class="paragraph">
+<p>You might try running Eclipse with the -debug command line option. You
+can then press Ctrl+Break in the console to look at the thread dump
+which may show where the system is locking up and where the memory is
+going. Send that thread dump to support.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="NoClassDefFoundError">What should I do if I encounter an NoSuchMethodError or NoClassDefFoundError using Swing Designer?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Start by checking your Eclipse ".log" file (found in your
+&lt;workspace&gt;/.metadata directory). If the error references one of your
+classes or methods, check that your classpath properly references the
+class you are trying to use. Also check that your class is properly
+compiled (no red <strong>X</strong>'s) and that a <strong>.class</strong> file exists in your projects
+<strong>/bin</strong> directory. A mismatch between the JDK used to compile your code
+and the JVM used to run Eclipse can also manifest itself as a
+NoClassDefFoundError problem. For example, if you compile your code
+using JDK 1.5 or 1.6 and then run your Eclipse using a 1.4 or 1.5 JVM,
+you can have this problem. If the error refers to a custom widget, you
+should also check that your component does not trigger an exception
+during its initialization (which can manifest itself as a
+NoClassDefFoundError). Try <strong>refreshing</strong> and <strong>cleaning</strong> your project
+using the <strong>Project &gt; Clean&#8230;&#8203;</strong> or <strong>Project &gt; Build Project</strong> commands. If
+that does not help, send a test case to support.</p>
+</div>
+<div class="paragraph">
+<p>If the error references a base Eclipse method or class, this means that
+you have the wrong version of Swing Designer loaded for the version of
+Eclipse you are using. Swing Designer is trying to access a method or
+class that simply does not exist in your Eclipse distribution. Delete
+the Swing Designer feature and plugin directories and then download and
+install the correct version of  Swing Designer for the version of
+Eclipse you are using.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="UnsupportedClassVersionError">What should I do if I encounter an UnsupportedClassVersionError using Swing Designer?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An UnsupportedClassVersionError is usually caused by attempting to run
+code compiled against a later JRE with an IDE using an earlier JRE.
+Typically, you will see this when trying to use a class (such as a
+custom widget) that has been compiled against JDK 1.6 within a version
+of Eclipse launched with JDK 1.5.</p>
+</div>
+<div class="paragraph">
+<p>Two solutions are possible: you may either recompile the class using JDK
+1.5, or you can tell Eclipse to run using JDK 1.6 by modifying its
+startup parameters as follows (use your path to JDK 1.6 on your system):</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>-vm C:\jdk1.6.0_21\bin\java.exe</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="UnsatisfiedLinkError">What should I do if I encounter an UnsatisfiedLinkError when launching my SWT application?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As stated in the product docs and tutorial, the Eclipse SWT DLL (which
+can be found in the
+$ECLIPSE$\plugins\org.eclipse.swt.win32_x.x.x\os\win32\x86\ directory or
+in the org.eclipse.swt.win32.win32.x86_3.x.x.jar file) needs to be on
+your path. Placing it into your windows/system32 directory is the
+easiest thing to do.</p>
+</div>
+<div class="paragraph">
+<p>For Linux, you need to locate the corresponding Eclipse SWT *.so files
+contained in the SWT GTK plugin.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="InstantiationException">What should I do if I encounter an InstantiationException or other error using a custom widget?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An InstantiationException means that Swing Designer could not create an
+instance of a particular class. The most common reason for this is that
+the component is not a <a href="#CustomWidgets">valid custom widget</a>. In
+order to be a valid Swing widget, a class must be a valid Java Bean and
+have a public, zero-argument constructor. SWT widgets must have a public
+two-argument constructor with parent and style bits as the two
+arguments. To fix the problem, add the missing constructor. Note: the
+Java Bean conventions (slightly modified for SWT) are important from a
+GUI builder point of view as they establish a common, expected, and, for
+the most part, self documenting API. If you create your own unique
+constructors, your are, in effect, creating your own personal API which
+makes it difficult for a GUI builder to reflectively interact with your
+components. Generating code to a custom constructor API requires
+knowledge of the API that generally is not provided by the component.
+That requires hard coding knowledge of the component into the GUI
+builder itself.</p>
+</div>
+<div class="paragraph">
+<p>Another possible cause for this exception is some other failure in the
+initialization code of the component. A component may rely on some
+runtime behavior that is not possible at design time (such as accessing
+an application database or some other file). Runtime specific behavior
+should be isolated (and stubbed out as necessary) by wrappering the
+runtime specific code with a call to Beans.isDesignTime() which will
+answer true when the component is loaded within Swing Designer and false
+at runtime.</p>
+</div>
+<div class="paragraph">
+<p>More detail about the use of custom widgets is available in
+<a href="#CustomWidgets">this FAQ entry</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Linux">How should Swing Designer be configured to work on Linux?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To use Swing Designer in Linux, we recommend that you use an official
+JDK from Sun, as using the GPL version of the java is not recommended.
+Here are some setup instructions for using Sun&#8217;s java with Fedora Core
+and Debian. Note that use of a non-Sun JDK can result in Eclipse locking
+up.<br>
+<br>
+Using Sun&#8217;s Java with Fedora Core:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download and Unpack Sun&#8217;s JDK .bin format.<br>
+ </p>
+</li>
+<li>
+<p>If you wish to use java on the command line or with other programs
+besides eclipse add the following to your /etc/profile<br>
+<br>
+JAVA_HOME = &lt;path_to_jdk&gt;<br>
+PATH= $PATH:$JAVA_HOME/bin<br>
+Export JAVA_HOME PATH<br>
+ </p>
+</li>
+<li>
+<p>Install Sun&#8217;s java as alternative<br>
+#/usr/sbin/alternatives -install /usr/bin/java java &lt;path_to_jdk&gt; 2<br>
+ </p>
+</li>
+<li>
+<p>Switch to the new alternative<br>
+#/usr/sbin/alternatives -config java<br>
+Select option 2<br>
+ </p>
+</li>
+<li>
+<p>Test<br>
+#/usr/sbin/alternatives -display java</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>You should see java pointing to the Sun JDK.<br>
+<br>
+Using Sun&#8217;s Java with Debian:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download Sun JDK in .bin format<br>
+ </p>
+</li>
+<li>
+<p>fakeroot make-jpkg &lt;jdk&gt;.bin<br>
+This creates a .deb package.<br>
+ </p>
+</li>
+<li>
+<p>sudo dpkg -i &lt;jdk&gt;.deb<br>
+ </p>
+</li>
+<li>
+<p>Test<br>
+#java -version.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SuSELinux">What should I do if I have problems running under SuSE Linux?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you have a problem running Swing Designer on Linux SuSE 10.3 such as
+Eclipse crashing and/or working incorrectly, or your my log files
+contains something like "xcb_xlib.c:42: xcb_xlib_lock: Assertion
+`!c&#8594;xlib.lock'" and/or "/usr/lib/Eclipse: No such file or directory",
+please try to add the following into you profile:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>LIBXCB_ALLOW_SLOPPY_LOCK=1<br>
+export LIBXCB_ALLOW_SLOPPY_LOCK.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="LinuxFlashing">How can I prevent the preview window from flashing under Linux using Metacity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to create the graphics that you see in the design view, Swing
+Designer creates an off screen window containing the various widgets and
+they takes a screen snapshot of them. This works very well under
+Windows, OSX and some versions of Linux. Recent versions of the Metacity
+window manager (more recent than 2.1.4), however, have been
+modified/"fixed" to disallow windows to be opened off screen. This
+forces the preview window to appear on screen leading to an annoying
+flashing effect any time you make a change. The solution is to disable
+the Metacity "fully_onscreen" constraint by patching the Metacity source
+code and rebuilding and installing the patched version into your
+system.<br>
+<br>
+Here are the steps to follow:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Download the Metacity source code from <a href="ftp://ftp.gnome.org/pub/gnome/sources/metacity/" class="bare">ftp://ftp.gnome.org/pub/gnome/sources/metacity/</a></p>
+</li>
+<li>
+<p>Unpack the source code tarball into any temporary directory.</p>
+</li>
+<li>
+<p>Chdir into this directory (with the unpacked code).</p>
+</li>
+<li>
+<p>Find window.c file and open it with your favourite texteditor.</p>
+</li>
+<li>
+<p>Find a line with "window&#8594;require_fully_onscreen = TRUE;"</p>
+</li>
+<li>
+<p>Replace it with "window&#8594;require_fully_onscreen = FALSE;"</p>
+</li>
+<li>
+<p>Save the changes and close the editor.</p>
+</li>
+<li>
+<p>Open a terminal and chdir into the directory with the source code (nice if you have already done this)</p>
+</li>
+<li>
+<p>Run "./configure".</p>
+</li>
+<li>
+<p>Run "make all".</p>
+</li>
+<li>
+<p>Make sure that steps 9 &amp; 10 completed without errors.</p>
+</li>
+<li>
+<p>Become root (or execute the next command via "sudo" depending on the Linux you are running)</p>
+</li>
+<li>
+<p>Run "make install" (or "sudo make install").</p>
+</li>
+<li>
+<p>Save your work and close any application you are working with.</p>
+</li>
+<li>
+<p>End your session (or press Ctrl-Alt-Delete to restart the x-server) and log in again.</p>
+</li>
+<li>
+<p>You are done!</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

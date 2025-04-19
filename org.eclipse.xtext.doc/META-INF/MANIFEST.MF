@@ -1,0 +1,390 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.3
+Build-Jdk-Spec: 21
+Bundle-ManifestVersion: 2
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.xtext.doc;singleton:=true
+Bundle-Version: 2.38.0.v20250226-0658
+Bundle-Vendor: %providerName
+Require-Bundle: org.eclipse.help;bundle-version="3.10.300"
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-xtext/xtext
+ .git;path="org.eclipse.xtext.doc";commitId=a90e0aec9c0a28776fa69e37f84f
+ c36df49e1175
+Bundle-License: Eclipse Public License, Version 2.0;link="http://www.ecl
+ ipse.org/legal/epl-2.0"
+
+Name: plugin.xml
+SHA-256-Digest: SGOkkupQBDDAxZ96OqUxlDHDEsrMnwc6pLhXyyLnESk=
+
+Name: contents/images/metamodel.png
+SHA-256-Digest: Ryi+D7xIUL9JofE1RVdrwJ4maboFIWGhnkFb0/fz4WI=
+
+Name: contents/images/FiveMinTutorial_WizardPageNames.png
+SHA-256-Digest: Jl4CHf7tuMYma3gzUYFAg3gvJGgAeTYEXnhTDxJT72A=
+
+Name: contents/images/LSP_06_XtextWizardGradle.png
+SHA-256-Digest: uk0UahyWkAPfL4TJD3WKwc85Z+ZybwLU/h2xX5kdUnE=
+
+Name: contents/images/mark_occurrences.png
+SHA-256-Digest: QFr0/Hh9mIGcXknnbGCihDBVmVwqes53NOuvdiZnpaI=
+
+Name: contents/301_grammarlanguage.html
+SHA-256-Digest: REd8YscfiJESoJKLR0QdzI5XQA99Ttt16DEjs9d6qfw=
+
+Name: contents/images/LSP_05_DomainmodelLanguageFeatures.png
+SHA-256-Digest: BbGV7D71mtwl9N5TbPIddzFdQQLp9OiTpN1BKCdTgD4=
+
+Name: contents/images/autoediting.gif
+SHA-256-Digest: S8XI/gZC+JrOziJxqZVjr/umWNyjyr8B1BDcDcXDxn4=
+
+Name: contents/308_emf_integration.html
+SHA-256-Digest: fp2liXtUMA6EYXhUoWpHvtNFCafbYJxQEAjO8H07UBI=
+
+Name: contents/images/pdf_icon.gif
+SHA-256-Digest: SDjAtqMbX0KVTsYQXRP6jCU7yxZ9ekNlik+VT81BfDA=
+
+Name: contents/images/LSP_3_DomainmodelLanguageServerLauncher.png
+SHA-256-Digest: anTxzdcQYaoIZwk9rjiuar15VpAbzeMIW0AxBVGUY0Y=
+
+Name: contents/images/generator-structure.png
+SHA-256-Digest: vKYsYyeayV/vPxkmJQrc60gAnryI6QKFPnPsL6/55BM=
+
+Name: contents/images/FiveMinTutorial_PlainIDE.png
+SHA-256-Digest: Y50CuAT3TdfkT5U659ZPvE5nM+dDo5qFjnOD3D/HvR8=
+
+Name: contents/images/mongobeans_screenshot.png
+SHA-256-Digest: JDtZY2pk+MKLuUUJpGFbFmL84lPTUXzpWoK/Tzk11z0=
+
+Name: contents/320_idea_support.html
+SHA-256-Digest: z0LWAHrntHzhXLjUnD0zEhY/DHPBIDxZ+6DCUf+84Tk=
+
+Name: contents/images/FiveMinTutorial_GenerateXtext.png
+SHA-256-Digest: ATxOi1SpJJ31nUvw/wVJtp6gx6AvzvNiiH4Nues0WKs=
+
+Name: contents/340_lsp_support.html
+SHA-256-Digest: UFaYz7gmI3jbiNQRn9YaFmjceUsxuKjoOnZSKXyK56E=
+
+Name: contents/images/FiveMinTutorial_WizardPageTargets.png
+SHA-256-Digest: TKPOEkdkyc6MYKCS4ghfr3w78aL2WNCJfhc1OifZ/oQ=
+
+Name: contents/images/sample_outline.png
+SHA-256-Digest: Ky0vWuQ+35NK+7GVDwBJqVunJqvhuHa3GQ2kVH6Gay0=
+
+Name: contents/images/idea/FiveMinTutorialIdea_WelcomePlugins.png
+SHA-256-Digest: 4e22R7DxZREyw1oiBCaEB2ALKtj0PvSEyQ8uZKcLLok=
+
+Name: contents/330_web_support.html
+SHA-256-Digest: noqsKMFcNQXSkYBtXeCrXifj7J3ZD1qlX1a60NpICsc=
+
+Name: contents/images/guicemodules_screenshot.png
+SHA-256-Digest: 2oldqaTIFtU9xrYN+2cnwx4WjrVuRhrgsUKaYdVqv+I=
+
+Name: contents/images/FiveMinTutorial_JettyRun.png
+SHA-256-Digest: fQcOu67rOjSke8jFY0hMwlyyKsoYILzOdWT2B498++w=
+
+Name: contents/images/scripting_screenshot.png
+SHA-256-Digest: st50O2+0E+ewjXHhJO/UuXRkaMcdEEfv7goF7Q+mRvI=
+
+Name: contents/302_configuration.html
+SHA-256-Digest: e6c/A3ZHUqV4uEhaeDU3ZXW6I0BSNPwmnNhSrY1vgDc=
+
+Name: contents/images/30min_launchconfiguration.png
+SHA-256-Digest: 2Fqy+11rIHUmbMz7P2CMidz5DnZRft/6dQaZ5K6oV5k=
+
+Name: contents/images/mwe2/component.png
+SHA-256-Digest: mQx14fQcjUOKGBZF0NBvnztKjXkVe9s4VWVc4FZUdoc=
+
+Name: contents/images/Pythagoras.png
+SHA-256-Digest: jFvlhc+fVEPxadhqeVAiiJkzfqMU84Th76fJ3gypgwU=
+
+Name: contents/images/LSP_09_IntelliJFileTypeConfiguration.png
+SHA-256-Digest: Ubkpb4EJMMQ20BE0udrAJHcIAmXKwnzp1L2Xiq34lOw=
+
+Name: contents/images/bullet-checkmark.png
+SHA-256-Digest: kXHI2NqU/316CsrARte6311i4Xh+8+mEhBNyzQf4Yug=
+
+Name: contents/images/FiveMinTutorial_Workspace.png
+SHA-256-Digest: EUBFH5mBdCVlz0WCynqSY7QIk9DkPOkY9GjzEYjs70g=
+
+Name: contents/images/ast.png
+SHA-256-Digest: z3kmmiPqn+G+oMpl3flADGmGFYumh32yOd8vxvw88Fg=
+
+Name: contents/images/ecore.png
+SHA-256-Digest: GLDmnfR0QAe9aRJl2ZXTpy4ETa8yN7SQ4AxruV1nEJc=
+
+Name: contents/images/LSP_04_DomainmodelLanguageServer.png
+SHA-256-Digest: GGx6ujcMh0cZjf5r3OJ5GVtZacfcq/jYGt0bBl6638w=
+
+Name: contents/toc.xml
+SHA-256-Digest: b7L7Ha+5QI6DzgI3ZwyRwt1iIrmoUw1s3wMKFq5SAq0=
+
+Name: contents/images/mwe2/property.png
+SHA-256-Digest: lX6V+oc7cuQ4QuR3x93/yOq0x/9xlJDoujZlIWCm8QM=
+
+Name: contents/index.html
+SHA-256-Digest: GDZedLjRRoTI4EC22MMQdFWvc+PcqCrzKRAYdxp4v+Y=
+
+Name: contents/images/idea/FiveMinTutorialIdea_OpenGradleView.png
+SHA-256-Digest: fCvlKXmMXVO2nLH1XFd1ebtgqaCGtoOmgj9UblijnvM=
+
+Name: contents/images/idea/FiveMinTutorialIdea_Plugins.png
+SHA-256-Digest: B94wG8H76M7ezSXy4gsl46K+yedEyXCdJ6pSqciDgOs=
+
+Name: contents/images/emf-integration.png
+SHA-256-Digest: XmV9OW12QBcPAXUqZ4FNInz9TTFUewrcXT07Jlh1qgU=
+
+Name: contents/images/tortoise_screenshot.png
+SHA-256-Digest: QvtQqJJzKRNtp32NcCqQB1zANiyqZ4QUg/UwUyXf9+g=
+
+Name: contents/305_xbase.html
+SHA-256-Digest: Da02sUMetvxvrR1slaL7+B4h3lsZMeM2xbkgPjw/x6U=
+
+Name: contents/images/idea/FiveMinTutorialIdea_InstallXtext.png
+SHA-256-Digest: rUoomPt6LYqkXhU78rDAXpgXQ8VVJEifnqWyZ7IC0tk=
+
+Name: contents/images/idea/FiveMinTutorialIdea_Welcome.png
+SHA-256-Digest: oy5UNk6h7T55DqOFVciLnH+P0/dIIOEATmihuqf62I4=
+
+Name: contents/images/FiveMinTutorial_RunEditor.png
+SHA-256-Digest: tqX72oWIaf3/ywaBj1XMmES2UYTPGhwYsroZruacyoc=
+
+Name: contents/images/idea/FiveMinTutorialIdea_WizardPageLanguage.png
+SHA-256-Digest: 7EsLuLDrJrupJEkPfd0edAVbHMxtHs11hU/g6Z5vMxU=
+
+Name: contents/images/30min_editor.png
+SHA-256-Digest: qKiHDUvmD8vA/CFCpDtVeVpUUGfeo8K75U+XHv+LSwc=
+
+Name: contents/images/builddsl_screenshot.png
+SHA-256-Digest: 32hR1RvM+rBRi1hWJLVSY5y/eBqsQ08t4WrZAbtRzF0=
+
+Name: contents/images/highlighting.png
+SHA-256-Digest: 8ic9rGO26Hm1CJmWNLAFj1ENl3QYtZdbc1XMlfYjmq0=
+
+Name: contents/images/LSP_08_IntelliJLanguageServerDefinition.png
+SHA-256-Digest: cvEkX7KG+Yb4yk5q4XMA8ruO0Pdne98K77JYIpjMrho=
+
+Name: contents/306_mwe2.html
+SHA-256-Digest: cIiSkeireZfpxrPdVUNu12GypFIA0yK7FlGW1+8u8h4=
+
+Name: contents/images/mwe2/module.png
+SHA-256-Digest: xDX+22n8TmK8pSD1m/5hkSgkbq2f3gY7GCpSPe7nZ3M=
+
+Name: contents/images/FiveMinTutorial_IdeaWelcome.png
+SHA-256-Digest: fX0Lnt/LoDI8Ap8K9JTBs5+JSaMmHU4OjMj3bStWXgw=
+
+Name: contents/images/LSP_04B_AddTextMateGrammarFile.png
+SHA-256-Digest: oSfYugBS1phXIMED5kv+seRmJdJGikl+ojt38y3EUNE=
+
+Name: contents/images/idea/FiveMinTutorialIdea_XtextRepository.png
+SHA-256-Digest: Jd1JfNyNjvZxw/HAyBTZWTMMzKirddRJvDLHBqI9F54=
+
+Name: contents/images/FiveMinTutorial_WizardProjectType.png
+SHA-256-Digest: 45BneGQSFXFKakik38T44MeOBPoipbhlMDDy9o25ejc=
+
+Name: contents/images/LSP_2_DomainmodelContentType.png
+SHA-256-Digest: kNYx1Gs0unt8Al40M6h34egQjBkLNsa266qndJ+RP2A=
+
+Name: contents/images/FiveMinTutorial_IdeaNewProject.png
+SHA-256-Digest: krI+WmFG9CBI9IgQskId4ATQEaMAqD+N83DM2HoXDKM=
+
+Name: contents/images/LSP_5_DomainmodelLanguageFeatures.png
+SHA-256-Digest: BbGV7D71mtwl9N5TbPIddzFdQQLp9OiTpN1BKCdTgD4=
+
+Name: contents/images/template_screenshot.png
+SHA-256-Digest: zA+wvr8/K5Obrb35sujocOYAR+lvGxAS8/hpyVQigBE=
+
+Name: META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.doc/pom.xml
+SHA-256-Digest: hFy7nKhTqvNbLXKifju+GhiHzZODlZeSezYurYXy5/M=
+
+Name: contents/book.css
+SHA-256-Digest: dhjgtX+NQhWbDPNMcd9elLiZWB5J6KCiLStMJKE2gIE=
+
+Name: contents/images/JvmTutorial_LaunchEditor.png
+SHA-256-Digest: WV1cNAgQdDOC7bAe1j1BVSct491N7h5FgLiWlmi1gjk=
+
+Name: contents/images/folding_customized.png
+SHA-256-Digest: P1b0Rpl7jnhX0S7OaklMK9bvyZ7PIuzmRbdZ/6Aqse0=
+
+Name: contents/images/LSP_01_XtextWizardMaven.png
+SHA-256-Digest: jxNFzCE0KGzZQ899u2rIaJv2xLCwlQu1M6K12VyTRKs=
+
+Name: contents/images/LSP_07_IntelliJLSPPlugin.png
+SHA-256-Digest: +CBS3hxp7hlFLcHOt9/hXyOvufLXq7172j9+YfE/GzM=
+
+Name: contents/images/index_datamodel.png
+SHA-256-Digest: +0Nx+BQEtcVlHBkX7jRrTZQaz6TjXIuB2/cW3LAtfK0=
+
+Name: contents/images/idea/FiveMinTutorialIdea_BrowseRepositories.png
+SHA-256-Digest: 0onc+5euqqoCg4TTKX4mcMpZy4/MkPKDRfGP3uErUnE=
+
+Name: contents/images/idea/FiveMinTutorialIdea_Repositories.png
+SHA-256-Digest: Krsc5pv6u2Q75Pu1NX0ImirHC1YsdgegcuEZqDPZ6UI=
+
+Name: contents/images/idea/FiveMinTutorialIdea_RunIdea.png
+SHA-256-Digest: ZbVI9QfaWP0cRVsOiI9BOeDX8NnWJLJMAO0g3OZSrak=
+
+Name: contents/images/expression-ast.png
+SHA-256-Digest: FcH2WbEEx+uc8hA4kVTW3fwpAEClj4be1PGFdrhkqIU=
+
+Name: plugin.properties
+SHA-256-Digest: FSAzCNaIoB3eSikanmqpug93L9ChzY5Xdvn9EUBmNO0=
+
+Name: contents/images/httprouting_screenshot.png
+SHA-256-Digest: TFHkJdtRbpHvG2YOw6jC84kmRgbi26hUfJRhLtiQWkI=
+
+Name: contents/103_domainmodelnextsteps.html
+SHA-256-Digest: 7aqakbDITsQO6aXuvJTp26Rg1ht8WJ68Zn/hA4dWB6E=
+
+Name: contents/images/bullet-checkmark-not-supported.png
+SHA-256-Digest: wUFP46dIdfWMDpni4j5cz1aDNnrWb8Age1ZHnRsK3Ws=
+
+Name: contents/images/FiveMinTutorial_Editor.png
+SHA-256-Digest: +nbAJPfOSx4hH0NgW5zon2bb+gQviMm+dfPHdonSDpM=
+
+Name: contents/images/FiveMinTutorial_IdeaProjectName.png
+SHA-256-Digest: 43ZV6rF9G7dWSUhsD71z2HeFtsuJbiXf3MgdAv7HcXA=
+
+Name: contents/images/LSP_02_DomainmodelContentType.png
+SHA-256-Digest: kNYx1Gs0unt8Al40M6h34egQjBkLNsa266qndJ+RP2A=
+
+Name: contents/images/FiveMinTutorial_FreshProject.png
+SHA-256-Digest: yEDFz7zE8ZHBcEFFGc/1gL7BFJYBf9UkBHwYud2pYFQ=
+
+Name: contents/images/preferences_templates.png
+SHA-256-Digest: NE8B5A2iE4hCRkcXI/+SdvgabEa8kfgKwR+hDOGBwYw=
+
+Name: contents/images/30min_multipleeditors.png
+SHA-256-Digest: 0OMx/mMpscvqZ9M0438F9xgPG21ONhfe/kRcBV/mcgY=
+
+Name: contents/faq.html
+SHA-256-Digest: PvGFaZ79N59CNGXutqUBDNZPBWEvR0jNE6jPJD6TBOM=
+
+Name: contents/images/idea/FiveMinTutorialIdea_WizardPageProjectName.png
+SHA-256-Digest: v66yKkcLs8zGsmFPFFNWiWBukaFL0K96y3bK87QTAoY=
+
+Name: contents/images/code_mining.png
+SHA-256-Digest: sytHhEzJdNiD5PuGujHFVH6GtPb6kS74K1QTincfq7c=
+
+Name: contents/102_domainmodelwalkthrough.html
+SHA-256-Digest: fgVVnSy4nsvi8dgx4FFwl0cY78NdWxVRZlMgFz4yQ+o=
+
+Name: contents/images/30min_initialprojectlayout.png
+SHA-256-Digest: +UA0QaFuh021KZkHGstq5fZkfdK1szpifxDo8CEmcdI=
+
+Name: contents/images/idea/FiveMinTutorialIdea_FreshProject.png
+SHA-256-Digest: FpCVofGXmJYTMfLS81ovo7hEI+9l7vXiBRMBNqNsJAQ=
+
+Name: contents/images/FiveMinTutorial_RunIdea.png
+SHA-256-Digest: x5iOKPkw9JRhF3Slk6+BPvLBIE1SnFdbC8Qy6AVhz4U=
+
+Name: contents/images/30min_rungenerator.png
+SHA-256-Digest: dILEhw8KrGrcnzp8pSlhcL0G/4opTUoKChIz4EVICkw=
+
+Name: contents/images/idea/FiveMinTutorialIdea_IdeaEditor.png
+SHA-256-Digest: elNGYcQtplFaJ9VZsNh+0hYttWMhdmlkvacTUZCIf/w=
+
+Name: contents/images/idea/FiveMinTutorialIdea_JettyRun.png
+SHA-256-Digest: wzt4JYaUawkV6tEiNfOvB7jsJ4NWCtJem4nUZcOlbN4=
+
+Name: contents/images/LSP_10_IntelliJCodeCompletion.png
+SHA-256-Digest: ATHt+oLAfK2y3jWsQZoBXr41PB5AJuLeX9y4OY3AmW8=
+
+Name: contents/images/templates_crossref.png
+SHA-256-Digest: HpfxO0vdaAnsWBYgD2wyWMwFAfszjX9PsIdL7e8ZIUE=
+
+Name: contents/images/FiveMinTutorial_Welcome.png
+SHA-256-Digest: 8j6O90vTRjS/AS/kRTWURXUPorh1gqzM9rZ+3IOkEPE=
+
+Name: contents/307_special_languages.html
+SHA-256-Digest: jW2yEjxnv4bLTsam5NG1Er2hAnPcUoGx6cuOrwZBQcc=
+
+Name: contents/310_eclipse_support.html
+SHA-256-Digest: gvWJk32sZHhcdSwiQYVwNNs0A6tXBmD4cUg32GCJ2pc=
+
+Name: contents/310_web_integration.html
+SHA-256-Digest: W4TpQSUDhM4wGJoMvIFgoGax3vsZqOHhPuWkIcacE18=
+
+Name: contents/images/LSP_03_DomainmodelLanguageServerLauncher.png
+SHA-256-Digest: anTxzdcQYaoIZwk9rjiuar15VpAbzeMIW0AxBVGUY0Y=
+
+Name: contents/code.css
+SHA-256-Digest: ZYrFnLpF6JgVrBKKCtfXJwUbXI/TF7FbCSfQa7FHnek=
+
+Name: contents/images/folding_default.png
+SHA-256-Digest: sWxulvzcwlv90DoX7c1hL3FJ1YDHq7btR7D17BspCKo=
+
+Name: contents/images/FiveMinTutorial_EclipseEditor.png
+SHA-256-Digest: RpfhMnYSkq5pzKfJTzLff5SEjNHc/qeLl7XED/sTLFc=
+
+Name: contents/images/idea/FiveMinTutorialIdea_InstallXtextRestart.png
+SHA-256-Digest: PvXZOjAAUmhIxklWyaANgXOTaOJDD2jyyMCuW2lEXUM=
+
+Name: contents/images/find_references.gif
+SHA-256-Digest: meo3NPYruGBlzoi+bolHQ2HvW0rqWrVLUD7uNxhETbw=
+
+Name: contents/images/Nikolaus.png
+SHA-256-Digest: 2XIOl3Dlv7LKa3sC7QtiC3nbv7O1ztb2YK62Xuq22wk=
+
+Name: contents/104_jvmdomainmodel.html
+SHA-256-Digest: PzsL+TifIdHJXkWqD/Af1mNqe3hr1qggiTyxGm5FpHk=
+
+Name: contents/images/FiveMinTutorial_LaunchConfig.png
+SHA-256-Digest: YMKM/Vk/b1q4IAcC01Mf+lnc0kCXHVNDhZqS3h3AvRk=
+
+Name: contents/images/FiveMinTutorial_IdeaEditor.png
+SHA-256-Digest: 7sJTma0K322BKJjZVZ01McNSH+CNrS8TsXAGkEbDCp0=
+
+Name: contents/images/FiveMinTutorial_BrowserEditor.png
+SHA-256-Digest: qBHxr6r8AbKa0ekMdhIIizxQFsczNFMvh85KUMLG3Yk=
+
+Name: contents/images/JvmTutorial_RunGenerator.png
+SHA-256-Digest: Bo5gnJsPygE/ZpEv8S/ptWGeuZ3QvkaMO2v3XptJHSo=
+
+Name: contents/images/preferences_syntax.png
+SHA-256-Digest: 2HcVpw5+CqIKr3tdpdqMlP5+XMyhZg9CJgGK++2ihJo=
+
+Name: about.html
+SHA-256-Digest: 7mbS+ztMDS7S5/aYvJ7U49bPd/pcr0CtAylhJdsaxfA=
+
+Name: contents/304_ide_concepts.html
+SHA-256-Digest: w54otW3CNRFXDRq7Yd8Axe1glVvsoy+0QsvtfIqsx7c=
+
+Name: META-INF/maven/org.eclipse.xtext/org.eclipse.xtext.doc/pom.propert
+ ies
+SHA-256-Digest: Wx0x6CWSoBOY5A8gwKR7hQGne+XUzNTNa04E0BjUJfw=
+
+Name: contents/images/mwe2/assignment.png
+SHA-256-Digest: Id97wKji3aNM0N4w1Gn/h8ExcFfbJMy77w8Bav6bj0g=
+
+Name: contents/images/LSP_4_DomainmodelLanguageServer.png
+SHA-256-Digest: GGx6ujcMh0cZjf5r3OJ5GVtZacfcq/jYGt0bBl6638w=
+
+Name: contents/images/index_container.png
+SHA-256-Digest: hJ9mIjMPpcbWGde7eYX57yc6+C6Rpj09Emlk6FWFRmU=
+
+Name: contents/images/30min_wizard.png
+SHA-256-Digest: jrbmMZZPgojr0UEgJi3tpIT4/ISv6w+9ltXKRk6XQfs=
+
+Name: contents/350_continuous_integration.html
+SHA-256-Digest: XDGVVGmInIttXV9t4oaJ0kiNl5PsIRueE6T+Dcd9dXU=
+
+Name: contents/303_runtime_concepts.html
+SHA-256-Digest: wjpFr6wpUzyW4AVzhO7tZ2gHp8zCamjbugZdv1ePKZg=
+
+Name: contents/images/family_tree.png
+SHA-256-Digest: yhEbmevV2IYc7AkSnjxdAODg2T8p5x99fOF2R41rR8w=
+
+Name: contents/images/JvmTutorial_Editor.png
+SHA-256-Digest: 8ZIBPwFvZHANpmc/wS2vGr3JxcXp69czfPaobOICWqg=
+
+Name: contents/images/hovering.png
+SHA-256-Digest: Srf73kkQH2vNxr+/wkXiKHnP02U5Xf8eXlvdSOvhaV8=
+
+Name: contents/images/LSP_1_Xtext_Wizard.png
+SHA-256-Digest: jxNFzCE0KGzZQ899u2rIaJv2xLCwlQu1M6K12VyTRKs=
+
+Name: contents/images/book.jpg
+SHA-256-Digest: J6KzIZU5Xt8DvW39UIrnoAvgTd8Wc1RBLK8PwJQBEcw=
+

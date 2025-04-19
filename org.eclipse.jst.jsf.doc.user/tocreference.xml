@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<!--
+    Copyright (c) 2006, 2019 IBM Corporation and others.
+    This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License 2.0
+    which accompanies this distribution, and is available at
+    https://www.eclipse.org/legal/epl-2.0/
+
+    SPDX-License-Identifier: EPL-2.0
+
+    Contributors:
+        IBM Corporation - initial API and implementation
+ -->
+
+<toc label="Reference" link_to="toc.xml#jsf_reference"> 
+	<topic label="Tag Library Support in the JSP Source Editor" href="html/reference/taglibsupport.html" > 
+		<topic label="JSF Core" href="html/reference/jsf-c.html" /> 
+		<topic label="JSF HTML" href="html/reference/jsf-h.html" />
+	</topic>
+	<topic label="JSF Library Management" href="html/reference/jsf_library_management.html" >
+	</topic>
+ <topic href="html/reference/jsf_design_time_skinning.html" label="JSF Design-Time Skinning Support">
+ </topic> 
+</toc>

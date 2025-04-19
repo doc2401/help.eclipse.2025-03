@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Error Reporting</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_error_reporting">Error Reporting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When something unexpected happens (such as an exception being thrown)
+while trying to parse a user interface class or perform a design view
+operation, the editor will display the following error page:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="images/error_handling_page.png" alt="image"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The <strong><a href="#CreateReportDialog">Create Report</a></strong> button opens up an error
+reporting dialog that will create a bug report that you can submit to
+the bug tracking system along with all the needed supporting details.</p>
+</div>
+<div class="paragraph">
+<p><a href="#CreateReportDialog"><span class="image"><img src="images/create_report_button.png" alt="image" width="133" height="42"></span></a></p>
+</div>
+<div class="paragraph">
+<p>The <strong>Reparse</strong> button will cause the current class to be reparsed.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/reparse_button.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>The <strong>Switch to code</strong> button will switch the editor back to the <strong>Source</strong>
+view.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/switch_to_code_button.png" alt="image"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Clicking the <strong>Show stack trace</strong> link will reveal the captured stack
+trace. Clicking the link a second time will hide the stack trace.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/error_handling_page_stack_trace.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CreateReportDialog">Create Report Dialog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Clicking the <strong>Create Report</strong> button will open the <strong>Create Report
+Dialog</strong>:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><span class="image"><img src="images/create_report_dialog.png" alt="image" width="394" height="243"></span></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The dialog contains several fields for entering information about the
+problem and several options for attaching important support info:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Eclipse workspace <strong>.metadata/.log</strong> file is attached. This contains
+any exceptions triggered as part of the error.</p>
+</li>
+<li>
+<p>A <strong><a href="#Screenshots">screenshot</a></strong> of the design view immediately prior
+to the exception will be attached. Additional screenshots may be
+attached.</p>
+</li>
+<li>
+<p>The <strong>Compilation unit of error</strong> (the currently edited class) may be
+optionally attached (this is recommended).
+<a href="support/test_cases.html">Reproducible test cases</a> are very important
+for quick problem resolution.</p>
+</li>
+<li>
+<p>The <strong>Entire project of error</strong> (the currently edited project) may be
+optionally attached (recommended if the current class has a lot of
+dependencies). <a href="support/test_cases.html">Reproducible test cases</a> are
+very important for quick problem resolution, so including any classes
+needed to compile the class you are editing can be important.</p>
+</li>
+<li>
+<p>A <strong><a href="#SoftwareHardwareSummary">Software and hardware summary</a></strong> is
+automatically attached to the case in order to identify any possible
+conflicts.</p>
+</li>
+<li>
+<p>The WindowBuilder <strong>preferences</strong> are automatically attached to the
+case.</p>
+</li>
+<li>
+<p>Any additional <strong><a href="#FileAttachments">File attachments</a></strong> may be
+optionally added to the case (your <strong>eclipse.ini</strong> file, for example, or
+any other classes needed by the class you are editing).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Clicking the <strong>OK</strong> button will generate a ZIP file that should be
+manually submitted to the
+<strong><a href="https://github.com/eclipse-windowbuilder/windowbuilder/discussions">WindowBuilder
+discussions</a></strong> or bug tracking system
+(<strong><a href="https://github.com/eclipse-windowbuilder/windowbuilder/issues">GitHub
+Issues</a></strong>).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="ProductInfo">Screenshots</h3>
+<div class="paragraph">
+<p>Click on the <strong>Screenshots <span class="underline">add..</span></strong> link to attach additional
+screenshots to the case.</p>
+</div>
+<p>
+  <img src="images/screenshots1.png">
+  <img src="images/screenshots2.png" align="top">
+</p>
+</div>
+<div class="sect2">
+<h3 id="SoftwareHardwareSummary">Software and hardware summary</h3>
+<div class="paragraph">
+<p>Click on the <strong>Software and hardware summary <span class="underline">view..</span></strong> link
+to see the software and hardware info that will be sent along with the
+case.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/software_and_hardware_info.png" alt="image"></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="FileAttachments">File attachments</h3>
+<div class="paragraph">
+<p>Click on the <strong>File attachments <span class="underline">add..</span></strong> link to attach
+additional files to the case (such as your <strong>eclipse.ini</strong> file).</p>
+</div>
+<p>
+  <img src="images/file_attachments1.png">
+  <img src="images/file_attachments2.png" align="top">
+</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SubmitManually">Manually submit to discussions or bug tracking system</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A ZIP file that includes all of the case data (including any images and
+files) is created and should be posted to the
+<strong><a href="https://github.com/eclipse-windowbuilder/windowbuilder/discussions">WindowBuilder
+discussions</a></strong> or bug tracking system
+(<strong><a href="https://github.com/eclipse-windowbuilder/windowbuilder/issues">GitHub
+Issues</a></strong>).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/submit_manually.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,690 @@
+h1. Translation Keys Changes
+
+This document lists the changes in @TranslatableMessage@ used for Sirius internationalization in each Sirius version.
+
+h2(#sirius745). Translation Keys Changes in Sirius 7.4.5 (from Sirius 7.4.4)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ImageSelectionDialog_resetImageStyle_buttonLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ImageSelectionDialog_resetImageStyle_label@
+
+h2(#sirius744). Translation Keys Changes in Sirius 7.4.4 (from Sirius 7.4.3)
+
+No changes.
+
+h2(#sirius743). Translation Keys Changes in Sirius 7.4.3 (from Sirius 7.4.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.tools.api.Messages.ToolManagement_sha256_instanciation@
+
+h2(#sirius740). Translation Keys Changes in Sirius 7.4.0 (from Sirius 7.3.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.tools.api.Messages.ImageManager_projectMembersFailure@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteStylePureGraphicalAction_commandLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteStylePureGraphicalAction_text@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteStylePureGraphicalAction_toolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_ArrangeAll_ActionLabelText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_ArrangeAll_ActionToolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_toolbar_ArrangeAll_ActionLabelText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_toolbar_ArrangeAll_ActionToolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_ArrangeSelection_ActionLabelText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_ArrangeSelection_ActionToolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_toolbar_ArrangeSelection_ActionLabelText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeAction_toolbar_ArrangeSelection_ActionToolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeBorderNodesAction_actionDiagramText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeBorderNodesAction_toolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeBorderNodesAction_toolbarActionDiagramText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeMenuManager_Arrange_ActionLabelText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeMenuManager_Arrange_ActionToolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutChildrenAction_commandLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutChildrenAction_menuText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutChildrenAction_toolbarText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutChildrenAction_tooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MovePinnedElementsAction_text@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MovePinnedElementsAction_toolTipText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PinElementsEclipseAction_tooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorManager_logErrorParsingRGB@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_customCategoryLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_customCategoryMoreButtonTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_customCategoryTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_basicCategoryLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_basicCategoryTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_lastUsedCategoryLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_lastUsedCategoryTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_moreButtonLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_suggestedCategoryLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_suggestedCategoryMoreButtonTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_suggestedCategoryTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorPalettePopup_title@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_addButtonLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_addButtonTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_customAllColorsTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_customColorsDialogTitle@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_groupAllCustomColorsLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_groupAllSuggestedColorsLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_groupDisplayedSuggestedColorsLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_removeButtonLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_removeButtonTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_suggestedAllColorsTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_suggestedColorsDialogTitle@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ColorSelectionDialog_suggestedDisplayedColorsTooltip@
+
+h3. Message Values Changed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteFormatAction_commandLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteFormatAction_text@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteLayoutAction_commandLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteLayoutAction_text@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteStyleAction_commandLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PasteStyleAction_text@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeBorderNodesAction_commandLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeBorderNodesAction_toolTipDiagramText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ArrangeBorderNodesAction_toolbarActionText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.PinElementsEclipseAction_text@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SiriusCopyAppearancePropertiesAction_tooltipMessage@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramEditorContextMenuProvider_arrangeMenuText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.UnpinElementsEclipseAction_text@
+
+h2(#sirius730). Translation Keys Changes in Sirius 7.3.0 (from Sirius 7.2.1)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramGeneralPreferencePage_newlyCreatedElementsGroupLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.NewlyCreatedElements_diagonalLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.NewlyCreatedElements_diagonalTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.NewlyCreatedElements_horizontalLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.NewlyCreatedElements_horizontalTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.NewlyCreatedElements_verticalLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.NewlyCreatedElements_verticalTooltip@
+
+h2(#sirius707). Translation Keys Changes in Sirius 7.0.7 (from Sirius 7.0.6)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.tree.ui.provider.Messages.AbstractDTreeItemRunnableWithProgress_emptyDTreeItemsParameter@
+* @org.eclipse.sirius.tree.ui.provider.Messages.AbstractDTreeItemRunnableWithProgress_nullDTreeItemParameter@
+* @org.eclipse.sirius.tree.ui.provider.Messages.CollapseDTreeItemRunnableWithProgress_collapseAllTreeItems@
+* @org.eclipse.sirius.tree.ui.provider.Messages.CollapseDTreeItemRunnableWithProgress_collapseTreeItem@
+* @org.eclipse.sirius.tree.ui.provider.Messages.ExpandDTreeItemRunnableWithProgress_expandAllTreeItems@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.tree.ui.provider.Messages.ExpandDTreeItemRunnableWithProgress_treeItemCollapsing@
+* @org.eclipse.sirius.tree.ui.provider.Messages.ExpandDTreeItemRunnableWithProgress_treeItemExpanding@
+
+h2(#sirius702). Translation Keys Changes in Sirius 7.0.2 (from Sirius 7.0.1)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_newLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_title@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_invalidCharInName@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_badLeadingCharacter@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_newTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_oldLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_oldTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_processDiagramContentLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_processDiagramContentTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeMassivelyImagePathDialog_warning@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ImageMarkerMassResolution_label@
+
+h2(#sirius701). Translation Keys Changes in Sirius 7.0.1 (from Sirius 7.0.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SVGImageRegistry_LoadImageError@
+
+h2(#sirius700). Translation Keys Changes in Sirius 7.0.0 (from Sirius 6.6.0)
+
+h3. Message Keys Renamed or Moved
+
+* Several Messages classes have been renamed or created due to Sirius modularization and Java packages rules:
+** Plugin _org.eclipse.sirius_: @org.eclipse.sirius.tools.api.Messages@ renamed from @org.eclipse.sirius.viewpoint.Messages@
+** Plugin _org.eclipse.sirius.model_: @org.eclipse.sirius.model.tools.internal.Messages@ extracted from @org.eclipse.sirius.viewpoint.Messages@
+** Plugin _org.eclipse.sirius.diagram_: @org.eclipse.sirius.diagram.tools.api.Messages@ renamed from @org.eclipse.sirius.diagram.Messages@
+** Plugin _org.eclipse.sirius.diagram.sequence_: @org.eclipse.sirius.diagram.sequence.tool.internal.Messages@ renamed from @org.eclipse.sirius.diagram.sequence.Messages@
+** Plugin _org.eclipse.sirius.table.model_: @org.eclipse.sirius.table.model.internal.Messages@ extracted from @org.eclipse.sirius.table.tools.internal.Messages@
+* Several Message Keys have been extracted to the .model plugins:
+** @org.eclipse.sirius.model.tools.internal.Messages.PaneBasedSelectionWizardDescriptionImpl_choiceOfValuesMsg@
+** @org.eclipse.sirius.model.tools.internal.Messages.PaneBasedSelectionWizardDescriptionImpl_selectedValuesMsg@
+** @org.eclipse.sirius.model.tools.internal.Messages.SelectionWizardDescriptionImpl_title@
+** @org.eclipse.sirius.model.tools.internal.Messages.ValidationRuleImpl_elementHas@
+** @org.eclipse.sirius.table.model.internal.Messages.Table_UnexpectedExceptionMessage@
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_labelProviderLocal@
+* @org.eclipse.sirius.diagram.tools.api.Messages_BringElementsForward_oneElementLabel@
+* @org.eclipse.sirius.diagram.tools.api.Messages_BringElementsForward_severalElementsLabel@
+* @org.eclipse.sirius.diagram.tools.api.Messages_BringElementsForward_wrongIndex@
+* @org.eclipse.sirius.diagram.tools.api.Messages_BringElementsToFront_oneElementLabel@
+* @org.eclipse.sirius.diagram.tools.api.Messages_BringElementsToFront_severalElementsLabel@
+* @org.eclipse.sirius.tools.api.Messages.ReferenceFinderCache_warningAlreadyEnabled@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.AbstractDEdgeNameEditPart_VisualID_Error@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ImageMarkerResolution_label@
+* @org.eclipse.sirius.tools.api.Messages.DRepresentationDescriptorQuery_representationError_broken_srm_path@
+* @org.eclipse.sirius.tools.api.Messages.DRepresentationDescriptorQuery_representationError_broken_fragment_path@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.Messages.NodeMappingHelper_methodInvocationErrorMsg@
+* @org.eclipse.sirius.editor.workflow.internal.Messages.WorkflowMenuBuilder_NewWorkflow_label@
+* @org.eclipse.sirius.editor.workflow.internal.Messages.WorkflowMenuBuilder_label@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerConfigurator_headerConfig@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerConfigurator_wrongPropertyTypeWarning@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerManager_cannotStartServer@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerManager_cannotStopServer@
+* @org.eclipse.sirius.workflow.ui.page.Messages.WorkflowPage_header_title@
+* @org.eclipse.sirius.workflow.ui.page.Messages.WorkflowPage_tab_name@
+
+
+
+
+
+
+h2(#sirius660). Translation Keys Changes in Sirius 6.6.0 (from Sirius 6.5.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.sequence.ui.Messages.SequenceEMFCommandFactory_notSupportedZorderCommandsMessage@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.AbstractEdgesZOrderAction_noExecutioninformationDialogTitle@
+* @org.eclipse.sirius.diagram.Messages.BringElementsForward_oneElementLabel@
+* @org.eclipse.sirius.diagram.Messages.BringElementsForward_severalElementsLabel@
+* @org.eclipse.sirius.diagram.Messages.BringElementsForward_wrongIndex@
+* @org.eclipse.sirius.diagram.Messages.BringElementsToFront_oneElementLabel@
+* @org.eclipse.sirius.diagram.Messages.BringElementsToFront_severalElementsLabel@
+* @org.eclipse.sirius.diagram.Messages.SendElementsBackward_oneElementLabel@
+* @org.eclipse.sirius.diagram.Messages.SendElementsBackward_severalElementsLabel@
+* @org.eclipse.sirius.diagram.Messages.SendElementsBackward_wrongIndex@
+* @org.eclipse.sirius.diagram.Messages.SendElementsToBack_oneElementLabel@
+* @org.eclipse.sirius.diagram.Messages.SendElementsToBack_severalElementsLabel@
+* @org.eclipse.sirius.diagram.Messages.ZOrderRecordingCommand_emptyList@
+* @org.eclipse.sirius.diagram.Messages.ZOrderRecordingCommand_notSameParent@
+* @org.eclipse.sirius.diagram.Messages.ZOrderRecordingCommand_notSameType@
+
+h3. Message Keys Removed
+
+h2(#sirius650). Translation Keys Changes in Sirius 6.5.0 (from Sirius 6.4.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.RepairEdgesWithOneBendpointMigrationParticipant_edgesModified@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.RepairEdgesWithOneBendpointMigrationParticipant_title@
+* @org.eclipse.sirius.diagram.Messages.UnsetOriginalStyleFeatureMigrationParticipant_danglingFeatures@
+* @org.eclipse.sirius.diagram.Messages.UnsetOriginalStyleFeatureMigrationParticipant_title@
+* @org.eclipse.sirius.diagram.Messages.UnsetOriginalStyleFeatureMigrationParticipant_unsetFeatures@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.CelEditorFactoryManager_impossibleInstantiation@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.CelEditorFactoryManager_notFound@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.CelEditorFactoryManager_wrongImplementation@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.DFeatureColumnEditingSupport_notJavaQualifiedName@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.DFeatureColumnEditingSupport_unusableCellEditor@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Table_CellEditorResult@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Table_CellElement@
+* @org.eclipse.sirius.table.tools.internal.Messages.Constraint_bothCellEditorEditLabelTool_message@
+* @org.eclipse.sirius.table.tools.internal.Messages.TableToolVariables_CellEditorResult@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_helpCreateMessage@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_helpCreateTitle@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_helpMoveMessage@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_helpMoveTitle@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencePage_refreshInfo@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencesPropertyPage_configureWorkspaceSettings@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencesPropertyPage_enableProjectSpecificSettings@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusSessionDetailsPropertyPage_computeSessionDetails@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusSessionDetailsPropertyPage_computingSessionDetails@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusSessionDetailsPropertyPage_copyToClipboard@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusSessionDetailsPropertyPage_repOpenedInEditor@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusSessionDetailsPropertyPage_sessionNotOpened@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_ActiveViewpoints@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_AllRepresentations@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_ControlledResources@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_CrossTable@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Date@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Diagram@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_EditionTable@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Elements@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_FileSize@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_InactiveViewpoints@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_InvalidReps@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_InvalidRepsInfo@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_LoadedBrokenReps@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_LoadedBrokenRepsInfo@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_LoadedFromResource@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_LoadedReps@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_NbRepElements@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_RepresentationDescriptorDetails@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Representations@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Resources@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_SemanticResources@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Sequence@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_SessionResources@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_TagInvalid@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_TagLoaded@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Tree@
+* @org.eclipse.sirius.viewpoint.Messages.SessionQuery_Viewpoints@
+* @org.eclipse.sirius.viewpoint.Messages.SiriusPreferencesImpl_noProjectScope@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.FormatData_illegalTarget@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.FormatData_unhandledDiagramElementKind@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutData_unhandledDiagramElementKind@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.RootLayoutData_unhandledDiagramElementKind@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_helpMessage@
+
+h2(#sirius640). Translation Keys Changes in Sirius 6.4.0 (from Sirius 6.3.2)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DDiagramEditorImpl_error_representationRefresh@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedDiagramContentDuplicationSwitch_ErrorImpossibleToCreateEdgeFromEdgeCandidate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedDiagramContentDuplicationSwitch_ErrorImpossibleToCreateNodeFromNodeCandidate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedDiagramContentDuplicationSwitch_ImpossibleToFindBestMapping@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorDiagramIsNull@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorMappingfunctionIncompleteOnSequenceDiagram@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorMappingfunctionIsEmpty@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorSourceAndOrTargetSessionsNull@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorSourceAndTargetDiagramDecriptionsDoesNotMatch@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorSourceAndTargetDiagramsAreTheSame@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorTargetDiagramNameIsEmpty@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ErrorTargetDiagramRootIsNull@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ImpossibleToCopyNoteInNonExistingOrUnreachableTarget@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ImpossibleToFindTargetTextNoteContainer@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ImpossibleToResolveOtherBoundTargetNote@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MappingBasedSiriusFormatManagerFactory_ImpossibleToSuitableDescription@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MessageFormatParser_ProxyOrNullSemanticTargetMessage@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.MessageFormatParser_ProxyOrNullTargetMessage@
+* @org.eclipse.sirius.ext.e3.ui.Messages.FilteredTree_AccessibleListenerClearButton@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.AbstractDTreeEditor_RepresentationRefreshFailed@
+* @org.eclipse.sirius.tree.ui.provider.Messages.DTreeEditor_RepresentationRefreshFailed@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractSWTCallback_shouldWeRefreshQuestion@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractSWTCallback_shouldWeRefreshTitle@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_helpMessage@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_labelProviderDefault@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AnalysisSelectorFilteredItemsSelectionDialog_labelProviderLocal@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AskSessionOpeningRunnable_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAction_exportErrorReport@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAction_exportOtherError@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAction_exportedDiagramImageCreationError@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAction_representationInformation@
+* @org.eclipse.sirius.viewpoint.provider.Messages.MoveRepresentationAction_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SmartDialogAnalysisSelector_messageWithRepresentationName@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SmartDialogAnalysisSelector_messageWithoutRepresentationName@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SmartDialogAnalysisSelector_otherFragments@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SmartDialogAnalysisSelector_titleWithRepresentationName@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SmartDialogAnalysisSelector_titleWithoutRepresentationName@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointsFolderInvalidItemImpl_invalidRepresentations_title@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DDiagramEditorImpl_diagramRefreshTitle@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DDiagramEditorImpl_shouldWeRefreshQuestion@
+
+h2(#sirius632). Translation Keys Changes in Sirius 6.3.2 (from Sirius 6.3.1)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.viewpoint.Messages.DRepresentationDescriptorQuery_representationError@
+
+h2(#sirius631). Translation Keys Changes in Sirius 6.3.1 (from Sirius 6.3.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.BundledImageShape_idMissing@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.BundledImageShape_usedByEndUser_idMissing_msg@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.BundledImageShape_usedInVSM_idMissing_msg@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramConnectionsPreferencePage_defaultValuesGroup_title@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramConnectionsPreferencePage_enableLineStyleOverride_label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SVGFigure_usingInvalidBundledImageShape@
+* @org.eclipse.sirius.viewpoint.provider.Messages.LogThroughActiveDialectEditorLogListener_wrongErrorMessageProvider@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramConnectionsPreferencePage_enableOverrideLabel@
+
+h2(#sirius61). Translation Keys Changes in Sirius 6.1 (from Sirius 6.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.common.ui.Messages.MigrationUIUtil_askToSaveChanges@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeEditModeAction_ChangeFailure@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ChangeEditModeAction_ChangePropertyValueRequest_label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DDiagramEditorImpl_updateToolFailure@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DefaultModeAction_Label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DefaultModeAction_statusOn@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramAppearancePreferencePage_displayUserFixedColorsInPaletteLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DoubleClickEditPolicy_confirmDialogAsking@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DoubleClickEditPolicy_confirmDialogTitle@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DoubleClickEditPolicy_filterConfirmDialogBody@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DoubleClickEditPolicy_layerConfirmDialogBody@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.EditModeAction_Label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.Group_No_Menu_ID@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.Group_Not_Displayed@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutingModeSwitchingAction_label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LocationURI_ParsePb_Blank@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LocationURI_ParsePb_MoreThanTwoLocations@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LocationURI_ParsePb_NoId@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LocationURI_ParsePb_OnlyOneLocationURIPerScheme@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LocationURI_ParsePb_WrongFormat@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LocationURI_ParsePb_WrongScheme@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ShowingModeSwitchingAction_label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.UndoRedoCapableEMFCommandFactory_insertHorizontalBlankSpaceNotImplemented@
+* @org.eclipse.sirius.diagram.Messages.ToolManagment_ToolChange_Command_Label@
+* @org.eclipse.sirius.diagram.Messages.UpdateToolRecordingCommand_cancelExceptionMessage@
+* @org.eclipse.sirius.diagram.Messages.ViewWithNullElementMigrationParticipant_message@
+* @org.eclipse.sirius.diagram.Messages.ViewWithNullElementMigrationParticipant_singleMessage@
+* @org.eclipse.sirius.diagram.Messages.ViewWithNullElementMigrationParticipant_title@
+* @org.eclipse.sirius.editor.Messages.CustomLayoutConfigurationDescriptionPropertySection_noLayoutAlgorithmProviderDescription@
+* @org.eclipse.sirius.editor.Messages.CustomLayoutConfigurationDescriptionPropertySection_noLayoutAlgorithmProviderName@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerConfigurator_headerConfig@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerConfigurator_wrongPropertyTypeWarning@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencePage_askUserToSaveAfterMigration@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencePage_migrationGroup@
+* @org.eclipse.sirius.viewpoint.provider.Messages.CreateMissingRepresentationFileResolution_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.CreateMissingRepresentationFileResolution_description@
+* @org.eclipse.sirius.viewpoint.Messages.AirDResourceImpl_nullUid@
+* @org.eclipse.sirius.viewpoint.Messages.Constraint_validNullLocationURIForGroupInPopupMenuConstraint_message@
+* @org.eclipse.sirius.viewpoint.Messages.TechnicalUidMigrationParticipant_message@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutingModeSwitchingAction_activate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutingModeSwitchingAction_deactivate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ShowingModeSwitchingAction_activate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ShowingModeSwitchingAction_deactivate@
+* @org.eclipse.sirius.diagram.Messages.UndoRedoCapableEMFCommandFactory_insertHorizontalBlankSpaceNotImplemented@
+
+h2(#sirius60). Translation Keys Changes in Sirius 6.0 (from Sirius 5.1)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramGeneralPreferencePage_sizeGroupLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.GenericConnectionCreationTool_label@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.InsertBlankSpace_cmdName@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutAlgorithmProviderRegistry_badClassType@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.LayoutAlgorithmProviderRegistry_classInitialization@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SetShowingModeCommandAndUpdateActionImage_activateLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SetShowingModeCommandAndUpdateActionImage_deactivateLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ShowingModeSwitchingAction_activate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ShowingModeSwitchingAction_deactivate@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.ShowingModeSwitchingAction_statusOn@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StandardDiagramServices_expressionMessage@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StandardDiagramServices_expressionTitle@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StandardDiagramServices_expressionTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StandardDiagramServices_sameETypeMessage@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StandardDiagramServices_sameETypeTitle@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StandardDiagramServices_sameETypeTooltip@
+* @org.eclipse.sirius.diagram.Messages.NoteAttachmentWithoutSourceOrTargetMigrationParticipant_edgesRemoved@
+* @org.eclipse.sirius.diagram.Messages.NoteAttachmentWithoutSourceOrTargetMigrationParticipant_title@
+* @org.eclipse.sirius.diagram.Messages.UndoRedoCapableEMFCommandFactory_insertHorizontalBlankSpaceNotImplemented@
+* @org.eclipse.sirius.diagram.Messages.UndoRedoCapableEMFCommandFactory_insertVerticalBlankSpaceNotImplemented@
+* @org.eclipse.sirius.editor.workflow.internal.Messages.WorkflowMenuBuilder_NewWorkflow_label@
+* @org.eclipse.sirius.editor.workflow.internal.Messages.WorkflowMenuBuilder_label@
+* @org.eclipse.sirius.editor.Messages.AddOptionOverridePropertySection_dialogTitle@
+* @org.eclipse.sirius.editor.Messages.AddOptionOverridePropertySection_overrideButtonLabel@
+* @org.eclipse.sirius.editor.Messages.CustomSiriusEditor_failedNavigationExceptionMessage@
+* @org.eclipse.sirius.editor.Messages.CustomSiriusEditor_failedNavigationMessage@
+* @org.eclipse.sirius.editor.Messages.CustomSiriusEditor_failedNavigationTitle@
+* @org.eclipse.sirius.editor.Messages.LayoutOptionValue_defaultLabel@
+* @org.eclipse.sirius.editor.Messages.OptionOverrideEditorDialog_filteringLabel@
+* @org.eclipse.sirius.editor.Messages.OptionOverrideEditorDialog_optionDefaultValueColumnLabel@
+* @org.eclipse.sirius.editor.Messages.OptionOverrideEditorDialog_optionDescriptionLabel@
+* @org.eclipse.sirius.editor.Messages.OptionOverrideEditorDialog_optionNameColumnLabel@
+* @org.eclipse.sirius.editor.Messages.OptionOverrideEditorDialog_optionTypeColumnLabel@
+* @org.eclipse.sirius.editor.Messages.OptionOverrideEditorDialog_tableLabel@
+* @org.eclipse.sirius.editor.Messages.ServiceNavigator_serviceNavigationDialog_description@
+* @org.eclipse.sirius.editor.Messages.ServiceNavigator_serviceNavigationDialog_title@
+* @org.eclipse.sirius.editor.Messages.ServiceNavigator_targetInitialization_error@
+* @org.eclipse.sirius.ext.ide.internal.Messages.DescriptorRegistryEventListener_cannotInstantiateExtension@
+* @org.eclipse.sirius.ext.ide.internal.Messages.DescriptorRegistryEventListener_extensionAlreadyContributed@
+* @org.eclipse.sirius.ext.ide.internal.Messages.DescriptorRegistryEventListener_missingAttribute@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerManager_cannotStartServer@
+* @org.eclipse.sirius.server.internal.Messages.SiriusServerManager_cannotStopServer@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractExportRepresentationsAsImagesDialog_scalingLevelDiagramLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAction_invalidLevel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAsImage_dialogSizeGroupName@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAsImage_maxLevelLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAsImage_nominalLevelLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ExportAsImage_sizeTooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.No_Browser_Error_Message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.OpenViewpointSelectionBrowser_Error_Message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SingleRepresentationTreeSelectionDialog_Title@
+* @org.eclipse.sirius.workflow.ui.page.Messages.WorkflowPage_header_title@
+* @org.eclipse.sirius.workflow.ui.page.Messages.WorkflowPage_tab_name@
+* @org.eclipse.sirius.viewpoint.Messages.InvalidModelingProjectMarkerUpdaterJob_updateMarkers@
+* @org.eclipse.sirius.viewpoint.Messages.ModelingModelProvider_addAnotherRepresentationFile@
+* @org.eclipse.sirius.viewpoint.Messages.ModelingModelProvider_addAnotherRepresentationFileSeveralProjects@
+* @org.eclipse.sirius.viewpoint.Messages.ModelingModelProvider_mainRepresentationFileDeleted@
+* @org.eclipse.sirius.viewpoint.Messages.ModelingModelProvider_mainRepresentationFilesOfSomeProjectsDeleted@
+* @org.eclipse.sirius.viewpoint.Messages.ModelingModelProvider_satusUnsaveDataWillBeLostWithProjectNames@
+* @org.eclipse.sirius.viewpoint.Messages.ModelingModelProvider_satusUnsavedDataWillBeLost@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramGeneralPreferencePage_scaleDiagramOnExport@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractExportRepresentationsAsImagesDialog_autoScaleDiagram@
+* @org.eclipse.sirius.viewpoint.provider.Messages.InvalidModelingProjectMarkerUpdaterJob_updateMarkers@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ModelingModelProvider_addAnotherRepresentationFile@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ModelingModelProvider_addAnotherRepresentationFileSeveralProjects@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ModelingModelProvider_mainRepresentationFileDeleted@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ModelingModelProvider_mainRepresentationFilesOfSomeProjectsDeleted@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ModelingModelProvider_satusUnsaveDataWillBeLostWithProjectNames@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ModelingModelProvider_satusUnsavedDataWillBeLost@
+
+h2(#sirius51). Translation Keys Changes in Sirius 5.1 (from Sirius 5.0)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.diagram.sequence.Messages.Range_wrongArgument@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.BundledImageShape_attributeAbsent@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramGeneralPreferencePage_scaleDiagramOnExport@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramGeneralPreferencePage_showSynchronizeStatusDecoratorLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.RepairGMFbendpointsMigrationParticipant_edgesModified@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.RepairGMFbendpointsMigrationParticipant_title@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SiriusStatusLineContributionItemProvider_diagramSynchronized@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SiriusStatusLineContributionItemProvider_diagramUnsynchronized@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SnapBackDistantLabelsMigrationParticipant_nodesMoved@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SnapBackDistantLabelsMigrationParticipant_oneLabelSnapBacked@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SnapBackDistantLabelsMigrationParticipant_severalLabelsSnapBacked@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SnapBackDistantLabelsMigrationParticipant_title@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_BottomSidePinnedLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_BottomSidePinnedTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_LeftSidePinnedLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_LeftSidePinnedTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_RightSidePinnedLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_RightSidePinnedTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_TopSidePinnedLabel@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.StraightenToAction_TopSidePinnedTooltip@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SynchronizeStatusFigure_diagSynchronized@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SynchronizeStatusFigure_diagUnsynchronized@
+* @org.eclipse.sirius.ui.editor.Messages.DefaultSessionEditorPage_closeSession_action_label@
+* @org.eclipse.sirius.ui.editor.Messages.DefaultSessionEditorPage_closeSession_action_tooltip@
+* @org.eclipse.sirius.ui.editor.Messages.GraphicalSemanticModelsHandler_addModelButton_tooltip@
+* @org.eclipse.sirius.ui.editor.Messages.GraphicalSemanticModelsHandler_newModelButton_tooltip@
+* @org.eclipse.sirius.ui.editor.Messages.GraphicalSemanticModelsHandler_removeModelButton_tooltip@
+* @org.eclipse.sirius.ui.editor.Messages.PluginPageProviderRegistry_badClassType@
+* @org.eclipse.sirius.ui.editor.Messages.PluginPageProviderRegistry_classInitialization@
+* @org.eclipse.sirius.ui.editor.Messages.SessionEditor_PageActivation_Failure@
+* @org.eclipse.sirius.ui.editor.Messages.SessionEditor_PageCommand_Integrity_Error@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractExportRepresentationsAsImagesDialog_autoScaleDiagram@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractSWTCallback_DeleteRepresentationAction_message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractSWTCallback_DeleteRepresentationAction_message_plural@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractSWTCallback_DeleteRepresentationAction_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractSWTCallback_DeleteRepresentationAction_title_plural@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_disableViewpointButton_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_enableViewpointButton_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_newRepresentationButton_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_removeRepresentationButton_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.RemoveSemanticResourceAction_Active_Representation_Message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.RemoveSemanticResourceAction_Controlled_Resources_Message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.RemoveSemanticResourceAction_Error_Removal_Title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.RemoveSemanticResourceAction_Not_External_Dependency_Message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.UpdateRepresentationsLocationHandler_errorMsg@
+* @org.eclipse.sirius.viewpoint.provider.Messages.UpdateRepresentationsLocationHandler_label@
+* @org.eclipse.sirius.viewpoint.Messages.DRepresentationDescriptorToDRepresentationLinkManager_repLoading@
+* @org.eclipse.sirius.viewpoint.Messages.ModelOperationToTask_cannotCreateTaskWarningMsg@
+* @org.eclipse.sirius.viewpoint.Messages.SessionFactoryImpl_ResourceTypeErrorMsg@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.viewpoint.provider.Messages.DeleteRepresentationAction_message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.DeleteRepresentationAction_message_plural@
+* @org.eclipse.sirius.viewpoint.provider.Messages.DeleteRepresentationAction_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.DeleteRepresentationAction_title_plural@
+
+
+h2(#sirius50). Translation Keys Changes in Sirius 5.0 (from Sirius 4.1)
+
+h3. Message Keys Added
+
+* @org.eclipse.sirius.common.acceleo.aql.business.Messages.AQLInterpreter_errorWithExpression@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramAppearancePreferencePage_authorizeOverlapGroupText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramAppearancePreferencePage_decorationGroupText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramPrintingPreferencePage_optionsGroupText@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.DiagramPrintingPreferencePage_printDecorations@
+* @org.eclipse.sirius.diagram.ui.provider.Messages.SiriusDiagramGraphicalViewer_tooltipDisplayDelay@
+* @org.eclipse.sirius.ecore.extender.business.internal.Messages.PermissionService_permissionProviderInstantiationError@
+* @org.eclipse.sirius.editor.properties.ext.widgets.reference.internal.Messages.DefaultReferenceDescriptionFactory_name@
+* @org.eclipse.sirius.editor.properties.ext.widgets.reference.internal.Messages.DefaultReferenceDescriptionFactory_widgetLabel@
+* @org.eclipse.sirius.editor.properties.internal.Messages.CategoryMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.ConditionalStyleMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.ContainerMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.CreateWidgetForAllFeaturesCommand_text@
+* @org.eclipse.sirius.editor.properties.internal.Messages.CreateWidgetFromDomainClassMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.CustomExpressionMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.CustomOperationMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultBooleanDescriptionFactory_name@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultBooleanDescriptionFactory_widgetLabel@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultEnumerationDescriptionFactory_name@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultEnumerationDescriptionFactory_widgetLabel@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultMonolineTextDescriptionFactory_name@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultMonolineTextDescriptionFactory_widgetLabel@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultMultilineTextDescriptionFactory_name@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultMultilineTextDescriptionFactory_widgetLabel@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultMultivaluedEAttributeDescriptionFactory_name@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DefaultMultivaluedEAttributeDescriptionFactory_widgetLabel@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DialogButtonMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.DynamicMappingMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.GroupMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.LayoutMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.OverridesMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.PageMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.PropertiesMenuBuilder_ExtendPropertiesView_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.PropertiesMenuBuilder_ImportPropertiesView_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.PropertiesMenuBuilder_NewPropertiesView_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.PropertiesMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.StyleMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.ToolbarActionMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.ValidationMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.WidgetActionMenuBuilder_label@
+* @org.eclipse.sirius.editor.properties.internal.Messages.WidgetMenuBuilder_label@
+* @org.eclipse.sirius.properties.core.internal.Messages.AbstractDescriptionConverter_noConverterFound@
+* @org.eclipse.sirius.properties.core.internal.Messages.IDescriptionConverter_InvalidDescriptionType@
+* @org.eclipse.sirius.properties.core.internal.Messages.SiriusToolServices_MainTabLabel@
+* @org.eclipse.sirius.properties.defaultrules.internal.Messages.DefaultRulesProvider_DefaultPropertiesNotFound@
+* @org.eclipse.sirius.properties.provider.Messages.Category__name@
+* @org.eclipse.sirius.properties.provider.Messages.GridLayoutDescription__label@
+* @org.eclipse.sirius.properties.provider.Messages.GroupDescription__name@
+* @org.eclipse.sirius.properties.provider.Messages.PageDescription__name@
+* @org.eclipse.sirius.properties.provider.Messages.ViewExtensionDescription__name@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Refresh_cancelled@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Refresh_error@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Refresh_errorDuringRefresh@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Table_LineElement@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Table_TableElement@
+* @org.eclipse.sirius.table.tools.internal.Messages.TableToolVariables_LineElement@
+* @org.eclipse.sirius.table.tools.internal.Messages.TableToolVariables_TableElement@
+* @org.eclipse.sirius.tree.ui.provider.Messages.EditorRefresh_error@
+* @org.eclipse.sirius.tree.ui.provider.Messages.EditorRefresh_refreshCancelled@
+* @org.eclipse.sirius.tree.ui.provider.Messages.EditorRefresh_treeRefreshError@
+* @org.eclipse.sirius.tree.ui.provider.Messages.SiriusTreePreferencePage_alwaysUseStandardFont@
+* @org.eclipse.sirius.tree.ui.provider.Messages.SiriusTreePreferencePage_alwaysUseStandardFont_help@
+* @org.eclipse.sirius.tree.ui.provider.Messages.SiriusTreePreferencePage_globalGroupName@
+* @org.eclipse.sirius.ui.editor.Messages.DefaultSessionEditorPage_collapseAllAction_tooltip@
+* @org.eclipse.sirius.ui.editor.Messages.DefaultSessionEditorPage_selectFilterAction_tooltip@
+* @org.eclipse.sirius.ui.editor.Messages.GraphicalRepresentationHandler_disabledViewpoint_label@
+* @org.eclipse.sirius.ui.editor.Messages.GraphicalRepresentationHandler_missingDependencies_requirements@
+* @org.eclipse.sirius.ui.editor.Messages.GraphicalRepresentationHandler_representationNumber_label@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_default_page_tab_label@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_header_title@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_inputNotHandled_error_message@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_models_button_newSemanticModel@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_models_button_removeSemanticModel@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_models_title@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_new_semantic_model_action_label@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_page_loading_error_message@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_representation_button_newRepresentation@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_representation_button_removeRepresentation@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_representation_title@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_session_loading_error_message@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_session_loading_task_title@
+* @org.eclipse.sirius.ui.editor.Messages.UI_SessionEditor_viewpoints_title@
+* @org.eclipse.sirius.ui.properties.internal.Messages.DialogTask_label@
+* @org.eclipse.sirius.ui.properties.internal.Messages.WizardTask_label@
+* @org.eclipse.sirius.ui.properties.internal.preferences.Messages.SiriusPropertiesPreferencePage_maxLengthTabName_invalidInteger@
+* @org.eclipse.sirius.ui.properties.internal.preferences.Messages.SiriusPropertiesPreferencePage_maxLengthTabName_invalidValue@
+* @org.eclipse.sirius.viewpoint.provider.Messages.AbstractExportRepresentationsAsImagesDialog_decorationExport@
+* @org.eclipse.sirius.viewpoint.provider.Messages.CreateEMFModelWizard_errorInstantiateRootElement@
+* @org.eclipse.sirius.viewpoint.provider.Messages.CreateEMFModelWizard_modelNamePrefix@
+* @org.eclipse.sirius.viewpoint.provider.Messages.CreateEMFModelWizard_windowTitle@
+* @org.eclipse.sirius.viewpoint.provider.Messages.DynamicViewpointsSelectionComponent_missingDependencies_requirements@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_CreateRepresentationWizard_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_button_activateDeactivateViewpoint_incorrectSelection_message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_button_activateDeactivateViewpoint_incorrectSelection_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_button_activateViewpoint@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_button_deactivateViewpoint@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_button_newRepresentation@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_button_removeRepresentation@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_checkBoxGroupByRepresentationDescription_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_checkBoxGroupByViewpoint_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_disabledViewpoint_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_missingDependencies_requirements@
+* @org.eclipse.sirius.viewpoint.provider.Messages.GraphicalRepresentationHandler_representationNumber_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.NameAndLocationWizardPage_description@
+* @org.eclipse.sirius.viewpoint.provider.Messages.NameAndLocationWizardPage_errorMessage@
+* @org.eclipse.sirius.viewpoint.provider.Messages.NameAndLocationWizardPage_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.OtherRepresentationAction_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.OtherRepresentationAction_noRepresentation_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.OtherRepresentationAction_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectEMFMetamodelWizardPage_description@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectEMFMetamodelWizardPage_documentationLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectEMFMetamodelWizardPage_metamodelLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectEMFMetamodelWizardPage_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectRootElementWizardPage_checkboxLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectRootElementWizardPage_description@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectRootElementWizardPage_label@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SelectRootElementWizardPage_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencePage_autoSessionEditorOpening@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusPreferencePage_sessionEditorGroup@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusRepresentationWithInactiveStatusLabelProvider_representationDescriptionItem_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusRepresentationWithInactiveStatusLabelProvider_viewpointItem_tooltip@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointSelectionCallbackWithConfimationAndDependenciesHandling_confirmDependencyActivation_activateLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointSelectionCallbackWithConfimationAndDependenciesHandling_confirmDependencyActivation_deactivateLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointSelectionCallbackWithConfimationAndDependenciesHandling_confirmDependencyActivation_message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointSelectionCallbackWithConfimationAndDependenciesHandling_confirmDependencyActivation_title@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointSelectionCallbackWithConfimationAndDependenciesHandling_missingDependency_message@
+* @org.eclipse.sirius.viewpoint.provider.Messages.ViewpointSelectionCallbackWithConfimationAndDependenciesHandling_missingDependency_title@
+* @org.eclipse.sirius.viewpoint.Messages.AbstractResourceStrategyImpl_methodReleaseNotHandleMsg@
+* @org.eclipse.sirius.viewpoint.Messages.LetTask_label@
+* @org.eclipse.sirius.viewpoint.Messages.SessionInterpreter_evaluationError@
+
+h3. Message Keys Removed
+
+* @org.eclipse.sirius.editor.properties.Messages.ImportingDefaultPropertiesViewDescriptionCommand_text@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Action_cancelled@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.Action_error@
+* @org.eclipse.sirius.table.metamodel.table.provider.Messages.RefreshAction_errorDuringRefresh@
+* @org.eclipse.sirius.tree.ui.provider.Messages.EditorRefreshAction_error@
+* @org.eclipse.sirius.tree.ui.provider.Messages.EditorRefreshAction_refreshCancelled@
+* @org.eclipse.sirius.tree.ui.provider.Messages.EditorRefreshAction_treeRefreshError@
+* @org.eclipse.sirius.ui.properties.internal.Messages.AbstractDescriptionConverter_noConverterFound@
+* @org.eclipse.sirius.ui.properties.internal.Messages.IDescriptionConverter_InvalidDescriptionType@
+* @org.eclipse.sirius.ui.properties.internal.Messages.SiriusTabDescriptorProvider_DefaultPropertiesNotFound@
+* @org.eclipse.sirius.ui.properties.internal.Messages.SiriusToolServices_MainTabLabel@
+* @org.eclipse.sirius.viewpoint.provider.Messages.SiriusCommonLabelProvider_eClassDisabled@

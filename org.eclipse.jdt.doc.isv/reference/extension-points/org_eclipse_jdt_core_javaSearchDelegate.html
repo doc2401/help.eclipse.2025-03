@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Java Search Delegate</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">Java Search Delegate</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.jdt.core.javaSearchDelegate<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>3.38
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>This extension point provides the ability to replace the Java Search functionality. The resolver will be instantiated on-demand based on the value of the system property `IJavaSearchDelegate`, which must be set to the id of an implementing extension. This extension point is not intended to be implemented by clients. This extension point is not considered API. This extension point may be modified or removed at any moment.<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.searchDelegate">searchDelegate</a>?)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.searchDelegate">searchDelegate</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST searchDelegate</p>
+<p class="code SchemaDtdAttlist">class&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+Definition of a Java Search Delegate.</p>
+<br>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>class</b> - The class that implements this Java Search Delegate. This class must implement the  <code>org.eclipse.jdt.core.search.IJavaSearchDelegate</code> interface with a public 0-arg constructor.</li>
+<li><b>id</b> - A unique identifier for this search delegate</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>Example of a declaration of a <code>IJavaSearchDelegate</code>:  <pre class="Example"><span class="code SchemaTag">
+&lt;extension
+      point=</span><span class="code SchemaCstring">&quot;org.eclipse.jdt.core.javaSearchDelegate&quot;</span><span class="code SchemaTag">&gt;
+   &lt;resolver
+         class=</span><span class="code SchemaCstring">&quot;org.eclipse.jdt.core.MySearchDelegate&quot;</span><span class="code SchemaTag">
+         id=</span><span class="code SchemaCstring">&quot;org.eclipse.jdt.core.MySearchDelegate&quot;</span><span class="code SchemaTag">&gt;
+   &lt;/resolver&gt;
+&lt;/extension&gt;
+</span></pre>
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+Copyright (c) 2025 Red Hat, Inc. and others.<br>
+
+This program and the accompanying materials
+are made available under the terms of the Eclipse Public License 2.0
+which accompanies this distribution, and is available at 
+<a href="https://www.eclipse.org/legal/epl-2.0">https://www.eclipse.org/legal/epl-v20.html</a>/
+
+SPDX-License-Identifier: EPL-2.0
+
+</p>
+</BODY>
+</HTML>

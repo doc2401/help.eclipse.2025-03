@@ -1,0 +1,311 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.3
+Build-Jdk-Spec: 21
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Version: 10.3.0.202503051725
+Bundle-Localization: plugin
+Bundle-SymbolicName: org.eclipse.tracecompass.doc.dev;singleton:=true
+Require-Bundle: org.eclipse.help
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-tracecompas
+ s/org.eclipse.tracecompass;path="doc/org.eclipse.tracecompass.doc.dev";
+ commitId=30f16f9f680d50f98473a41a1337934074d99c5a
+Bundle-License: Eclipse Public License 2.0
+
+Name: doc/images/SelectManifest.png
+SHA-256-Digest: hzCayez+34tbpJV/aRxdhRIY+6lit82CnTMGnVTmpbY=
+
+Name: plugin.xml
+SHA-256-Digest: quw0MLKLc+AHCqb0mqXugjsCv0uDvkCb7EhhhXDsI3c=
+
+Name: doc/images/SampleDiagramTimeComp.png
+SHA-256-Digest: x3CVqrv4JPI5RBXMPr2gU7mBNy7mbb54+A90AFQf8r0=
+
+Name: index/_1_Lucene84_0.pos
+SHA-256-Digest: Pt52EJjZnN3/6gpADx7+n5waLlJTZckrkhX0doLVnGs=
+
+Name: doc/OS-Execution-Graph-Extension.html
+SHA-256-Digest: SElmM+42DNHjSmaFPVhWJ9q9vUR6IgJFSwHV2Vxnxew=
+
+Name: doc/XML-schema-extension.html
+SHA-256-Digest: UO7wqcSSMgnsFeGlIdXgRsoy0fi0fRHVFp1xGwMAFH4=
+
+Name: doc/images/NTTTraceType.png
+SHA-256-Digest: 6xqNfVCZt4Lao+d8gBh1XZXjK3hy8Ee0xcicp7mbRJU=
+
+Name: doc/images/NTTExtensionPoint.png
+SHA-256-Digest: kdywUN9FvosWUcYBQ5MKAqLJsFY7cbVR227Vx683Qy0=
+
+Name: book.css
+SHA-256-Digest: UCuR8Qyhx1o7HqT9o8lvZb2d5k/w0hlkeZGQT0LLn0Y=
+
+Name: doc/images/FillSampleLoader.png
+SHA-256-Digest: seZazYWP8027X1B4grwh/C4S4wj6RKVLInacrxnZCk8=
+
+Name: doc/images/SeqDiagramPref.png
+SHA-256-Digest: LWkkt+FSka1P3aTz32nWmujtaZmYICrpjLWwqHQpyyA=
+
+Name: index/write.lock
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: doc/images/ShowViewOther.png
+SHA-256-Digest: xwTz8xDIAc+b92avchmGdJD7O7L8XPQXX22IQUj5TLI=
+
+Name: doc/images/TmfAddStatisticsViewClass.png
+SHA-256-Digest: E6aQSyLecctOQflcawMo3l7eA/lInM+HMiBh9WQJyqo=
+
+Name: doc/images/RunEclipseApplication.png
+SHA-256-Digest: GvM67pgyqWHdHvTr8rfGEGE5CURQ6fxKBukYSPxUjYA=
+
+Name: doc/View-Tutorial.html
+SHA-256-Digest: y0Oe8LftxmCrkt+7YycoPQaqbq+auYciHuXpsWZlsio=
+
+Name: doc/Network-Tracing.html
+SHA-256-Digest: vEysp2BC4KuKFjpt/fG/XoIATdM6MpBVh84XFJS6L4I=
+
+Name: doc/images/HidePatternsMenuItem.png
+SHA-256-Digest: zsMRhqV4BYMF11s8wyH82wPup2TQJCgtbLXo1/hMQCU=
+
+Name: doc/images/NTTExtension.png
+SHA-256-Digest: iqpSg93J+3mLQsRDT3rM4EQpH72spXHQkv4xWqcbs0k=
+
+Name: doc/images/NTTAddType.png
+SHA-256-Digest: FxAzl9f/fOHnttSyEkqt1eT6yxkb9pSX1Nu9tnYCh/Y=
+
+Name: doc/images/Screenshot-NewPlug-inProject3.png
+SHA-256-Digest: Fnu6xQr19oMhVSSs2IA3zoJoXNoeNxjVnAjZotVDHaM=
+
+Name: doc/Analysis-Framework.html
+SHA-256-Digest: wyAryTdaZ0IpyHfRVD7FBJaz2RIcdfAEIsjJ5Z945YY=
+
+Name: doc/Markers.html
+SHA-256-Digest: ChlmoU4a+nrCrAraWeHZLUQ/Mx7PpS5VqY8OY+UcWas=
+
+Name: doc/images/NTTPluginxmlComplete.png
+SHA-256-Digest: xxTPCyVX5j0Q5eOAFqcgIZu/i7zbNpD9mNGg1LpShgo=
+
+Name: index/segments_1
+SHA-256-Digest: MFPP8yVmFQbJFTqo1EZv0+3ZPy6pnor76hoWQz+Yw2w=
+
+Name: index/indexed_docs
+SHA-256-Digest: EHd8LHn3XWuw4gtjdhACWWpd8zzcb6syWdX2WP1SERg=
+
+Name: index/_1_Lucene84_0.tim
+SHA-256-Digest: RWDRexOXvXPf6LLLVpb4vEjw+gNrWZC29HvhUGrj974=
+
+Name: doc/images/NewSampleLoaderClass.png
+SHA-256-Digest: NKbLKxsZwm/uEsfjl9+NVXxpYA1DfGAJnz8JA+CoEMk=
+
+Name: index/_1_Lucene84_0.tip
+SHA-256-Digest: V2j/3Z2nw9c8GM9FlW9FXOD//mpvyTh7QlaoUlI3tQY=
+
+Name: doc/images/Screenshot-NewPlug-inProject2.png
+SHA-256-Digest: g74TVFJhaDxm51kkDQWNkzwLjr8x9ayat0mmUyevkSc=
+
+Name: doc/images/BlankSampleSeqDiagram.png
+SHA-256-Digest: HK0PtJjIymyIsRIR7TILR9UfAeRN2wfLslzaZoRiUHQ=
+
+Name: doc/images/ShowEventsView.png
+SHA-256-Digest: Yb+fIHNuAENrPGTEbsP5dg/fcT7bnAFPRr3/nk8CKhU=
+
+Name: doc/images/SupplCoolbar.png
+SHA-256-Digest: OV6M/IK2Rtt6vNVK9mX22/Tt24ZkuStdT3RtcJpcSYw=
+
+Name: doc/images/PrintDialog.png
+SHA-256-Digest: kGpWP7WOXafav880XD83+H6xbKRuF7bfcVdrGMmxhaA=
+
+Name: doc/images/FindProviderAdded.png
+SHA-256-Digest: 4LYJ8BZlwYYPBjoYt91ZSEdROgpmzm/lABeN5KTyjiI=
+
+Name: doc/images/next.gif
+SHA-256-Digest: IFqoxpwo9EXNAc2xh0M2KmlZWC1RBMxv8nWCwhMwRtI=
+
+Name: doc/images/FindDialog.png
+SHA-256-Digest: 8d+FbUWWe4nV/NFxQfiv6NnXekBGfHmWRufwKkerCk0=
+
+Name: doc/Developer-Guide.mediawiki
+SHA-256-Digest: afq3yev3gBmr9Gc0gTlOtY85YANvBdi+j/96I3xcmAE=
+
+Name: doc/images/SampleView.png
+SHA-256-Digest: NXryfsYfTptlA22OPrfRmYE9JHfSYJDtKlDPb+RGHmY=
+
+Name: doc/images/TmfPinViewAction.png
+SHA-256-Digest: cSasn4URv/eVsxIA1BzJfgoFp3b8jO5DOlbEsFKI6cQ=
+
+Name: doc/images/ReferenceExtensions.png
+SHA-256-Digest: uHcmx9XsJgeWMTdgj5wxxjPQB9JuFZ0aRtjQuFz2UYQ=
+
+Name: doc/images/DialogHidePatterns.png
+SHA-256-Digest: YI3QtkYiquF/siRXip16iSBY4F0zrL+SY3JF9KCN578=
+
+Name: doc/images/EmptySampleView.png
+SHA-256-Digest: ZBCXMSq/5XlFcy/cAff9LdMBak8p6oO8NGmipm7EOZ4=
+
+Name: doc/images/AddViewExtension2.png
+SHA-256-Digest: /OfKbG6flJPpf8cgp+ayuaDKf3XE+/Xd7isPUu7JECg=
+
+Name: doc/images/TmfStatisticsView.png
+SHA-256-Digest: 2GAXzo/qhvGk87sLkigsGFOx6LxqmrCY4OGv+nLbWWk=
+
+Name: doc/Event-matching-and-trace-synchronization.html
+SHA-256-Digest: 6RBtyapg4azBIJ5Xrl3oir4jCPDK81jkla0UOqQB5eg=
+
+Name: doc/Introduction.html
+SHA-256-Digest: CZDa2uQQ2BO73qCd2V1b0My4FAZFPnVfVYjDu+Q61KQ=
+
+Name: index/indexed_dependencies
+SHA-256-Digest: 9NlKDNthE+/YSYGYPsvPlAumwtiUKNrBksP4VtGLsfo=
+
+Name: doc/images/TmfAddStatisticsView.png
+SHA-256-Digest: EjluhZZpNkVqN9H1cosXinNYVbIwXKtiGPREla8HYug=
+
+Name: doc/images/zoomout_nav.gif
+SHA-256-Digest: Elmzj0RgGu7YorwsdareA0ShO2GSEptEt0tfR59aovQ=
+
+Name: doc/images/NTTSelectProjects.png
+SHA-256-Digest: 7/qB3dgkjy1BYIUX+ecRZqrqpclOSD96zUFO7d4t44c=
+
+Name: doc/images/ExampleNewStatsView.png
+SHA-256-Digest: fmoeH8DG/WKYHUPocVpN9P+GGfMvRFYtZF5yC1vBBEI=
+
+Name: doc/images/FillSampleSeqDiagram.png
+SHA-256-Digest: wOCG1UM2qWNHq4Bj3nsn6JjBxaah7+YVRBcZV++rf+A=
+
+Name: doc/Data-Providers.html
+SHA-256-Digest: RchjKhd5fBDD+D+eyI9zONhr7loGS8b7ecRGbaIV+o8=
+
+Name: doc/Developer-Guide-toc.xml
+SHA-256-Digest: RLTC5jy2VLCECfm5cE+7kdVzxLr24H0TrIQPHqduRws=
+
+Name: doc/Implementing-a-New-Trace-Type.html
+SHA-256-Digest: IQL8qzC+FlGhwsyfIXH5xBUv3ID8aDg45teHnSnNf6w=
+
+Name: doc/images/home.gif
+SHA-256-Digest: 4cB3uzSzawBtPtcQboiWU16+RMytdhxFuZZGzwENCF8=
+
+Name: doc/JUL-Logging.html
+SHA-256-Digest: HziGbxRBJOMyDfByxsvqKhQwX6VwUaBF9Cf/hetqk8U=
+
+Name: doc/images/SampleDiagramSyncMessage.png
+SHA-256-Digest: C7S1WSa8K0SEoyOe1Zn0s8CD8mrtXeVHJ8uHgSXJ0ZI=
+
+Name: doc/Virtual-Machine-Analysis.html
+SHA-256-Digest: FyNLNnYG3T4nm+T5QwviD9SJMDpiL2r9abOWYo3Na2k=
+
+Name: index/_1.fdx
+SHA-256-Digest: 7zLxoutwGfnuQQRcvTnMbo01oJFwUP+AR6uEnxNPNlk=
+
+Name: doc/images/TmfAddModelPackage.png
+SHA-256-Digest: oyGr9qTUjBKeNyuwAzlo+ibZo8I0Zg9SpJQ9MI3ksDU=
+
+Name: doc/images/ShowTmfSDView.png
+SHA-256-Digest: 6VzqA21R2TZi544feo/5soVVOK918ZfGkklCS7zKllY=
+
+Name: plugin.properties
+SHA-256-Digest: 33x2ysVhVqCMau6yeDdAqsD4Qs9PrPceuSf0uAqAGAg=
+
+Name: doc/Performance-Tests.html
+SHA-256-Digest: tSZaep8YtwNK+HZ4KIlM5/uEdIROasPcuRo+ezs+ABM=
+
+Name: index/_1.fdt
+SHA-256-Digest: xdWDcC2ijxBTrXm+Gb9n+WUJeXb35WufaaqRtpAc+no=
+
+Name: doc/images/SampleDiagramMessageDelta.png
+SHA-256-Digest: 2/kKOc8JNID/n5vfWnSPf7AbQOI6PE5rMpCdf1Xl5n0=
+
+Name: META-INF/maven/org.eclipse.tracecompass/org.eclipse.tracecompass.d
+ oc.dev/pom.properties
+SHA-256-Digest: /bFXqNNdXPf3TeXlbr2xAE9yZIJhsUu6uQ+gl3qWZWE=
+
+Name: doc/images/AddDependencyTmfUi.png
+SHA-256-Digest: RPWrNKNNF4MWiaBuxjLw6WLvRckwgBlTfFzTTdbzqX4=
+
+Name: doc/images/SampleDiagramAsyncMessage.png
+SHA-256-Digest: oCYRBmNDaTkyECLF8Hh6KoRT9G6SYM5xt6QCY8hhi3Y=
+
+Name: index/_1.nvd
+SHA-256-Digest: TDZZUDg8Oq1frrout1n0pgBXFlmMHN9ncNdCGqDF5no=
+
+Name: doc/images/AddTmfUml2SDLoader.png
+SHA-256-Digest: 9ddyii6TE5q3BSubnc1cxYaVojI3hV/ZQWw6RCRuTqc=
+
+Name: doc/images/ImportTracePackage.png
+SHA-256-Digest: vvysMAXcgDevRK32efC2rCTDqVdQBdLDMMLHjMo2GaQ=
+
+Name: doc/images/TmfViewPinAction.png
+SHA-256-Digest: 1dTgRN+/XzDq/iveiUq+TQ3BWNrOs/8c+CwotTlKnfw=
+
+Name: doc/images/ReferenceSeqDiagram.png
+SHA-256-Digest: 4CmQxfSAN6VKjdEL1N2mE6sGLRI3w9nSSuujTHJ91vE=
+
+Name: doc/CTF-Parser.html
+SHA-256-Digest: cglrz0nmaTy6fhy8jwZGW0jkI6K/T4suP37rv/uprU8=
+
+Name: index/_1.si
+SHA-256-Digest: MRlvTXGnfcxNhWeW0IPTPYeree9iKefjmZDzOid70+4=
+
+Name: index/_1.nvm
+SHA-256-Digest: HjoaEFUQIaMczbBY2jKZSPto1wn/9mQDoRy4xDkz7t0=
+
+Name: index/_1.fnm
+SHA-256-Digest: arb4005BTYCn8k2seAMjja8E3TchBgS8XEu5/04KeMI=
+
+Name: doc/TMF-Remote-API.html
+SHA-256-Digest: piadypN7ztBIC3HJSZ4cYQ56wHpnNd9ZOLByMnYe9KY=
+
+Name: doc/Component-Interaction.html
+SHA-256-Digest: Zshp+RCKDAA6uefPZmYnMySTJpUJYKwuCvTMDGnNmSQ=
+
+Name: doc/UML2-Sequence-Diagram-Framework.html
+SHA-256-Digest: CiGH4j92PgG9RFBTpiVSG0EDFV7xrQkuBAA0hDcvTlM=
+
+Name: doc/images/Screenshot-NewPlug-inProject1.png
+SHA-256-Digest: 2Igv2yB56UCyVGcCOZv8Vd2naNE2sOcr8QRDiscIpZ4=
+
+Name: doc/images/NTTAddDepend.png
+SHA-256-Digest: cQfY9uOmbduasREk1I5U5QYNbaGf5WWIgtVTQP4uxNo=
+
+Name: about.html
+SHA-256-Digest: 7mbS+ztMDS7S5/aYvJ7U49bPd/pcr0CtAylhJdsaxfA=
+
+Name: META-INF/maven/org.eclipse.tracecompass/org.eclipse.tracecompass.d
+ oc.dev/pom.xml
+SHA-256-Digest: +NfIYKljI96W2ummNAqrZMZpoqdar2FnLwSDVMmQJ5I=
+
+Name: doc/images/PageProviderAdded.png
+SHA-256-Digest: gtoejh6/2vvZeIkggutzgFnNpgGQhxmnVNDnBniLXkQ=
+
+Name: index/_1_Lucene84_0.doc
+SHA-256-Digest: AQ4eZZmsX0eamtYttEwMnMogQukw1TvCFtb+iASoVCI=
+
+Name: doc/images/DefaultCoolbarMenu.png
+SHA-256-Digest: i8uiLgA+5mXhbFfdKwQO3ZderwzgjDN9sUX7r0v4wUQ=
+
+Name: doc/images/SampleDiagram1.png
+SHA-256-Digest: siciKK/iRnepe5bdnPo/6oasXgozFBABCeJpL+VoB20=
+
+Name: doc/Developer-Guide.html
+SHA-256-Digest: GLOL/xoNuxzHT+4OFujum7igy0OWRfhXguP611kt5rU=
+
+Name: doc/images/FillSampleViewExtension.png
+SHA-256-Digest: Bcphn5+F9kZL07MYy8IWTznhw5ACZkQbDdUV+z/e+7g=
+
+Name: index/indexed_contributions
+SHA-256-Digest: a0Iy7ByJHGWaDo57vnZQGv5gh4UthtMP7FxSqmXkJY8=
+
+Name: doc/images/TmfAddModelClass.png
+SHA-256-Digest: CvX5LVY6s8eWGA3YmNarz2K9aRqTWCbptUs4dDJ6k68=
+
+Name: doc/images/prev.gif
+SHA-256-Digest: I4Bs/TypPpF2FValAaI3lNDWuD4KFikkGjdaeiyR4Yc=
+
+Name: doc/images/AddViewExtension1.png
+SHA-256-Digest: 2YMXAfG4AXUjCrQmB9fdJqBdBVOgdV5EFop1A/EDPmQ=
+
+Name: doc/images/CustomStatisticsView.png
+SHA-256-Digest: IphvE2mNciCT+YSiFsaroMbuBn1aM34w5voYyasGKP8=
+
+Name: doc/Generic-State-System.html
+SHA-256-Digest: JSvJoYEmEultspwGf9iWyn6QULhCeEjMnrV6Ide1xxM=
+

@@ -1,0 +1,141 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.3
+Build-Jdk-Spec: 21
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundleName
+Bundle-SymbolicName: org.eclipse.cdt.meson.docs;singleton:=true
+Bundle-Version: 12.0.0.202410081652
+Bundle-Vendor: %provider
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.help,org.eclipse.ui.cheatsheets
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-cdt/cdt;pat
+ h="build/org.eclipse.cdt.meson.docs";commitId=e138646434ac20af1505a3849
+ 6d5541ab61b7eb9
+
+Name: index/segments_1
+SHA-256-Digest: wZNoSRXsHS0whNve4NI9VIv2PjZNW/wpv3yHIW7Jhos=
+
+Name: plugin.xml
+SHA-256-Digest: LterMxO7YSj1UlM4hCvVOCNeeTGllTsBx8kI79hzMnY=
+
+Name: index/_1_Lucene99_0.tmd
+SHA-256-Digest: qA99pGARZ1qz+wwzHyF6TDv1fOpOFxcT3VT+2ittAYw=
+
+Name: index/indexed_docs
+SHA-256-Digest: KXbBKQsY2Vwb65m3frK+I7HPqLFi3Cubq57hRelv5iI=
+
+Name: CDT/Meson/User_Guide/Building.html
+SHA-256-Digest: 8dMdu8+gco3fPe2PS6766uNmsPjbqdxcwrf/6LmyqbU=
+
+Name: CDT/Meson/User_Guide/Creating-a-Meson-Project.html
+SHA-256-Digest: W9b5+x8/7EGxZFgpBdhKFShx6YmV4lqe4sw2F377P3s=
+
+Name: CDT/Meson/User_Guide/Configuration.html
+SHA-256-Digest: aMweyb8BUrhHQjFgjAIM8XauGwYCjke9iIEAYOqMks0=
+
+Name: index/_1.si
+SHA-256-Digest: 0xJrLPMSm5nJja5TORQPltF0OkyX342PN30nWoGC3hg=
+
+Name: CDT/Meson/User_Guide/images/MesonLaunchbarBuild.png
+SHA-256-Digest: E4LajU/QbFKdBsxvhD1d/XmRg4RSSktxeuyhGPQ61lY=
+
+Name: index/_1_Lucene99_0.pos
+SHA-256-Digest: gnPmQWvzrizzSPMRTPi2tJY73Zb1ccyBZL3zBPiIjwU=
+
+Name: CDT/Meson/User_Guide/images/MesonNewProjectDialog.png
+SHA-256-Digest: +lUNB4y9tO16DXYAzu4llXcp4ikZVxKvVLsbLMt6Cmw=
+
+Name: CDT/Meson/User_Guide/User-Guide.html
+SHA-256-Digest: DwgLdZyV/Fv7SjHV1tUO/D7m5HdkcQGlkSsQE3j7yCw=
+
+Name: images/prev.gif
+SHA-256-Digest: I4Bs/TypPpF2FValAaI3lNDWuD4KFikkGjdaeiyR4Yc=
+
+Name: index/_1.nvm
+SHA-256-Digest: OLz2odlXqqgq43qeTrvjav3wRy16DSvIIKRvw7JGz/w=
+
+Name: index/_1.fnm
+SHA-256-Digest: NDNGhX49A1mx+/ZGZhupBaHk0P+8jjFtlczE0N8nlXo=
+
+Name: index/_1_Lucene99_0.tim
+SHA-256-Digest: +wktWmEnkMdYHzNerm4sNEo/wNkESN58Afqqbyws1tM=
+
+Name: CDT/Meson/User_Guide/images/MesonRunNinja.png
+SHA-256-Digest: p7vihju/0Ftf1KgfBJKwja2YpY52HPA3OMSrRKChsJc=
+
+Name: index/_1_Lucene99_0.tip
+SHA-256-Digest: +xJb0jLRihiny1oyg/ZGq9YwR/jjajx9RV1UaUAE3GA=
+
+Name: index/_1.fdx
+SHA-256-Digest: YMCsdd8iQutwhUyDJL33wqOV74EdaocKokDyaTgQAPY=
+
+Name: book.css
+SHA-256-Digest: UCuR8Qyhx1o7HqT9o8lvZb2d5k/w0hlkeZGQT0LLn0Y=
+
+Name: index/_1.fdm
+SHA-256-Digest: txNXYhvGLMifO3BkXFRugQK3EHbLE4Ks2J9ad6r5Y0E=
+
+Name: plugin.properties
+SHA-256-Digest: 5FrgzWt5p2Dp4yAXAYf0C2u9RD+Y1dhyhivxWg7VF/g=
+
+Name: CDT/Meson/User_Guide/Updating-This-Document.html
+SHA-256-Digest: Y4uRFwjGVyGQMtfHEsdxGtnRZuXouwiSMFciowRP7BU=
+
+Name: index/_1.fdt
+SHA-256-Digest: GXNOeZNAfwv9qHDe/kQve4Zv0eoWY6lygp+MgF0D35Y=
+
+Name: about.html
+SHA-256-Digest: RvukeXiD1GnUclxaggNaNsE9vlj0EQRiCopdFNLCinM=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.meson.docs/pom.xml
+SHA-256-Digest: eR3Jbxq8vITaKmEXNTkuFDw8rQeDzUq3S98YPLw4y9w=
+
+Name: CDT/Meson/User_Guide/images/MesonExistingProject.png
+SHA-256-Digest: 6Yl1UMf9EhZvHdeoPj4eh8tYceQjtRf1jsPgPSmETE0=
+
+Name: images/home.gif
+SHA-256-Digest: 4cB3uzSzawBtPtcQboiWU16+RMytdhxFuZZGzwENCF8=
+
+Name: index/write.lock
+SHA-256-Digest: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+
+Name: CDT/Meson/User_Guide/images/MesonHammerIcon.png
+SHA-256-Digest: Z8Od86sD06Tiq6Tfa2fDe5So1AkqMH0uzDgSb8C/7i0=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.meson.docs/pom.prop
+ erties
+SHA-256-Digest: VsYEy8GxPMPlTwihmEwtswQgFSx3x9FNl4HvxY2RL3w=
+
+Name: images/next.gif
+SHA-256-Digest: IFqoxpwo9EXNAc2xh0M2KmlZWC1RBMxv8nWCwhMwRtI=
+
+Name: CDT/Meson/User_Guide/images/MesonConfigurePropertyPage.png
+SHA-256-Digest: GK6JgxwD3u1WsXiddoznhSVcAMJ0gd/3XUzBUwBZlNU=
+
+Name: index/_1_Lucene99_0.doc
+SHA-256-Digest: MVl19URpdVmt5szNcnGqwa6cfWxiM3+C50kA+C5nfcs=
+
+Name: index/indexed_dependencies
+SHA-256-Digest: qhS11jC4ZPyzMF7nI9Y107F7/bHUmFOgjfHf4i5VzJI=
+
+Name: index/_1.nvd
+SHA-256-Digest: Aln6UyJZI9oSgQShUFe8FhM7Tl4hhpLzXW5h5sV5Uzg=
+
+Name: CDT/Meson/User_Guide/images/MesonCleanBuild.png
+SHA-256-Digest: 7V77zJ/jWskSQ9KYh+cx76waA6ruK7PB4KilATDcKdM=
+
+Name: index/indexed_contributions
+SHA-256-Digest: WrhKVbe0ysT6JpbirgGOKVDb98YyL87MDHbH39NXbuE=
+
+Name: toc.xml
+SHA-256-Digest: O0r2znDss/N65zyCdQvQ7It4xyLG42fmZJoFxKjlzF4=
+
+Name: CDT/Meson/User_Guide/images/MesonUnconfiguredPropertyPage.png
+SHA-256-Digest: j0J+4gJ2JLTBHQ/70X+CZPkAlF1tWxu6jaGCWbVh1xI=
+
+Name: doc/notices.html
+SHA-256-Digest: Nx6R4pboZTNUruLycJyfl5zm1MjRQjqTTyhpTQxK8Rw=
+
+Name: CDT/Meson/User_Guide/Supported-Environments.html
+SHA-256-Digest: SA71DmfG+9Lhodtg6lC5g8NMmpDJ6HxS/7KYVGUapS4=
+

@@ -1,0 +1,209 @@
+Signature-Version: 1.0
+Created-By: 11.0.24 (Eclipse Adoptium)
+SHA-256-Digest-Manifest: kfbRFeTnG4cbenhczM2T9a/OPr8KSs2pi6HahGOLxSE=
+SHA-256-Digest-Manifest-Main-Attributes: kQoJJcFmhED8GpHkjoFB6tmYTpyzeV0
+ rVLOJCeG/whg=
+
+Name: plugin.xml
+SHA-256-Digest: dOX3ROzQN0Uq8G2VDgqx2CXPRLLdd9KcS7Kr7lnyoX0=
+
+Name: index/_1_Lucene99_0.tmd
+SHA-256-Digest: CUV/otOnmOaPXEov8XAIxcxonDzAsyerpZc3IbvyNG8=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsAutoreconf.png
+SHA-256-Digest: nQrV5b02A8iyJWPlUpaYUjVzJrxrcIEJSmg+qn/6qrI=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsConvertWizard.png
+SHA-256-Digest: Xqwr7cy/uhksdYniwPT0yDKNX1IJ0pDyjdWWuPNsjws=
+
+Name: CDT/Autotools/User_Guide/Make-Targets.html
+SHA-256-Digest: kAxfu/ClDMtcsDt870ioRCvmA03tG9jdc2GFxALRnsw=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsConvertProject.png
+SHA-256-Digest: UFfLkv/gK6iv2r0g3QHbXicFCdYpVbHuL+o/7ECtWp4=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsMakeTargetMenu.png
+SHA-256-Digest: 1xTGHU/leGpSUiyByLRKMpSD4Q3vklE/Epdow6WaX1c=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsModifyMakeTarget.png
+SHA-256-Digest: bcttWi0p4JEu1Gtlz9i8Tc1ylmnBob51dvitdLB/BtI=
+
+Name: images/prev.gif
+SHA-256-Digest: ho4O92wMkbppVlqv7B0oySYonlqXVm7qBY+Y+oD9jls=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsConsole.png
+SHA-256-Digest: u/BdY6kzhbZ8Usc/hd3N944sAlpRWTicLbOi2SesH4Q=
+
+Name: index/_1_Lucene99_0.tim
+SHA-256-Digest: dsXPKv1zvE+DcDeCkNft8m540THW/cKZAjoUVm7+pp4=
+
+Name: index/_1_Lucene99_0.tip
+SHA-256-Digest: oBGnWe8re5B6xMllqEDje9lYvDRx5OCw8MGAD1g+nkY=
+
+Name: index/_1.fdx
+SHA-256-Digest: DaeMES+PAIAdkYy/43dwSbWBPi/qKKWCzlyXG2V6rE4=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsAutomakeEditor.png
+SHA-256-Digest: rIIzvZJktz2qJogeEFD3rFJbGGh7RPMixDqbHEY8mSo=
+
+Name: cheatsheets/autotools.xml
+SHA-256-Digest: wvpRH2GbbJqetH5jELIsHsMsaA03hnoRDAvixp4O7PQ=
+
+Name: book.css
+SHA-256-Digest: Nk7dfcX2qsuofAjucBRU/kKrGCi0cr//7nS7dBsenH8=
+
+Name: index/_1.fdm
+SHA-256-Digest: Rb8UXgMuY3vMzbZQYjf0kd8nAX43Ng5m/njgamray+4=
+
+Name: plugin.properties
+SHA-256-Digest: hHFbrVRoMxsJTM34hCLfz6ndgqoXrbTuvHaKjoM94Vk=
+
+Name: CDT/Autotools/User_Guide/Invoking-Autotools.html
+SHA-256-Digest: Z9D8TZ2mNToDATNnWxXSz7s+2FfTqPdPtRKIc2H9qvM=
+
+Name: CDT/Autotools/User_Guide/Supported-Environments.html
+SHA-256-Digest: Sa+HLJID6IHlNwmQ5BG67NkTYNSWhMaMBDNbBetsy+A=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsManageConfigurations.png
+SHA-256-Digest: EGRQB2U+nDcfDgnOuLbLVOHWjmmbyS9zJ56yNseKNY8=
+
+Name: index/_1.fdt
+SHA-256-Digest: G4ELIlG1bxg8OMrqiUDKN78JA8dwWSG3PYZseX6yS3E=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsAclocal.png
+SHA-256-Digest: vkoigPCpEGMFwpVcGAqV8Qdy5GD9FHIWYosjFGFVVog=
+
+Name: CDT/Autotools/User_Guide/Updating-This-Document.html
+SHA-256-Digest: JyaPVgi8QH3I0p9eXkq9Ygo9Rz/IlhL0mhoJp/ZlvQg=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsToolSettings.png
+SHA-256-Digest: PU6Q2ntLNnnLlq57915R53zhfyIDN5lGuS99uAYsgP4=
+
+Name: images/home.gif
+SHA-256-Digest: 822F9NyDQdLchnGhqoug5tXI/IfhSo7q6RJuxl/uzVg=
+
+Name: index/write.lock
+SHA-256-Digest: 2qoEDU2SMdERdhC69Qa+gtkSc9L4Qavow5CUQp79s+w=
+
+Name: CDT/Autotools/User_Guide/Creating-an-Autotools-Project.html
+SHA-256-Digest: 8qREWt6M/Tysq53MDaDRuyvNyHXKEz19WRIZN6nBqj0=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsConvertToCProject.png
+SHA-256-Digest: MOkr5ZG+QO1r11oq1SPxiJ0A3gAog9hoq61pIaoWdrU=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsConfigureSettings.png
+SHA-256-Digest: w1YIZpmrmegxYOXRVKx3Nkzed1MnzjNZ1GI610G+Jy4=
+
+Name: images/next.gif
+SHA-256-Digest: mPQwWc2mzoNT0IPbzfzbX1BHJDbcx/Lbs9IKlTnGp0M=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.autotools.docs/pom.
+ properties
+SHA-256-Digest: K8ayfG1ALEAxj3B3mm17L3uS46GDzraKldcyxOqt7h4=
+
+Name: tools.xml
+SHA-256-Digest: 3k7OKig6LZd3vW1Sts0vPdOVPwOXXBcHbYCxYBeUR1w=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsBuilders.png
+SHA-256-Digest: WyEbWwvuPvMlrssCbU64YItS9LeMeRtYUEQRX1iPYhE=
+
+Name: index/_1.nvd
+SHA-256-Digest: oQTsUrdyO716bn/IqxQh1fTekkrJj0wvgXM6vr7uY6s=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsBuildMakeTarget.png
+SHA-256-Digest: t9WeVtl29p1NAZN3ybCX2prsgOQoycRJueIlvBnc9N8=
+
+Name: toc.xml
+SHA-256-Digest: yCbqJUKOyi5FVef4fwxNeFA6D1nPfq75PjuE7VKCdCU=
+
+Name: CDT/Autotools/User_Guide/Building.html
+SHA-256-Digest: sERFuMyKZ9tGZ5T/nM1J4VxCIB2bStbyt+2kbLyBrqg=
+
+Name: doc/notices.html
+SHA-256-Digest: Fuz7Bi9Zj16+1xgZHq2Ob43unZxJ6Fbjt7pxgg4Dgnw=
+
+Name: index/segments_1
+SHA-256-Digest: qzYe9qYwAddV0SX8GYzw4BIKQnnA4gbIvUq6CLvwXFY=
+
+Name: index/indexed_docs
+SHA-256-Digest: Vmtcl0EWXt+Z9Dx7TJSl/E8K+8tXjzlUdWWss7BpSsM=
+
+Name: index/_1.si
+SHA-256-Digest: ImDRs7uO443Uecq95bwEjBLIHvg7w7WzyjkaKfW9RAw=
+
+Name: index/_1_Lucene99_0.pos
+SHA-256-Digest: +U4ug7uBg5v0K71PROaHyLgLp6Ru2BlgXbwvpClOQPQ=
+
+Name: index/_1.nvm
+SHA-256-Digest: 2b/QEzx77EV0ZE7UCpakWBAfLuthtf1eHu1O7eggsgo=
+
+Name: index/_1.fnm
+SHA-256-Digest: a6S88PWnI2dXXrw90CbxhG6NSldJuQvnuYxZlsAJqRI=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsEditorsTab.png
+SHA-256-Digest: RHBxmKFpGT6sNciTLDY4X4Fgdm+Bs3GDMld2t7slemE=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.autotools.docs/pom.
+ xml
+SHA-256-Digest: TR9w6Yhbz6eotoGqdCj/DbdrLfdMbP9lno9xllPG1K8=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsLibtoolize.png
+SHA-256-Digest: K/fbwvfkEYXioXndrnA7lgrQ3SJ1jUsw4axQfzfPdYg=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsNewCProjectWizard.png
+SHA-256-Digest: GQcM4+ysb8qREd0VlkN5P6W7EOBp6r/q8GmtO70uAYU=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsNewConfiguration.png
+SHA-256-Digest: m6SVGt2XeEqj8Rbhw5OZWZ/0Qo4/ocGUuL3TAPlUkVs=
+
+Name: CDT/Autotools/User_Guide/Special-Editors.html
+SHA-256-Digest: j+NkNdY9x83mwaFe5tyWJ/BirwMSc0WsbC0d87Xwx0I=
+
+Name: about.html
+SHA-256-Digest: VkBpxYkgR2aYq5bEWmJnDGxaECMroH8SiODouQCaGpg=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsEditorPreferences.png
+SHA-256-Digest: 4fW+ZnRYCByU25bPzQB7MAyJF6I6cuub4Yy3ARNuf7Q=
+
+Name: CDT/Autotools/User_Guide/User-Guide.html
+SHA-256-Digest: hoDtJ3imSEzr59tzH6wOJKX5xBvfKA1fzZFz6h+nkno=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsAutoconfEditor.png
+SHA-256-Digest: 5GJg/e6/StjNJGfXqUoKk+9Lq6+l12HvvesfKkePlqg=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsConfigureConsole.png
+SHA-256-Digest: 4p8XnZA+NM4soM3DyDhybdHx6eW9ACYcjyi+PSHbUuM=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsProperties.png
+SHA-256-Digest: RciJaHuVpmFz08vR7Qb9/EzgU2evLsoM8cMLxNbM0PA=
+
+Name: index/_1_Lucene99_0.doc
+SHA-256-Digest: a2wFBF0Bw+FL8QnAN+51gwFgjB9zFPXj65x4gpvRuzs=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsCreateMakeTarget.png
+SHA-256-Digest: kMvK2EXNXS1O2cLOPvUz4fGKZ2MfOd6XawJ6FgKzp5s=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsCBuildProperties.png
+SHA-256-Digest: eMV6CMYuYFJzlQu1Y1t/3+Cn4Kv+JAAkLww83Xq80Og=
+
+Name: CDT/Autotools/User_Guide/Configuration.html
+SHA-256-Digest: 8W9RP9QUurGG0lKDThBYvCMKnyPg6EMiT30G6y/PdQQ=
+
+Name: index/indexed_dependencies
+SHA-256-Digest: 8GXz9KhenWo8MMnQ2uYBL42KVRdvMf2/xpkP19AtM0Y=
+
+Name: index/indexed_contributions
+SHA-256-Digest: KxbPfny1nPtVfKkb+n8ZaRZ/vpDrShKJGeA4g7HjG/o=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsAutoheader.png
+SHA-256-Digest: Ow9KyHGXt6ceXpWGemfFz3ltdGd402L21Fmemosy87g=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsAutomake.png
+SHA-256-Digest: iTkdJ7wYizlF2FpsJtcZtdpPhZzwrROkn4LsSeEj9iw=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsBuildConsole.png
+SHA-256-Digest: UWoLXDRxbkH8focQmR8GHyqqKnmG/JtmT8KgCw1bEXo=
+
+Name: CDT/Autotools/User_Guide/images/AutotoolsCheckOutAs.png
+SHA-256-Digest: hn5rnPjV3pRCLEuPV/HRc7euNhe1Sd1cBLka/ZH+rqc=
+

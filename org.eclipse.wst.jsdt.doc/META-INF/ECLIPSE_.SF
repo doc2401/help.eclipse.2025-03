@@ -1,0 +1,333 @@
+Signature-Version: 1.0
+Created-By: 11.0.18 (Eclipse Adoptium)
+SHA-256-Digest-Manifest: IyfjLAFZPiDiPjH8dZoK3UhzlA+9pYMMNksF1My2Fsk=
+SHA-256-Digest-Manifest-Main-Attributes: 5PhRSHSP6kCOyjvfx7KieartbRTyVxb
+ uPG3VYp6XmAQ=
+
+Name: plugin.xml
+SHA-256-Digest: NqI1efRMYrDvdkwr7I5BzXkafjDXbM59zViZ5EWhgTw=
+
+Name: reference/rhino_debug/ref-rhino-pref-page.htm
+SHA-256-Digest: 5w494ZTxPOsMR4Ev/F7vr+0Kr+Hgrpz6a5ENkvdz600=
+
+Name: images/rhino_debug/include_tab.png
+SHA-256-Digest: 5QrAF5rQ+N+oPcDXtC2H21qaC9Lf4i+c/mUrDKaDyhQ=
+
+Name: images/rhino_debug/rhino-debug-pref-page.png
+SHA-256-Digest: OdaBrH+Zjxdwm4t+7B25k1KdKGCUizu5pEgqYxNFdpM=
+
+Name: schema.css
+SHA-256-Digest: SlYATzMPz56G7plsAK76paaZ9XEzcgVjafH3NA6rFZw=
+
+Name: images/rhino_debug/source_tab.png
+SHA-256-Digest: Ft3hXpXA9NLKyNtOjzCqPQrSkX3CFNqEjRBZtHNaqYY=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_javaCompletionP
+ roposalSorters.html
+SHA-256-Digest: z8+DHss+Fpag+DFOLwg/OA1b5PvrgTDqVOBwCZZXm54=
+
+Name: images/add-lib-mozilla-wizard.png
+SHA-256-Digest: BcHjZz+PND4OtxKV0W262R6ZXy549UHEsKIycSgfFLQ=
+
+Name: build.properties
+SHA-256-Digest: 8mLEBUTryjoCInef891i4kT5w3izWk4L0NTQ3kJ8d8g=
+
+Name: book.css
+SHA-256-Digest: xY89d1oL73ZRD7LF+cc7f+pz4XMBTt9N0huncOFWFs4=
+
+Name: images/ngrelr.png
+SHA-256-Digest: 6v0GQK18jAUVotvX2Ou4BolfYB9TGXNoiFOYEq8aNxg=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_JSRuntimeInst
+ allProvider.html
+SHA-256-Digest: bdUIl3TBVJj4r++/tdTqWIuPy15M4YZKHaUCZOMzghI=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_documentationPr
+ ovider.html
+SHA-256-Digest: cNSqgJ49eK7yum/oCIdNHj4HDbhkl0pEh3PAJjvNEkk=
+
+Name: images/rhino_debug/common_tab.png
+SHA-256-Digest: D+Z1UJCBm90wWuuhQYWu6axBs0/5OqOUDa30zLlzDCc=
+
+Name: images/rhino_debug/main_tab.png
+SHA-256-Digest: QLQPV5mMuHJZEd4RyITfjACU8iULGsD/UEDxNxmpZ0M=
+
+Name: started/img/newhtml/3.jpg
+SHA-256-Digest: /7GW3yeIiC1gvuHHRA8heYCdb2S6VJmlQzzg1JJj7fY=
+
+Name: started/img/pure/3.jpg
+SHA-256-Digest: iTjjxgw8HUrfbo/enLgEsgubMrZbUzRo1fOzqN2WrRg=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_chromium_debug_cor
+ e_sourceMapLanguageSupports.html
+SHA-256-Digest: vDkvH8qmbPH/syxMn+cetuOUSq2gXiHFGFOPkIecz84=
+
+Name: index/write.lock
+SHA-256-Digest: 2qoEDU2SMdERdhC69Qa+gtkSc9L4Qavow5CUQp79s+w=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_sourcePathPro
+ vider.html
+SHA-256-Digest: rcdjsWaqQ19ODnW8Py9XNzRzqdSyAcVKodDXPtvVHKc=
+
+Name: toc.xml
+SHA-256-Digest: d8cl7k7UV2iVT4nM/6V/pMLwVPB1BaGLFIjm9EEBicw=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_debug_core_scriptR
+ esolvers.html
+SHA-256-Digest: 2sErPd5p2Ebr9yubYk54Q0fcnF9bno/RU6ObqZhLUp0=
+
+Name: reference/debug/preferences/ref-debug-pref-page.htm
+SHA-256-Digest: Ato2ztVMn69TdFqXXO6dbToeWM6+6hs0mSBHO+3KgbY=
+
+Name: META-INF/maven/org.eclipse.webtools.jsdt.docs/org.eclipse.wst.jsdt
+ .doc/pom.xml
+SHA-256-Digest: xPvyn23X5+sWcEK84NXty+3JPbgZJwa8TL6mHxdbpJc=
+
+Name: started/newjsFile.html
+SHA-256-Digest: uXJHZi4HdV9YAkM9vg0AZ9wTvFuj/wLGH8SqnGZGL7U=
+
+Name: index/segments_1
+SHA-256-Digest: XAu7VFHl3L/2OgtUV37gUy3l7D8sdhQ+5Xbvu5u5rEg=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_debug_core_breakpo
+ intParticipants.html
+SHA-256-Digest: g62/GMfhwOyr8pBNZBZEhs24AUgmAQaa1muGkmPiEYo=
+
+Name: index/indexed_docs
+SHA-256-Digest: ZEcaJHL+OHn7Hu31PJjby5/G1ENdI/wC2BMrPdUphII=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_inferrenceSup
+ port.html
+SHA-256-Digest: Q5Ex1q5ENlpdl3fHYJ3y3XvD6Hh+lTXV5zqi6rXnx7o=
+
+Name: started/img/pure/1.jpg
+SHA-256-Digest: 7uV6MqQ9p9wbVucKurl3ceg4uG2AQoF0kAVQYsthnJY=
+
+Name: concepts/limitations.html
+SHA-256-Digest: NKVlKEC7heU0ijj9twLlwZE0GtUIc3srHZ4Yb927m0o=
+
+Name: about.mappings
+SHA-256-Digest: ffRpxRW0Vg12FOJJpaYGL3Ts46MxykvGKZJ0tcR8rLk=
+
+Name: started/overview.html
+SHA-256-Digest: fhNkXDCdLAGVY9ZJKBMZ/Z96wH6UdxSLHpIz4CigwBc=
+
+Name: started/htmlProject.html
+SHA-256-Digest: J6b2eoBYWNmD1pYaByxuKajx86ui2GgshHEFXggiVsE=
+
+Name: images/include-path.png
+SHA-256-Digest: CIAHB635bSV4f0NpLDatVHXtDd30rt/N9afmv8VV5BM=
+
+Name: reference/rhino_debug/ref-include-tab.htm
+SHA-256-Digest: KkxpPbXfK+f8NK6LOlViT0xvlV0NdW2jW23yrv551aM=
+
+Name: images/rhino_debug/rhino.gif
+SHA-256-Digest: oSSMkmACUaLmklLUO67SF4VCrojPmGNrfnHaFSyUCUE=
+
+Name: started/img/newjs/1.jpg
+SHA-256-Digest: 2/yxgxxGATlqQcebQjo5wtsm7vvZAz90auMviQyf7VY=
+
+Name: reference/rhino_debug/ref-main-tab.htm
+SHA-256-Digest: fjxYktwjwDeWznIqkqDcYw326pri4F83qdT7F6JKZa4=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_JsGlobalScopeCo
+ ntainerPage.html
+SHA-256-Digest: GyQZM4ZWnDqboRknDaEwYqaXKfRi3kOrqkpeJQ/fshs=
+
+Name: index/_1_Lucene90_0.tip
+SHA-256-Digest: dgu7qjecM+Gk4Jd4sFb6X3OnY8d7fLShUKCnff8W+J0=
+
+Name: reference/rhino_debug/ref-rhino-launch-shortcut.htm
+SHA-256-Digest: IuGkqpQn+rdR46MQOzsk0oBS8aImvZg0/XtduT9RnNc=
+
+Name: index/_1_Lucene90_0.tim
+SHA-256-Digest: QRGNldojB5iW0d2uHxYeGLVdhvLjxqQt8YAwDbyJ4KA=
+
+Name: images/debug/debug-pref-page.png
+SHA-256-Digest: X8sIEbnixxjkDA6hKKxDL0PIyPxbl68uOWardacZXK4=
+
+Name: concepts/archOverview.html
+SHA-256-Digest: 0ljRx6g9/pYQjz82Ir97G0lhDppCwY/grUdhjsyktYE=
+
+Name: index/indexed_dependencies
+SHA-256-Digest: ubpA9lyMtizij6pQdrlIyygLtmg7OsCxbkw9WArVnmI=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_JsGlobalScope
+ ContainerInitializer.html
+SHA-256-Digest: ng4miSZebY1tM5D+1PvF9bri0BSYoqRzJF13ksvF0gw=
+
+Name: started/img/newjs/3.jpg
+SHA-256-Digest: LXKuRm2N6ZDFwnKbeNtPWCriSI08KB57IB2cZLJkGCg=
+
+Name: tocgettingstarted.xml
+SHA-256-Digest: blbGTAShbe/yuN3oopavovKnzj5aNOj2QGa3xQYztNs=
+
+Name: started/img/html/3.jpg
+SHA-256-Digest: 4uI7WEN1H1XxBtyqqN+yca3uclKOd9yUlESvonSp1JU=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_javadocCompleti
+ onProcessor.html
+SHA-256-Digest: SBeZLiQpXSyjaCd1/KhIyrYpUrHZ/dFgQxybfXQQewU=
+
+Name: images/ngrelc.png
+SHA-256-Digest: GYRSuqxHThT/W1wfWi+wkBb9K9x4yS/Oyy1vizULisc=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_javascriptValid
+ ationHelper.html
+SHA-256-Digest: hsGyRXZzYMGSRAGzEL1/pqQN+UisJUe/vXfw+X6f1o8=
+
+Name: reference/rhino_debug/ref-common-tab.htm
+SHA-256-Digest: mEzS9/FstBH0OkXiss6upfPK+KFoibq1gkRp8OFYF7E=
+
+Name: index/_1_Lucene90_0.doc
+SHA-256-Digest: lm7qe0KBY6+fZHo7dzcCcZWLO01tlH8ov+224U3niho=
+
+Name: index/_1.fdx
+SHA-256-Digest: yN3N7aoFqs8DRboLf2bWmKi3cKx/Uw2S7QHhGf48ViE=
+
+Name: reference/extension-points/index.html
+SHA-256-Digest: rtA+ij0lOEQFr0FzaWH0ztzSUNKvQAYgmv84AVtzG0c=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_debug_core_launchi
+ ngConnectors.html
+SHA-256-Digest: ZtIQybVtMiwSLu6GG9N4CJPwzfNfZ3r2Ey7cJMn8jL0=
+
+Name: index/_1.fdm
+SHA-256-Digest: G/+GmgWt3oya7lWDjI4tCoOWZNuZbDlPgKM+o0dNCX4=
+
+Name: plugin.properties
+SHA-256-Digest: 8b9N3CIPsLW84J09HiDzF0bO1hi+1P1d7bXJJTIziT0=
+
+Name: started/img/newhtml/2.jpg
+SHA-256-Digest: a5HdI+MLCeIwVepdTnbzzB6apit9+ERT80tOPnrkpmg=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_JSRuntimeType
+ .html
+SHA-256-Digest: L00s4QlFi7iZW/hb5IMcrakJT74hTW0u5cgN1J11AH8=
+
+Name: index/_1.fdt
+SHA-256-Digest: zHs4UqBSY57+q0G5v/tzkQxPfJ9RBrvsUCaRNPBnC0Y=
+
+Name: META-INF/maven/org.eclipse.webtools.jsdt.docs/org.eclipse.wst.jsdt
+ .doc/pom.properties
+SHA-256-Digest: L+BiB0BZCiSocNTQ1fgiC/9VdCnHKJOQKHn8YZhn1DM=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_quickAssistProc
+ essors.html
+SHA-256-Digest: FY+0ZAWnWPx9jpv1iuQ8ukaLkRCFX3nRe0e08a7BHo0=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_queryParticipan
+ ts.html
+SHA-256-Digest: gaBaaQk+I4DIO3gj0YG0ri7Z9kXjTOTKO+9A62YLi1Q=
+
+Name: notices.html
+SHA-256-Digest: +rMbmyfhyjB4oIHbubXrNJa7egnv/u0RFBPvwBu7UUg=
+
+Name: index/_1_Lucene90_0.pos
+SHA-256-Digest: kO22k8rr0O9hPK212GH+Y62ydKvOIb9Kau8Udka+uMg=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_validationPar
+ ticipant.html
+SHA-256-Digest: 37FUhpe35zM+O/8m2Fuc64M/RjxYKULYi3eivBwo/zY=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_javaEditorTextH
+ overs.html
+SHA-256-Digest: aOOhfDpGd7hVuHsfyETFdm91aL/N9GjBol0Oix3iNwk=
+
+Name: started/img/pure/4.jpg
+SHA-256-Digest: RrLYz96AOpSTo0Fmfa7uF4/z9RkJ0vbZ5G9q5hJDo8A=
+
+Name: ui-contexts.xml
+SHA-256-Digest: Cr/S+doao6hynE3GNVHTk6vgiMoiPpj81GOywyMYUSk=
+
+Name: reference/rhino_debug/ref-source-tab.htm
+SHA-256-Digest: XlctZbJ3cNJOw5GusgM3MXTYatGykjGMKfQv6uYvcNk=
+
+Name: index/_1.nvd
+SHA-256-Digest: lLGm503Ee0YGliiPhFA8yoy6AZ8zf6v54EuZb8IoMYQ=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_javaCompletionP
+ roposalComputer.html
+SHA-256-Digest: l6cgoQgp6X7KUxm3lJCnjCFOm2vlLkWPou5zQW1MS4o=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_javaElementFilt
+ ers.html
+SHA-256-Digest: GGU4hRzZRqDIjX/ImgseDRUW32R3cqfKW0CZdNK+qr4=
+
+Name: reference/rhino_debug/ref-rhino-tab-group.htm
+SHA-256-Digest: f0e6f0Pq34fkHPulP07U4T7mOiWglEBM6u0FW/nfJos=
+
+Name: started/newhtmlFile.html
+SHA-256-Digest: UaRP1jwHFk7ZkYxRTWG6UwZV/4TnnkIBOSTu7xg8Iwo=
+
+Name: images/include-path-source-tab.png
+SHA-256-Digest: o00T6zPAimScrBcbWDhATD6PVcM+Ag7F9rBLl0ymLfo=
+
+Name: started/img/html/2.jpg
+SHA-256-Digest: 1nPXUye9DfViGzJRnYOitFcRLGzhQqkneJQhEdjxBUg=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_foldingStructur
+ eProviders.html
+SHA-256-Digest: oAz1xWGzCiRbgiL3jS2s1SokvDJ3KPaPtKzoqNNJMtA=
+
+Name: index/_1.si
+SHA-256-Digest: eeWM1TUhUOSwtQc1bveN2lb93aZvucMdhyZEoQ3pEvk=
+
+Name: index/_1.nvm
+SHA-256-Digest: XaWQR97GaIqQXH/MNguLZ7Z7JnNAFw3IzNMMDLKjM9I=
+
+Name: index/_1.fnm
+SHA-256-Digest: 669NfmFTdGSxadQq//KZYHEIOhCizwjQNaIUjsqRbQc=
+
+Name: started/img/pure/2.jpg
+SHA-256-Digest: v5ubLuSVLMgMOI5FLVdpOnWX+3uz9DKyeUlvLE01gEI=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_core_JsGlobalScope
+ VariableInitializer.html
+SHA-256-Digest: 73/Rv9yd5eMfW31ZVrLSS/UE0hNeiZKQHVyTb5mpRc4=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_JsGlobalScopeUI
+ Initializer.html
+SHA-256-Digest: kTRdDq5ALbC+9NeeZg6uezKMg3/dICVYD5J8IHhK9y8=
+
+Name: index/_1_Lucene90_0.tmd
+SHA-256-Digest: 25xhHrW1OEzqqMmQrqv/LZikQu8VpXquqEJyxGuLbvM=
+
+Name: about.html
+SHA-256-Digest: ed6eG32NcGG/Ll/IMFE9jTPTS68ibNeuUpJkyglwgwk=
+
+Name: images/add-lib-wizard.png
+SHA-256-Digest: QGw/J047X8M0hfBFk1ecuqCMEUJX4REVk6N3oJOMhDU=
+
+Name: images/include-path-new-lib.png
+SHA-256-Digest: 931ju9RTXgB1WbrtVaU5U5PN5452y6KOJY/6oLPBbtU=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_quickFixProcess
+ ors.html
+SHA-256-Digest: mmuJgPuvDwIMCn/qD+daUW6Jt/AQ5JjrDWjBIHqztpA=
+
+Name: tocconcepts.xml
+SHA-256-Digest: FKmfJR1o1EJsUI/TGvNowc+pNaYPCZQ31/v8Min0zeY=
+
+Name: concepts/features.html
+SHA-256-Digest: t8lQrqoZPAlr+Xz23qWDHaVBRvr7P1RWnQByg+ncnWk=
+
+Name: reference/extension-points/org_eclipse_wst_jsdt_ui_classpathAttrib
+ uteConfiguration.html
+SHA-256-Digest: h26MS7oE4v4fUftmBvcyii/TzPmXPD3bDwnAeGtoBak=
+
+Name: started/img/newjs/2.jpg
+SHA-256-Digest: YvPv8ynOw0X1o38v01BNhubeVFf9YOhAy+lPLtjohlU=
+
+Name: index/indexed_contributions
+SHA-256-Digest: ZA9cm+8c8hZPyeLXm38OOaZDcv8Cd5nz9zJGaMpnZl8=
+
+Name: debug-contexts.xml
+SHA-256-Digest: XX+EMSSGYlL+ofet8VPLtojX447nRCgDkCmezs74mdE=
+
+Name: tocreference.xml
+SHA-256-Digest: j95KL57t8/+7FIIJpoCNwdzWSQyouk6xr7rTDidIql8=
+
+Name: images/ngrelt.png
+SHA-256-Digest: eYWhuXZxGjWO+qycdS8MaizSY+3ZwWa11s7W0uV57+I=
+

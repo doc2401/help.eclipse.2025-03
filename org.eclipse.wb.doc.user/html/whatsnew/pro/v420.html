@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>What&#8217;s New - v4.2.0</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>What&#8217;s New - v4.2.0</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#SWT_VisualInheritance">Support for SWT Visual Inheritance</a></p>
+</li>
+<li>
+<p><a href="#FreeCellMode">New "Free cell mode" edit policy for SWT GridLayout</a></p>
+</li>
+<li>
+<p><a href="#NonVisualBeans">Support for non-visual beans</a></p>
+</li>
+<li>
+<p><a href="#SWT">Enhanced SWT support</a></p>
+</li>
+<li>
+<p><a href="#JFace_RCP">Enhanced JFace &amp; RCP support</a></p>
+</li>
+<li>
+<p><a href="#Swing">Enhanced Swing support</a></p>
+</li>
+<li>
+<p><a href="#CodeGeneration">Code Generation &amp; Parsing enhancements</a></p>
+</li>
+<li>
+<p><a href="#Editor_PropertyPane">Editor &amp; Property Pane Enhancements</a><br>
+ </p>
+</li>
+<li>
+<p><a href="v410.html">v4.1.0</a></p>
+</li>
+<li>
+<p><a href="v400.html">v4.0.0</a></p>
+</li>
+<li>
+<p><a href="v300.html">v3.0.0</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SWT_VisualInheritance">Support for SWT Visual Inheritance</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Inherit from any Composite or Shell subclass</p>
+</li>
+<li>
+<p>All inherited widgets are visible</p>
+</li>
+<li>
+<p>Access inherited widgets exposed via public or protected accessors</p>
+</li>
+<li>
+<p>Inherited widgets appear in tree with "i" decorator</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="FreeCellMode">New "Free cell mode" edit policy for SWT GridLayout</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Position widgets freely in any open cell</p>
+</li>
+<li>
+<p>Insert new rows and columns between existing cells</p>
+</li>
+<li>
+<p>Rearrange rows and columns via drag/drop</p>
+</li>
+<li>
+<p>Double-click or right-click on header to set/clear horizontal/vertical grab</p>
+</li>
+<li>
+<p>Interactive column and row spanning feedback</p>
+</li>
+<li>
+<p>Right-click on the header area to access the popup header menu</p>
+</li>
+<li>
+<p>Right-click to delete rows and columns</p>
+</li>
+<li>
+<p>Filler labels automatically managed</p>
+</li>
+<li>
+<p>Option for Text widgets to automatically grab horizontally</p>
+</li>
+<li>
+<p>Option to automatically right-align label widgets to the left of text
+widgets</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="NonVisualBeans">Support for non-visual beans</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Non-visual beans placed in a "(non-visual beans)" category</p>
+</li>
+<li>
+<p>Marked in source with "// @wb:location=X,Y" tag</p>
+</li>
+<li>
+<p>Option for creating non-visual beans as fields</p>
+</li>
+<li>
+<p>Reorder non-visual beans via drag/drop</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SWT">Enhanced SWT support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Enhanced support for custom SWT widgets</p>
+</li>
+<li>
+<p>Option to generate Eclipse 3.0-style GridData</p>
+</li>
+<li>
+<p>New "Set tab order" command on container context menu</p>
+</li>
+<li>
+<p>Automatically autosize widgets in null and FormLayout</p>
+</li>
+<li>
+<p>New "Autosize widget" command for FormLayout</p>
+</li>
+<li>
+<p>Reparenting support for Forms ExpandableComposite and Section</p>
+</li>
+<li>
+<p>Enhanced layout assistants for FillLayout &amp; GridLayout</p>
+</li>
+<li>
+<p>Support for protected properties in SWT</p>
+</li>
+<li>
+<p>Support for SWT Point property</p>
+</li>
+<li>
+<p>Support for 3.2 CoolBar vertical style</p>
+</li>
+<li>
+<p>Support for 3.2 sortColumn/sortDirection properties</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="JFace_RCP">Enhanced JFace &amp; RCP support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Show events for label and main controls for field editors in popup</p>
+</li>
+<li>
+<p>Support for name/icon properties for views/editors</p>
+</li>
+<li>
+<p>Support for view category editing and creation</p>
+</li>
+<li>
+<p>Support for toolbar/coolbar managers on design canvas</p>
+</li>
+<li>
+<p>Create ID field for new ViewPart</p>
+</li>
+<li>
+<p>Wizard for ViewPart adds view declaration in plugin.xml</p>
+</li>
+<li>
+<p>Wizard for EditorPart adds editor declaration in plugin.xml</p>
+</li>
+<li>
+<p>Create view/editor extensions when needed</p>
+</li>
+<li>
+<p>Automatically adapt non-form control</p>
+</li>
+<li>
+<p>Add/remove paintBorders/adapt using popup menu</p>
+</li>
+<li>
+<p>"Adapt control" popup items for Forms API</p>
+</li>
+<li>
+<p>Support for clientVerticalSpacing/marginWidth/marginHeight properties
+for ExpandableComposite/Section</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Swing">Enhanced Swing support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Show value feedback for insets/padding in GridBagLayout</p>
+</li>
+<li>
+<p>Support for focus traversal policy for Swing</p>
+</li>
+<li>
+<p>New "Set tab order" command on container context menu</p>
+</li>
+<li>
+<p>Automatically autosize widgets in null and SpringLayout</p>
+</li>
+<li>
+<p>New "Flatten Hierarchy" action for Swing container</p>
+</li>
+<li>
+<p>Option for changing size to preferred on move in absolute layout</p>
+</li>
+<li>
+<p>New "Autosize widget" command for SpringLayout</p>
+</li>
+<li>
+<p>Don&#8217;t show sub-components when "isContainer == FALSE" in bean descriptor</p>
+</li>
+<li>
+<p>Support for custom layout managers</p>
+</li>
+<li>
+<p>Support for JBuilder XYLayout and XYConstraints</p>
+</li>
+<li>
+<p>Support for Swing components from fields</p>
+</li>
+<li>
+<p>Mark container as focus cycle root when setting focus policy</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CodeGeneration">Code Generation &amp; Parsing enhancements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Option for specifying default code generation method</p>
+</li>
+<li>
+<p>Option to to surround method invocation code with try\{}catch\{}</p>
+</li>
+<li>
+<p>Support for "this" prefix before field</p>
+</li>
+<li>
+<p>Option for disabling complex expressions evaluations</p>
+</li>
+<li>
+<p>Option for enable/disable reparse after custom component change</p>
+</li>
+<li>
+<p>Support for options for position of event handler inner class</p>
+</li>
+<li>
+<p>Option for removing "real" event handlers during component remove</p>
+</li>
+<li>
+<p>Provide JDK 1.5 versions of ResourceManager as needed</p>
+</li>
+<li>
+<p>Ignore during parsing methods that have single argument subclass of
+EventObject</p>
+</li>
+<li>
+<p>Support for components from static factories</p>
+</li>
+<li>
+<p>Support for borders from static factories</p>
+</li>
+<li>
+<p>Understand SWT code for controls with more than two arguments in
+constructor</p>
+</li>
+<li>
+<p>Support for adding new controls with complex constructors</p>
+</li>
+<li>
+<p>Support for constructor arguments for SWT controls</p>
+</li>
+<li>
+<p>Support for enumeration properties</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Editor_PropertyPane">Editor &amp; Property Pane Enhancements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Option for automatically drop down combo property editors on activation</p>
+</li>
+<li>
+<p>"Expose property&#8230;&#8203;" item added to property table popup menu</p>
+</li>
+<li>
+<p>Option to automatically direct edit new widgets</p>
+</li>
+<li>
+<p>Support for editing layout properties with multi-selection</p>
+</li>
+<li>
+<p>Refresh custom components palette after receiving focus</p>
+</li>
+<li>
+<p>Support for preferred property descriptors</p>
+</li>
+<li>
+<p>Remember expansion state in image selection dialog</p>
+</li>
+<li>
+<p>Group constructor properties in complex "constructor" property</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,574 @@
+h1. Release Notes for Sirius Desktop
+
+{toc:style=disc|minLevel=2|maxLevel=3}
+
+This document contains the release notes for recent major releases of Sirius. See also "the release notes from previous versions":Release_Notes_Previous.html for details about older releases.
+
+h2(#sirius7.4.7). Changes in Sirius  Desktop 7.4.7
+
+Nothing.
+
+h2(#sirius7.4.6). Changes in Sirius  Desktop 7.4.6
+
+h3. Specifiers-Visible Changes
+
+* The 'interaction container mapping' has been added to the sequence diagram metamodel. It is configured like a container mapping. Its edit part deactivate user interaction. Its goal is to have a background container that graphically wraps around all sequence diagram element.
+
+h3. Developer-Visible Changes
+
+* The addition of an 'interaction container mapping' to the sequence metamodel introduced new API classes such as:</br>
+	- @org.eclipse.sirius.diagram.sequence.business.internal.elements.InteractionContainer@ to determine a View element should be represented as an InteractionContainer; </br>
+	- @org.eclipse.sirius.diagram.sequence.description.InteractionContainerMapping@ to specify an 'interaction container mapping' in a sequence diagram</br> 
+	- @org.eclipse.sirius.diagram.sequence.ui.tool.internal.edit.part.InteractionContainerEditPart@ a custom edit part to deactivate user interaction as this custom "Container mapping is automatically resized depending on diagram element locations".
+
+h2(#sirius7.4.5). Changes in Sirius  Desktop 7.4.5
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> In the @ImageSelectionDialog@, a new feature has been added to reset the WorkspaceImage assigned to a DDiagramElement. Before this improvement, it was necessary to use the “Reset style properties to default values” button, but this also affected all other style modifications. This new button in the dialog resets only the WorkspaceImage style to the style of the element as defined in the Viewpoint Specification Model. </br> !{width: 500px}user/diagrams/images/selectImageDialog_resetImage.png!
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageHelper.resetStyle(BasicLabelStyle)@ has been added to reset the WorkspaceImage style assigned to a DDiagramElement, while preserving all other style modifications. In other words, the workspacePath feature is reset.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog.isResetImage()@ and @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog.setResetImage(boolean)@ have been added to handle the new "Reset Image Style" feature in the related dialog.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageHelper.resetStyle(BasicLabelStyle)@ has been added to reset the WorkspaceImage style assigned to a DDiagramElement, while preserving all other style modifications. In other words, the workspacePath feature is reset.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog.isResetImage()@ and @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog.setResetImage(boolean)@ have been added to handle the new "Reset Image Style" feature in the related dialog.
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelector.selectImages(EObject, SelectionMode, String, boolean)@ has been added to de-corelate the display of current/new image path field from the present of a value to the @currentSelection@ parameter. Default implementations of the other @ImageSelector.selectImages@ methods have been added in the interface to match previous behavior for callers of those methods. The @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageSelector.selectImages(EObject, SelectionMode, String, boolean)@ has been removed in favor of the default implementation of the method in @ImageSelector@.
+
+h4. Changes in @org.eclipse.sirius.tests.support@
+
+* <span class="label label-success">Added</span> The @org.eclipse.sirius.tests.support.api.PlatformProblemsListener@ class has been extracted from both @org.eclipse.sirius.tests.support.api.SiriusTestCase@ and @org.eclipse.sirius.tests.swtbot.support.api.AbstractSiriusSwtBotGefTestCase@ to regroup common mechanisms used to manages info, warning, errors and uncaught exceptions.
+* <span class="label label-info">Modified</span>Info, warning, errors and uncaught exceptions management has been extracted from @org.eclipse.sirius.tests.support.api.SiriusTestCase@ and moved to @org.eclipse.sirius.tests.support.api.PlatformProblemsListener@.
+
+h4. Changes in @org.eclipse.sirius.tests.swtbot.support@
+
+* <span class="label label-info">Modified</span> Info, warning, errors and uncaught exceptions management has been extracted from @org.eclipse.sirius.tests.swtbot.support.api.AbstractSiriusSwtBotGefTestCase@ and moved to @org.eclipse.sirius.tests.support.api.PlatformProblemsListener@.
+
+h2(#sirius7.4.4). Changes in Sirius  Desktop 7.4.4
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> A new extension point @org.eclipse.sirius.diagram.ui.colorPalettePopupProvider@ has been introduced. It allows to provide a custom color palette popup by registering a custom implementation of the new @org.eclipse.sirius.diagram.ui.tools.api.color.ColorPalettePopupProvider@ interface. See the @exsd@ file for the extension point for more information and an example.
+
+h2(#sirius7.4.3). Changes in Sirius  Desktop 7.4.3
+
+h3. User-Visible Changes
+
+* <span class="label label-info">Modified</span> The pin behavior has been changed for edges.
+** Before Sirius 7.4.3, the documentation stated that @it is not possible to pin/unpin edges or compartments.@. Nevertheless, it was possible to pin/unpin edges through the corresponding wizard (using the @Pin/Unpin@ button provided by the tab bar when there is no element selected on the diagram). The default layout considered this status with different results according to the pinned status of source/target:
+*** The edge, the source and the target are pinned: nothing moves during arrange all.
+*** The edge is not pinned and, the source and the target are pinned: the edge is arranged to keep only a minimum number of bendpoints.
+*** The edge is pinned and, source or/and target is not pinned: the source or the target is moved, so the corresponding extremity of the edge is also arranged (but the number of bendpoints is preserved). This combination can have strange results and is not recommended.
+** Since Sirius 7.4.3:
+*** The @Pin status@ button is enabled on edges.
+*** The preference @Automatically mark moved elements as pinned@ also affects edges.
+*** The effect on the layout remains the same as before (see above description).
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-info">Modified</span> When using ELK, the routing style of edges is now considered. It was ignored before. You can refer to the "Use an ELK layout algorithm/Specific rules for routing style of edges":specifier/diagrams/Diagrams.html#elkRoutingStyleRules for more details.
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.elk@
+
+* <span class="label label-success">Added</span> A system property @org.eclipse.sirius.diagram.elk.targetFolderPath@ is now available to set the folder path where the diagram will be exported in "ELK Graph" format. Previously, this path was hard-coded to the Java temporary folder path @java.io.tmpdir@ (for example under Windows: @%USER%\AppData\Local\Temp@). If this property is not set (or is invalid), the Java temporary folder is used. The value of this system property can contains variables names, like in the definition of the workspace data folder in a launch configuration. For example:
+** @${container_loc}@: Returns the absolute file system path of the session's container (container of the AIRD * file),
+** @${project_loc}@: Returns the absolute file system path of a session's project,
+** or @${workspace_loc}@: Returns the absolute file system path of the workspace root.
+** **Warning:** If you use a the "VM arguments" field in the launch configuration, you must replace the @"$"@ by a @"%"@ to avoid a replacement of the variables during the launch (and not by ElkDiagramLayoutTracer during export).
+* <span class="label label-info">Modified</span> The ELK debug capabilities have been improved and documented, see "ELK Debug capabilities":specifier/diagrams/Diagrams.html#elkDebug section for details.
+
+h4. Migrations
+
+* <span class="label label-success">Added</span> A migration participant, EmptyJunctionPointsStringValueStyleMigrationParticipant,  has been added to fix the GMF edges that contain an empty "junctionPoints" StringValueStyle. These empty "junctionPoints" StringValueStyle were created due to a bug in ELK./Sirius integration. This migration participant simply removes the empty "junctionPoints" StringValueStyle. As reminder, this migration participant has been introduced in Sirius 7.4.3. The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _15.4.3.202406261640_.
+
+h4. Changes in @org.eclipse.sirius.diagram@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.tools.api.management.ToolManagement.hash(byte[])@ has been added to generate a hash for IDs of Tools and ToolSections in Palette.
+
+h2(#sirius7.4.2). Changes in Sirius Desktop 7.4.2
+
+h3. User-Visible Changes
+
+* <span class="label label-info">Modified</span> A "regression":https://github.com/eclipse-sirius/sirius-desktop/issues/419 introduced in 7.4.1 which prevented the dirty state marker (*) to be displayed in the model explorer in some cases has been fixed. 
+
+h3. Specifier-Visible Changes
+
+h3. Developer-Visible Changes
+
+h4. Migrations
+
+h2(#sirius7.4.1). Changes in Sirius  Desktop 7.4.1
+
+h3. User-Visible Changes
+
+* <span class="label label-info">Modified</span> The UI preference @SiriusUIPreferencesKeys.PREF_DISPLAY_VSM_USER_FIXED_COLOR_IN_PALETTE@ has been renamed from "Display viewpoints colors" to "Display suggested colors in color palette". 
+
+h3. Specifier-Visible Changes
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-info">Modified</span> The method @org.eclipse.sirius.diagram.ui.tools.api.color.ColorManager.collectVsmColors(Session)@ has replaced @Map<String, RGB> collectVsmAndDefaultColors(Session session)@.
+
+h4. Migrations
+
+* <span class="label label-success">Added</span> The migration participant WorkspaceImageGMFBoundsMigrationParticipant has been updated to handle the missed case of the image style of nodes contained in a container (and not directly in diagram). As reminder, this migration participant has been introduced in Sirius 7.0.0. The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _15.4.1.202403191723_.
+
+
+h2(#sirius7.4.0). Changes in Sirius  Desktop 7.4.0
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> Copy and paste style from one diagram element to another. The copied and pasted diagram elements may be of different types. The style properties are applied at best. You can refer to the "paste style documentation":user/diagrams/Diagrams.html#paste_style for more details.
+* <span class="label label-info">Modified</span> The 3 other existing pastes (@Paste Format@, @Paste Style@ and @Paste Layout@) are now called semantic paste (i.e. @Paste Format (Semantic)@, @Paste Style (Semantic)@ and @Paste Layout (Semantic)@), but their behavior remains unchanged.
+* <span class="label label-danger">Removed</span> Feature @Apply the applicable appearance properties of the last selected shape to the other selected shapes.@ has been removed. Use the new style copy-paste feature, which does the same thing.
+* <span class="label label-success">Added</span> A checkbox to ignore the pinning of elements on the diagram for the layout actions.
+* <span class="label label-success">Added</span> A new layout action to layout the direct children of the selection on a diagram.
+* <span class="label label-info">Modified</span> The layout of border nodes is now available for the selection (in addition to the whole diagram).
+* <span class="label label-info">Modified</span> Arrange actions have been renamed from "Arrange <...>" to "Layout <...>".
+* <span class="label label-info">Modified</span> The pin and unpin actions are now combined into a single checkbox action.
+* <span class="label label-info">Modified</span> The preference for marking moved items as pinned is now disabled by default. You can re-enable it via Window > Preferences > Sirius > Sirius Diagram
+* <span class="label label-info">Modified</span> In Sirius table, font type and default size are now based on Preferences Settings of **General > Appearance > Colors and Fonts**. Previously, cells font were always 'Arial' and of size '9' but column and line headers were based on Preferences Settings.
+* <span class="label label-info">Modified</span> In Sirius table, default colors has been changed to use Preferences Settings and selection coloring behaves like other Views and Editors. Previously, line headers were forced to gray, selected cell was using Menu color instead of Theme color and no color was indicating the row on mouse hover.
+* <span class="label label-success">Added</span> A new "color selection popup dialog":user/diagrams/Diagrams.html#edit_element_color has been defined to choose the color(label, fill and line) to use for the selected element. This popup dialog is opened from the diagram toolbar, the contextual menu, the Diagram navigation bar, or the Appearance tab in the Properties View. Four color categories has been defined in this popup:
+** Last Used colors category displays the ten last colors used by the user. These colors are persisted in preferences for the user workspace.
+** Custom colors category displays the ten first colors defined by the user. These colors are persisted in aird file. The "More..." button opens a dialog for adding custom colors.
+** Suggested colors category displays the ten "preferred colors" chosen by the user which are a subset of the colors defined in the VSM. These colors are persisted in the aird file. The "More..." button opens a dialog that lets the user choose the ten "preferred colors".
+** Basic colors category displays ten useful colors.
+* <span class="label label-info">Modified</span> Diagram export as SVG image has been improved. It is now repeatable as long as resources are the same. Previously some XML ID were generated using random mechanism.
+
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-info">Modified</span> Upgraded ELK version from 0.7.1 to 0.9.0, see the "ELK documentation":https://eclipse.dev/elk/downloads/releasenotes/release-0.9.0.html for the list of changes in that version (and previous). Due to improvements or refactoring in ELK, some configuration option identifiers have been renamed or deleted. An automatic migration has been added in Sirius to migrate these identifiers used in VSM (see Migrations section for detail). In any case, if your modeler uses an ELK layout, you must be careful.
+* <span class="label label-info">Modified</span> In tables, expressions and tools are injected with more variables. 'table', 'containerView' and 'line' elements are now accessible. With those elements, Specifier can access, for example, to @AnnotationEntry@ elements of @DTable@ instances. This modification allows following use-cases: 
+** Create virtual lines: lines to group elements in tree with criteria based on attributes values or on user query.
+** Have columns unrelated to root element: for example, in Cross Table, columns targeting Ecore features to have a table with a dynamic number of columns.
+** Store states to alter tools: read/write mode driven by tools; default values to use in creation tools of current table.
+* <span class="label label-info">Modified</span> The SquareDescription can now have -1 value for height and width. If the value -1 is used for both width and height enable the "auto-size" mode.
+
+h3. Developer-Visible Changes
+
+* <span class="label label-danger">Removed</span> AbstractTabbarContributor.createCopyAppearancePropertiesContribution and TabbarContributionFactory.createCopyAppearancePropertiesContribution has been removed.
+* <span class="label label-success">Added</span> The SiriusStyleClipboard singleton to store the style clipboard data for the diagram elements.
+* <span class="label label-success">Added</span> The ISimpleAuthorityListener functional interface to listen for any lock change, like IAuthorityListener but with a single method.
+* <span class="label label-info">Modified</span> ArrangeBorderNodesAction.initAction now has two parameters for its text: when there is no selection, when there is a selection.
+* <span class="label label-success">Added</span> Method @org.eclipse.sirius.diagram.business.api.diagramtype.IDiagramDescriptionProvider.allowsAutoSizeNodeStyle(DNode)@ has been added to indicates if a diagram description provider allows node auto-size mode computed from the node style on the specified element.
+* <span class="label label-success">Added</span> Method @org.eclipse.sirius.diagram.business.api.query.DNodeQuery.isAutoSize()@ has been added to indicates if a node is in auto-size mode.
+* <span class="label label-success">Added</span> Method @org.eclipse.sirius.diagram.business.api.query.DNodeQuery.supportNodeStyleAutoSize(NodeStyle, NodeStyleDescription)@ has been added to indicates if a DNode can support autosize mode defined from its style.
+
+h4. Changes in @org.eclipse.sirius@
+
+* <span class="label label-success">Added</span> @org.eclipse.sirius.business.api.logger.InterpretationContext@ is created to ease setting and clearing variables when interpreting expressions.
+
+h4. Changes in @org.eclipse.sirius.table@
+
+* <span class="label label-success">Added</span> @org.eclipse.sirius.table.business.api.helper.TableVariablesHelper@ is added to initialize variable value according active table decorator.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.table.business.api.helper.TableToolHelper@ is added to handle common evaluations with table tools.
+* <span class="label label-info">Modified</span> The @org.eclipse.sirius.table.business.api.helper.TableHelper.canEditCrossTableCell(DCell)@ and @org.eclipse.sirius.table.business.api.helper.TableHelper.canEditCrossTableCell(DCell)@ have been deprecated for removal. @TableToolHelper@ should be used to handle precondition evaluation.
+* <span class="label label-info">Modified</span> The @org.eclipse.sirius.table.business.api.query.DLineQuery@ query has been deprecated for removal. It was only used once in a internal class.
+* <span class="label label-info">Modified</span> Methods @org.eclipse.sirius.table.tools.api.command.ITableCommandFactory.buildCreateLineCommandFromTool(LineContainer, EObject, CreateTool)@ and @org.eclipse.sirius.table.tools.api.command.ITableCommandFactory.buildCreateColumnCommandFromTool(DTable, EObject, CreateTool)@ have been deprecated for removal. They have been replaced by methods using applicable DSemanticDecorator in signature.
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> The constant @org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager.KEEP_FIXED@ has been added to tag elements to be laid out and indicate that their location should not be modified.
+* <span class="label label-success">Added</span> Method @org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager.getArrangeCreatedViewsCommand(List<IAdaptable>, List<IAdaptable>, IGraphicalEditPart, String)@ has been added to handle the new @KEEP_FIXED@ layout tag. There are now 3 types of tags that can be used for layout: @org.eclipse.gmf.runtime.diagram.ui.services.layout.LayoutType.DEFAULT@, @org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager.LAYOUT_TYPE_ARRANGE_AT_OPENING@ and @org.eclipse.sirius.diagram.ui.business.api.view.SiriusLayoutDataManager.KEEP_FIXED@.
+* <span class="label label-success">Added</span> New preferences have been added to store the last colors used by the user:
+** @org.eclipse.sirius.diagram.ui.tools.api.preferences.SiriusDiagramUiPreferencesKeys.PREF_FONT_LAST_USED_COLORS@ is used to store the last used font colors.
+** @org.eclipse.sirius.diagram.ui.tools.api.preferences.SiriusDiagramUiPreferencesKeys.PREF_FILL_LAST_USED_COLORS@ is used to store the last used fill colors.
+** @org.eclipse.sirius.diagram.ui.tools.api.preferences.SiriusDiagramUiPreferencesKeys.PREF_LINE_LAST_USED_COLORS@ is used to store the last used line colors.
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.ui.tools.api.color.ColorManager.collectVsmColors(Session)@ has been added to collect colors defined in the VSM.
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.ui.tools.api.color.ColorManager.rgbToString(RGB)@ has been added to convert an RGB color to a string.
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.ui.tools.api.color.ColorManager.stringToRGB(String)@ has been added to convert a string color to an RGB color.
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.ui.tools.api.color.ColorManager.sortColors(Collection<RGB>)@ has been added to sort a collection of RGB colors using their HSB (Hue, Saturation, Brightness). The specified collection isn't modified.
+
+* <span class="label label-success">Added</span> The class @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager@ has been added to manage color categories used in the new @ColorPalettePopup@. It includes the following methods:
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.getLastUsedColors()@ to get the list of last colors used by the user.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.getCustomColors()@ to get the list of custom colors defined by the user.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.getSuggestedColors()@ to get  the list of the ten preferred colors defined in the VSM.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.getBasicColors()@ to get ten useful colors.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.addLastUsedColor(RGB)@ to add a color to the list of last used colors.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.setCustomColors(List<RGB>)@ to set the list of custom colors defined by the user.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.setSuggestedColors(List<RGB>)@ to set the list of the preferred suggested colors.
+** @org.eclipse.sirius.diagram.ui.tools.api.color.ColorCategoryManager.getSelectedColorsByPropertyId()@ to get the list of colors used for all objects selected in the representation for a specific propertyId.
+
+h4. Migrations
+
+* <span class="label label-success">Added</span> A migration participant has been added to migrate ELK options used in VSM. Some have been renamed and some others have been removed. You should carefully read the information logged during this migration and the "ELK release notes":https://eclipse.dev/elk/downloads/releasenotes/release-0.9.0.html to check if any manual adjustments need to be made. The corresponding version, stored in attribute version of description:Group of the odesign file, is _15.4.0.202401051836_.
+
+h2(#sirius7.3.0). Changes in Sirius 7.3.0
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> A new preference has been added in the Sirius Diagram preference page. This preference allows the user to choose the arrangement of elements created on a diagram when they are not directly positioned by the user. In the preference page, users can choose between a diagonal, vertical or horizontal arrangement.
+
+h3. Specifier-Visible Changes
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-info">Modified</span> The methods @org.eclipse.sirius.diagram.ui.tools.api.util.GMFNotationHelper.getNotes(Diagram)@ and @org.eclipse.sirius.diagram.ui.tools.api.util.GMFNotationHelper.getTextNotes(Diagram)@ now return a list of @org.eclipse.gmf.runtime.notation.Shape@ instead of a list of @org.eclipse.gmf.runtime.notation.Node@. This type is more precise and avoids multiple cast when using the returned list.
+* <span class="label label-success">Added</span> A new preference have been added in  @org.eclipse.sirius.diagram.ui.tools.api.preferences.SiriusDiagramUiPreferencesKeys@:
+** @PREF_NEWLY_CREATED_ELEMENTS_LAYOUT@: An integer preference used to define the arrangement of elements created on a diagram when they are not directly positioned by the user. When created successively, elements can be positioned diagonally, vertically or horizontally. Elements can be positioned diagonally with the value 0, vertically with the value 1, horizontally with the value 2. By default, elements are positioned diagonally with the value 0.
+
+The Sirius default values for these preferences can be overridden for a specific product. For example:
+
+bc. 
+    // Preference customization for plugin "org.eclipse.sirius.diagram.ui"
+    IEclipsePreferences diagramPreferences = DefaultScope.INSTANCE.getNode(org.eclipse.sirius.diagram.ui.provider.DiagramUIPlugin.ID);
+    // By default override the @PREF_NEWLY_CREATED_ELEMENTS_LAYOUT@ default value
+    diagramPreferences.putBoolean(SiriusDiagramUiPreferencesKeys.@PREF_NEWLY_CREATED_ELEMENTS_LAYOUT@, 2);
+
+h2(#sirius7.2.1). Changes in Sirius 7.2.1
+
+h3. User-Visible Changes
+
+* <span class="label label-info">Modified</span> Sequence diagrams are now correctly identified in the Sirius Session Details report (accessible with the "Properties" dialog on an aird file).
+* <span class="label label-info">Modified</span> When a semantic modification is made on a diagram (e.g. Drag and Drop of an element), the notes and texts attached to the element remain attached, and the notes and texts contained in the element are preserved as much as possible.
+* <span class="label label-info">Modified</span> When an element is deleted after drag and drop, its attached notes and texts are also removed if preference "Remove/hide note when the annotated element is removed/hidden" is enabled.
+
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-info">Modified</span> Three system properties have been added to allow the enablement of layout customizations for Regions (containers whose parent has a Children Presentation attribute set to Horizontal Stack or Vertical Stack): 
+** @-Dorg.eclipse.sirius.diagram.ui.internal.region.autosize.figure.optimized=true@
+*** When this system property is set to true, the auto-size layout of Regions is based on model constraints. It reduces the layout changes for such Regions after reopening of a diagram.
+** @-Dorg.eclipse.sirius.diagram.ui.internal.region.autosize.action.optimized=true@ 
+*** When this system property is set to true, individual auto-size actions and status are enabled for Regions. Otherwise the auto-size actions and status are delegated and managed by the RegionContainer.
+** @-Dorg.eclipse.sirius.diagram.ui.internal.region.content.canonical.layout.standard=true@
+*** When this system property is set to true, the centered layout will not be applied on the Regions content at RegionContainer creation time.
+
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.query.NodeQuery.getFreeFormContainerCompartment()@ is added to get the compartment of the GMF node container with "free form" layout.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.query.ViewQuery.isFreeFormContainer()@ and @org.eclipse.sirius.diagram.ui.business.api.query.ViewQuery.isRegionContainer()@ are added to test if a GMF node is associated to DNodeContainer Sirius diagram element with respectively free form layout and stack layout (horizontal or vartical).
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.query.ViewQuery.isFreeFormCompartment()@ is added to test if a GMF node is compartment of node corresponding to a Sirius container free form.
+<span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.query.ViewQuery.isNode()@ is added to test if a GMF node is associated to DNode Sirius diagram element.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.query.ViewQuery.isNodeLabel()@ is added to test if a GMF node is associated to label of DNode Sirius diagram element.
+
+h2(#sirius7.2.0). Changes in Sirius 7.2.0
+
+h3. User-Visible Changes
+
+* <span class="label label-info">Modified</span> Java 17 (or later) is now required to run Sirius.
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-success">Added</span> New decorators are now available for the beginning and edge of edges: @CirclePlus@, @DiamondWithDot@, @FillDiamondWithDot@, @InputArrowWithDiamondAndDot@, @InputArrowWithDot@, @InputArrowWithFillDiamondAndDot@.
+
+h3. Developer-Visible Changes
+
+* <span class="label label-info">Modified</span> Java 17 is required as BREE and source level.
+
+h2(#sirius7.1.0). Changes in Sirius 7.1.0
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> In a tree editor, if the @Shift@ key is pressed during using the @left arrow@ key, a collapse all is done instead of a simple collapse. This is the same for expand with @Shift@ + @right arrow@ key. You can refer to "navigation documentation":user/trees/Trees.html#navigation for more details.
+* <span class="label label-success">Added</span> A new mode has been added to "paste the layout":user/diagrams/Diagrams.html#paste_layout of elements between two diagrams. This mode is useful in case of diagrams having the same elements represented several times in a diagram or to copy the layout from a diagram having a hierarchy different than the target diagram. This mode is called "Optimized locations by group" (the existing mode is called "Similar locations in absolute coordinates"). With this new mode, the paste action groups elements having the same container in the target diagram. Then it applies the copied layout of these elements relative to each other, while maintaining the same location for the group in the target diagram. Examples are available in the "corresponding documentation":user/diagrams/Diagrams.html#paste_layout.
+* <span class="label label-success">Added</span> The Distribute and Align actions are now also available on the label of edges. Previously, this kind of actions was available only on nodes. You can refer to "Distribute elements documentation":user/diagrams/Diagrams.html#distribute or "Align elements documentation":user/diagrams/Diagrams.html#align for more details.
+* <span class="label label-info">Modified</span> In a tree editor, if the expand is done with the right arrow key, the behavior is now OK. Before this version, if the expand is done for the first time with the right arrow key, only a blank child is displayed. You can refer to "bugzilla 549352":https://bugs.eclipse.org/bugs/show_bug.cgi?id=549352 for more details.
+* <span class="label label-info">Modified</span> In a tree or a table representation, the direct edit is no longer accessible with any alphanumeric character key pressed, but only with double-clicking or pressing _F2_ or _Return_ (as the documentation always said). It is possible to restore the previous behavior by setting the system property @org.eclipse.sirius.ui.restoreBehaviorEnablingDirectEditOnAlphanumericKey@ to true
+* <span class="label label-info">Modified</span> The Sirius Session Details report (accessible with the "Properties" dialog on an aird file) is updated to always show the dependencies even for a not opened Session. The general dependencies are computed from serialized data. The image project dependencies are computed from the opened session or from the serialized data if the Session is not opened. A button is available to update image project dependencies.
+* <span class="label label-info">Modified</span> The Copy action is now visible in the tabbar, of a diagram editor, when no diagram element is selected, before it was visible only when at least one diagram element is selected. And the drop-down menu for Paste actions is now visible in the tabbar, of a diagram editor, when at least one diagram element is selected, before it was visible only when no diagram element is selected. 
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-success">Added</span> The system property @org.eclipse.sirius.ui.enableCreatedElementsConstraintInSelectElementsListener@ has been added to allow to ignore the "created elements" constraint when the @SelectDRepresentationElementsListener@ is called to select elements after a tool execution. In other words, this allows to select an element that is not created during the tool execution. The default value of the system property is @true@. It must be set to @false@ to ignore the constraint.
+* <span class="label label-info">Modified</span> A fix has been done to ensure that all the necessary interpreter variables are set when computing the conditional style expression whatever the context of call. Variables for Node and NodeContainer styles: (diagram, view, containerView, container) and for Edge style: (same than for Node, sourceView, targetView). *Warning* The impact is that, potentially, if you used the variables diagram or containerView in the precondition of your conditional styles, the precondition that returned false before the fix, could now returned true. So you may encounter different node or edge rendering.
+* <span class="label label-success">Added</span> The enhancement of the properties views with the @org.eclipse.sirius.properties.core.api.SiriusInputDescriptor@ and @org.eclipse.sirius.properties.core.internal.SiriusToolServices@ classes allows to use the list of selected elements in order to exploit additional informations. It is now possible to retrieve the list of selected elements via an aql expression like @aql:input.getSelectedOriginalSelections()@, the list of semantic elements with @aql:input.getSelectedSemanticElements()@ and the list of contexts with @aql:input.getContextSelections()@.
+
+h3. Developer-Visible Changes
+
+* <span class="label label-success">Added</span> The interface @org.eclipse.sirius.ecore.extender.business.api.permission.IPermissionAuthority@ now has a @isFrozen(EObject)@ method. This is a status handled by the collaborative plugins, but this new API makes this status available for queries from Sirius core plugins.
+
+h4. Changes in @org.eclipse.sirius@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.business.api.helper.task.DeleteEObjectTask.getEObjectToDelete()@ has been added to get the EObject that will be deleted by this task.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.business.api.refresh.RepresentationTimeStampInformationSupplierRegistry@ and @org.eclipse.sirius.business.api.refresh.RepresentationTimeStampInformationSupplier@ have been added. The first is the registry to register instance of the second that allows to tell when the DRepresentationDescriptor.changeId is updated or not. 
+* <span class="label label-success">Added</span>The class @org.eclipse.sirius.business.api.query.SiriusProjectDependencyQuery@ is added to get project
+dependencies from a given project.
+* <span class="label label-success">Added</span>The method @org.eclipse.sirius.business.api.session.Session.getSharedMainDAnalysis()@ is added to get the DAnalysis that holds data and can be shared in some context such as CDO.
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> Two new preferences have been added in  @org.eclipse.sirius.diagram.ui.tools.api.preferences.SiriusDiagramUiPreferencesKeys@:
+** @PREF_PROMPT_PASTE_MODE@: A boolean preference to say if the paste mode must be requested at each "Paste format" or "Paste layout" action.
+** @PREF_PASTE_MODE_ABSOLUTE@: : A boolean preference for the paste mode, true for "Absolute" mode, false for "Bounding box" mode. This preference is changed as soon as the user changes the selection in the dialog asking the mode. Thereby, at the next dialog, the last choice is pre-selected.
+*** If the @PREF_PROMPT_PASTE_MODE@ is true, this preference is used to pre-select the choice in the dialog.
+*** If the @PREF_PROMPT_PASTE_MODE@ is false, this preference is used as the Paste mode to apply.
+
+The Sirius default values for these preferences can be overridden for a specific product. For example:
+
+bc. 
+    // Preference customization for plugin "org.eclipse.sirius.diagram.ui"
+    IEclipsePreferences diagramPreferences = DefaultScope.INSTANCE.getNode(org.eclipse.sirius.diagram.ui.provider.DiagramUIPlugin.ID);
+    // By default override the PREF_PROMPT_PASTE_MODE default value
+    diagramPreferences.putBoolean(SiriusDiagramUiPreferencesKeys.PREF_PROMPT_PASTE_MODE, false);
+
+* <span class="label label-success">Added</span> Two new methods have been added in  @org.eclipse.sirius.diagram.ui.tools.api.format.SiriusFormatDataManager@ to allow to paste the layout on a subpart of the children of a container and not on all children of this container: @applyLayout(IGraphicalEditPart, List<IGraphicalEditPart>, boolean)@ and @applyFormat(IGraphicalEditPart, List<IGraphicalEditPart>, boolean)@. A default implementation is available in @org.eclipse.sirius.diagram.ui.tools.api.format.AbstractSiriusFormatDataManager@.
+
+h4. Changes in @org.eclipse.sirius.tests.swtbot.support@
+
+* <span class="label label-success">Added</span> Two new methods have been added in @org.eclipse.sirius.tests.swtbot.support.api.editor.SWTBotSiriusDiagramEditor@: @getAbsoluteLocation(String, Class<? extends EditPart>, boolean)@ and @getAbsoluteLocation(GraphicalEditPart, boolean)@. Only a boolean parameter has been added to two existing methods (same name without last boolean parameter). This boolean allows to consider, or note, the label of an edge in the bounds computation.
+h4. Changes in @org.eclipse.sirius.properties.core@
+
+* <span class="label label-success">Added</span> The @org.eclipse.sirius.properties.core.api.SiriusInputDescriptor@ class has been modified to handle the selection of many elements by creating a list of SiriusContext. This enhancement allows to access the list of selected semantic elements with @org.eclipse.sirius.properties.core.api.SiriusInputDescriptor.getSemanticElements()@ and the list of original selected objects with @org.eclipse.sirius.properties.core.api.SiriusInputDescriptor.getOriginalSelections()@.
+
+
+h4. Migrations
+
+* <span class="label label-info">Modified</span>The migration participant introduced by "Bug 576423 - _Incorrect representation size when using 'Size Computation Expression'_":https://bugs.eclipse.org/bugs/show_bug.cgi?id=576423 was wrongly resizing the GMF bounds of collapsed nodes. @org.eclipse.sirius.diagram.ui.business.internal.migration.WorkspaceImageGMFBoundsMigrationParticipant@ migration participant has been modified to fix the previous version _15.0.0.202201261500_ . The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _15.0.0.202209061200_.
+* <span class="label label-info">Modified</span> The migration participant @org.eclipse.sirius.diagram.ui.business.internal.migration.SetChangeIdMigrationParticipant@ that set a changeId value for each DRepresentationDescriptor that did not have one has been changed. The migration participant now sets a time stamp that represents the absolute time. The corresponding version, stored in the attribute version of viewpoint:DAnalysis of the aird file, is _15.1.0.202211301600_.
+
+h2(#sirius7.0.4). Changes in Sirius 7.0.4
+
+h3. User-Visible Changes
+
+Minor release to avoid errors thrown during indirect deletion of edges whose label is selected (deletion done from outside the diagram editor or from a custom command).
+
+h2(#sirius7.0.3). Changes in Sirius 7.0.3
+
+h3. Developer-Visible Changes
+
+* <span class="label label-danger">Removed</span> To ensure compatibility with Eclipse 2022-09, dependency to @com.ibm.icu@ has been removed.
+
+h2(#sirius7.0.2). Changes in Sirius 7.0.2
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-success">Added</span> The variables @edgeView@ and @otherEnd@ are now also available during precondition evaluation of a reconnect tool. Before, these variables were available only during the reconnection tool execution.
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.business.api.helper.task.TaskHelper.checkPrecondition(EObject, AbstractToolDescription, Map<String, EObject>, boolean, boolean)@ has been added to factorize code for the evaluation of a tool precondition.
+
+h4. Changes in @org.eclipse.sirius.common@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.common.tools.api.interpreter.VariableType.fromVariableTypes(VariableType...)@ has been added to create a new VariableType from a list of other VariableTypes, ie a concatenation without duplicate.
+
+h4. Changes in @org.eclipse.sirius.diagram@
+
+* <span class="label label-success">Added</span> The name for variables @edgeView@ and @otherEnd@ is now available in @org.eclipse.sirius.diagram.tools.api.interpreter.IInterpreterSiriusDiagramVariables@. Before, it was duplicated constants in several classes.
+
+h2(#sirius7.0.1). Changes in Sirius 7.0.1
+
+h3. Developer-Visible Changes
+
+* <span class="label label-info">Modified</span> The behavior concerning SVG images export has been improved. You can refer to "bugzilla 578509":https://bugs.eclipse.org/bugs/show_bug.cgi?id=578509 for more details. This behavior is activated by default but you may disable it by setting the system property @org.eclipse.sirius.diagram.ui.enableEmbeddedSVGInSVGExport@ to @false@.
+
+h2(#sirius7.0.0). Changes in Sirius 7.0.0
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> Some enhancement have been done about the images management.
+** The selection of images from the workspace to change the style of an element in a diagram has been improved. The UI can now provide a preview of the images on the workspace by displaying them in a gallery based on the selected project or directory. !{width: 500px}images/imageSelectionDialog.png!
+** A new constraint used for the "Diagram validation" has been added to check that images used by the models are reachable. A quick fix, available on the marker, allows to select a new image in the workspace.
+* <span class="label label-info">Modified</span> The Sirius constraints, used for the model validation, have been re-categorized (visible in Preferences) to better understand where they are defined and on which model they apply.
+ !{width: 500px}images/preferenceValidationConstraint.png!
+* <span class="label label-info">Modified</span> It is now possible to move a regions container by moving one of its region with the "Ctrl" shortcut key pressed. In the same way, it is now possible to select a regions container by clicking on one of its region with the "Ctrl" shortcut key pressed.
+* <span class="label label-danger">Removed</span> It is no longer possible to change the workspace image of a diagram element with an image from an internal plugin via the "Set style to workspace image" action. This functionality affects a very small part of the use cases. The new UI of the "Set style to workspace image" action does not support this advanced functionality. However, it is still possible to go through Properties > Style > Workspace Image, then paste the path of the internal plugin image.
+
+h3. Developer-Visible Changes
+
+* <span class="label label-success">Added</span> Sirius core and dialects metamodels have been extracted in new **.model** plugins with minimum dependencies. Each new plugin is re-exported by the plugin which was the previous container of its metamodel. The base packages of the generated code has not been modified. Each API modification is listed in the corresponding plugin section. Additional dialect providers and extension providers might have to modify the path or references to Sirius .ecore and .genmodel files to reflect this change. The new plugins are:
+** @org.eclipse.sirius.model@, re-exported by @org.eclipse.sirius@
+** @org.eclipse.sirius.diagram.model@, re-exported by @org.eclipse.sirius.diagram@
+** @org.eclipse.sirius.diagram.sequence.model@, re-exported by @org.eclipse.sirius.diagram.sequence@
+** @org.eclipse.sirius.table.model@, re-exported by @org.eclipse.sirius.table@
+** @org.eclipse.sirius.tree.model@, re-exported by @org.eclipse.sirius.tree@
+* <span class="label label-info">Modified</span> The behavior of arrange at opening has been changed/fixed (only one arrange instead of two for examples). You can refer to "bugzilla 577676":https://bugs.eclipse.org/bugs/show_bug.cgi?id=577676 for more details. Maybe your modeler rely on this "buggy behavior" or maybe some impacts have not yet been detected. If you notice a problem, you can retrieve the previous behavior by setting the system property @org.eclipse.sirius.diagram.ui.disableArrangeAtOpeningChanges@ to @true@. You can also create a specific bugzilla to explain the problem. This system property is temporary and will be removed in one or two versions.
+* <span class="label label-info">Modified</span> The behavior concerning layout of regions container has been improved. You can refer to "bugzilla 576305":https://bugs.eclipse.org/bugs/show_bug.cgi?id=576305 for more details. Maybe your modeler rely on this "buggy behavior" or maybe some impacts have not yet been detected. As a reminder, assembling multiple region containers is not supported. These changes are improving the situation but maybe not in your modeler. If you notice a problem, you can retrieve the previous behavior by setting the system property @org.eclipse.sirius.diagram.ui.disableHStackContainerNewBehavior@ to @true@. You can also create a specific bugzilla to explain the problem. This system property is temporary and will be removed in one or two versions.
+* <span class="label label-info">Modified</span> The @org.eclipse.sirius.ext.base.Option<T>@ helper type has been deprecated for removal. It will be progressively replaced by the standard @java.util.Optional@ type in our APIs.
+* <span class="label label-danger">Removed</span> **The "Workflow" feature** has been removed . Workflow was experimental and to our knowledge not used in practice. This corresponds to the @org.eclipse.sirius.workflow.*@ and @org.eclipse.sirius.editor.workflow@ plug-ins.
+* <span class="label label-danger">Removed</span> **The server parts which supported the Workflow feature** has been removed too. It was our first experiment in moving Sirius to the web, but this is now replaced by the newly published "Sirius Web":https://www.eclipse.dev/sirius/sirius-web.html. This corresponds to all the @org.eclipse.sirius.server.*@ plug-ins.
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.business.api.query.DRepresentationDescriptorQuery.isRepresentationReachable(boolean)@ was added to allow it to load the representation in order to verify that the representation element is reachable, not just its resource. To benefit from this new method, @org.eclipse.sirius.business.api.query.DRepresentationDescriptorQuery.isRepresentationValid(boolean)@ and @org.eclipse.sirius.business.api.query.DRepresentationDescriptorQuery.DRepresentationDescriptorValidityAdapter.triggerRepresentationValidation(boolean)@ were also created. These new methods (with a parameter value true) can be used in tests, but should not be used by the "Model explorer" view otherwise there would be no more lazy loading of representations.
+
+h4. Changes in @org.eclipse.sirius@
+
+* <span class="label label-success">Added</span> The classes @org.eclipse.sirius.business.api.image.ImageManager@ and @org.eclipse.sirius.business.api.image.Base64ImageHelper@ have been added to support image management such as image creation from base64 string or image path serialization.
+* <span class="label label-success">Added</span> The class @org.eclipse.sirius.business.api.query.SiriusReferenceFinderCache@ has been added. This cache allows to avoid redundant computing to find impacted DRepresentationDescriptors returned by @org.eclipse.sirius.business.api.query.SiriusReferenceFinder.getImpactedRepresentationDescriptors@.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.business.api.query.SiriusReferenceFinder.CACHE@ is a convenience to use @org.eclipse.sirius.business.api.query.SiriusReferenceFinderCache@.
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.viewpoint.SiriusPlugin@ has been renamed to @org.eclipse.sirius.tools.api.SiriusPlugin@
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.viewpoint.Messages@ has been renamed to @org.eclipse.sirius.tools.api.Messages@
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.business.api.helper.ViewpointUtil@ has been deprecated, @org.eclipse.sirius.model.business.api.helper.ViewpointUtil@ from plugin @org.eclipse.sirius.model@ should be used instead.
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.business.api.resource.ResourceDescriptor@ has been moved to @org.eclipse.sirius.model@ plugin alongside with code generated from Sirius metamodel as it is one of its data type. 
+* <span class="label label-info">Modified</span> The package @org.eclipse.sirius.business.api.resource@ has been renamed to @org.eclipse.sirius.business.api.resource.support@. Impacted classes are @org.eclipse.sirius.business.api.resource.support.LoadEMFResource@ and @org.eclipse.sirius.business.api.resource.support.WorkspaceDragAndDropSupport@.
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.tools.api.ui.color.EnvironmentSystemColorFactory@ has been moved to @org.eclipse.sirius.model@ plugin.
+* <span class="label label-info">Modified</span> Methods @org.eclipse.sirius.business.api.session.danalysis.DAnalysisSelector.selectSmartlyAnalysisForAddedResource(Resource, Collection<DAnalysis>)@ and @org.eclipse.sirius.business.api.session.danalysis.DAnalysisSessionHelper.selectAnalysis(Resource, Collection<DAnalysis>, DAnalysisSelector)@ have been deprecated for removal in a future version.
+
+h4. Changes in @org.eclipse.sirius.common@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.common.tools.api.resource.FileProvider.exists(IPath)@ and @org.eclipse.sirius.common.tools.api.resource.IFileGetter.exists(IPath)@ have been added to know if a path leads to an existing file.
+
+h4. Changes in @org.eclipse.sirius.diagram@
+
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.DiagramPlugin@ has been renamed to @org.eclipse.sirius.diagram.tools.api.DiagramPlugin@.
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.Messages@ has been renamed to @org.eclipse.sirius.diagram.tools.api.Messages@.
+* <span class="label label-success">Added</span> @eventShouldTriggerArrange(OperationHistoryEvent)@ in @org.eclipse.sirius.diagram.business.api.diagramtype.IDiagramDescriptionProvider@ This method is used to avoid an arrange to be launch for a specific event if it is not necessary for a specific diagram description.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.helper.graphicalfilters.HideFilterHelper.hideLabel(DDiagramElement, Map<EObject, List<Integer>>)@ has been added in order to hide a list of labels of a diagram element. This is dedicated to DEdge that can have up to 3 labels. The list of Integer correspond to the VisualID of the corresponding edge label edit part.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.helper.graphicalfilters.HideFilterHelper.revealLabel(DDiagramElement, Map<EObject, List<Integer>>)@ has been added in order to reveal a list of labels of a diagram element. This is dedicated to DEdge that can have up to 3 labels. The list of Integer correspond to the VisualID of the corresponding edge label edit part.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.tools.api.command.IDiagramCommandFactory.buildHideLabelSelectionCommand(Set<EObject>, Map<EObject, List<Integer>>)@ has been added to forward the labels of an edge to hide to the command.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.tools.api.command.IDiagramCommandFactory.buildRevealLabelSelectionCommand(DDiagramElement, Map<EObject, List<Integer>>)@  has been added to forward the labels of an edge to reveal to the command.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.tools.api.command.view.HideDDiagramElementLabel.HideDDiagramElementLabel(TransactionalEditingDomain, Set<?>, Map<EObject, List<Integer>>)@ has a new constructor in order to give the list of labels of an edge to hide.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.tools.api.command.view.RevealDDiagramElementsLabel.RevealDDiagramElementsLabel(TransactionalEditingDomain, Set<DDiagramElement>, Map<EObject, List<Integer>>)@ has a new constructor in order to give the list of labels of an edge to reveal.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.query.DDiagramElementQuery.hasAnyHiddenLabel()@ has been added in order to check if at least one label of a DDiagramElement is hidden.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.query.DDiagramElementQuery.areAllLabelsHidden()@ has been added in order to check if at all labels of a DDiagramElement are hidden.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.query.DDiagramElementQuery.areAllLabelsHidden(List<Integer>)@ has been added in order to check if at all labels of the given collection concerning a DDiagramElement are hidden.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.query.DDiagramElementQuery.isLabelHidden(int)@ has been added in order to check if one label in particular of a DDiagramElement is hidden.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.query.DEdgeQuery.howManyLabels()@ has been added in order to return how many labels an edge has.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.business.api.query.DEdgeQuery.areAllLabelsHidden()@ has been added in order to check if at all labels of a DEdge are hidden.
+
+h4. Changes in @org.eclipse.sirius.diagram.model@
+
+* <span class="label label-danger">Removed</span> The @DiagramDescription::allTools@ operation has been removed from the Diagram metamodel. The corresponding method has been removed from generated code. Calls to @org.eclipse.sirius.diagram.description.DiagramDescription.getAllTools()@ should be replaced by @new org.eclipse.sirius.diagram.business.api.query.DiagramDescriptionQuery(diagramDescription).getAllTools()@.
+* <span class="label label-danger">Removed</span> The @DiagramDescription::allEdgeMappings@ operation has been removed from the Diagram metamodel. The corresponding method has been removed from generated code. Calls to @org.eclipse.sirius.diagram.description.DiagramDescription.getAllEdgeMappings()@ should be replaced by @org.eclipse.sirius.diagram.business.internal.metamodel.helper.ContentHelper.getAllEdgeMappings(diagramDescription, false)@ alongside with the getAllNodeMappings and getAllContainerMappings methods.
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> The class @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageHelper@ has been added, it includes most of the methods that previously existed in @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectorService@. The affected methods are:
+** <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageHelper.updateStyle(BasicLabelStyle, String)@, which was previously @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectorService.updateStyle(BasicLabelStyle, String)@.
+** <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageHelper.updateWorkspacePath(BasicLabelStyle, String)@, which was previously @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectorService.updateWorkspacePath(BasicLabelStyle, String)@.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog@ has been added to replace the @org.eclipse.sirius.common.ui.tools.api.resource.WorkspaceResourceDialogWithFilter@ dialog which was used to select a background image for a diagram element. @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog@ now provides a new simpler and more complete UI.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.ITreeImagesContentProvider@ has been added to allow the implementation of an @org.eclipse.jface.viewers.ITreeContentProvider@ that can be used by @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog@ to retrieve image information.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.ImageFiltersUtils@ provides the filter used by the TreeViewer in the @ImageSelectionDialog@ as well as various utility methods to identify the supported image formats.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.image.GallerySelectable@ provides an implementation of @org.eclipse.sirius.diagram.ui.tools.internal.dialogs.widgets.gallery.Gallery@ which allows to select items in the gallery. This is mostly used in tests. @GallerySelectable@ allows to use the @org.eclipse.sirius.diagram.ui.tools.internal.dialogs.widgets.gallery.Gallery@ in @ImageSelectionDialog@ implementations.
+* <span class="label label-success">Added</span> 2 methods have been added in @org.eclipse.sirius.diagram.ui.tools.api.editor.DDiagramEditor@: @enableFireNotification()@ to enable the fire notification, ie it causes the editor to fire selection changed notification to all listeners when @SelectionManager#fireSelectionChanged()@ is called, and @disableFireNotification()@ to disable it. It is used internally, among others, to disable the notification during a drag'n'drop of an element or during the reconnection of an edge.
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.ui@ now depends on GMF Runtime 1.14.0, which itself uses Apache Batik 1.14.0 to support SVG (both rendering SVG images on diagrams and exporting diagrams to SVG files). As a result, exporting diagrams to PDF is not supported anymore (as GMF Runtime 1.14.0 itself has dropped support for this).
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelector@ has been modified to support multiple image selection. The enum @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelector.SelectionMode@ can be used to define the selection mode supported: @MONO_SELECTION@ for a single selection or @MULTI_SELECTION@ for a multiple selection. The method @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelector.selectImages(EObject, SelectionMode)@ has been updated to handle this selection mode as a parameter and now returns the list of selected images as a @List<String>@.
+* <span class="label label-info">Modified</span> The class @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageSelector@ has been modified to implement the interface @ImageSelector@ and the update of its @ImageSelector.selectImages(EObject, SelectionMode)@ method.
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectorService@ has been split in a new lighter @ImageSelectorService@ which aims to get an @ImageSelector@. The other methods have been moved to @org.eclipse.sirius.diagram.ui.business.api.image.WorkspaceImageHelper@.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.tools.internal.util.EditPartQuery.getVisualID()@ has been added in order to return the VisualID field value if there is one.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.tools.api.figure.FigureQuery.edgeLabelViewConstantToVisualID(int)@ has been added in order to convert LabelViewConstant values to the equivalent VisualID from the label edit parts.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.tools.api.figure.SiriusWrapLabelWithAttachment.getLocationField()@ was added in order to have a public access to the location value.
+* <span class="label label-success">Added</span> @org.eclipse.sirius.diagram.ui.business.api.provider.DEdgeBeginLabelItemProvider@, @org.eclipse.sirius.diagram.ui.business.api.provider.DEdgeEndLabelItemProvider@ and @org.eclipse.sirius.diagram.ui.business.api.provider.DEdgeLabelItemProvider@ methods equals and hashCode have been overridden in order to differentiate them in an HashSet.
+
+h4. Changes in @org.eclipse.sirius.common.ui@
+
+* <span class="label label-info">Modified</span> The class @org.eclipse.sirius.common.ui.tools.api.resource.WorkspaceResourceDialogWithFilter@ is now deprecated. The use of @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog@ is now favored to provide a dialog to select a background image of a diagram element. 
+
+h4. Changes in @org.eclipse.sirius.diagram.sequence@
+
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.sequence.util.Range@ has been moved to @org.eclipse.sirius.diagram.sequence.business.api.util.Range@
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.sequence.util.Pair@ has been moved to @org.eclipse.sirius.diagram.sequence.business.api.util.Pair@
+* <span class="label label-info">Modified</span> @org.eclipse.sirius.diagram.sequence.Messages@ has been moved to @org.eclipse.sirius.diagram.sequence.tool.internal.Messages@.
+
+
+h4. Changes in @org.eclipse.sirius.tests.swtbot.support@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.tests.swtbot.support.api.editor.SWTBotSiriusHelper.selectGalleryItem(SWTBot, String)@ has been added in order to select an item in the Gallery in the new @org.eclipse.sirius.diagram.ui.business.api.image.ImageSelectionDialog@.
+* <span class="label label-success">Added</span> The condition @org.eclipse.sirius.tests.swtbot.support.api.condition.CheckNbVisibleElementsInGallery@ has been added to avoid tests failing because of images that have not finished loading.
+* <span class="label label-danger">Removed</span> The method @org.eclipse.sirius.tests.swtbot.support.api.AbstractSiriusSwtBotGefTestCase.getNbStatusInErrorLog()@ has been removed. It is not reliable (sometimes the number of elements returned is 0 instead of the real number). It should be replaced by @doesAnErrorOccurs()@ and @doesAWarningOccurs()@.
+
+h4. Changes in @org.eclipse.sirius.tests.junit.support@
+
+* <span class="label label-success">Added</span> The method  @org.eclipse.sirius.tests.support.api.SiriusTestCase.copyAllFiles(String, String, String)@ and  @org.eclipse.sirius.tests.support.api.EclipseTestsSupportHelper.copyDirectory(String, String)@ have been added to ease to the copy of the test files from the test plugin to the junit workspace.
+
+h4. Migrations
+
+* <span class="label label-success">Added</span> A migration participant has been added to repair size of GMF nodes with Workspace Image style description. A default size was set for this type of nodes, which resulted in graphical inconsistencies (see "Bug 576423 - _Incorrect representation size when using 'Size Computation Expression'_":https://bugs.eclipse.org/bugs/show_bug.cgi?id=576423). With the @org.eclipse.sirius.diagram.ui.business.internal.migration.WorkspaceImageGMFBoundsMigrationParticipant@ migration participant, the size of these nodes was recomputed according to the Size Computation Expression defined in the VSM. The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _15.0.0.202201261500_.
+
+h2(#sirius6.6.0). Changes in Sirius 6.6.0
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> 4 new actions have been added to control the "z-order" of edges. These actions are mainly useful in the context of "jump links":user/diagrams/Diagrams.html#Appearance. Similar actions already existed for nodes but not for edges. A chapter dedicated to these new actions has been added in "Sirius User Manual":user/diagrams/Diagrams.html#edge_zorder.
+* <span class="label label-danger">Removed</span> To be coherent, the actions available "Diagram/Order" menu of Eclipse menu bar have been removed. Indeed, these actions are always visible but only valid for nodes. Now, only the contextual menus are to be used (for nodes or for edges).
+
+h3. Developer-Visible Changes
+
+h4. Changes in @org.eclipse.sirius.diagram@
+
+* <span class="label label-success">Added</span> New methods returning z-order commands have been added in @org.eclipse.sirius.diagram.tools.api.command.IDiagramCommandFactory@ to support the new z-order actions on edges. The returned commands are currently only used by new actions for edges but they also manage nodes (same code than in existing GMF commands).
+** @buildBringToFrontCommand(List<? extends View>)@: Build a command that is able to bring to the front many elements. These elements, nodes or edges, must be of the same type and have the same parent.
+** @buildSendToBackCommand(List<? extends View>@: Build a command that is able to send to the back many elements. These elements, nodes or edges, must be of the same type and have the same parent.
+** @buildBringForwardCommand(List<? extends View>)@: Build a command that is able to bring forward many elements. These elements, nodes or edges, must be of the same type and have the same parent.
+** @buildSendBackwardCommand(List<? extends View>)@: Build a command that is able to send backward many elements. These elements, nodes or edges, must be of the same type and have the same parent.
+* <span class="label label-success">Added</span> The 4 commands corresponding to the above method has been added as API:
+** @org.eclipse.sirius.diagram.tools.api.command.view.BringForwardElements@
+** @org.eclipse.sirius.diagram.tools.api.command.view.BringToFrontElements@
+** @org.eclipse.sirius.diagram.tools.api.command.view.SendBackwardElements@
+** @org.eclipse.sirius.diagram.tools.api.command.view.SendToBackElements@
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* * <span class="label label-info">Modified</span> The method @org.eclipse.sirius.diagram.ui.edit.api.part.AbstractDDiagramEditPart.refreshChildren()@ has been overridden to redraw the edges figures according to the order of the GMF edges.
+
+h4. Migrations
+
+* <span class="label label-success">Added</span> A migration participant has been added to set a changeId value for each DRepresentationDescriptor that did not have one. Some old models were missing the changeId attribute, which could lead to technical problems. The migration participant @org.eclipse.sirius.diagram.ui.business.internal.migration.SetChangeIdMigrationParticipant@ sets a random changeId if it didn't already exist. The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _14.6.0.202110251100_.
+* <span class="label label-success">Added</span> A migration participant has been added to sort GMF edges order. The goal is to have edges displayed as before "edges z-order" improvement. Indeed, the display now consider order of GMF edges instead of order of its sources/targets.The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _14.6.0.202109231100_.
+
+h2(#sirius6.5.1). Changes in Sirius 6.5.1
+
+h3. Developer-Visible Changes
+
+h4. Migrations
+
+* <span class="label label-info">Modified</span> The migration participant @org.eclipse.sirius.diagram.ui.business.internal.migration.NoteShapeDefaultLabelAlignmentMigrationParticipant@ has been updated to repair Notes with a potential wrong vertical label alignment. This problem can occur since Sirius 6.3.2 used in a collaborative environment, Obeo Designer Team Edition or Team For Capella for example. The corresponding version, stored in the attribute version of viewpoint:DAnalysis of the aird file, is _14.5.1.202106111100_ (migration added in Sirius 6.5.1).
+
+h2(#sirius6.5.0). Changes in Sirius 6.5.0
+
+h3. User-Visible Changes
+
+* <span class="label label-success">Added</span> It is possible to override at the aird level both "Sirius/Do Refresh on representation opening" and "Sirius/Automatic refresh" preferences. To override the preferences, right-click on the @aird@ file, select "Properties", and in the dialog go to the "Sirius settings" section. The preferences are stored in the project scope and associated to the aird file. For more details, refer the "documentation":user/general/Aird_Preferences.html .
+* <span class="label label-success">Added</span> A new tab has been added in the properties dialog box, when an aird is selected, to present technical information about the Sirius Session. For more details, refer the "documentation":user/general/SiriusSessionDetailedInformation.html .
+
+h3. Specifier-Visible Changes
+
+* <span class="label label-success">Added</span> A new @CellEditor@ tool is available for feature column mapping of edition table. It allows to define a specific @org.eclipse.jface.viewers.CellEditor@ to edit a cell (see "documentation":specifier/tables/Tables.html#column_tools for more details).
+* <span class="label label-info">Modified</span> ELK integration now handles "egde on edge" case. As reminder, Sirius allows to have an edge as source or target of another edge. This kind of construction is not allowed by ELK. Sirius 6.5.0 introduces a specific transformation from Sirius graph to EKL graph (and reciprocally) in
+order, despite this problem, to have a satisfactory layout result. This new behavior has been tested with "ELK Layered":https://www.eclipse.org/elk/reference/algorithms/org-eclipse-elk-layered.html algorithm with option "@Node Placement Strategy@":https://www.eclipse.org/elk/reference/options/org-eclipse-elk-layered-nodePlacement-strategy.html set to @NETWORK_SIMPLEX@. There is no guarantee with other kind of layouts. All cases are not supported. Further additional developments are needed to support more. There are probably still some constructions not correctly handled but it is a first step. As example, the edges with label(s) have not been tested. Here is a list of supported/tested cases:
+** An edge having another edge as source,
+** An edge having another edge as target,
+** An edge that is the source of several edges,
+** An edge that is the target of several edges.
+
+h3. Developer-Visible Changes
+
+* <span class="label label-success">Added</span> It is now possible to keep semantic element traceability during the representation export. For now, this option is only supported for diagram SVG export. In this case, a new attribute @diagram:targetSemanticId@ is added on SVG elements to reference the target semantic id on which the graphical element is based on. This option can be activated programmatically or by setting a preference. See the details below:
+** <span class="label label-success">Added</span> The constructor @org.eclipse.sirius.diagram.ui.tools.api.part.DiagramEditPartService.DiagramEditPartService(boolean)@ has been added to make it possible to activate the semantic traceability during the SVG export. Note that this constructor will also be called by @org.eclipse.sirius.ui.business.api.dialect.DialectUIServices.exportWithResult@ with the @ExportFormat@ as parameter, which own the @SemanticTraceabilityEnabled@ value.
+** <span class="label label-success">Added</span> In @org.eclipse.sirius.ui.business.api.dialect.ExportFormat@, @setSemanticTraceabilityEnabled(boolean)@ and @isSemanticTraceabilityEnabled()@ have been added to specify through the ExportFormat if the traceability should be enabled.
+** <span class="label label-success">Added</span> @org.eclipse.sirius.ui.business.api.preferences.SiriusUIPreferencesKeys.PREF_EXPORT_SEMANTIC_TRACEABILITY@ has been added to make it possible to activate the  traceability on representation export. This will activate the traceability for any export by using the user interface (through the export specific wizard) or by calling the @ExportAction@. Direct calls to the @DialectUIServices.exportWithResult@ are not impacted.
+* <span class="label label-info">Modified</span> Upgraded ELK version from 0.7.0 to 0.7.1, see the "ELK documentation":https://projects.eclipse.org/projects/modeling.elk/releases/0.7.1 for the list of changes in that version (and previous).
+
+h4. Changes in @org.eclipse.sirius@
+
+* <span class="label label-success">Added</span> The API @org.eclipse.sirius.business.api.session.SiriusPreferences@ has been added to get preferences related to a Sirius Session that is to a main aird file. An instance of this API can be accessed with @org.eclipse.sirius.business.api.session.Session.getSiriusPreferences()@. Both @org.eclipse.sirius.business.api.preferences.SiriusPreferencesKeys.PREF_AUTO_REFRESH@ and @org.eclipse.sirius.ui.business.api.preferences.SiriusUIPreferencesKeys.PREF_REFRESH_ON_REPRESENTATION_OPENING@ **should not be used any more by clients with Eclipse preference API** but @org.eclipse.sirius.business.api.session.SiriusPreferences.isAutoRefresh()@ and @org.eclipse.sirius.business.api.session.SiriusPreferences.isRefreshAtRepresentationOpening()@ should be used instead.
+The reason  is that the implementation of @SiriusPreferences@ wraps the logic of getting or storing the preferences on a ProjectScope.
+* <span class="label label-danger">Removed</span> @org.eclipse.sirius.tools.api.ui.RefreshHelper.isAutoRefresh()@ has been removed. Clients should call @Session.getPreferences.isAutoRefresh()@ or @new DRepresentationQuery(DRpresentation).isAutoRefresh()@ instead.
+* <span class="label label-danger">Removed</span> @org.eclipse.sirius.diagram.ui.tools.api.properties.PropertiesService@, @org.eclipse.sirius.tools.api.ui.property.IPropertiesProvider@ and @org.eclipse.sirius.diagram.ui.tools.internal.properties.SiriusDiagramEditorPropertiesProvider@ have been removed. Clients should call @Session.getPreferences.isAutoRefresh()@ or @new DRepresentationQuery(DRpresentation).isAutoRefresh()@ instead.
+
+h4. Changes in @org.eclipse.sirius.diagram.ui@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.diagram.ui.tools.api.format.AbstractSiriusFormatDataManager.logUnhandledDiagramElementKindMessage(Object)@ has been added to mutualize the code concerning the log of a warning for @Object@ not managed by the @SiriusLayoutDataManager@. This method avoids to log a message for @DNodeListElement@, as it is expected that nothing is stored in LayoutDataManager for @DNodeListElement@ as their location and size are constrained by their parents.
+
+h4. Changes in @org.eclipse.sirius.ui@
+
+* <span class="label label-danger">Removed</span> @org.eclipse.sirius.ui.business.api.dialect.DialectUIManager.isRefreshActivatedOnRepresentationOpening()@ has been removed. Use @org.eclipse.sirius.business.api.session.SiriusPreferences.isRefreshAtRepresentationOpening()@ instead.
+
+h4. Changes in @org.eclipse.sirius.ecore.extender@
+
+* <span class="label label-success">Added</span> The method @org.eclipse.sirius.ecore.extender.business.api.permission.IPermissionAuthority.getLockedObjects()@ has been added the get all the locked objects.
+
+h4. Changes in @org.eclipse.sirius.ext.gmf.runtime@
+
+* <span class="label label-success">Added</span> The API @org.eclipse.sirius.ext.gmf.runtime.gef.ui.figures.IFigureWithoutLabels@ has been created so that a Figure, that implements this API, can provide its bounds without considering its labels. The method @org.eclipse.sirius.ext.gmf.runtime.editparts.GraphicalHelper.getAbsoluteBoundsWithoutLabelsIn100Percent(GraphicalEditPart)@ has been added to get the rectangle bounds without taking labels into account. This is used, in particular, to compute the bendpoints of an edge when the source or the target of the edge is an edge.
+
+h4. Migrations
+
+* <span class="label label-success">Added</span> A migration participant has been added to repair rectilinear edges containing only one bendpoint. Bracket edges are not relevant. The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _14.5.0.202104070943_.
+* <span class="label label-success">Added</span> A migration participant has been added to unset originalStyle features. This feature is no longer used by Sirius and, if set, it may cause errors when loading the aird because of dangling reference. The corresponding version, stored in attribute version of viewpoint:DAnalysis of the aird file, is _14.5.0.202104161500_.

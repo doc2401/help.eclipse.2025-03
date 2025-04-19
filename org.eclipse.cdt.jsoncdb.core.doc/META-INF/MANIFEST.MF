@@ -1,0 +1,49 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.2
+Build-Jdk-Spec: 17
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundleName
+Bundle-Description: %Bundle-Description
+Bundle-Copyright: %Bundle-Copyright
+Bundle-SymbolicName: org.eclipse.cdt.jsoncdb.core.doc;singleton:=true
+Bundle-Version: 1.1.0.202211080413
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Bundle-ActivationPolicy: lazy
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-cdt/cdt;pat
+ h="jsoncdb/org.eclipse.cdt.jsoncdb.core.doc";commitId=1087dc5f2255b8bef
+ a31e6e0cf98e72d9483ceed
+
+Name: about.html
+SHA-256-Digest: RvukeXiD1GnUclxaggNaNsE9vlj0EQRiCopdFNLCinM=
+
+Name: plugin.xml
+SHA-256-Digest: eemTyiY3Tsj7Q/+MXKzIATUDzji+MYlE5BmCq2UHTv0=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.jsoncdb.core.doc/po
+ m.properties
+SHA-256-Digest: 99IrFjD6XfFkHScaMFXseWdOFfyKeOXMSbg0Hj9G/bY=
+
+Name: doc/html/supported-compilers.xhtml
+SHA-256-Digest: wCkSvEAgPLTMaGwfFzbLGVue/8mq8uurGgBA0CUOACc=
+
+Name: doc/toc.xml
+SHA-256-Digest: lNWCKdsyFL/r2YfflLhqzFrQHGLI/iwwWEAAgyaAGrQ=
+
+Name: plugin.properties
+SHA-256-Digest: 8lXWQYcLVjK9Iw3sP2wY0LMLdfXA1abuKvljIGf/sIk=
+
+Name: META-INF/maven/org.eclipse.cdt/org.eclipse.cdt.jsoncdb.core.doc/po
+ m.xml
+SHA-256-Digest: /ZfOjAkS3SlT2HxBFefoUpg0NSm6KkGueKQTRLLLARw=
+
+Name: doc/topics_Tasks.xml
+SHA-256-Digest: p/SgRBqxV8iR+DZpmkCQIrB8mMYaN9JUUYivN9dsDn0=
+
+Name: doc/html/notices.html
+SHA-256-Digest: vqgsE/W/KceBVuacmu4V6PHP71b72BNu9E3DZ3QnAX4=
+
+Name: doc/html/builtins-detection.xhtml
+SHA-256-Digest: gpxndDT7HaBIxEfxYE0iSZnhV0Ys5SWWuGdUNPhdW0M=
+

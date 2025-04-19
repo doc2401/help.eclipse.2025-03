@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Palette</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Palette</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<p>
+  <img src="images/palette_swt.png" align="top">
+  <img src="images/palette_swing.png" align="top">
+</p>
+<div class="paragraph">
+<p>The <strong>Palette</strong> provides quick access to toolkit-specific components as
+well as any custom components installed by the user. The <strong>Palette</strong> is
+organized into categories which may be expanded, collapsed or hidden.</p>
+</div>
+<div class="paragraph">
+<p>To add a components to the <strong><a href="design_view.html">Design View</a></strong>, you
+can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select it in the palette and drop it on the
+<strong><a href="design_view.html">Design View</a></strong> or
+<strong><a href="component_tree.html">Component Tree</a></strong> by clicking in the desired location.</p>
+</li>
+<li>
+<p>Use the <strong>Choose Component</strong> command to select the widget type from <strong>Choose Component</strong> dialog.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Multiple widgets of the same type may be added to the
+<strong><a href="design_view.html">Design View</a></strong> by holding down the <strong>Ctrl</strong> key when
+selecting the widget in the <strong>Palette</strong>.</p>
+</div>
+<div class="paragraph">
+<p>The palette may be customized by right-clicking anywhere in the palette
+to access the <a href="palette_context_menu.html">palette context menu</a> or by
+opening the <strong><a href="palette_manager.html">Palette Manager</a></strong> dialog..</p>
+</div>
+<div class="paragraph">
+<p>The following commands are common to every palette:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Selection</p>
+</li>
+<li>
+<p>Marquee</p>
+</li>
+<li>
+<p>Choose component</p>
+</li>
+<li>
+<p>Tab Order</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p> </p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/palette_context_menu.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_common_palette_commands">Common Palette Commands</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_icon">Icon</h3>
+
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_menu_name">Menu Name</h3>
+
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_description">Description</h3>
+
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/SelectionTool.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Selection</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select one or more widgets. Hold the <strong>Shift</strong> or <strong>Ctrl</strong> key down to
+select multiple widgets.</p>
+<p class="tableblock"><span class="image"><img src="images/single_selection.png" alt="image"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/MarqueeSelectionTool.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Marquee</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rubber band select multiple widgets. Hold the <strong>Alt</strong> key and start
+dragging to automatically activate the <strong>Marquee</strong> tool.</p>
+<p class="tableblock"><span class="image"><img src="images/marquee_select.png" alt="image"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/ChooseComponent.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Choose component</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a component to the editor. Enter the name of the class or select it
+from the history list. You can right-click on an item in the list to
+<strong>Remove from History</strong>.</p>
+<p class="tableblock"><p>
+  <img src="images/choose_component_dialog.png" align="top">
+  <img src="images/remove_from_history.png" align="top">
+</p>
+</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/tab_order.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Tab Order</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set the tab order of the components.</p>
+<p class="tableblock">. Start by selecting the top-level container (such as the JFrame).
+. Activate the Tab Order tool.
+. Click the components in the desired order.</p>
+<p class="tableblock">Click a component more than once to increment its index.</p>
+<p class="tableblock">Shift+Click to exclude a component.</p>
+<p class="tableblock">Ctrl+Click to move the selected  index to another component.
+. Deactivate the Tab Order tool by choosing another tool (such as
+<strong>Selection</strong>).</p>
+<p class="tableblock"><span class="image"><img src="images/set_tab_order.png" alt="image" width="296" height="137"></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The position of the <strong>Palette</strong> may be configured via drag and drop or by
+right-clicking on the <strong>Palette</strong> header and selecting the <strong>Dock On</strong>
+command. The <strong>Palette</strong> may be docked to either the left or right side of
+the <strong><a href="design_view.html">Design View</a></strong>.</p>
+</div>
+<p>
+  <img src="../preferences/images/flyout_palette1.png" align="top">
+  <img src="images/palette_dock_on.gif" align="top">
+</p>
+<div class="paragraph">
+<p>The <strong>Palette</strong> may also be collapse and expanded on demand.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../preferences/images/flyout_palette2.png" alt="image"></span> </p>
+</div>
+<div class="paragraph">
+<p>The <strong>Palette</strong> is also available as a standalone view. Use the <strong>Window &gt;
+Show View &gt; Other&#8230;&#8203;</strong> command and open the <strong>WindowBuilder &gt; Palette</strong>
+view or right-click on the <strong>Palette</strong> and select the <strong>Extract as view</strong>
+command. Closing the <strong>Palette</strong> view will make the <strong>Palette</strong> reappear as
+embedded view within the editor.</p>
+</div>
+<p>
+  <img src="../preferences/images/windowbuilder_views.png" align="top">
+  <img src="../preferences/images/palette_view.png" align="top">
+  <img src="images/palette_extract_as_view.gif" align="top">
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

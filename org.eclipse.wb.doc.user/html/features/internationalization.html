@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Internationalization (i18n) / Localization</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Internationalization (i18n) / Localization</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The tool has powerful internationalization (i18n) support. It can
+externalize component strings, create and manage resource bundles for
+multiple languages, switch locales on fly and edit translated strings in
+context.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_package_explorer1.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>The editor&#8217;s internationalization functions center around two items on
+the <strong><a href="../userinterface/toolbar.html">Toolbar</a></strong> - the <strong>Externalize
+Strings</strong> button
+<span class="image"><img src="../userinterface/images/globe3.png" alt="image" width="16" height="16"></span> and
+the drop down <strong>Locales</strong> list (which lists any locales defined for the
+current window).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../userinterface/images/choose_locale.gif" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>To illustrate how to use various internationalization functions, we will
+start with the simple example shown below. This example includes a
+variety of widget types each containing a static string label.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_design_view1.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>The source for this example looks like the following. Note that all of
+the widget and window text elements are hard coded as string literals
+within the source. For an internationalized application, these strings
+need to be extracted to a resource (property) file and accessed via a
+key.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_source_view1.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_externalize_strings_dialog">The Externalize Strings dialog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To begin the internationalization process, click the <strong>Externalize
+Strings</strong> button
+<span class="image"><img src="../userinterface/images/globe3.png" alt="image" width="16" height="16"></span> to
+open the <strong>Externalize Strings</strong> dialog. Initially, the dialog should
+present a list of all of the hard coded string properties assigned to
+any component within the window. If any NLS string externalization
+sources have been created for other classes in the same package, they
+will be listed in the <strong>Existing sources</strong> list (the list will be empty if
+no class in the package have been externalized). Select an existing
+source or create a new one by clicking the <strong>New&#8230;&#8203;</strong> button.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings1.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Click the <strong>New&#8230;&#8203;</strong> button to create a new NLS strings source (more than
+one source may be used). Four different types of sources are supported:
+<strong>Classic Eclipse message class</strong>, <strong>Modern Eclipse message class</strong>, <strong>Direct
+ResourceBundle usage</strong> and <strong>ResourceBundle in field</strong>. When a source type
+is selected, an example of what the code will look like is shown in the
+<strong>Example</strong> field.</p>
+</div>
+<div class="paragraph">
+<p>For the <strong>Classic Eclipse message class</strong> style, you can create a new
+bundle accessor class or select an existing one. You can also specify
+the name and location of the resource bundle property file that should
+be used.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_new_source1.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>For the <strong>Modern Eclipse message class</strong> style, you can create a new
+bundle accessor class or select an existing one. You can also specify
+the name and location of the resource bundle property file that should
+be used.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_new_source2.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>For the <strong>Direct ResourceBundle usage</strong> style, you only need to specify
+the name and location of the resource bundle property file that should
+be used.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_new_source3.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>For the <strong>ResourceBundle in field</strong> style, in addition to the name and
+location of the resource bundle property file, you also need to specify
+the name of the field that the resource bundle should be assigned to.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_new_source4.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Once the source has been created, click the <strong>Enable All</strong> button to
+select all of the strings within all of the components. Finally, click
+the <strong>Externalize</strong> button to begin the extraction process. The strings
+will be extracted to the source selected in the <strong>Existing sources</strong> list.
+Turning on the <strong>Copy strings to all locales</strong> option causes the extracted
+strings to be copied to all of the defined locales rather than only the
+default locale</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings2.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Switch to the tab named after the resource bundle to see the results (if
+multiple sources are used, there will be a tab for each source). Each
+string will have been give a default key name based on the name of the
+window class, the variable name of the component and the property name
+of the string (usually just "text"). The icon representing each
+component is shown next to the key. Hovering over the icon will display
+a tooltip showing the widgets using that key.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings3.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Note that both the key names and string values are editable within the
+dialog. You can use the <strong>Enter</strong> and <strong>Tab</strong> keys to traverse the cells in
+the table.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings4.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>If you change the value of a key so that it matches another existing
+key, you will need to confirm the change.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_rename_key.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_messages_class_and_properties_files">Messages class and properties files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After closing the dialog, note that a couple of additional files have
+been created. The first is a properties file (resource bundle) for the
+default locale that includes all of the keys and their associated
+values.</p>
+</div>
+<p>
+  <img src="images/nls_package_explorer2.png">
+  <img src="images/nls_properties_default.png" align="top">
+</p>
+<div class="paragraph">
+<p>The second (optional) file is a <strong>Messages</strong> class whose job is to
+interface to the resource bundle via the key names. The classic Eclipse
+message class format looks like the following:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_messages.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>The modern Eclipse message class format looks like the following:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_messages2.png" alt="image" width="558" height="512"></span></p>
+</div>
+<div class="paragraph">
+<p>If we now take another look at the source view when using the
+<strong>ResourceBundle in field</strong> style, we see that all of the hard coded
+strings have been replaced calls to ResourceBundle with the string key
+names are arguments. Note that these keys themselves will remain
+constant across multiple languages and should be ignored for
+internationalization purposes. As such, they have all been marked with
+the <strong>//$NON-NLS-1$</strong> end-of-line comment.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_source_view2.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_new_locale">Adding a new locale</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Once an default resource bundle has been created, it is easy to add a
+second (or third) language, by clicking the <strong>Externalize Strings</strong> button
+again. The dialog will open up focused on the first resource bundle tab.
+Click the <strong>New locale&#8230;&#8203;</strong> button to open up the <strong>New Locale</strong> dialog.
+This dialog lists all of the known locales. You can select a <strong>Language</strong>
+code (like fr for French) and an optional <strong>Country</strong> code, or you can
+select from the list of <strong>All locales</strong>. You can also select whether the
+strings in the new locale should be copied from an existing locale (like
+the default locale) or left blank (copied from "none") using the drop
+down list in the <strong>Copy strings from</strong> field.</p>
+</div>
+<p>
+  <img src="images/nls_new_locale.png">
+  <img src="images/nls_new_locale2.png" align="top">
+</p>
+<div class="paragraph">
+<p>After selecting the new locale, click <strong>OK</strong> to add the locale as a new
+column in the table. The strings values will match the locale specified
+in the <strong>Copy string from</strong> field in the <strong>New Locale</strong> dialog. You can then
+enter translated values yourself or leave that task to a language
+expert. If you right-click on a cell, you can internalize a key (remove
+a row) or remove an entire locale (column).</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings5.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Upon closing the dialog for the second time, you will see that a new
+properties file has been created for the new locale.</p>
+</div>
+<p>
+  <img src="images/nls_package_explorer3.png">
+  <img src="images/nls_properties_fr.png" align="top">
+</p>
+<div class="paragraph">
+<p>If you switch back to the <strong><a href="../userinterface/design_view.html">Design
+View</a></strong>, you will see that the <strong>Locales</strong> drop down list now contains two
+value - one for the default locale and one for the second locale.
+Selecting the second locale will update the design view to show the
+appropriate string values in context.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_design_view2.png" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>Selecting the default locale will then restore the string values to the
+original language. Thus, you can use the <strong>Locales</strong> drop down list to
+quickly switch between languages in order to check the layout.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_design_view3.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_editing_string_values_in_the_design_view">Editing string values in the design view</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is also important to note that you can continue to edit the string
+values within the <strong><a href="../userinterface/design_view.html">Design View</a></strong>
+(either via <a href="../userinterface/design_view.html#DirectEdit">direct
+edit</a> or in the <strong><a href="../userinterface/property_pane.html">Property
+Pane</a></strong>) and the tool will automatically update the appropriate
+properties file. If the default locale is selected, the default
+properties file will be changed. If the second locale is selected its
+corresponding properties file will be updated. Conversely, if you edit
+the text in one of the property files, the
+<strong><a href="../userinterface/design_view.html">Design View</a></strong> will be updated
+when the editor takes focus.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_design_view4.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_new_components">Adding new components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You may even add new widget with new text components to the window and
+incrementally externalize them via the <strong>Externalize Strings</strong> dialog. If
+you open the dialog and switch to the <strong>Properties</strong> tab, you will see a
+list of any non-externalized strings. </p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings6.png" alt="image"></span> </p>
+</div>
+<div class="paragraph">
+<p>Select those strings and click <strong>Externalize</strong> them to add a new key/value
+pair to the properties file selected in the <strong>Existing sources</strong> list. If
+multiple locales have been defined and the <strong>Copy strings to all locales</strong>
+option is checked, the new key/value pair will be added to all of the
+locales simultaneously. Translate the secondary locales as necessary.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_externalize_strings7.png" alt="image"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_existing_keys_in_the_property_pane">Using existing keys in the property pane</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Enter keys directly into the property pane by prefixing them with an
+asterisks (<strong>) or click the
+<span class="image"><img src="../userinterface/images/ellipses.png" alt="image"></span> button to access the
+*String Editor</strong> and select a key from an existing resource bundle.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/nls_key_as_value.gif" alt="image"></span></p>
+</div>
+<div class="paragraph">
+<p>To use a value from a resource bundle, check the <strong>Use existing NLS
+source/key</strong> checkbox and click the <strong>Browse</strong> button. The <strong>Choose Key</strong>
+dialog will open where you can select a String source and a key/value
+pair. You can filter the list of key/value pairs that is shown by
+entering a string in the <strong>Search string</strong> field. By default, key names
+are searched but you can also search values or both keys and values by
+selecting the appropriate radio button at the bottom of the dialog.</p>
+</div>
+<p>
+  <img src="../userinterface/images/property_editor_string2.png">
+  <img src="../userinterface/images/property_editor_string3.png" align="top">
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

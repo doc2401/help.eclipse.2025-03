@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Palette Context Menu</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Palette Context Menu</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="palette.html">palette</a> may be customized by right-clicking
+anywhere in the palette to access the palette context menu.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 70%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_icon">Icon</h3>
+
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_menu_name">Menu Name</h3>
+
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="sect2">
+<h3 id="_description">Description</h3>
+
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/add_category.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add category&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create a new category to contain palette entries. The category may have
+a name, a description and an initial state of <strong>visible</strong> and/or <strong>opened
+by default</strong>. The category can be inserted before any existing category
+or inserted at the end of the list.</p>
+<p class="tableblock"><span class="image"><img src="images/new_palette_category.png" alt="image"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/add_component.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add component&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create a new palette entry representing a user-specified component. The
+entry must have a name, class, and a description (visible as hover help
+in the palette). If the widget defines its own icon in its bean info,
+that icon will be used by default. The component may be initially
+<strong>visible</strong> or not and may be added to any available category.</p>
+<p class="tableblock"><span class="image"><img src="images/add_component_dialog.png" alt="image"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add static factory &gt;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/add_factory_menu.png" alt="image"></span>Add components from a static
+<a href="../features/factories.html">factory</a>. Single factory components may
+be added or multiple factory components may be added at the same time.</p>
+<p class="tableblock">To add a single <a href="../features/factories.html">factory</a> item, give it a
+name, select the factory class and method signature, and give it a
+description. The component may be initially <strong>visible</strong> or not and may be
+added to any available category.</p>
+<p class="tableblock"><span class="image"><img src="images/add_static_factory_dialog.png" alt="image"></span></p>
+<p class="tableblock">To add a multiple <a href="../features/factories.html">factory</a> items at the
+same time, select the factory class and method signatures. The component
+name and description will be given default values. The components will
+be initially <strong>visible</strong> and may be added to any available category.</p>
+<p class="tableblock"><span class="image"><img src="images/add_static_factories_dialog.png" alt="image"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Add instance factory &gt;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/add_factory_menu.png" alt="image"></span>Add components from an instance
+factory. Single factory components may be added or multiple factory
+components may be added at the same time.</p>
+<p class="tableblock">To add a single factory item, give it a name, select the factory class
+and method signature, and give it a description. The component may be
+initially <strong>visible</strong> or not and may be added to any available category.</p>
+<p class="tableblock"><span class="image"><img src="images/add_instance_factory_dialog.png" alt="image"></span></p>
+<p class="tableblock">To add a multiple factory items at the same time, select the factory
+class and method signatures. The component name and description will be
+given default values. The components will be initially <strong>visible</strong> and may
+be added to any available category.</p>
+<p class="tableblock"><span class="image"><img src="images/add_instance_factories_dialog.png" alt="image"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/import_jar.png" alt="image"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Import Jar&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create multiple new palette entries using widget classes from a JAR file
+(selected from the classpath, workspace or from disk). Optionally create
+a new category to add the entries to. The category name defaults to the
+name of the JAR.</p>
+<p class="tableblock"><p>
+  <img src="images/palette_import_jar_archive_dialog.gif">
+  <img src="images/palette_workspace_jar_selection_dialog.png" align="top">
+</p></p>
+<p class="tableblock"><em>If no widgets appear when you select a jar file, this is usually an
+indication that the jar file does not provide a proper JavaBean manifest
+readable by Sun&#8217;s JavaBean manifest reader. Please contact the jar
+provider for a correction. As long as the jar is on your project path,
+you should be able to add individual widgets to the palette manually by
+using the <strong>Add Component&#8230;&#8203;</strong> command.</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Edit&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Edit the selected category or component.</p>
+<p class="tableblock"><span class="image"><img src="images/edit_palette_category.png" alt="image" width="394" height="249"></span></p>
+<p class="tableblock"><span class="image"><img src="images/edit_palette_component.png" alt="image" width="415" height="235"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/delete.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Delete</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete the
+selected category or entry.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Restore default palette&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Restore the palette to its default state (and custom widgets will be removed).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/manager.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Palette
+manager&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <strong><a href="palette_manager.html">Palette Manager</a></strong> dialog
+allows the toolkit-specific palette to be fully configured. Categories,
+and entries may be added, edited and removed and JAR files imported.
+Items may be rearranged using the <strong>Up</strong> and <strong>Down</strong> buttons or via drag
+and drop. The <strong>Collapse All</strong> and <strong>Expand All</strong> buttons show or hide all
+of the elements in the list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/import_palette.gif" alt="image" width="16" height="15"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Import palette&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Import the current palette in XML format.</p>
+<p class="tableblock"><span class="image"><img src="images/import_palette_dialog.png" alt="image" width="428" height="326"></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/export_palette.gif" alt="image" width="16" height="15"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Export
+palette&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Export the current palette in XML format.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/export_palette_dialog.png" alt="image" width="428" height="131"></span></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="images/settings.gif" alt="image" width="16" height="16"></span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Settings&#8230;&#8203;</strong></p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The palette entries may be configured to appear in one to five columns.
+By default, each entry is shown with an icon and class name. Optionally,
+each entry can be shown with an icon only. Category and entry fonts may
+also be selected.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/palette_settings.png" alt="image" width="394" height="252"></span></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</body>
+</html>

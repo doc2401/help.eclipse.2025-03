@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Project Configurator</title>
+<style type="text/css">@import url("../../book.css");</style>
+<style type="text/css">@import url("../../schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">Project Configurator</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>org.eclipse.ui.ide.projectConfigurator<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>3.12
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>This extension point allow contributors to add an import strategy.<p>
+</p>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.projectConfigurator">projectConfigurator</a>)+&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>
+<p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.projectConfigurator">projectConfigurator</a> (<a href="#e.activeWhen">activeWhen</a>?)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST projectConfigurator</p>
+<p class="code SchemaDtdAttlist">class&nbsp;CDATA #REQUIRED</p>
+<p class="code SchemaDtdAttlist">label&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>class</b> - class defining the import strategy contribution. This class is responsible for 3 things:
+                  <ul>
+                    <li>Detecting and deciding whether a given folder is meant to be an Eclipse project in workspace, generally depending on the existence of particular files, pattern or text</li>
+                    <li>Whether it applies on an existing Eclipse project, generally depending on the existence of particular files, pattern or text</li>
+                    <li>Apply configuration for new or existing Eclipse project in workspace</li>
+                  </ul></li>
+<li><b>label</b> - label of the configurator, presented to user.</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.activeWhen">activeWhen</a> (<a href="#e.not">not</a> | <a href="#e.or">or</a> | <a href="#e.and">and</a> | <a href="#e.instanceof">instanceof</a> | <a href="#e.test">test</a> | <a href="#e.systemTest">systemTest</a> | <a href="#e.equals">equals</a> | <a href="#e.count">count</a> | <a href="#e.with">with</a> | <a href="#e.resolve">resolve</a> | <a href="#e.adapt">adapt</a> | <a href="#e.iterate">iterate</a> | <a href="#e.reference">reference</a> | <a href="#e.hasFile">hasFile</a> | <a href="#e.hasFileRecursively">hasFileRecursively</a> | <a href="#e.hasFileWithSuffixRecursively">hasFileWithSuffixRecursively</a>)?&gt;</p>
+<p></p>
+<p class="ConfigMarkupElementDesc">
+A core Expression that controls the enablement of the Project Configuration. Will be checked before loading Project Configuration</p>
+<br><br>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.hasFile">hasFile</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST hasFile</p>
+<p class="code SchemaDtdAttlist">path&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>path</b> - File is this expression looking for. This is a relative path to the container on which expression will apply.</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.hasFileRecursively">hasFileRecursively</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST hasFileRecursively</p>
+<p class="code SchemaDtdAttlist">filename&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>filename</b> - File name the expression will recursively look for, in the contextual container.</li>
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.hasFileWithSuffixRecursively">hasFileWithSuffixRecursively</a> EMPTY&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST hasFileWithSuffixRecursively</p>
+<p class="code SchemaDtdAttlist">suffix&nbsp;CDATA #REQUIRED&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>suffix</b> - Suffix for a file. Expression will recursively look for files with this suffix in the contextual container.</li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>See in same plugin, contribution of the EclipseProjectConfigurator.
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>API is currently instable. Feature is in incubation.
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+</p>
+</BODY>
+</HTML>

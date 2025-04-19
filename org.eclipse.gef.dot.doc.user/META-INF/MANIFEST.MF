@@ -1,0 +1,148 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.3
+Build-Jdk-Spec: 17
+Bundle-ManifestVersion: 2
+Bundle-Name: GEF DOT User Guide
+Bundle-SymbolicName: org.eclipse.gef.dot.doc.user;singleton:=true
+Bundle-Version: 5.1.3.202411181539
+Bundle-Vendor: Eclipse GEF
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-gef/gef.git
+ ;path="org.eclipse.gef.dot.doc.user";commitId=9f7c80551722362e2cad1b10f
+ 4e85c08cdc13e97
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_01_Syntax_Highligh
+ ting.png
+SHA-256-Digest: PhzNikMWsyZ3nLTP6WAZKfdiXnfq4nzWPX6UiSK/LO0=
+
+Name: about.properties
+SHA-256-Digest: a9gFfjT30oYcGr0jJnu2UJiaDYWmhnoRGEmqWpDgSUQ=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_24_Graphviz_Prefer
+ ence_Page.png
+SHA-256-Digest: JxHgDfFL7mTZauNUhYzDBU7O0VAbhZD12F1rWX1Q/rQ=
+
+Name: plugin.xml
+SHA-256-Digest: 8QYGf8/VhPWNNPMS5tz/8XYH22qszhMo/7rCDmH1oDE=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_07_Hovering.png
+SHA-256-Digest: s4OPIJCLdcleGhKdLVZDOE1r0R3nWa4TuzUE4JXbogU=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_24_Sync_Graphviz_E
+ xport.png
+SHA-256-Digest: MtnNuX7lKu0R5ctxb5+SkK3u+oPwpiC7FpRuvRBW32s=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_02_Content_Assista
+ nt.png
+SHA-256-Digest: pJPmciZqshC4ITjq6owleff2xrlAgiaHgSLUC+QB0hg=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_04_AutoEditing.png
+SHA-256-Digest: uGauOmjZm7ydEu19XuVjQP0vxyNJcJrvf17r921APoc=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Graph_View_01_native_emul
+ ated.png
+SHA-256-Digest: u2ghgHuVa+0kwDeiF0X8l0BUYiAEfawR5P4cCsOrKwg=
+
+Name: about.mappings
+SHA-256-Digest: f0+UNmtWkI9kHss37HJlSKtpqoO2qcTaNbrOv99ipS8=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_13_Quick_Outline_V
+ iew.png
+SHA-256-Digest: dyKlhWMWwWvMXYY87FSdzXOtKfEamFcPojD3bR5uiXY=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_20_TODO_FIXME_XXX_
+ Statements.png
+SHA-256-Digest: 8IkWLjcgxUb7Y4I8obn+bGjeaZTREpOjZYVz3tJURQU=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_21_New_Project_Wiz
+ ard_New_File_Wizard.png
+SHA-256-Digest: nt1YdwstLc2O4BarMb139C7zpJTmwrfZvvj/S1nA5ms=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_18_Rename_Refactor
+ ing.png
+SHA-256-Digest: L6fIvPDe9DoJOU0sLHOxiU+muRzkRf1mkPPtuhqsbiE=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_06_CodeMining.png
+SHA-256-Digest: Ke1i8leZ0OIWMX2MzLbioxoS6Dtk0wQ3+PLfeEK8DaI=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_17_Find_References
+ .png
+SHA-256-Digest: egvvwn/qIbrmoCAwwuGkclUdvuHm7+UbPakrp9djdPg=
+
+Name: about.ini
+SHA-256-Digest: dJnpCx3Bbij7WuygdxEHHHdTDeteCiPLA3svbr565Tw=
+
+Name: gef_eclipse_logo_32.png
+SHA-256-Digest: 3gjt8pGYyF7O9G8DmyVCJGnZ0uzj6jfJwG5MgJjWJoQ=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_11_Formatting.png
+SHA-256-Digest: lQziHXea/VAqRBbh7xkv9ubFbZ05ZS+yz7OUuyCiycc=
+
+Name: about.html
+SHA-256-Digest: SIo6368v6ECCRmakfWp6tu6+3B/aiqVh/Gus3CAyZtU=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_25_Visualizing_the
+ _DOT_Graph.png
+SHA-256-Digest: WUfLcmrY7XF9FFok/JhK1SZ9QuqdWajEtXLrcYV7NoE=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_15_Hyperlink_Navig
+ ation.png
+SHA-256-Digest: gLOH/ZvfRcxUIiwhHfs4+5SHU6hBoqNy2U+NSHFEY7k=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_05_BracketMatching
+ .png
+SHA-256-Digest: O4P00VZo7uotN66wQZEu0vJMUb6RoKwuuEqwn6lB56Y=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_03_Template_Propos
+ als.png
+SHA-256-Digest: 7A8x70KUMVGgK8GwomiPN07U+H/Sxjtvbiv550n+/Xo=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_09_Quickfixes.png
+SHA-256-Digest: YV3I4NcMasXipRT+vB2ZDg0MK81ckMIVEON3xBaU4Z8=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_23_Integration_wit
+ h_other_editors.png
+SHA-256-Digest: hGfniHuAOkTHIgHUFSsKNGKmDhwHdy6zS34ybYD0iB4=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_08_Error_Checking.
+ png
+SHA-256-Digest: m8bazp6Y+PnIhnUoP0neefgG0V9PLffchoU47WG17u8=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_12_Outline_View.pn
+ g
+SHA-256-Digest: XVbfLgrgnZXjQpTTKWRyKkBol58/Mm6HkgmqE4pRV0s=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_22_Preferences.png
+SHA-256-Digest: keeZahCz7TIMUuzmBsKleutHKK1CJ/OwW50K2XGXiEE=
+
+Name: reference/wiki/DOT-User-Guide.html
+SHA-256-Digest: vgq6OHOj6XQVGsRTFeILWFdEh3gnav+goAYH5jQRlh8=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Graph_View_02_Link_with_D
+ OT_Editor.png
+SHA-256-Digest: cJ5ag2dqiTQqM+zAepCstoMbPZMqb97gxtNAeD62TZ8=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Graph_View_03_Embedded_Do
+ t_graph.png
+SHA-256-Digest: V8/hw7EHArwc8VtVj/aZcQZkwDDdSvyW9tcCK9bdIL4=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_14_Folding.png
+SHA-256-Digest: s6hXHVJZbF1KYearFJJejml4cXUHKCo9uilV8/PcIcQ=
+
+Name: toc.xml
+SHA-256-Digest: gxA1cxfjPTG7RPGowY62DAtN71SPab8TwXx55s8V8VQ=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_16_Marking_Occurre
+ nces.png
+SHA-256-Digest: S9Rrf3LcQle35rMVUQbbG+fnXAcvvM/L7yi1jvekICk=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_19_Adding_Toggling
+ _Comments.png
+SHA-256-Digest: MbjMZydJtnT3+ABj9tqQN+AqWAzv4NM6i5EEaazGR8c=
+
+Name: reference/wiki/images/dot-user-guide/DOT_Editor_10_Multi-Quickfixe
+ s.png
+SHA-256-Digest: +n/WkNa6ESemHRg0wyh32rYMxkdkBX9C3rfgZ5t87TE=
+
+Name: reference/wiki/DOT-User-Guide-toc.xml
+SHA-256-Digest: 4pI5Uw190caB7DSeMv6jTy3gWtECP1XtTfuP+yw5wY4=
+

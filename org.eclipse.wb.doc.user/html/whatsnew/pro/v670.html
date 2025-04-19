@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>What&#8217;s New - v6.7.0</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>What&#8217;s New - v6.7.0</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>WindowBuilder Pro v6.7.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SWT Designer v6.7.0</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Swing Designer v6.7.0</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GWT Designer v5.0.0</strong></p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#RFRS">Ready for IBM Rational Software Certification</a></p>
+</li>
+<li>
+<p><a href="#DataBinding">Enhanced SWT/JFace Data Bindings support</a></p>
+</li>
+<li>
+<p><a href="#GWT">Enhanced GWT support</a></p>
+</li>
+<li>
+<p><a href="#SWT">Enhanced SWT support</a></p>
+</li>
+<li>
+<p><a href="#Swing">Enhanced Swing support</a></p>
+</li>
+<li>
+<p><a href="#NLS">Enhanced NLS support</a></p>
+</li>
+<li>
+<p><a href="#CodeGen">Code Generation &amp; Parsing enhancements</a></p>
+</li>
+<li>
+<p><a href="#Editor_PropertyPane">Editor &amp; Property Pane Enhancements</a></p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><a href="v660.html">v6.6.0</a></p>
+</li>
+<li>
+<p><a href="v650.html">v6.5.0</a></p>
+</li>
+<li>
+<p><a href="v640.html">v6.4.0</a></p>
+</li>
+<li>
+<p><a href="v630.html">v6.3.0</a></p>
+</li>
+<li>
+<p><a href="v620.html">v6.2.0</a></p>
+</li>
+<li>
+<p><a href="v610.html">v6.1.0</a></p>
+</li>
+<li>
+<p><a href="v600.html">v6.0.0</a></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p><a href="v510.html">v5.1.0</a></p>
+</li>
+<li>
+<p><a href="v500.html">v5.0.0</a></p>
+</li>
+<li>
+<p><a href="v430.html">v4.3.0</a></p>
+</li>
+<li>
+<p><a href="v420.html">v4.2.0</a></p>
+</li>
+<li>
+<p><a href="v410.html">v4.1.0</a></p>
+</li>
+<li>
+<p><a href="v400.html">v4.0.0</a></p>
+</li>
+<li>
+<p><a href="v300.html">v3.0.0</a></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="RFRS">Ready for IBM Rational Software Certification</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Validated as Ready for IBM Rational software</p>
+</li>
+<li>
+<p>Achieved the Ready for IBM Rational software Best Practices Indicator</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="DataBinding">Enhanced SWT/JFace Data Binding support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Support for new Eclipse 3.4 data binding APIs</p>
+</li>
+<li>
+<p>Support TreeViewer input bindings</p>
+</li>
+<li>
+<p>Support for simple (Designer custom) TreeViewer binding</p>
+</li>
+<li>
+<p>Support for binding multi selection and checked elements</p>
+</li>
+<li>
+<p>Support for direct binding to WritableValues</p>
+</li>
+<li>
+<p>Support attributes that are WritableValues</p>
+</li>
+<li>
+<p>Support for bindings assigned to fields</p>
+</li>
+<li>
+<p>Support for binding to the validation status of another binding</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="GWT">Enhanced GWT support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Added GWT Compile Application launch configuration</p>
+</li>
+<li>
+<p>Added new "GWT library" wizard</p>
+</li>
+<li>
+<p>Improved support MyGWT and GWT-Ext</p>
+</li>
+<li>
+<p>Added GWT-Ext palette</p>
+</li>
+<li>
+<p>Support for project-specific GWT_HOME using classpath</p>
+</li>
+<li>
+<p>Support for FireFox 3/GRE 1.9 under Linux</p>
+</li>
+<li>
+<p>Support for Safari 3.1 under OSX</p>
+</li>
+<li>
+<p>Support for ConstantsWithLookup</p>
+</li>
+<li>
+<p>Limited support for Windows/IE strict modes</p>
+</li>
+<li>
+<p>64-Bit development support</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="SWT">Enhanced SWT support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Support for drag/drop of ButtonGroups on MenuItems</p>
+</li>
+<li>
+<p>Support for TableCursor</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Swing">Enhanced Swing support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Support for JGoodies FormLayout v1.2.0</p>
+</li>
+<li>
+<p>Added GroupLayout to default layout manager list</p>
+</li>
+<li>
+<p>Create Swing GUI in AWT EventQueue</p>
+</li>
+<li>
+<p>Allow JInternalFrame on any container, not just JDesktopPane</p>
+</li>
+<li>
+<p>Support for "this.getClass()" for Swing Icon creation</p>
+</li>
+<li>
+<p>Support for rendering JFrame/JDialog.add(component)</p>
+</li>
+<li>
+<p>Support for JFileChooser</p>
+</li>
+<li>
+<p>Improved JBuilder-generated code rendering</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="NLS">Enhanced NLS support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Allow use default package for *.properties in NLS</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="CodeGen">Code Generation &amp; Parsing enhancements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Improved JBuilder 2006 code generation compatibility</p>
+</li>
+<li>
+<p>Parsing support for "add(component, constraints, -1)"</p>
+</li>
+<li>
+<p>Use ColumnSpec/RowSpec.decode() for JGFL 1.2</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Editor_PropertyPane">Editor &amp; Property Pane Enhancements</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Reduced flickering under Linux</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

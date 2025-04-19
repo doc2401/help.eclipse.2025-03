@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.3
+Build-Jdk-Spec: 21
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.eclipse.linuxtools.callgraph.docs;singleton:=tr
+ ue
+Bundle-Version: 1.0.0.202503042117
+Require-Bundle: org.eclipse.help
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Localization: plugin
+Automatic-Module-Name: org.eclipse.linuxtools.callgraph.docs
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse-linuxtools/
+ org.eclipse.linuxtools;path="systemtap/org.eclipse.linuxtools.callgraph
+ .docs";commitId=c22225490226970ce27b7e1e8551a7ab625ccb68
+Bundle-License: Eclipse Public License v2.0
+

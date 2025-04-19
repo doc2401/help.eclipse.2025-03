@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.20">
+<title>Layout Managers</title>
+<style>
+P.Code {
+	display: block;
+	text-align: left;
+	text-indent: 0.00pt;
+	margin-top: 0.000000pt;
+	margin-bottom: 0.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 15pt;
+	font-size: 10.000000pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #4444CC;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+H6.CaptionFigColumn {
+	display: block;
+	text-align: left;
+	text-indent: 0.000000pt;
+	margin-top: 3.000000pt;
+	margin-bottom: 11.000000pt;
+	margin-right: 0.000000pt;
+	margin-left: 0.000000pt;
+	font-size: 9.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+P.Note {
+	display: block;
+	text-align: left;
+	text-indent: 0pt;
+	margin-top: 19.500000pt;
+	margin-bottom: 19.500000pt;
+	margin-right: 0.000000pt;
+	margin-left: 30pt;
+	font-size: 11.000000pt;
+	font-weight: normal;
+	font-style: Italic;
+	color: #000000;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.UILabel {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+}
+EM.CodeName {
+	font-weight: Bold;
+	font-style: normal;
+	text-decoration: none;
+	vertical-align: baseline;
+	text-transform: none;
+	font-family: "Courier New", Courier, monospace;
+}
+
+body, html { border: 0px }
+
+
+/* following font face declarations need to be removed for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-family: Arial, Helvetica, sans-serif; color: #000000}
+pre				{ font-family: "Courier New", Courier, monospace;}
+
+/* end font face declarations */
+
+/* following font size declarations should be OK for DBCS */
+
+body, h1, h2, h3, h4, h5, h6, p, table, td, caption, th, ul, ol, dl, li, dd, dt {font-size: 10pt; }
+pre				{ font-size: 10pt}
+
+/* end font size declarations */
+
+body	     { background: #FFFFFF; margin-bottom: 1em }
+h1           { font-size: 18pt; margin-top: 5; margin-bottom: 1 }	
+h2           { font-size: 14pt; margin-top: 25; margin-bottom: 3 }
+h3           { font-size: 11pt; margin-top: 20; margin-bottom: 3 }
+h4           { font-size: 10pt; margin-top: 20; margin-bottom: 3; font-style: italic }
+p            { margin-top: 10px; margin-bottom: 10px }
+pre          { margin-left: 6; font-size: 9pt; } // color: #4444CC 
+/*a:link	     { color: #0000FF }*/
+/*a:hover	     { color: #000080 }*/
+/*a:visited    { text-decoration: underline }*/
+ul	     { margin-top: 10px; margin-bottom: 10px; }
+li	     { margin-top: 5px; margin-bottom: 5px; } 
+li p	     { margin-top: 5px; margin-bottom: 5px; }
+ol	     { margin-top: 10px; margin-bottom: 10px; }
+dl	     { margin-top: 10px; margin-bottom: 10px; }
+dt	     { margin-top: 5px; margin-bottom: 5px; font-weight: bold; }
+dd	     { margin-top: 5px; margin-bottom: 5px; }
+strong	     { font-weight: bold}
+em	     { font-style: italic}
+var	     { font-style: italic}
+div.revision { border-left-style: solid; border-left-width: thin; 
+				   border-left-color: #7B68EE; padding-left:5 }
+th	     { font-weight: bold }
+
+a.command-link {
+}
+a.command-link img {
+	border-width: 0px;
+	border-style: none;
+	vertical-align: middle;
+}
+
+pre code {
+	display: block;
+	border: 1px solid gray;
+	margin: 1em;
+	padding: 1em;
+	background-color: #F3F3F3;
+}
+
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Layout Managers</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A program written in Java may be deployed on multiple platforms. If you
+were to use standard UI design techniques, specifying absolute positions
+and sizes for your UI components, your UI won&#8217;t be portable. What looks
+fine on your development system might be unusable on another platform.
+To solve this problem, Java provides a system of portable layout
+managers. You use these layout managers to specify rules and constraints
+for the layout of your UI in a way that will be portable.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 34%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../userinterface/images/feedback_drag_grid1.png" alt="image" width="229" height="124"></span> </p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../userinterface/images/feedback_drag_xy.png" alt="image" width="229" height="124"></span> </p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../userinterface/images/feedback_size_xy.png" alt="image" width="229" height="124"></span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Layout managers can provide the following advantages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Correctly positioned components that are independent of fonts, screen
+resolutions, and platform differences.</p>
+</li>
+<li>
+<p>Intelligent component placement for containers that are dynamically
+resized at runtime.</p>
+</li>
+<li>
+<p>Ease of translation. If a string increases in length after
+translation, the associated components stay properly aligned.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_about_layout_managers">About layout managers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When writing Java applications, you may need to use layouts to give your
+windows a specific look. A layout controls the position and size of
+children in a container. Layout classes are subclasses of the abstract
+class Layout. Both SWT and Swing provide several standard layout
+classes, and you can write custom layout classes. Other UI toolkits
+embed implicit layout managers in each panel type.</p>
+</div>
+<div class="paragraph">
+<p>In Java, positioning and sizing does not happen automatically.
+Applications can decide to size and place a container&#8217;s children
+initially, or in a resize listener. Another option is to specify a
+layout class to position and size the children. If children are not
+given a size, they will have zero size and they cannot be seen.</p>
+</div>
+<div class="paragraph">
+<p>The layout manager sets the sizes and locations of the components based
+on various factors such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The layout manager&#8217;s layout rules.</p>
+</li>
+<li>
+<p>The layout manager&#8217;s property settings, if any.</p>
+</li>
+<li>
+<p>The layout datas associated with each component.</p>
+</li>
+<li>
+<p>The size of the container.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each layout manager has characteristic strengths and drawbacks.
+Grid-based layouts and constraint-based layouts are the most useful and
+powerful of the standard layouts, but they are also the most
+complicated. When using the design view, you can change the layout
+whenever you like. The tool adjusts the code as needed on the fly.
+Change the layout either by explicitly adding a layout manager to the
+source code for the container, or by selecting a layout for the
+composite on the design surface.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

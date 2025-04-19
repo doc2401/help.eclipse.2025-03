@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.5.2
+Build-Jdk-Spec: 11
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.eclipse.uml2.doc; singleton:=true
+Bundle-Version: 5.5.0.v20221116-1811
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.help
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Eclipse-SourceReferences: scm:git:https://git.eclipse.org/c/uml2/org.ecl
+ ipse.uml2.git;path="doc/org.eclipse.uml2.doc";commitId=4e8c255bdee00863
+ f53fd8d2802e1ff67e8dffc4
+Bundle-License: Eclipse Public License v2.0
+
+Name: about.properties
+SHA-256-Digest: tu4XKCH3ZPpGVJQeyfi5cocV61+DxZH150J3kVZqRKU=
+
+Name: about.html
+SHA-256-Digest: RrnRWmByTlTZCj3OwrKwGyLNMdk10wgdt6ZEJp7vMd8=
+
+Name: plugin.xml
+SHA-256-Digest: QnchxBoZP0J5J2Ji9ymJKCDwcGREcvHdpS1wDyntE6c=
+
+Name: about.ini
+SHA-256-Digest: mCNlGHiEhEePA3g/rNGYTUEbMgxXXA05+JM9cJud+pE=
+
+Name: toc.xml
+SHA-256-Digest: mLqlFDkGg6LQbhqHiJLAne3EhNkOHHikq61dJ3Rgs/Q=
+
+Name: plugin.properties
+SHA-256-Digest: DKwxAt+QUw6e7Uk7vpAoLuyIHdc0U7jvaK2nLMucuKs=
+
+Name: about.mappings
+SHA-256-Digest: vgghfh4VJyJY7nQRrg5yL345yv1+RNwXdQTUAwGKPYE=
+
+Name: modeling32.png
+SHA-256-Digest: saSrfvJ79Uzl2BFpCbuVBho1UTuf14LrjD+wGJG44Ok=
+

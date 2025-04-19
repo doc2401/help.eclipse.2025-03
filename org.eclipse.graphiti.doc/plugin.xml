@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!--
+**********************************************************************
+* Copyright (c) 2005, 2024 SAP SE
+*
+* This program and the accompanying materials are made
+* available under the terms of the Eclipse Public License 2.0
+* which is available at https://www.eclipse.org/legal/epl-2.0/
+*
+* Contributors:
+*    SAP SE - initial API, implementation and documentation
+*
+* SPDX-License-Identifier: EPL-2.0
+***********************************************************************
+ -->
+
+<plugin>
+  <extension
+        point="org.eclipse.help.toc">
+     <toc
+           file="toc.xml"
+           primary="true"/>
+     <toc
+           file="toc_concepts.xml">
+     </toc>
+     <toc file="toc_graphiti.xml"/>
+  </extension>
+</plugin>

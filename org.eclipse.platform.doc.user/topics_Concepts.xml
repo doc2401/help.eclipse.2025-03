@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+<!-- ============================== -->
+<!-- Define topics for the Concepts -->
+<!-- ============================== -->
+
+<toc label="Concepts">
+   <topic label="Welcome" href="concepts/welcome.htm">
+      <enablement>
+         <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.ui.intro"/>
+      </enablement>
+   </topic>
+   <topic label="Workbench" href="concepts/concepts-2.htm" >
+      <topic label="Resources" href="concepts/concepts-12.htm" />
+      <topic label="Resource Hierarchies" href="concepts/concepts-17.htm" />
+      <topic label="Linked Resources" href="concepts/concepts-13.htm" />
+      <topic label="Virtual Folders" href="concepts/virtualfolders.htm" />
+      <topic label="Path Variables" href="concepts/cpathvars.htm" />
+      <topic label="Resource Filters" href="concepts/resourcefilters.htm" />
+      <topic label="Working Sets" href="concepts/cworkset.htm"/>
+      <topic label="Builds" href="concepts/concepts-22.htm" />
+      <topic label="Local History" href="concepts/concepts-17a.htm" />
+   </topic>
+   <anchor id="c_afterworkbench" />
+   <topic label="Perspectives" href="concepts/concepts-4.htm" />
+   <anchor id="c_afterperspectives" />
+   <topic label="Editors" href="concepts/concepts-6.htm" >
+      <topic label="Ant Editor" href="reference/ref-anteditor.htm">
+      </topic>
+      <topic label="External Editors" href="concepts/concepts-6a.htm" />
+   </topic>
+   <anchor id="c_aftereditors" />
+   <topic label="Views" href="concepts/concepts-5.htm" >
+      <topic label="Detached Views" href="concepts/concepts-21a.htm" />
+      <topic label="Ant View" href="reference/ref-antview.htm">
+      </topic>
+      <topic label="Project Explorer View" href="reference/ref-27.htm" />
+      <topic label="Help View" href="concepts/help_view.htm">
+         <enablement>
+            <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.help.ui"/>
+         </enablement>
+      </topic>
+      <topic label="Tasks View" href="concepts/ctskview.htm" />
+      <topic label="Problems View" href="concepts/cprbview.htm" />
+      <topic label="Outline View" href="concepts/coutline.htm" />
+      <topic label="Templates View" href="reference/ref-templates-view.htm"></topic>
+      <topic label="Properties View" href="concepts/cpropview.htm" />
+      <topic label="Search View" href="concepts/csearchview.htm" />
+   </topic>
+   <anchor id="c_afterviews" />
+   <topic label="Toolbars" href="concepts/concepts-18.htm" />
+   <anchor id="c_aftertoolbars" />
+   <topic label="Markers" href="concepts/concepts-11.htm" />
+   <anchor id="c_aftermarkers" />
+   <topic label="Bookmarks" href="concepts/cbookmrk.htm" />
+   <anchor id="c_afterbookmarks" />
+   <topic label="Label Decorations" href="concepts/cdecorations.htm" />
+   <anchor id="c_afterdecorations" />
+   <topic label="Help" href="concepts/help.htm">
+      <enablement>
+         <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.help.ui"/>
+      </enablement>
+   </topic>
+   <anchor id="c_afterhelp" />
+   <topic label="Ant &amp; External tools" href="concepts/concepts-antexttools.htm" >
+      <topic label="Ant Support" href="concepts/concepts-antsupport.htm"/>
+      <enablement>
+         <test property="org.eclipse.core.runtime.isBundleInstalled" args="org.eclipse.ant.ui"/>
+      </enablement>
+      <topic href="concepts/concepts-exttools.htm" label="External Tools">
+      </topic>
+   </topic>
+   <anchor id="c_afterteam" />
+   <topic label="Accessibility Features in Eclipse" href="concepts/accessibility/accessmain.htm">
+      <topic label="Navigating the User Interface Using the Keyboard"  href="concepts/accessibility/navigation.htm"/>
+      <topic label="Accessibility Features in Textual Editors"  href="concepts/accessibility/text_editor.htm"/>
+      <topic label="Fonts and Colors in Eclipse"  href="concepts/accessibility/fontsandcolors.htm"/>
+   </topic>
+   <anchor id="c_afteraccessibility" />
+   <topic label="Features" href="concepts/concepts-25.htm" />
+   <anchor id="c_afterfeatures" />
+</toc>
